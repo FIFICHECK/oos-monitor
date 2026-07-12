@@ -307,14 +307,7 @@
         .footer .version-badge .info {
             color: #ffd700;
         }
-        .countdown {
-            text-align: center;
-            font-size: 0.85rem;
-            color: #888;
-            margin-top: 8px;
-            font-weight: 500;
-        }
-        
+
         .footer .version-badge .info.green {
             color: #2ecc71;
         }
@@ -399,7 +392,6 @@
         <p>HKTVmall 庫存監察 Dashboard</p>
         <div class="monitor-period" id="monitorPeriod">Monitoring until: --</div>
         <div id="headerStatus" class="status-badge badge-ok">Loading...</div>
-        <div class="countdown" id="countdownTimer">⏱️ 距離下次更新: 30s</div>
     </div>
     
     <!-- Marquee -->
@@ -436,6 +428,10 @@
             <div class="stat-card">
                 <h3>Out of Stock</h3>
                 <div class="value red" id="oosCount">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>⏱️ Next Cron Check</h3>
+                <div class="value" style="font-size:1rem;color:#3498db;font-family:monospace" id="nextCronTimer">--</div>
             </div>
             <div class="stat-card">
                 <h3>Last Checked</h3>
@@ -749,7 +745,7 @@
                 const dashData = await dashResp.json();
                 const config = await cfgResp.json();
                 updateDashboard(dashData, config);
-                if (typeof resetCountdown === 'function') resetCountdown();
+
             } catch (e) {
                 console.error('Failed to load data:', e);
                 const el = document.getElementById('headerStatus');
@@ -1442,23 +1438,34 @@
         }
         
         loadData();
-            // Countdown timer for next refresh
-    var countdownSeconds = 30;
-    var countdownEl = document.getElementById('countdownTimer');
-    function resetCountdown() {
-        countdownSeconds = 30;
-        if (countdownEl) countdownEl.textContent = '⏱️ 距離下次更新: 00:30';
-    }
-    function updateCountdown() {
-        countdownSeconds--;
-        if (countdownSeconds < 0) countdownSeconds = 30;
-        if (countdownEl) {
-            var mins = Math.floor(countdownSeconds / 60);
-            var secs = countdownSeconds % 60;
-            countdownEl.textContent = '⏱️ 距離下次更新: ' + mins.toString().padStart(2, '0') + ':' + secs.toString().padStart(2, '0');
+            // Cron countdown timer - calculate next check based on last_checked + 30min
+    var cronInterval = 30; // minutes
+    var cronEl = document.getElementById('nextCronTimer');
+    function updateCronCountdown() {
+        var lastEl = document.getElementById('lastChecked');
+        if (!lastEl || lastEl.textContent === '--' || !cronEl) return;
+        // Parse last checked time
+        var lastText = lastEl.textContent;
+        var lastDate = new Date(lastText);
+        if (isNaN(lastDate.getTime())) {
+            cronEl.textContent = '--';
+            return;
         }
+        var nextDate = new Date(lastDate.getTime() + cronInterval * 60000);
+        var now = new Date();
+        var diff = nextDate - now;
+        if (diff < 0) {
+            // Cron check is overdue - show that next check should have happened
+            cronEl.textContent = '⏳ 即將檢查...';
+            cronEl.style.color = '#f39c12';
+            return;
+        }
+        var mins = Math.floor(diff / 60000);
+        var secs = Math.floor((diff % 60000) / 1000);
+        cronEl.textContent = mins.toString().padStart(2, '0') + ':' + secs.toString().padStart(2, '0');
+        cronEl.style.color = diff < 60000 ? '#2ecc71' : '#3498db';
     }
-    setInterval(updateCountdown, 1000);
+    setInterval(updateCronCountdown, 1000);
     setInterval(loadData, 30000);
     </script>
 </body>

@@ -307,6 +307,14 @@
         .footer .version-badge .info {
             color: #ffd700;
         }
+        .countdown {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+        
         .footer .version-badge .info.green {
             color: #2ecc71;
         }
@@ -391,6 +399,7 @@
         <p>HKTVmall 庫存監察 Dashboard</p>
         <div class="monitor-period" id="monitorPeriod">Monitoring until: --</div>
         <div id="headerStatus" class="status-badge badge-ok">Loading...</div>
+        <div class="countdown" id="countdownTimer">⏱️ 距離下次更新: 30s</div>
     </div>
     
     <!-- Marquee -->
@@ -740,6 +749,7 @@
                 const dashData = await dashResp.json();
                 const config = await cfgResp.json();
                 updateDashboard(dashData, config);
+                if (typeof resetCountdown === 'function') resetCountdown();
             } catch (e) {
                 console.error('Failed to load data:', e);
                 const el = document.getElementById('headerStatus');
@@ -1432,7 +1442,24 @@
         }
         
         loadData();
-        setInterval(loadData, 30000);
+            // Countdown timer for next refresh
+    var countdownSeconds = 30;
+    var countdownEl = document.getElementById('countdownTimer');
+    function resetCountdown() {
+        countdownSeconds = 30;
+        if (countdownEl) countdownEl.textContent = '⏱️ 距離下次更新: 00:30';
+    }
+    function updateCountdown() {
+        countdownSeconds--;
+        if (countdownSeconds < 0) countdownSeconds = 30;
+        if (countdownEl) {
+            var mins = Math.floor(countdownSeconds / 60);
+            var secs = countdownSeconds % 60;
+            countdownEl.textContent = '⏱️ 距離下次更新: ' + mins.toString().padStart(2, '0') + ':' + secs.toString().padStart(2, '0');
+        }
+    }
+    setInterval(updateCountdown, 1000);
+    setInterval(loadData, 30000);
     </script>
 </body>
 </html>

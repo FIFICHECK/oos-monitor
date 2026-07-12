@@ -401,17 +401,18 @@
         <table>
             <thead>
                 <tr>
-                    <th style="width:22%;">SKU</th>
-                    <th style="width:30%;">Product Name</th>
+                    <th style="width:20%;">SKU</th>
+                    <th style="width:28%;">Product Name</th>
                     <th style="width:8%;">庫存</th>
                     <th style="width:8%;">Status</th>
                     <th style="width:10%;">Price</th>
-                    <th style="width:14%;">Period</th>
+                    <th style="width:10%;">Starts</th>
+                    <th style="width:8%;">End</th>
                     <th style="width:8%;">Link</th>
                 </tr>
             </thead>
             <tbody id="allSkuBody">
-                <tr><td colspan="6" style="text-align:center;color:#666;">No data yet</td></tr>
+                <tr><td colspan="8" style="text-align:center;color:#666;">No data yet</td></tr>
             </tbody>
         </table>
         
@@ -420,17 +421,18 @@
         <table>
             <thead>
                 <tr>
-                    <th style="width:22%;">SKU</th>
-                    <th style="width:30%;">Product Name</th>
-                    <th style="width:14%;">庫存</th>
+                    <th style="width:20%;">SKU</th>
+                    <th style="width:28%;">Product Name</th>
+                    <th style="width:8%;">庫存</th>
                     <th style="width:8%;">Status</th>
+                    <th style="width:10%;">Price</th>
                     <th style="width:10%;">Starts</th>
                     <th style="width:8%;">End</th>
                     <th style="width:8%;">Link</th>
                 </tr>
             </thead>
             <tbody id="pendingSkuBody">
-                <tr><td colspan="7" style="text-align:center;color:#666;">No pending SKUs</td></tr>
+                <tr><td colspan="8" style="text-align:center;color:#666;">No pending SKUs</td></tr>
             </tbody>
         </table>
         
@@ -783,16 +785,12 @@
                     
                     var periodEnd = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
                     var periodStart = (config.sku_start_periods && config.sku_start_periods[sku]) || '';
-                    var periodDisplay = '';
-                    if (periodStart) {
-                        periodDisplay += new Date(periodStart).toLocaleString('zh-HK', {weekday:'short', year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false});
-                        periodDisplay += ' - ';
-                    }
-                    if (periodEnd !== '--') {
-                        periodDisplay += new Date(periodEnd).toLocaleString('zh-HK', {weekday:'short', year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false});
-                    } else {
-                        periodDisplay += '--';
-                    }
+                    var startDisplay = periodStart
+                        ? new Date(periodStart).toLocaleString('zh-HK', {weekday:'short', year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false})
+                        : '--';
+                    var endDisplay = periodEnd !== '--'
+                        ? new Date(periodEnd).toLocaleString('zh-HK', {weekday:'short', year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false})
+                        : '--';
                     
                     if (s) {
                         // Has data from dashboard_data.json
@@ -812,7 +810,8 @@
                             + '<td class="tag-cell">' + stockDisplay + '</td>'
                             + '<td class="tag-cell">' + tag + '</td>'
                             + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
-                            + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + periodDisplay + '</td>'
+                            + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + startDisplay + '</td>'
+                            + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + endDisplay + '</td>'
                             + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>');
                     } else {
                         // New SKU — not yet in dashboard_data.json (Pending, active now)
@@ -820,16 +819,17 @@
                             + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
                             + '<td class="tag-cell"><span class="tag tag-error">Pending</span></td>'
                             + '<td class="price-cell">--</td>'
-                            + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + periodDisplay + '</td>'
+                            + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + startDisplay + '</td>'
+                            + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + endDisplay + '</td>'
                             + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>');
                     }
                 });
                 
                 allBody.innerHTML = allRows.length > 0 
                     ? allRows.join('')
-                    : '<tr><td colspan="7" style="text-align:center;color:#888;">All SKUs completed — see Monitored SKUs History</td></tr>';
+                    : '<tr><td colspan="8" style="text-align:center;color:#888;">All SKUs completed — see Monitored SKUs History</td></tr>';
             } else {
-                allBody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:#e74c3c;">⚠️ No SKUs configured</td></tr>';
+                allBody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:#e74c3c;">⚠️ No SKUs configured</td></tr>';
             }
             
             // All Pending Monitored SKUs Table — not yet started
@@ -844,19 +844,20 @@
                     pendingSkus.push({sku: sku, start: startShort, end: endShort});
                 }
             });
-            
             if (pendingSkus.length > 0) {
                 pendingBody.innerHTML = pendingSkus.map(function(p) {
-                    return '<tr style="opacity:0.7;"><td class="sku-cell"><code style="color:#888;">' + p.sku + '</code></td>'
+                    return '<tr style="color:#888;">'
+                        + '<td class="sku-cell"><code style="color:#888;">' + p.sku + '</code></td>'
                         + '<td class="name-cell" style="color:#888;">--</td>'
                         + '<td class="tag-cell" style="color:#888;">--</td>'
                         + '<td class="tag-cell"><span class="tag" style="background:#888;color:#fff;">⏳ Pending</span></td>'
+                        + '<td style="color:#888;font-size:0.8rem;">--</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + p.start + '</td>'
                         + '<td style="color:#666;font-size:0.8rem;">' + p.end + '</td>'
                         + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + p.sku + '" target="_blank" style="color:#888;">View</a></td></tr>';
                 }).join('');
             } else {
-                pendingBody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:#666;">No pending SKUs</td></tr>';
+                pendingBody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:#666;">No pending SKUs</td></tr>';
             }
             
             // Monitored SKUs History — expired/completed SKUs

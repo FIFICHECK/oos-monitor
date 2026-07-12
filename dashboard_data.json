@@ -1,91 +1,7 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-12T22:51:38.440592",
+  "last_checked": "2026-07-12T23:22:38.612230",
   "history": [
-    {
-      "sku": "B0961005_S_9556174902219",
-      "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
-      "status": "in_stock",
-      "stock_level": 630,
-      "checked_at": "2026-07-12T17:11:45.019331"
-    },
-    {
-      "sku": "B0961005_S_4891609190294",
-      "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
-      "status": "in_stock",
-      "stock_level": 55,
-      "checked_at": "2026-07-12T17:42:04.007950"
-    },
-    {
-      "sku": "B0961005_S_4897020276715",
-      "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
-      "status": "in_stock",
-      "stock_level": 126,
-      "checked_at": "2026-07-12T17:42:07.990382"
-    },
-    {
-      "sku": "B0961005_S_9311770608084",
-      "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期:04/2027】",
-      "status": "in_stock",
-      "stock_level": 180,
-      "checked_at": "2026-07-12T17:42:11.694430"
-    },
-    {
-      "sku": "B0961005_S_9311770615426",
-      "product_name": "Swisse | ULTIBOOST 維他命B+ 60片裝【香港行貨】【最佳使用日期:08/2027】",
-      "status": "in_stock",
-      "stock_level": 23,
-      "checked_at": "2026-07-12T17:42:15.416250"
-    },
-    {
-      "sku": "B0961005_S_9556174902219",
-      "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
-      "status": "in_stock",
-      "stock_level": 619,
-      "checked_at": "2026-07-12T17:42:19.235433"
-    },
-    {
-      "sku": "B0961005_S_4891609190294",
-      "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
-      "status": "in_stock",
-      "stock_level": 51,
-      "checked_at": "2026-07-12T18:15:15.926791"
-    },
-    {
-      "sku": "B0961005_S_4897020276715",
-      "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
-      "status": "in_stock",
-      "stock_level": 119,
-      "checked_at": "2026-07-12T18:15:19.609029"
-    },
-    {
-      "sku": "B0961005_S_9311770608084",
-      "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期:04/2027】",
-      "status": "in_stock",
-      "stock_level": 180,
-      "checked_at": "2026-07-12T18:15:23.165099"
-    },
-    {
-      "sku": "B0961005_S_9311770615426",
-      "product_name": "Swisse | ULTIBOOST 維他命B+ 60片裝【香港行貨】【最佳使用日期:08/2027】",
-      "status": "in_stock",
-      "stock_level": 23,
-      "checked_at": "2026-07-12T18:15:26.693765"
-    },
-    {
-      "sku": "B0961005_S_9556174902219",
-      "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
-      "status": "in_stock",
-      "stock_level": 604,
-      "checked_at": "2026-07-12T18:15:30.371321"
-    },
-    {
-      "sku": "B0961005_S_4891609190294",
-      "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
-      "status": "in_stock",
-      "stock_level": 51,
-      "checked_at": "2026-07-12T18:45:50.937504"
-    },
     {
       "sku": "B0961005_S_4897020276715",
       "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
@@ -701,6 +617,90 @@
       "status": "pending",
       "stock_level": null,
       "checked_at": "2026-07-12T22:51:38.371281"
+    },
+    {
+      "sku": "B0961005_S_4891609190294",
+      "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
+      "status": "in_stock",
+      "stock_level": 33,
+      "checked_at": "2026-07-12T23:22:23.524619"
+    },
+    {
+      "sku": "B0961005_S_4897020276715",
+      "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
+      "status": "in_stock",
+      "stock_level": 36,
+      "checked_at": "2026-07-12T23:22:27.460596"
+    },
+    {
+      "sku": "B0961005_S_9311770608084",
+      "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期:04/2027】",
+      "status": "in_stock",
+      "stock_level": 173,
+      "checked_at": "2026-07-12T23:22:31.247219"
+    },
+    {
+      "sku": "B0961005_S_9311770615426",
+      "product_name": "Swisse | ULTIBOOST 維他命B+ 60片裝【香港行貨】【最佳使用日期:08/2027】",
+      "status": "low_stock",
+      "stock_level": 23,
+      "checked_at": "2026-07-12T23:22:34.833802"
+    },
+    {
+      "sku": "B0961005_S_9556174902219",
+      "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
+      "status": "in_stock",
+      "stock_level": 420,
+      "checked_at": "2026-07-12T23:22:38.526400"
+    },
+    {
+      "sku": "B0961005_S_4894436008671",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-12T23:22:38.526463"
+    },
+    {
+      "sku": "B0961005_S_4892218083908",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-12T23:22:38.526472"
+    },
+    {
+      "sku": "B0961005_S_4902320706674",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-12T23:22:38.526479"
+    },
+    {
+      "sku": "B0961005_S_4905522709861",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-12T23:22:38.526485"
+    },
+    {
+      "sku": "B0961005_S_4904616341235",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-12T23:22:38.526509"
+    },
+    {
+      "sku": "B0961005_S_4902828031500",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-12T23:22:38.526526"
+    },
+    {
+      "sku": "B0961005_S_4897091050078",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-12T23:22:38.526535"
     }
   ],
   "low_stock_skus": [],
@@ -709,25 +709,25 @@
       "sku": "B0961005_S_4891609190294",
       "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
       "status": "in_stock",
-      "stock_level": 34,
+      "stock_level": 33,
       "price": "359.00",
-      "checked_at": "2026-07-12T22:51:22.966619"
+      "checked_at": "2026-07-12T23:22:23.524619"
     },
     {
       "sku": "B0961005_S_4897020276715",
       "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
       "status": "in_stock",
-      "stock_level": 55,
+      "stock_level": 36,
       "price": "178.00",
-      "checked_at": "2026-07-12T22:51:26.926352"
+      "checked_at": "2026-07-12T23:22:27.460596"
     },
     {
       "sku": "B0961005_S_9311770608084",
       "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期:04/2027】",
       "status": "in_stock",
-      "stock_level": 174,
+      "stock_level": 173,
       "price": "149.00",
-      "checked_at": "2026-07-12T22:51:30.805238"
+      "checked_at": "2026-07-12T23:22:31.247219"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -735,15 +735,15 @@
       "status": "low_stock",
       "stock_level": 23,
       "price": "114.00",
-      "checked_at": "2026-07-12T22:51:34.520927"
+      "checked_at": "2026-07-12T23:22:34.833802"
     },
     {
       "sku": "B0961005_S_9556174902219",
       "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
       "status": "in_stock",
-      "stock_level": 445,
+      "stock_level": 420,
       "price": "15.50",
-      "checked_at": "2026-07-12T22:51:38.371222"
+      "checked_at": "2026-07-12T23:22:38.526400"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -751,7 +751,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-12T22:51:38.371262"
+      "checked_at": "2026-07-12T23:22:38.526463"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -759,7 +759,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-12T22:51:38.371267"
+      "checked_at": "2026-07-12T23:22:38.526472"
     },
     {
       "sku": "B0961005_S_4902320706674",
@@ -767,7 +767,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-12T22:51:38.371270"
+      "checked_at": "2026-07-12T23:22:38.526479"
     },
     {
       "sku": "B0961005_S_4905522709861",
@@ -775,7 +775,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-12T22:51:38.371273"
+      "checked_at": "2026-07-12T23:22:38.526485"
     },
     {
       "sku": "B0961005_S_4904616341235",
@@ -783,7 +783,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-12T22:51:38.371276"
+      "checked_at": "2026-07-12T23:22:38.526509"
     },
     {
       "sku": "B0961005_S_4902828031500",
@@ -791,7 +791,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-12T22:51:38.371279"
+      "checked_at": "2026-07-12T23:22:38.526526"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -799,7 +799,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-12T22:51:38.371281"
+      "checked_at": "2026-07-12T23:22:38.526535"
     }
   ],
   "super_low_stock_skus": [],
@@ -809,7 +809,7 @@
       "product_name": "Swisse | ULTIBOOST 維他命B+ 60片裝【香港行貨】【最佳使用日期:08/2027】",
       "price": "114.00",
       "stock_level": 23,
-      "checked_at": "2026-07-12T22:51:34.520927"
+      "checked_at": "2026-07-12T23:22:34.833802"
     }
   ]
 }

@@ -319,7 +319,8 @@
             align-items: center;
         }
         .toolbar .table-search {
-            flex: 1;
+            width: 20%;
+            min-width: 140px;
             padding: 6px 10px;
             border-radius: 5px;
             border: 1px solid #1a1a2e;
@@ -493,7 +494,7 @@
         </div>
         <!-- All SKUs -->
         <h2 class="section-title blue">📋 All Monitored SKUs</h2>
-        <div class="toolbar"><input type="text" class="table-search" data-table="allSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('allSkuBody')">📥 Excel</button></div>
+        <div class="toolbar"><input type="text" class="table-search" data-table="allSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('allSkuBody')">📥 下載</button></div>
         <div class="table-scroll"><table>
             <thead>
                 <tr>
@@ -514,7 +515,7 @@
         </div>
         <!-- All Pending Monitored SKUs -->
         <h2 class="section-title" style="color:#888;">⏳ All Pending Monitored SKUs Table</h2>
-        <div class="toolbar"><input type="text" class="table-search" data-table="pendingSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('pendingSkuBody')">📥 Excel</button></div>
+        <div class="toolbar"><input type="text" class="table-search" data-table="pendingSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('pendingSkuBody')">📥 下載</button></div>
         <div class="table-scroll"><table>
             <thead>
                 <tr>
@@ -535,7 +536,7 @@
         </div>
         <!-- Monitored SKUs History (completed/expired SKUs) -->
         <h2 class="section-title" style="color:#888;">📜 Monitored SKUs History</h2>
-        <div class="toolbar"><input type="text" class="table-search" data-table="expiredSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('expiredSkuBody')">📥 Excel</button></div>
+        <div class="toolbar"><input type="text" class="table-search" data-table="expiredSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('expiredSkuBody')">📥 下載</button></div>
         <div class="table-scroll"><table>
             <thead>
                 <tr>

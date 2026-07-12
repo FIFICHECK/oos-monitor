@@ -351,8 +351,8 @@
                 <tr>
                     <th style="width:22%;">SKU</th>
                     <th style="width:38%;">Product Name</th>
-                    <th style="width:10%;">Status</th>
-                    <th style="width:14%;">Checked</th>
+                    <th style="width:10%;">庫存</th>
+                    <th style="width:12%;">Price</th>
                     <th style="width:8%;">Link</th>
                 </tr>
             </thead>
@@ -686,7 +686,7 @@
                     return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell"><span class="tag tag-oos">OOS</span></td>'
-                    + '<td class="time nowrap">' + (s.checked_at ? new Date(s.checked_at).toLocaleString('zh-HK') : '--') + '</td>'
+                    + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
                     + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>';
                 }).join('');
             } else {

@@ -4,34 +4,41 @@
     "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
     "stock_level": 51,
     "last_change": "2026-07-12T16:02:16.245561",
-    "last_checked": "2026-07-12T18:15:15.926828"
+    "last_checked": "2026-07-12T18:45:50.937548"
   },
   "B0961005_S_4897020276715": {
     "status": "in_stock",
     "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
     "stock_level": 119,
     "last_change": "2026-07-12T16:24:48.959265",
-    "last_checked": "2026-07-12T18:15:19.609069"
+    "last_checked": "2026-07-12T18:45:54.816202"
   },
   "B0961005_S_9311770608084": {
     "status": "in_stock",
     "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期:04/2027】",
-    "stock_level": 180,
+    "stock_level": 178,
     "last_change": "2026-07-12T16:24:52.881852",
-    "last_checked": "2026-07-12T18:15:23.165137"
+    "last_checked": "2026-07-12T18:45:59.382995"
   },
   "B0961005_S_9311770615426": {
-    "status": "in_stock",
+    "status": "low_stock",
     "product_name": "Swisse | ULTIBOOST 維他命B+ 60片裝【香港行貨】【最佳使用日期:08/2027】",
     "stock_level": 23,
-    "last_change": "2026-07-12T16:24:56.596788",
-    "last_checked": "2026-07-12T18:15:26.693801"
+    "last_change": "2026-07-12T18:46:03.034156",
+    "last_checked": "2026-07-12T18:46:03.034158"
   },
   "B0961005_S_9556174902219": {
     "status": "in_stock",
     "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
-    "stock_level": 604,
+    "stock_level": 588,
     "last_change": "2026-07-12T16:25:00.557808",
-    "last_checked": "2026-07-12T18:15:30.371362"
+    "last_checked": "2026-07-12T18:46:07.049760"
+  },
+  "H5096001_S_LDB-UN003030": {
+    "status": "in_stock",
+    "product_name": "Unichi | 澳洲 Unichi Teddi Lab 生髮育髮小熊軟糖 升級版 海鹽青提味 60粒 [平行進口] 此日期前最佳:2028年08月15日",
+    "stock_level": 114,
+    "last_change": "2026-07-12T18:46:10.760358",
+    "last_checked": "2026-07-12T18:46:10.760362"
   }
 }

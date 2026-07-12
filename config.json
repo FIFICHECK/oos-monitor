@@ -1,10 +1,16 @@
 {
   "skus": [
-    "B0961005_S_4891609190294"
+    "B0961005_S_4891609190294",
+    "B0961005_S_4897020276715",
+    "B0961005_S_9311770608084",
+    "B0961005_S_9311770615426",
+    "B0961005_S_9556174902219"
   ],
   "check_interval_minutes": 30,
   "monitor_start": "2026-07-12",
-  "monitor_end": "2026-12-31",
+  "monitor_end": "2026-07-13T23:59:00",
+  "low_stock_threshold": 10,
   "discord_webhook_url": "",
-  "notify_on_restock": true
+  "notify_on_restock": true,
+  "notify_on_low_stock": true
 }

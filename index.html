@@ -311,6 +311,41 @@
             color: #2ecc71;
         }
         
+        /* Table toolbar: search + download */
+        .toolbar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: center;
+        }
+        .toolbar .table-search {
+            flex: 1;
+            padding: 6px 10px;
+            border-radius: 5px;
+            border: 1px solid #1a1a2e;
+            background: #0f3460;
+            color: #eee;
+            font-size: 0.8rem;
+            outline: none;
+        }
+        .toolbar .table-search:focus {
+            border-color: #3498db;
+        }
+        .toolbar .dl-btn {
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+        .toolbar .dl-btn:hover {
+            background: #2980b9;
+        }
+        
         /* Table scroll wrapper for mobile */
         .table-scroll {
             width: 100%;
@@ -346,6 +381,8 @@
             .stat-card .value { font-size: 1.2rem; }
         }
     </style>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 </head>
 <body>
     <div class="header">
@@ -456,7 +493,8 @@
         </div>
         <!-- All SKUs -->
         <h2 class="section-title blue">📋 All Monitored SKUs</h2>
-        <table>
+        <div class="toolbar"><input type="text" class="table-search" data-table="allSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('allSkuBody')">📥 Excel</button></div>
+        <div class="table-scroll"><table>
             <thead>
                 <tr>
                     <th style="width:20%;">SKU</th>
@@ -476,7 +514,8 @@
         </div>
         <!-- All Pending Monitored SKUs -->
         <h2 class="section-title" style="color:#888;">⏳ All Pending Monitored SKUs Table</h2>
-        <table>
+        <div class="toolbar"><input type="text" class="table-search" data-table="pendingSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('pendingSkuBody')">📥 Excel</button></div>
+        <div class="table-scroll"><table>
             <thead>
                 <tr>
                     <th style="width:20%;">SKU</th>
@@ -496,7 +535,8 @@
         </div>
         <!-- Monitored SKUs History (completed/expired SKUs) -->
         <h2 class="section-title" style="color:#888;">📜 Monitored SKUs History</h2>
-        <table>
+        <div class="toolbar"><input type="text" class="table-search" data-table="expiredSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('expiredSkuBody')">📥 Excel</button></div>
+        <div class="table-scroll"><table>
             <thead>
                 <tr>
                     <th style="width:20%;">SKU</th>
@@ -633,6 +673,63 @@
     </div>
     
     <script>
+
+    // Table search filter
+    function filterTable(input) {
+        const tableId = input.dataset.table;
+        const search = input.value.toLowerCase();
+        document.querySelectorAll('#' + tableId + ' tr').forEach(function(tr) {
+            var text = tr.textContent.toLowerCase();
+            tr.style.display = text.includes(search) ? '' : 'none';
+        });
+    }
+    
+    // Export table to Excel
+    function exportTable(tableId) {
+        if (typeof XLSX === 'undefined') {
+            alert('⚠️ Excel library not loaded. Please refresh and try again.');
+            return;
+        }
+        var tbody = document.getElementById(tableId);
+        if (!tbody) return;
+        var table = tbody.closest('table');
+        if (!table) return;
+        
+        var rows = [];
+        // Header row
+        var headers = [];
+        table.querySelectorAll('thead th').forEach(function(th) {
+            headers.push(th.textContent.trim());
+        });
+        if (headers.length > 0) rows.push(headers);
+        
+        // Visible data rows only
+        tbody.querySelectorAll('tr').forEach(function(tr) {
+            if (tr.style.display === 'none') return;
+            if (tr.querySelectorAll('td').length === 0) return;
+            // Skip "No data" / "All completed" messages
+            var firstTd = tr.querySelector('td');
+            if (firstTd && firstTd.getAttribute('colspan')) return;
+            
+            var cells = [];
+            tr.querySelectorAll('td').forEach(function(td) {
+                cells.push(td.textContent.trim());
+            });
+            if (cells.length > 0) rows.push(cells);
+        });
+        
+        if (rows.length <= 1) {
+            alert('No data to export');
+            return;
+        }
+        
+        var ws = XLSX.utils.aoa_to_sheet(rows);
+        var wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+        var dateStr = new Date().toISOString().slice(0, 10);
+        XLSX.writeFile(wb, tableId + '_' + dateStr + '.xlsx');
+    }
+
         async function loadData() {
             try {
                 const [dashResp, cfgResp] = await Promise.all([

@@ -384,6 +384,25 @@
             </tbody>
         </table>
         
+        <!-- All Pending Monitored SKUs -->
+        <h2 class="section-title" style="color:#888;">⏳ All Pending Monitored SKUs Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:22%;">SKU</th>
+                    <th style="width:30%;">Product Name</th>
+                    <th style="width:14%;">庫存</th>
+                    <th style="width:8%;">Status</th>
+                    <th style="width:10%;">Starts</th>
+                    <th style="width:8%;">End</th>
+                    <th style="width:8%;">Link</th>
+                </tr>
+            </thead>
+            <tbody id="pendingSkuBody">
+                <tr><td colspan="7" style="text-align:center;color:#666;">No pending SKUs</td></tr>
+            </tbody>
+        </table>
+        
         <!-- Monitored SKUs History (completed/expired SKUs) -->
         <h2 class="section-title" style="color:#888;">📜 Monitored SKUs History</h2>
         <table>
@@ -539,10 +558,21 @@
             const lowStock30Count = data.low_stock_30_skus ? data.low_stock_30_skus.length : 0;
             const lowStockCount = superLowStockCount + lowStock30Count;
             const totalSku = config.skus ? config.skus.length : 0;
-            // Count expired to subtract from active count
-            var expiredCount = data.all_skus ? data.all_skus.filter(function(s) { return s.status === 'expired'; }).length : 0;
-            // Count pending (not yet started) from data
-            var pendingCount = data.all_skus ? data.all_skus.filter(function(s) { return s.status === 'pending'; }).length : 0;
+            // Build pendingSet from config (used in multiple places)
+            var pendingSet = {};
+            var now = new Date();
+            if (config.sku_start_periods) {
+                for (var sk in config.sku_start_periods) {
+                    if (new Date(config.sku_start_periods[sk]) > now) {
+                        pendingSet[sk] = true;
+                    }
+                }
+            }
+            // Count expired (exclude pending SKUs that were wrongly marked as expired)
+            var expiredCount = data.all_skus ? data.all_skus.filter(function(s) { 
+                return s.status === 'expired' && !pendingSet[s.sku];
+            }).length : 0;
+            var pendingCount = Object.keys(pendingSet).length;
             var activeTotal = totalSku - expiredCount - pendingCount;
             
             // Header
@@ -713,34 +743,19 @@
                 config.skus.forEach(function(sku) {
                     var s = skuDataMap[sku];
                     var isExpired = expiredSet[sku];
+                    var isPending = pendingSet[sku];
                     
                     // Skip expired — they go to Monitored SKUs History
                     if (isExpired) return;
+                    // Skip pending — they go to All Pending Monitored SKUs Table
+                    if (isPending) return;
                     
                     var periodEnd = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
                     var periodDisplay = periodEnd !== '--' 
                         ? new Date(periodEnd).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'})
                         : '--';
                     
-                    // Check if SKU has a future start date (not yet started)
-                    var notYetStarted = false;
-                    if (config.sku_start_periods && config.sku_start_periods[sku]) {
-                        var startDt = new Date(config.sku_start_periods[sku]);
-                        if (startDt > new Date()) {
-                            notYetStarted = true;
-                        }
-                    }
-                    
-                    if (notYetStarted) {
-                        // Future start date — show as Not Started
-                        var startDisplay = new Date(config.sku_start_periods[sku]).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
-                        allRows.push('<tr style="opacity:0.6;"><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
-                            + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
-                            + '<td class="tag-cell"><span class="tag" style="background:#888;color:#fff;">⏳ Pending</span></td>'
-                            + '<td class="price-cell">--</td>'
-                            + '<td class="period-cell" style="color:#888;font-size:0.8rem;">Starts ' + startDisplay + '</td>'
-                            + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>');
-                    } else if (s) {
+                    if (s) {
                         // Has data from dashboard_data.json
                         var tag = '';
                         if (s.status === 'oos') tag = '<span class="tag tag-oos">OOS</span>';
@@ -778,9 +793,36 @@
                 allBody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:#e74c3c;">⚠️ No SKUs configured</td></tr>';
             }
             
+            // All Pending Monitored SKUs Table — not yet started
+            const pendingBody = document.getElementById('pendingSkuBody');
+            var pendingSkus = [];
+            config.skus.forEach(function(sku) {
+                if (pendingSet[sku]) {
+                    var startD = config.sku_start_periods[sku] || '';
+                    var endD = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
+                    var startShort = startD ? new Date(startD).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}) : '--';
+                    var endShort = endD !== '--' ? new Date(endD).toLocaleString('zh-HK', {month:'short', day:'numeric'}) : '--';
+                    pendingSkus.push({sku: sku, start: startShort, end: endShort});
+                }
+            });
+            
+            if (pendingSkus.length > 0) {
+                pendingBody.innerHTML = pendingSkus.map(function(p) {
+                    return '<tr style="opacity:0.7;"><td class="sku-cell"><code style="color:#888;">' + p.sku + '</code></td>'
+                        + '<td class="name-cell" style="color:#888;">--</td>'
+                        + '<td class="tag-cell" style="color:#888;">--</td>'
+                        + '<td class="tag-cell"><span class="tag" style="background:#888;color:#fff;">⏳ Pending</span></td>'
+                        + '<td style="color:#888;font-size:0.8rem;">' + p.start + '</td>'
+                        + '<td style="color:#666;font-size:0.8rem;">' + p.end + '</td>'
+                        + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + p.sku + '" target="_blank" style="color:#888;">View</a></td></tr>';
+                }).join('');
+            } else {
+                pendingBody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:#666;">No pending SKUs</td></tr>';
+            }
+            
             // Monitored SKUs History — expired/completed SKUs
             const expiredBody = document.getElementById('expiredSkuBody');
-            const expiredSkus = data.all_skus ? data.all_skus.filter(function(s) { return s.status === 'expired'; }) : [];
+            const expiredSkus = data.all_skus ? data.all_skus.filter(function(s) { return s.status === 'expired' && !pendingSet[s.sku]; }) : [];
             const skuPeriods = config.sku_periods || {};
             
             if (expiredSkus.length > 0) {

@@ -1,6 +1,6 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-12T18:46:10.833697",
+  "last_checked": "2026-07-12T19:16:48.612815",
   "history": [
     {
       "sku": "B0961005_S_4891609190294",
@@ -341,6 +341,48 @@
       "status": "in_stock",
       "stock_level": 114,
       "checked_at": "2026-07-12T18:46:10.760277"
+    },
+    {
+      "sku": "B0961005_S_4891609190294",
+      "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
+      "status": "in_stock",
+      "stock_level": 50,
+      "checked_at": "2026-07-12T19:16:29.870375"
+    },
+    {
+      "sku": "B0961005_S_4897020276715",
+      "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
+      "status": "in_stock",
+      "stock_level": 117,
+      "checked_at": "2026-07-12T19:16:33.769817"
+    },
+    {
+      "sku": "B0961005_S_9311770608084",
+      "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期:04/2027】",
+      "status": "in_stock",
+      "stock_level": 178,
+      "checked_at": "2026-07-12T19:16:37.571313"
+    },
+    {
+      "sku": "B0961005_S_9311770615426",
+      "product_name": "Swisse | ULTIBOOST 維他命B+ 60片裝【香港行貨】【最佳使用日期:08/2027】",
+      "status": "low_stock",
+      "stock_level": 23,
+      "checked_at": "2026-07-12T19:16:41.164871"
+    },
+    {
+      "sku": "B0961005_S_9556174902219",
+      "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
+      "status": "in_stock",
+      "stock_level": 577,
+      "checked_at": "2026-07-12T19:16:44.881979"
+    },
+    {
+      "sku": "H5096001_S_LDB-UN003030",
+      "product_name": "Unichi | 澳洲 Unichi Teddi Lab 生髮育髮小熊軟糖 升級版 海鹽青提味 60粒 [平行進口] 此日期前最佳:2028年08月15日",
+      "status": "in_stock",
+      "stock_level": 104,
+      "checked_at": "2026-07-12T19:16:48.538127"
     }
   ],
   "low_stock_skus": [],
@@ -349,17 +391,17 @@
       "sku": "B0961005_S_4891609190294",
       "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
       "status": "in_stock",
-      "stock_level": 51,
+      "stock_level": 50,
       "price": "359.00",
-      "checked_at": "2026-07-12T18:45:50.937504"
+      "checked_at": "2026-07-12T19:16:29.870375"
     },
     {
       "sku": "B0961005_S_4897020276715",
       "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
       "status": "in_stock",
-      "stock_level": 119,
+      "stock_level": 117,
       "price": "178.00",
-      "checked_at": "2026-07-12T18:45:54.816158"
+      "checked_at": "2026-07-12T19:16:33.769817"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -367,7 +409,7 @@
       "status": "in_stock",
       "stock_level": 178,
       "price": "149.00",
-      "checked_at": "2026-07-12T18:45:59.382945"
+      "checked_at": "2026-07-12T19:16:37.571313"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -375,23 +417,23 @@
       "status": "low_stock",
       "stock_level": 23,
       "price": "114.00",
-      "checked_at": "2026-07-12T18:46:03.034085"
+      "checked_at": "2026-07-12T19:16:41.164871"
     },
     {
       "sku": "B0961005_S_9556174902219",
       "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
       "status": "in_stock",
-      "stock_level": 588,
+      "stock_level": 577,
       "price": "15.50",
-      "checked_at": "2026-07-12T18:46:07.049714"
+      "checked_at": "2026-07-12T19:16:44.881979"
     },
     {
       "sku": "H5096001_S_LDB-UN003030",
       "product_name": "Unichi | 澳洲 Unichi Teddi Lab 生髮育髮小熊軟糖 升級版 海鹽青提味 60粒 [平行進口] 此日期前最佳:2028年08月15日",
       "status": "in_stock",
-      "stock_level": 114,
+      "stock_level": 104,
       "price": "132.00",
-      "checked_at": "2026-07-12T18:46:10.760277"
+      "checked_at": "2026-07-12T19:16:48.538127"
     }
   ],
   "super_low_stock_skus": [],
@@ -401,7 +443,7 @@
       "product_name": "Swisse | ULTIBOOST 維他命B+ 60片裝【香港行貨】【最佳使用日期:08/2027】",
       "price": "114.00",
       "stock_level": 23,
-      "checked_at": "2026-07-12T18:46:03.034085"
+      "checked_at": "2026-07-12T19:16:41.164871"
     }
   ]
 }

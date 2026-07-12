@@ -6,8 +6,9 @@
     <title>OOS Monitor Dashboard</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { color-scheme: dark; }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Inter UI', Arial, sans-serif;
             background: #1a1a2e;
             color: #eee;
             min-height: 100vh;
@@ -228,35 +229,34 @@
         a:hover { text-decoration: underline; }
         .time { color: #666; font-size: 0.8rem; }
         
-        /* Date/time inputs - white calendar icon */
+        /* Date/time inputs - white calendar & clock icons */
+        /* Use explicit white SVG icons for maximum compatibility */
         input[type="date"],
         input[type="time"] {
             color-scheme: dark;
             accent-color: #e94560;
+            color: #eee !important;
         }
+        /* White calendar icon (native SVG) */
         input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(0.85) brightness(1.5);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z'/%3E%3C/svg%3E");
             cursor: pointer;
             opacity: 1;
         }
+        /* White clock icon for time inputs */
         input[type="time"]::-webkit-calendar-picker-indicator {
-            filter: invert(0.85) brightness(1.5);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z'/%3E%3Cpath d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z'/%3E%3C/svg%3E");
             cursor: pointer;
             opacity: 1;
         }
-        /* Firefox support */
-        input[type="date"],
-        input[type="time"] {
-            color: #eee;
-        }
-        /* Ensure inputs are clearly visible */
+        /* Ensure text inside inputs is white */
         input[type="date"]::-webkit-datetime-edit,
         input[type="time"]::-webkit-datetime-edit {
-            color: #eee;
+            color: #eee !important;
         }
         input[type="date"]::-webkit-datetime-edit-fields-wrapper,
         input[type="time"]::-webkit-datetime-edit-fields-wrapper {
-            color: #eee;
+            color: #eee !important;
         }
         
         .config-area {

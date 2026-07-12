@@ -408,10 +408,14 @@
                                    style="flex:1;min-width:250px;padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-family:monospace;font-size:0.8rem;">
                             <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
                                 <span style="color:#888;font-size:0.75rem;">🟢 Start</span>
-                                <input type="datetime-local" id="newSkuStart" step="1"
+                                <input type="date" id="newSkuStartDate" 
+                                       style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                                <input type="time" id="newSkuStartTime" step="1" value="00:00:00"
                                        style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                                 <span style="color:#ffd700;font-size:0.75rem;">🔴 End</span>
-                                <input type="datetime-local" id="newSkuEnd" step="1"
+                                <input type="date" id="newSkuEndDate" 
+                                       style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                                <input type="time" id="newSkuEndTime" step="1" value="23:59:59"
                                        style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                             </div>
                             <button onclick="addSkuViaAPI()" style="
@@ -845,8 +849,10 @@
         function addSkuViaAPI() {
             if (!ensureToken()) return;
             var sku = document.getElementById('newSkuInput').value.trim();
-            var startPeriod = document.getElementById('newSkuStart').value;
-            var endPeriod = document.getElementById('newSkuEnd').value;
+            var startDate = document.getElementById('newSkuStartDate').value;
+            var startTime = document.getElementById('newSkuStartTime').value;
+            var endDate = document.getElementById('newSkuEndDate').value;
+            var endTime = document.getElementById('newSkuEndTime').value;
             var msgEl = document.getElementById('addSkuMsg');
             
             if (!sku) {
@@ -871,13 +877,16 @@
                 config.skus.push(sku);
                 
                 // Handle periods
-                if (endPeriod) {
-                    var endISO = endPeriod.replace('T', 'T');
-                    if (endISO.length === 16) endISO += ':00';  // add :ss if missing
+                if (endDate) {
+                    var endISO = endDate + 'T' + (endTime || '23:59:59');
                     if (!config.sku_periods) config.sku_periods = {};
                     config.sku_periods[sku] = endISO;
                 }
-                // We could also store start_periods but for now just use end period
+                if (startDate) {
+                    if (!config.sku_start_periods) config.sku_start_periods = {};
+                    var startISO = startDate + 'T' + (startTime || '00:00:00');
+                    config.sku_start_periods[sku] = startISO;
+                }
                 
                 var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(config, null, 2))));
                 
@@ -886,8 +895,10 @@
                         msgEl.innerHTML = '✅ Added: ' + sku;
                         msgEl.style.color = '#2ecc71';
                         document.getElementById('newSkuInput').value = '';
-                        document.getElementById('newSkuStart').value = '';
-                        document.getElementById('newSkuEnd').value = '';
+                        document.getElementById('newSkuStartDate').value = '';
+                        document.getElementById('newSkuStartTime').value = '00:00:00';
+                        document.getElementById('newSkuEndDate').value = '';
+                        document.getElementById('newSkuEndTime').value = '23:59:59';
                         reloadDashboard();
                     } else {
                         msgEl.innerHTML = '❌ Error: ' + (resp.message || 'Unknown');

@@ -13,7 +13,6 @@
             min-height: 100vh;
         }
         
-        /* Header */
         .header {
             background: linear-gradient(135deg, #16213e, #0f3460);
             padding: 20px;
@@ -25,10 +24,8 @@
             color: #e94560;
             margin-bottom: 5px;
         }
-        .header p {
-            color: #aaa;
-            font-size: 0.9rem;
-        }
+        .header p { color: #aaa; font-size: 0.9rem; }
+        .header .monitor-period { color: #666; font-size: 0.8rem; margin-top: 4px; }
         .status-badge {
             display: inline-block;
             padding: 4px 12px;
@@ -38,14 +35,14 @@
             margin-top: 8px;
         }
         .badge-ok { background: #2ecc71; color: #fff; }
-        .badge-warn { background: #e74c3c; color: #fff; animation: pulse 1.5s infinite; }
+        .bade-warn { background: #e74c3c; color: #fff; animation: pulse 1.5s infinite; }
+        .badge-low { background: #f39c12; color: #fff; animation: pulse 1.5s infinite; }
         
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.6; }
         }
         
-        /* Marquee Section */
         .marquee-container {
             background: #0f3460;
             overflow: hidden;
@@ -73,28 +70,25 @@
             white-space: nowrap;
             animation: marquee 25s linear infinite;
         }
-        .marquee-track:hover {
-            animation-play-state: paused;
-        }
+        .marquee-track:hover { animation-play-state: paused; }
         .marquee-item {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             margin: 0 30px;
-            color: #ff6b6b;
             font-weight: 500;
             font-size: 0.95rem;
         }
-        .marquee-item .price {
-            color: #ffd700;
-        }
+        .marquee-item.oos { color: #ff6b6b; }
+        .marquee-item.low-stock { color: #f39c12; }
+        .marquee-item .price { color: #ffd700; }
+        .marquee-item .stock-count { color: #fff; background: #e74c3c; padding: 1px 6px; border-radius: 3px; font-size: 0.75rem; }
         
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
         
-        /* No OOS message */
         .no-oos-marquee {
             text-align: center;
             padding: 12px;
@@ -103,17 +97,11 @@
             font-size: 1rem;
         }
         
-        /* Main content */
-        .main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .main { max-width: 1200px; margin: 0 auto; padding: 20px; }
         
-        /* Stats cards */
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
             margin-bottom: 25px;
         }
@@ -125,7 +113,7 @@
             border: 1px solid #0f3460;
         }
         .stat-card h3 {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #888;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -137,23 +125,28 @@
         }
         .stat-card .value.green { color: #2ecc71; }
         .stat-card .value.red { color: #e74c3c; }
+        .stat-card .value.orange { color: #f39c12; }
         .stat-card .value.blue { color: #3498db; }
         
-        /* OOS Table */
         .section-title {
             font-size: 1.1rem;
             margin-bottom: 12px;
-            color: #e94560;
+            margin-top: 25px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
+        .section-title.red { color: #e74c3c; }
+        .section-title.orange { color: #f39c12; }
+        .section-title.blue { color: #3498db; }
+        
         table {
             width: 100%;
             border-collapse: collapse;
             background: #16213e;
             border-radius: 10px;
             overflow: hidden;
+            margin-bottom: 10px;
         }
         th {
             background: #0f3460;
@@ -170,48 +163,23 @@
             font-size: 0.9rem;
         }
         tr:hover { background: rgba(233, 69, 96, 0.05); }
-        .oos-tag {
-            background: #e74c3c;
-            color: #fff;
+        
+        .tag {
             padding: 2px 8px;
             border-radius: 4px;
             font-size: 0.75rem;
             font-weight: bold;
+            display: inline-block;
         }
-        .stock-tag {
-            background: #2ecc71;
-            color: #fff;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
-        }
+        .tag-oos { background: #e74c3c; color: #fff; }
+        .tag-low { background: #f39c12; color: #fff; }
+        .tag-stock { background: #2ecc71; color: #fff; }
+        .tag-error { background: #666; color: #fff; }
+        
         a { color: #3498db; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .time { color: #666; font-size: 0.8rem; }
         
-        /* History */
-        .history-table { margin-top: 25px; }
-        .history-entry.oos { border-left: 3px solid #e74c3c; }
-        .history-entry.instock { border-left: 3px solid #2ecc71; }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 { font-size: 1.3rem; }
-            .stat-card .value { font-size: 1.5rem; }
-            th, td { padding: 8px 10px; font-size: 0.8rem; }
-            .marquee-label { font-size: 0.7rem; padding: 0 10px; }
-        }
-        
-        /* Last checked */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #555;
-            font-size: 0.8rem;
-        }
-        
-        /* Settings toggle */
         .config-area {
             background: #16213e;
             border: 1px solid #0f3460;
@@ -224,30 +192,42 @@
             color: #888;
             font-size: 0.85rem;
         }
-        .config-area textarea {
-            width: 100%;
-            height: 120px;
+        .config-area pre {
             background: #0f3460;
-            border: 1px solid #1a1a2e;
-            color: #eee;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: monospace;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 8px 0;
+            color: #2ecc71;
             font-size: 0.8rem;
-            margin-top: 10px;
+            overflow-x: auto;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.3rem; }
+            .stat-card .value { font-size: 1.5rem; }
+            th, td { padding: 8px 10px; font-size: 0.8rem; }
+            .marquee-label { font-size: 0.7rem; padding: 0 10px; }
         }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>📦 OOS Monitor</h1>
-        <p>HKTVmall 缺貨監察 Dashboard</p>
+        <p>HKTVmall 庫存監察 Dashboard</p>
+        <div class="monitor-period" id="monitorPeriod">Monitoring until: --</div>
         <div id="headerStatus" class="status-badge badge-ok">Loading...</div>
     </div>
     
-    <!-- Marquee Section -->
+    <!-- Marquee -->
     <div class="marquee-container" id="marqueeContainer">
-        <div class="marquee-label">🔴 OOS Alert</div>
+        <div class="marquee-label" id="marqueeLabel">🔴 OOS Alert</div>
         <div id="marqueeContent">
             <div class="no-oos-marquee">✅ All products in stock</div>
         </div>
@@ -265,6 +245,10 @@
                 <div class="value green" id="inStockCount">0</div>
             </div>
             <div class="stat-card">
+                <h3>Low Stock</h3>
+                <div class="value orange" id="lowStockCount">0</div>
+            </div>
+            <div class="stat-card">
                 <h3>Out of Stock</h3>
                 <div class="value red" id="oosCount">0</div>
             </div>
@@ -274,201 +258,274 @@
             </div>
         </div>
         
-        <!-- OOS Table -->
-        <h2 class="section-title">🔴 Currently Out of Stock</h2>
-        <div id="oosTableContainer">
-            <table>
-                <thead>
-                    <tr>
-                        <th>SKU</th>
-                        <th>Product Name</th>
-                        <th>Status</th>
-                        <th>Checked</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody id="oosTableBody">
-                    <tr><td colspan="5" style="text-align:center;color:#666;">No data yet</td></tr>
-                </tbody>
-            </table>
-        </div>
+        <!-- Low Stock Section -->
+        <h2 class="section-title orange" id="lowStockTitle">🟡 Low Stock (尚餘少量)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Product Name</th>
+                    <th>庫存</th>
+                    <th>Price</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody id="lowStockBody">
+                <tr><td colspan="5" style="text-align:center;color:#666;">No low stock items</td></tr>
+            </tbody>
+        </table>
         
-        <!-- All SKUs status -->
-        <h2 class="section-title" style="margin-top:25px;">📋 All Monitored SKUs</h2>
+        <!-- OOS Section -->
+        <h2 class="section-title red">🔴 Out of Stock</h2>
         <table>
             <thead>
                 <tr>
                     <th>SKU</th>
                     <th>Product Name</th>
                     <th>Status</th>
+                    <th>Checked</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody id="oosTableBody">
+                <tr><td colspan="5" style="text-align:center;color:#666;">No OOS items</td></tr>
+            </tbody>
+        </table>
+        
+        <!-- All SKUs -->
+        <h2 class="section-title blue">📋 All Monitored SKUs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Product Name</th>
+                    <th>庫存</th>
+                    <th>Status</th>
+                    <th>Price</th>
                     <th>Link</th>
                 </tr>
             </thead>
             <tbody id="allSkuBody">
-                <tr><td colspan="4" style="text-align:center;color:#666;">No data yet</td></tr>
+                <tr><td colspan="6" style="text-align:center;color:#666;">No data yet</td></tr>
             </tbody>
         </table>
         
-        <!-- Status History -->
-        <div class="history-table">
-            <h2 class="section-title">📜 Status Changes</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>SKU</th>
-                        <th>Product</th>
-                        <th>Change</th>
-                    </tr>
-                </thead>
-                <tbody id="historyBody">
-                    <tr><td colspan="4" style="text-align:center;color:#666;">No history yet</td></tr>
-                </tbody>
-            </table>
-        </div>
+        <!-- History -->
+        <h2 class="section-title">📜 Status Changes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>SKU</th>
+                    <th>Product</th>
+                    <th>Change</th>
+                </tr>
+            </thead>
+            <tbody id="historyBody">
+                <tr><td colspan="4" style="text-align:center;color:#666;">No history yet</td></tr>
+            </tbody>
+        </table>
         
         <!-- How to Add SKUs -->
         <div class="config-area">
             <details>
                 <summary>⚙️ How to Add / Remove SKUs</summary>
                 <div style="margin-top:10px;font-size:0.85rem;color:#ccc;">
-                    <p>用 terminal command 加 SKU：</p>
-                    <pre style="background:#0f3460;padding:12px;border-radius:6px;margin:8px 0;color:#2ecc71;font-size:0.8rem;">
-# Add a SKU
+                    <p>Run these commands in terminal:</p>
+                    <pre>
+# Add SKU
 python3 ~/oos-monitor/manage_skus.py add B0961005_S_XXXXXXXXXXXX
 
-# Add multiple at once
-python3 ~/oos-monitor/manage_skus.py add B0961005_S_XXX
-python3 ~/oos-monitor/manage_skus.py add B0961005_S_YYY
-
-# List all monitored SKUs
+# List all
 python3 ~/oos-monitor/manage_skus.py list
 
-# Remove a SKU
-python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX
-                    </pre>
-                    <p style="color:#888;margin-top:6px;">更新 config 後，下一個 cron job run 就會自動生效。</p>
+# Remove
+python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                     
                     <hr style="border-color:#0f3460;margin:12px 0;">
                     
                     <p>Current SKUs (<span id="skuCount">0</span>):</p>
-                    <div id="skuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:200px;overflow-y:auto;">
-                    </div>
+                    <div id="skuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:200px;overflow-y:auto;"></div>
                 </div>
             </details>
         </div>
     </div>
     
     <div class="footer">
-        OOS Monitor v1.0 | Auto-refreshes every 30 seconds
+        OOS Monitor v1.1 | Auto-refreshes every 30s | Low stock threshold: &lt; 10
     </div>
     
     <script>
-        // Load config
         async function loadData() {
             try {
-                // Load dashboard data
-                const dashResp = await fetch('dashboard_data.json?' + Date.now());
+                const [dashResp, cfgResp] = await Promise.all([
+                    fetch('dashboard_data.json?' + Date.now()),
+                    fetch('config.json?' + Date.now())
+                ]);
                 const dashData = await dashResp.json();
-                
-                // Load config for SKU list
-                const cfgResp = await fetch('config.json?' + Date.now());
                 const config = await cfgResp.json();
-                
                 updateDashboard(dashData, config);
             } catch (e) {
                 console.error('Failed to load data:', e);
-                document.getElementById('headerStatus').textContent = '⚠️ Error loading data';
-                document.getElementById('headerStatus').className = 'status-badge badge-warn';
+                const el = document.getElementById('headerStatus');
+                el.textContent = '⚠️ Error loading data';
+                el.className = 'status-badge bade-warn';
             }
         }
         
         function updateDashboard(data, config) {
-            // Header status
             const oosCount = data.oos_skus ? data.oos_skus.length : 0;
+            const lowStockCount = data.low_stock_skus ? data.low_stock_skus.length : 0;
+            const totalSku = config.skus ? config.skus.length : 0;
+            
+            // Header
             const statusEl = document.getElementById('headerStatus');
             if (oosCount > 0) {
-                statusEl.textContent = `⚠️ ${oosCount} SKU(s) Out of Stock`;
-                statusEl.className = 'status-badge badge-warn';
+                statusEl.textContent = '🔴 ' + oosCount + ' SKU(s) Out of Stock';
+                statusEl.className = 'status-badge bade-warn';
+            } else if (lowStockCount > 0) {
+                statusEl.textContent = '🟡 ' + lowStockCount + ' SKU(s) Low Stock';
+                statusEl.className = 'status-badge badge-low';
             } else {
                 statusEl.textContent = '✅ All in Stock';
                 statusEl.className = 'status-badge badge-ok';
             }
+            document.getElementById('monitorPeriod').textContent = 'Monitoring until: ' + (config.monitor_end || 'N/A');
             
             // Stats
-            const totalSku = config.skus ? config.skus.length : 0;
             document.getElementById('totalSku').textContent = totalSku;
             document.getElementById('oosCount').textContent = oosCount;
-            document.getElementById('inStockCount').textContent = totalSku - oosCount;
+            document.getElementById('lowStockCount').textContent = lowStockCount;
+            document.getElementById('inStockCount').textContent = totalSku - oosCount - lowStockCount;
             document.getElementById('lastChecked').textContent = data.last_checked 
                 ? new Date(data.last_checked).toLocaleString('zh-HK') : '--';
             
             // Marquee
             const marqueeContent = document.getElementById('marqueeContent');
-            if (oosCount > 0 && data.oos_skus) {
-                // Double the items for seamless scroll
+            const marqueeLabel = document.getElementById('marqueeLabel');
+            
+            let alertItems = [];
+            if (data.oos_skus) {
+                data.oos_skus.forEach(s => {
+                    alertItems.push({ type: 'oos', sku: s });
+                });
+            }
+            if (data.low_stock_skus) {
+                data.low_stock_skus.forEach(s => {
+                    alertItems.push({ type: 'low_stock', sku: s });
+                });
+            }
+            
+            if (alertItems.length > 0) {
+                if (oosCount > 0) {
+                    marqueeLabel.textContent = '🔴 OOS Alert';
+                    marqueeLabel.style.background = '#e74c3c';
+                } else {
+                    marqueeLabel.textContent = '🟡 Low Stock Alert';
+                    marqueeLabel.style.background = '#f39c12';
+                }
+                
                 let items = [];
                 for (let i = 0; i < 2; i++) {
-                    data.oos_skus.forEach(sku => {
-                        items.push(`<span class="marquee-item">
-                            🔴 ${sku.product_name || sku.sku}
-                            ${sku.price ? `<span class="price">$${sku.price}</span>` : ''}
-                            <a href="https://www.hktvmall.com/hktv/p/${sku.sku}" target="_blank" style="color:#3498db;font-size:0.75rem;">🔗</a>
-                        </span>`);
+                    alertItems.forEach(item => {
+                        const cls = item.type === 'oos' ? 'oos' : 'low-stock';
+                        const icon = item.type === 'oos' ? '🔴' : '🟡';
+                        const stockHtml = item.sku.stock_level 
+                            ? '<span class="stock-count">' + item.sku.stock_level + '</span>' 
+                            : '';
+                        items.push('<span class="marquee-item ' + cls + '">'
+                            + icon + ' ' + (item.sku.product_name || item.sku.sku)
+                            + ' ' + stockHtml
+                            + (item.sku.price ? ' <span class="price">$' + item.sku.price + '</span>' : '')
+                            + ' <a href="https://www.hktvmall.com/hktv/p/' + item.sku.sku + '" target="_blank" style="color:#3498db;font-size:0.75rem;">🔗</a>'
+                            + '</span>');
                     });
                 }
-                marqueeContent.innerHTML = `<div class="marquee-track">${items.join('')}</div>`;
+                marqueeContent.innerHTML = '<div class="marquee-track">' + items.join('') + '</div>';
             } else {
+                marqueeLabel.textContent = '🔴 OOS Alert';
+                marqueeLabel.style.background = '#e94560';
                 marqueeContent.innerHTML = '<div class="no-oos-marquee">✅ All products in stock</div>';
+            }
+            
+            // Low Stock Table
+            const lowBody = document.getElementById('lowStockBody');
+            if (lowStockCount > 0 && data.low_stock_skus) {
+                lowBody.innerHTML = data.low_stock_skus.map(s => 
+                    '<tr><td><code>' + s.sku + '</code></td>'
+                    + '<td>' + (s.product_name || 'N/A') + '</td>'
+                    + '<td><span class="tag tag-low">' + s.stock_level + ' 件</span></td>'
+                    + '<td>' + (s.price ? '$' + s.price : '--') + '</td>'
+                    + '<td><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>'
+                ).join('');
+                document.getElementById('lowStockTitle').style.display = 'block';
+            } else {
+                lowBody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#2ecc71;">✅ No low stock items</td></tr>';
+                document.getElementById('lowStockTitle').style.display = oosCount > 0 ? 'block' : 'block';
             }
             
             // OOS Table
             const oosBody = document.getElementById('oosTableBody');
             if (oosCount > 0 && data.oos_skus) {
-                oosBody.innerHTML = data.oos_skus.map(sku => `
-                    <tr>
-                        <td><code>${sku.sku}</code></td>
-                        <td>${sku.product_name || 'N/A'}</td>
-                        <td><span class="oos-tag">OOS</span></td>
-                        <td class="time">${sku.checked_at ? new Date(sku.checked_at).toLocaleString('zh-HK') : '--'}</td>
-                        <td><a href="https://www.hktvmall.com/hktv/p/${sku.sku}" target="_blank">View</a></td>
-                    </tr>
-                `).join('');
+                oosBody.innerHTML = data.oos_skus.map(s => 
+                    '<tr><td><code>' + s.sku + '</code></td>'
+                    + '<td>' + (s.product_name || 'N/A') + '</td>'
+                    + '<td><span class="tag tag-oos">OOS</span></td>'
+                    + '<td class="time">' + (s.checked_at ? new Date(s.checked_at).toLocaleString('zh-HK') : '--') + '</td>'
+                    + '<td><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>'
+                ).join('');
             } else {
                 oosBody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#2ecc71;">✅ All products in stock</td></tr>';
             }
             
-            // All SKUs table
+            // All SKUs Table
             const allBody = document.getElementById('allSkuBody');
-            // We need to merge state with SKU list
-            // For now, show SKUs from config with status
-            let skuStates = {};
-            if (data.oos_skus) {
-                data.oos_skus.forEach(s => { skuStates[s.sku] = 'oos'; });
+            if (data.all_skus && data.all_skus.length > 0) {
+                allBody.innerHTML = data.all_skus.map(s => {
+                    let tag = '';
+                    if (s.status === 'oos') tag = '<span class="tag tag-oos">OOS</span>';
+                    else if (s.status === 'low_stock') tag = '<span class="tag tag-low">' + (s.stock_level || 'Low') + '</span>';
+                    else if (s.status === 'in_stock') tag = '<span class="tag tag-stock">OK</span>';
+                    else tag = '<span class="tag tag-error">Err</span>';
+                    
+                    const stockDisplay = s.stock_level !== null && s.stock_level !== undefined 
+                        ? s.stock_level + ' 件' : '--';
+                    
+                    return '<tr><td><code>' + s.sku + '</code></td>'
+                        + '<td>' + (s.product_name || 'N/A') + '</td>'
+                        + '<td>' + stockDisplay + '</td>'
+                        + '<td>' + tag + '</td>'
+                        + '<td>' + (s.price ? '$' + s.price : '--') + '</td>'
+                        + '<td><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>';
+                }).join('');
+            } else if (config.skus && config.skus.length > 0) {
+                allBody.innerHTML = config.skus.map(sku => 
+                    '<tr><td><code>' + sku + '</code></td>'
+                    + '<td>--</td><td>--</td>'
+                    + '<td><span class="tag tag-error">Pending</span></td>'
+                    + '<td>--</td>'
+                    + '<td><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>'
+                ).join('');
+            } else {
+                allBody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:#e74c3c;">⚠️ No SKUs configured</td></tr>';
             }
-            
-            allBody.innerHTML = config.skus.map(sku => {
-                const isOos = skuStates[sku] === 'oos';
-                return `<tr>
-                    <td><code>${sku}</code></td>
-                    <td>${isOos ? (data.oos_skus.find(s => s.sku === sku)?.product_name || 'N/A') : 'In Stock'}</td>
-                    <td>${isOos ? '<span class="oos-tag">OOS</span>' : '<span class="stock-tag">In Stock</span>'}</td>
-                    <td><a href="https://www.hktvmall.com/hktv/p/${sku}" target="_blank">View</a></td>
-                </tr>`;
-            }).join('');
             
             // History
             const histBody = document.getElementById('historyBody');
             if (data.history && data.history.length > 0) {
                 const recent = data.history.slice().reverse().slice(0, 20);
-                histBody.innerHTML = recent.map(h => `
-                    <tr class="${h.status === 'oos' ? 'history-entry oos' : 'history-entry instock'}">
-                        <td class="time">${new Date(h.checked_at).toLocaleString('zh-HK')}</td>
-                        <td><code>${h.sku}</code></td>
-                        <td>${h.product_name || 'N/A'}</td>
-                        <td>${h.status === 'oos' ? '<span class="oos-tag">OOS</span>' : '<span class="stock-tag">Restocked</span>'}</td>
-                    </tr>
-                `).join('');
+                histBody.innerHTML = recent.map(h => {
+                    let tag = '';
+                    let rowClass = '';
+                    if (h.status === 'oos') { tag = '<span class="tag tag-oos">OOS</span>'; rowClass = ' style="border-left:3px solid #e74c3c;"'; }
+                    else if (h.status === 'low_stock') { tag = '<span class="tag tag-low">Low (' + (h.stock_level || '?') + ')</span>'; rowClass = ' style="border-left:3px solid #f39c12;"'; }
+                    else { tag = '<span class="tag tag-stock">Restocked</span>'; rowClass = ' style="border-left:3px solid #2ecc71;"'; }
+                    
+                    return '<tr' + rowClass + '><td class="time">' + new Date(h.checked_at).toLocaleString('zh-HK') + '</td>'
+                        + '<td><code>' + h.sku + '</code></td>'
+                        + '<td>' + (h.product_name || 'N/A') + '</td>'
+                        + '<td>' + tag + '</td></tr>';
+                }).join('');
             } else {
                 histBody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:#666;">No history yet</td></tr>';
             }
@@ -477,15 +534,14 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX
             document.getElementById('skuCount').textContent = config.skus.length;
             const skuListEl = document.getElementById('skuListDisplay');
             if (config.skus.length > 0) {
-                skuListEl.innerHTML = config.skus.map((sku, i) => 
-                    `<div style="padding:4px 0;border-bottom:1px solid #0f3460;">${i+1}. <code style="color:#3498db;">${sku}</code></div>`
-                ).join('');
+                skuListEl.innerHTML = config.skus.map(function(sku, i) {
+                    return '<div style="padding:4px 0;border-bottom:1px solid #0f3460;">' + (i+1) + '. <code style="color:#3498db;">' + sku + '</code></div>';
+                }).join('');
             } else {
-                skuListEl.innerHTML = '<div style="color:#e74c3c;">⚠️ No SKUs configured. Add with: python3 manage_skus.py add B0961005_S_XXXX</div>';
+                skuListEl.innerHTML = '<div style="color:#e74c3c;">⚠️ No SKUs configured</div>';
             }
         }
         
-        // Auto-refresh every 30s
         loadData();
         setInterval(loadData, 30000);
     </script>

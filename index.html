@@ -327,19 +327,34 @@
             </table>
         </div>
         
-        <!-- Config -->
+        <!-- How to Add SKUs -->
         <div class="config-area">
             <details>
-                <summary>⚙️ Settings</summary>
-                <p style="color:#888;font-size:0.8rem;margin-top:8px;">
-                    Edit SKU list (one per line, format: B0961005_S_XXXXXXXXXXXX):
-                </p>
-                <textarea id="skuEditor"></textarea>
-                <button onclick="saveSKUs()" style="
-                    background:#e94560;color:#fff;border:none;padding:8px 20px;
-                    border-radius:5px;margin-top:8px;cursor:pointer;font-weight:bold;
-                ">💾 Save SKUs</button>
-                <span id="saveMsg" style="color:#2ecc71;margin-left:10px;font-size:0.8rem;"></span>
+                <summary>⚙️ How to Add / Remove SKUs</summary>
+                <div style="margin-top:10px;font-size:0.85rem;color:#ccc;">
+                    <p>用 terminal command 加 SKU：</p>
+                    <pre style="background:#0f3460;padding:12px;border-radius:6px;margin:8px 0;color:#2ecc71;font-size:0.8rem;">
+# Add a SKU
+python3 ~/oos-monitor/manage_skus.py add B0961005_S_XXXXXXXXXXXX
+
+# Add multiple at once
+python3 ~/oos-monitor/manage_skus.py add B0961005_S_XXX
+python3 ~/oos-monitor/manage_skus.py add B0961005_S_YYY
+
+# List all monitored SKUs
+python3 ~/oos-monitor/manage_skus.py list
+
+# Remove a SKU
+python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX
+                    </pre>
+                    <p style="color:#888;margin-top:6px;">更新 config 後，下一個 cron job run 就會自動生效。</p>
+                    
+                    <hr style="border-color:#0f3460;margin:12px 0;">
+                    
+                    <p>Current SKUs (<span id="skuCount">0</span>):</p>
+                    <div id="skuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:200px;overflow-y:auto;">
+                    </div>
+                </div>
             </details>
         </div>
     </div>
@@ -458,24 +473,15 @@
                 histBody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:#666;">No history yet</td></tr>';
             }
             
-            // Editor
-            document.getElementById('skuEditor').value = config.skus.join('\n');
-        }
-        
-        async function saveSKUs() {
-            const text = document.getElementById('skuEditor').value;
-            const skus = text.split('\n').map(s => s.trim()).filter(s => s.length > 0);
-            
-            try {
-                const resp = await fetch('config.json');
-                const config = await resp.json();
-                config.skus = skus;
-                
-                // Save via API or show instructions
-                document.getElementById('saveMsg').textContent = '⚠️ For now, update ~/oos-monitor/config.json directly';
-                setTimeout(() => document.getElementById('saveMsg').textContent = '', 3000);
-            } catch(e) {
-                document.getElementById('saveMsg').textContent = 'Error: ' + e.message;
+            // SKU list display
+            document.getElementById('skuCount').textContent = config.skus.length;
+            const skuListEl = document.getElementById('skuListDisplay');
+            if (config.skus.length > 0) {
+                skuListEl.innerHTML = config.skus.map((sku, i) => 
+                    `<div style="padding:4px 0;border-bottom:1px solid #0f3460;">${i+1}. <code style="color:#3498db;">${sku}</code></div>`
+                ).join('');
+            } else {
+                skuListEl.innerHTML = '<div style="color:#e74c3c;">⚠️ No SKUs configured. Add with: python3 manage_skus.py add B0961005_S_XXXX</div>';
             }
         }
         

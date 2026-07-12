@@ -228,6 +228,18 @@
         a:hover { text-decoration: underline; }
         .time { color: #666; font-size: 0.8rem; }
         
+        /* Date/time inputs - white calendar icon */
+        input[type="date"],
+        input[type="time"] {
+            color-scheme: dark;
+            accent-color: #e94560;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+        
         .config-area {
             background: #16213e;
             border: 1px solid #0f3460;

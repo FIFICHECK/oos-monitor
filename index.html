@@ -293,8 +293,12 @@
                 <div class="value green" id="inStockCount">0</div>
             </div>
             <div class="stat-card">
-                <h3>Low Stock</h3>
+                <h3>Low Stock (&lt;30)</h3>
                 <div class="value orange" id="lowStockCount">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Super Low (&lt;10)</h3>
+                <div class="value red" id="superLowStockCount">0</div>
             </div>
             <div class="stat-card">
                 <h3>Out of Stock</h3>
@@ -306,8 +310,8 @@
             </div>
         </div>
         
-        <!-- Low Stock Section -->
-        <h2 class="section-title orange" id="lowStockTitle">🟡 Low Stock (尚餘少量)</h2>
+        <!-- Low Stock 30 Section (10-29 PCS) -->
+        <h2 class="section-title" style="color:#f39c12;" id="lowStock30Title">🟡 Low Stock (尚餘少量-不足30PCS)</h2>
         <table>
             <thead>
                 <tr>
@@ -318,8 +322,25 @@
                     <th style="width:8%;">Link</th>
                 </tr>
             </thead>
-            <tbody id="lowStockBody">
-                <tr><td colspan="5" style="text-align:center;color:#666;">No low stock items</td></tr>
+            <tbody id="lowStock30Body">
+                <tr><td colspan="5" style="text-align:center;color:#666;">No low stock items (10-29 PCS)</td></tr>
+            </tbody>
+        </table>
+        
+        <!-- Super Low Stock Section (< 10 PCS) -->
+        <h2 class="section-title" style="color:#e74c3c;" id="superLowStockTitle">🔴 Super Low Stock (尚餘少量-不足10PCS)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:22%;">SKU</th>
+                    <th style="width:38%;">Product Name</th>
+                    <th style="width:10%;">庫存</th>
+                    <th style="width:12%;">Price</th>
+                    <th style="width:8%;">Link</th>
+                </tr>
+            </thead>
+            <tbody id="superLowStockBody">
+                <tr><td colspan="5" style="text-align:center;color:#666;">No super low stock items (&lt; 10 PCS)</td></tr>
             </tbody>
         </table>
         
@@ -509,7 +530,9 @@
         
         function updateDashboard(data, config) {
             const oosCount = data.oos_skus ? data.oos_skus.length : 0;
-            const lowStockCount = data.low_stock_skus ? data.low_stock_skus.length : 0;
+            const superLowStockCount = data.super_low_stock_skus ? data.super_low_stock_skus.length : 0;
+            const lowStock30Count = data.low_stock_30_skus ? data.low_stock_30_skus.length : 0;
+            const lowStockCount = superLowStockCount + lowStock30Count;
             const totalSku = config.skus ? config.skus.length : 0;
             // Count expired to subtract from active count
             var expiredCount = data.all_skus ? data.all_skus.filter(function(s) { return s.status === 'expired'; }).length : 0;
@@ -529,6 +552,9 @@
             const statusEl = document.getElementById('headerStatus');
             if (oosCount > 0) {
                 statusEl.textContent = '🔴 ' + oosCount + ' SKU(s) Out of Stock';
+                statusEl.className = 'status-badge bade-warn';
+            } else if (superLowStockCount > 0) {
+                statusEl.textContent = '🔴 ' + superLowStockCount + ' SKU(s) Super Low Stock (<10)';
                 statusEl.className = 'status-badge bade-warn';
             } else if (lowStockCount > 0) {
                 statusEl.textContent = '🟡 ' + lowStockCount + ' SKU(s) Low Stock';
@@ -561,7 +587,8 @@
             // Stats
             document.getElementById('totalSku').textContent = activeTotal;
             document.getElementById('oosCount').textContent = oosCount;
-            document.getElementById('lowStockCount').textContent = lowStockCount;
+            document.getElementById('lowStockCount').textContent = lowStock30Count;
+            document.getElementById('superLowStockCount').textContent = superLowStockCount;
             document.getElementById('inStockCount').textContent = activeTotal - oosCount - lowStockCount;
             document.getElementById('lastChecked').textContent = data.last_checked 
                 ? new Date(data.last_checked).toLocaleString('zh-HK') : '--';
@@ -576,8 +603,13 @@
                     alertItems.push({ type: 'oos', sku: s });
                 });
             }
-            if (data.low_stock_skus) {
-                data.low_stock_skus.forEach(s => {
+            if (data.super_low_stock_skus) {
+                data.super_low_stock_skus.forEach(s => {
+                    alertItems.push({ type: 'super_low_stock', sku: s });
+                });
+            }
+            if (data.low_stock_30_skus) {
+                data.low_stock_30_skus.forEach(s => {
                     alertItems.push({ type: 'low_stock', sku: s });
                 });
             }
@@ -585,6 +617,9 @@
             if (alertItems.length > 0) {
                 if (oosCount > 0) {
                     marqueeLabel.textContent = '🔴 OOS Alert';
+                    marqueeLabel.style.background = '#e74c3c';
+                } else if (superLowStockCount > 0) {
+                    marqueeLabel.textContent = '🔴 Super Low Stock Alert';
                     marqueeLabel.style.background = '#e74c3c';
                 } else {
                     marqueeLabel.textContent = '🟡 Low Stock Alert';
@@ -594,8 +629,8 @@
                 let items = [];
                 for (let i = 0; i < 2; i++) {
                     alertItems.forEach(item => {
-                        const cls = item.type === 'oos' ? 'oos' : 'low-stock';
-                        const icon = item.type === 'oos' ? '🔴' : '🟡';
+                        const cls = item.type === 'oos' || item.type === 'super_low_stock' ? 'oos' : 'low-stock';
+                        const icon = item.type === 'oos' ? '🔴' : (item.type === 'super_low_stock' ? '🔴' : '🟡');
                         const stockHtml = item.sku.stock_level 
                             ? '<span class="stock-count">' + item.sku.stock_level + '</span>' 
                             : '';
@@ -615,19 +650,33 @@
             }
             
             // Low Stock Table
-            const lowBody = document.getElementById('lowStockBody');
-            if (lowStockCount > 0 && data.low_stock_skus) {
-                lowBody.innerHTML = data.low_stock_skus.map(function(s) {
+            // Low Stock 30 Table (10-29 PCS)
+            const lowBody30 = document.getElementById('lowStock30Body');
+            if (lowStock30Count > 0 && data.low_stock_30_skus) {
+                lowBody30.innerHTML = data.low_stock_30_skus.map(function(s) {
                     return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell"><span class="tag tag-low">' + s.stock_level + ' 件</span></td>'
                     + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
                     + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>';
                 }).join('');
-                document.getElementById('lowStockTitle').style.display = 'block';
+                document.getElementById('lowStock30Title').style.display = 'block';
             } else {
-                lowBody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#2ecc71;">✅ No low stock items</td></tr>';
-                document.getElementById('lowStockTitle').style.display = oosCount > 0 ? 'block' : 'block';
+                lowBody30.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#2ecc71;">✅ All stock >= 30</td></tr>';
+            }
+            // Super Low Stock Table (< 10 PCS)
+            const superLowBody = document.getElementById('superLowStockBody');
+            if (superLowStockCount > 0 && data.super_low_stock_skus) {
+                superLowBody.innerHTML = data.super_low_stock_skus.map(function(s) {
+                    return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
+                    + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
+                    + '<td class="tag-cell"><span class="tag tag-low">' + s.stock_level + ' 件</span></td>'
+                    + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
+                    + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>';
+                }).join('');
+                document.getElementById('superLowStockTitle').style.display = 'block';
+            } else {
+                superLowBody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#2ecc71;">✅ No super low stock items</td></tr>';
             }
             
             // OOS Table
@@ -697,6 +746,7 @@
                         // Has data from dashboard_data.json
                         var tag = '';
                         if (s.status === 'oos') tag = '<span class="tag tag-oos">OOS</span>';
+                        else if (s.status === 'super_low_stock') tag = '<span class="tag" style="background:#e74c3c;color:#fff;">🔴 ' + (s.stock_level || 'SuperLow') + '</span>';
                         else if (s.status === 'low_stock') tag = '<span class="tag tag-low">' + (s.stock_level || 'Low') + '</span>';
                         else if (s.status === 'in_stock') tag = '<span class="tag tag-stock">OK</span>';
                         else tag = '<span class="tag tag-error">Err</span>';

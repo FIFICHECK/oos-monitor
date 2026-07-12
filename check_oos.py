@@ -21,6 +21,7 @@ STATE_PATH = os.path.expanduser("~/oos-monitor/oos_state.json")
 DASHBOARD_DATA_PATH = os.path.expanduser("~/oos-monitor/dashboard_data.json")
 DISCORD_WEBHOOK_PATH = os.path.expanduser("~/oos-monitor/discord_webhook.txt")
 LOW_STOCK_THRESHOLD = 10  # Alert when stock < 10
+LOW_STOCK_THRESHOLD_30 = 30  # Alert when stock < 30
 
 def load_config():
     with open(CONFIG_PATH) as f:
@@ -106,8 +107,11 @@ def check_sku(page, sku_id):
             status = "oos"
             reason = "OOS indicator found"
         elif stock_level is not None and stock_level < LOW_STOCK_THRESHOLD:
+            status = "super_low_stock"
+            reason = f"尚餘{stock_level}件-不足10PCS"
+        elif stock_level is not None and stock_level < LOW_STOCK_THRESHOLD_30:
             status = "low_stock"
-            reason = f"尚餘{stock_level}件"
+            reason = f"尚餘{stock_level}件-不足30PCS"
         else:
             status = "in_stock"
             reason = "加入購物車 available"
@@ -151,12 +155,17 @@ def send_discord_notification(sku, product_name, status, prev_status, stock_leve
         title = "⚠️ 缺貨通知 Out of Stock Alert"
         desc = f"**{product_name}** 已缺貨！" if product_name else f"**{sku}** 已缺貨！"
         color = 0xFF4444
+    elif status == "super_low_stock":
+        emoji = "🔴"
+        title = f"⚠️ 超低庫存通知 Super Low Stock Alert (< 10 PCS — 僅餘{stock_level}件)"
+        desc = f"**{product_name}** 僅剩 **{stock_level}** 件（不足10件）！" if product_name else f"**{sku}** 僅剩 **{stock_level}** 件（不足10件）！"
+        color = 0xFF4444
     elif status == "low_stock":
         emoji = "🟡"
-        title = f"⚠️ 低庫存通知 Low Stock Alert (尚餘{stock_level}件)"
-        desc = f"**{product_name}** 僅剩 **{stock_level}** 件！" if product_name else f"**{sku}** 僅剩 **{stock_level}** 件！"
+        title = f"⚠️ 低庫存通知 Low Stock Alert (< 30 PCS — 尚餘{stock_level}件)"
+        desc = f"**{product_name}** 僅剩 **{stock_level}** 件（不足30件）！" if product_name else f"**{sku}** 僅剩 **{stock_level}** 件（不足30件）！"
         color = 0xFFAA44
-    elif status == "in_stock" and prev_status in ("oos", "low_stock"):
+    elif status == "in_stock" and prev_status in ("oos", "super_low_stock", "low_stock"):
         emoji = "🟢"
         title = "✅ 返貨通知 Back in Stock!"
         desc = f"**{product_name}** 已恢復庫存！" if product_name else f"**{sku}** 已恢復庫存！"
@@ -284,7 +293,7 @@ def main():
             prev = state.get(sku, {})
             prev_status = prev.get("status", "unknown")
             
-            if result["status"] in ("oos", "low_stock", "in_stock") and result["status"] != prev_status:
+            if result["status"] in ("oos", "super_low_stock", "low_stock", "in_stock") and result["status"] != prev_status:
                 print(f"  ⚡ Status changed: {prev_status} → {result['status']}")
                 send_discord_notification(
                     sku, result["product_name"],
@@ -314,7 +323,12 @@ def main():
         {"sku": r["sku"], "product_name": r["product_name"], "price": r["price"], "checked_at": r["checked_at"]}
         for r in results if r["status"] == "oos"
     ]
-    low_stock_list = [
+    super_low_stock_list = [
+        {"sku": r["sku"], "product_name": r["product_name"], "price": r["price"], 
+         "stock_level": r["stock_level"], "checked_at": r["checked_at"]}
+        for r in results if r["status"] == "super_low_stock"
+    ]
+    low_stock_30_list = [
         {"sku": r["sku"], "product_name": r["product_name"], "price": r["price"], 
          "stock_level": r["stock_level"], "checked_at": r["checked_at"]}
         for r in results if r["status"] == "low_stock"
@@ -332,13 +346,14 @@ def main():
     ]
     
     dashboard["oos_skus"] = oos_list
-    dashboard["low_stock_skus"] = low_stock_list
+    dashboard["super_low_stock_skus"] = super_low_stock_list
+    dashboard["low_stock_30_skus"] = low_stock_30_list
     dashboard["all_skus"] = all_skus_list
     dashboard["last_checked"] = datetime.now().isoformat()
     
     # Add to history (keep last 100 events)
     for r in results:
-        if r["status"] in ("oos", "low_stock", "in_stock"):
+        if r["status"] in ("oos", "super_low_stock", "low_stock", "in_stock"):
             dashboard["history"].append({
                 "sku": r["sku"],
                 "product_name": r["product_name"],
@@ -353,16 +368,22 @@ def main():
     
     # Summary
     in_stock = sum(1 for r in results if r["status"] == "in_stock")
+    super_low_stock = sum(1 for r in results if r["status"] == "super_low_stock")
     low_stock = sum(1 for r in results if r["status"] == "low_stock")
     oos_count = sum(1 for r in results if r["status"] == "oos")
     expired = sum(1 for r in results if r["status"] == "expired")
     errors = sum(1 for r in results if r["status"] == "error")
     
-    print(f"\n✅ Done — In Stock: {in_stock}, Low Stock: {low_stock}, OOS: {oos_count}, Expired: {expired}, Errors: {errors}")
+    print(f"\n✅ Done — In Stock: {in_stock}, Super Low: {super_low_stock}, Low: {low_stock}, OOS: {oos_count}, Expired: {expired}, Errors: {errors}")
     
     # Output alerts
+    if super_low_stock > 0:
+        print(f"\n🔴 SUPER LOW STOCK (<10) SKUs:")
+        for r in results:
+            if r["status"] == "super_low_stock":
+                print(f"  🔴 {r['sku']} — {r['product_name'][:60]} (only {r['stock_level']} left)")
     if low_stock > 0:
-        print(f"\n🟡 Low Stock SKUs:")
+        print(f"\n🟡 Low Stock (<30) SKUs:")
         for r in results:
             if r["status"] == "low_stock":
                 print(f"  🟡 {r['sku']} — {r['product_name'][:60]} (only {r['stock_level']} left)")

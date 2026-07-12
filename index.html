@@ -25,7 +25,7 @@
             margin-bottom: 5px;
         }
         .header p { color: #aaa; font-size: 0.9rem; }
-        .header .monitor-period { color: #666; font-size: 0.8rem; margin-top: 4px; }
+        .header .monitor-period { color: #ffd700; font-size: 0.85rem; margin-top: 6px; font-weight: 500; }
         .status-badge {
             display: inline-block;
             padding: 4px 12px;
@@ -344,6 +344,10 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                     
                     <hr style="border-color:#0f3460;margin:12px 0;">
                     
+                    <p>⏱️ Monitor Period: <strong id="settingsPeriod" style="color:#ffd700;">Loading...</strong></p>
+                    
+                    <hr style="border-color:#0f3460;margin:12px 0;">
+                    
                     <p>Current SKUs (<span id="skuCount">0</span>):</p>
                     <div id="skuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:200px;overflow-y:auto;"></div>
                 </div>
@@ -390,7 +394,26 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                 statusEl.textContent = '✅ All in Stock';
                 statusEl.className = 'status-badge badge-ok';
             }
-            document.getElementById('monitorPeriod').textContent = 'Monitoring until: ' + (config.monitor_end || 'N/A');
+            // Header — monitoring period
+            const periodEnd = config.monitor_end || '';
+            let periodText = '📅 Monitoring period: ';
+            if (periodEnd) {
+                periodText += 'Until ' + new Date(periodEnd).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+                // Countdown
+                const now = new Date();
+                const end = new Date(periodEnd);
+                const diff = end - now;
+                if (diff > 0) {
+                    const hours = Math.floor(diff / 3600000);
+                    const mins = Math.floor((diff % 3600000) / 60000);
+                    periodText += '  ⏱️ ' + hours + 'h ' + mins + 'm remaining';
+                } else {
+                    periodText += '  ⏰ Expired';
+                }
+            } else {
+                periodText += 'Not set';
+            }
+            document.getElementById('monitorPeriod').textContent = periodText;
             
             // Stats
             document.getElementById('totalSku').textContent = totalSku;
@@ -532,6 +555,9 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
             
             // SKU list display
             document.getElementById('skuCount').textContent = config.skus.length;
+            
+            // Settings period
+            document.getElementById('settingsPeriod').textContent = periodText.replace('📅 ', '');
             const skuListEl = document.getElementById('skuListDisplay');
             if (config.skus.length > 0) {
                 skuListEl.innerHTML = config.skus.map(function(sku, i) {

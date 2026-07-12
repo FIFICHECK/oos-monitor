@@ -1,56 +1,7 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-13T06:17:36.215254",
+  "last_checked": "2026-07-13T06:47:48.918641",
   "history": [
-    {
-      "sku": "B0961005_S_4892218083908",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T22:51:38.371267"
-    },
-    {
-      "sku": "B0961005_S_4902320706674",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T22:51:38.371270"
-    },
-    {
-      "sku": "B0961005_S_4905522709861",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T22:51:38.371273"
-    },
-    {
-      "sku": "B0961005_S_4904616341235",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T22:51:38.371276"
-    },
-    {
-      "sku": "B0961005_S_4902828031500",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T22:51:38.371279"
-    },
-    {
-      "sku": "B0961005_S_4897091050078",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T22:51:38.371281"
-    },
-    {
-      "sku": "B0961005_S_4891609190294",
-      "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
-      "status": "in_stock",
-      "stock_level": 33,
-      "checked_at": "2026-07-12T23:22:23.524619"
-    },
     {
       "sku": "B0961005_S_4897020276715",
       "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
@@ -701,6 +652,55 @@
       "status": "pending",
       "stock_level": null,
       "checked_at": "2026-07-13T06:17:36.149875"
+    },
+    {
+      "sku": "B0961005_S_4894436008671",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T06:47:48.858570"
+    },
+    {
+      "sku": "B0961005_S_4892218083908",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T06:47:48.858581"
+    },
+    {
+      "sku": "B0961005_S_4902320706674",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T06:47:48.858590"
+    },
+    {
+      "sku": "B0961005_S_4905522709861",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T06:47:48.858599"
+    },
+    {
+      "sku": "B0961005_S_4904616341235",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T06:47:48.858607"
+    },
+    {
+      "sku": "B0961005_S_4902828031500",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T06:47:48.858615"
+    },
+    {
+      "sku": "B0961005_S_4897091050078",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T06:47:48.858623"
     }
   ],
   "low_stock_skus": [],
@@ -711,7 +711,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149794"
+      "checked_at": "2026-07-13T06:47:48.858456"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -719,7 +719,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149815"
+      "checked_at": "2026-07-13T06:47:48.858487"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -727,7 +727,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149823"
+      "checked_at": "2026-07-13T06:47:48.858501"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -735,7 +735,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149834"
+      "checked_at": "2026-07-13T06:47:48.858535"
     },
     {
       "sku": "B0961005_S_9556174902219",
@@ -743,7 +743,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149840"
+      "checked_at": "2026-07-13T06:47:48.858557"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -751,7 +751,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149846"
+      "checked_at": "2026-07-13T06:47:48.858570"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -759,7 +759,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149852"
+      "checked_at": "2026-07-13T06:47:48.858581"
     },
     {
       "sku": "B0961005_S_4902320706674",
@@ -767,7 +767,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149857"
+      "checked_at": "2026-07-13T06:47:48.858590"
     },
     {
       "sku": "B0961005_S_4905522709861",
@@ -775,7 +775,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149862"
+      "checked_at": "2026-07-13T06:47:48.858599"
     },
     {
       "sku": "B0961005_S_4904616341235",
@@ -783,7 +783,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149866"
+      "checked_at": "2026-07-13T06:47:48.858607"
     },
     {
       "sku": "B0961005_S_4902828031500",
@@ -791,7 +791,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149871"
+      "checked_at": "2026-07-13T06:47:48.858615"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -799,7 +799,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T06:17:36.149875"
+      "checked_at": "2026-07-13T06:47:48.858623"
     }
   ],
   "super_low_stock_skus": [],

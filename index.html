@@ -844,10 +844,10 @@
                     var periodEnd = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
                     var periodStart = (config.sku_start_periods && config.sku_start_periods[sku]) || '';
                     var startDisplay = periodStart
-                        ? new Date(periodStart).toLocaleString('zh-HK', {weekday:'short', year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false})
+                        ? new Date(periodStart).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false})
                         : '--';
                     var endDisplay = periodEnd !== '--'
-                        ? new Date(periodEnd).toLocaleString('zh-HK', {weekday:'short', year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false})
+                        ? new Date(periodEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false})
                         : '--';
                     
                     if (s) {

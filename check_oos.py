@@ -185,14 +185,26 @@ def send_discord_notification(sku, product_name, status, prev_status, stock_leve
     except Exception as e:
         print(f"  ❌ Failed to send Discord notification: {e}")
 
-def check_monitor_period(config):
-    """Check if current time is within the monitoring period."""
+def check_monitor_period(config, sku=None):
+    """Check if current time is within the monitoring period for a SKU (or globally)."""
+    # First check per-SKU period
+    if sku:
+        periods = config.get("sku_periods", {})
+        sku_end = periods.get(sku)
+        if sku_end:
+            try:
+                end_dt = datetime.fromisoformat(sku_end)
+                if datetime.now() > end_dt:
+                    return False
+            except:
+                pass
+    
+    # Fall back to global period
     monitor_end = config.get("monitor_end", "")
     if monitor_end:
         try:
             end_dt = datetime.fromisoformat(monitor_end)
             if datetime.now() > end_dt:
-                print(f"\n⏰ Monitoring period ended ({monitor_end}). Stopping.")
                 return False
         except:
             pass
@@ -222,6 +234,20 @@ def main():
         page = context.new_page()
         
         for sku in config['skus']:
+            # Check per-SKU period
+            if not check_monitor_period(config, sku):
+                print(f"  ⏰ {sku}... [expired — monitor period ended]")
+                results.append({
+                    "sku": sku,
+                    "status": "expired",
+                    "reason": "Monitor period ended",
+                    "product_name": "",
+                    "price": "",
+                    "stock_level": None,
+                    "checked_at": datetime.now().isoformat()
+                })
+                continue
+            
             print(f"  🔎 {sku}...", end=" ", flush=True)
             result = check_sku(page, sku)
             results.append(result)
@@ -306,9 +332,10 @@ def main():
     in_stock = sum(1 for r in results if r["status"] == "in_stock")
     low_stock = sum(1 for r in results if r["status"] == "low_stock")
     oos_count = sum(1 for r in results if r["status"] == "oos")
+    expired = sum(1 for r in results if r["status"] == "expired")
     errors = sum(1 for r in results if r["status"] == "error")
     
-    print(f"\n✅ Done — In Stock: {in_stock}, Low Stock: {low_stock}, OOS: {oos_count}, Errors: {errors}")
+    print(f"\n✅ Done — In Stock: {in_stock}, Low Stock: {low_stock}, OOS: {oos_count}, Expired: {expired}, Errors: {errors}")
     
     # Output alerts
     if low_stock > 0:

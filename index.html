@@ -434,11 +434,26 @@
                         <p style="margin-bottom:8px;font-weight:bold;color:#888;font-size:0.8rem;">📋 Bulk Add (one SKU per line)</p>
                         <textarea id="bulkSkuInput" rows="3" placeholder="B0961005_S_XXXXXXXXXXXX&#10;B0961005_S_YYYYYYYYYYYY" 
                                   style="width:100%;padding:8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-family:monospace;font-size:0.8rem;"></textarea>
-                        <button onclick="bulkAddSkuViaAPI()" style="
-                            margin-top:6px;background:#3498db;color:#fff;border:none;padding:8px 16px;
-                            border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.8rem;
-                        ">📋 Bulk Add</button>
-                        <span id="bulkAddMsg" style="margin-left:10px;font-size:0.8rem;"></span>
+                        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px;">
+                            <span style="color:#888;font-size:0.75rem;">🟢 Start</span>
+                            <input type="date" id="bulkSkuStartDate" 
+                                   style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <input type="time" id="bulkSkuStartTime" step="1" value="00:00:00"
+                                   style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <span style="color:#ffd700;font-size:0.75rem;">🔴 End</span>
+                            <input type="date" id="bulkSkuEndDate" 
+                                   style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <input type="time" id="bulkSkuEndTime" step="1" value="23:59:59"
+                                   style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <button onclick="bulkAddSkuViaAPI()" style="
+                                background:#3498db;color:#fff;border:none;padding:6px 14px;
+                                border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.8rem;
+                            ">📋 Bulk Add</button>
+                        </div>
+                        <div style="margin-top:4px;font-size:0.75rem;color:#888;">
+                            Leave Start/End blank to use default period. All SKUs share the same period.
+                        </div>
+                        <span id="bulkAddMsg" style="margin-top:4px;font-size:0.8rem;"></span>
                     </div>
                     
                     <hr style="border-color:#0f3460;margin:12px 0;">
@@ -931,6 +946,10 @@
         function bulkAddSkuViaAPI() {
             if (!ensureToken()) return;
             var text = document.getElementById('bulkSkuInput').value.trim();
+            var startDate = document.getElementById('bulkSkuStartDate').value;
+            var startTime = document.getElementById('bulkSkuStartTime').value;
+            var endDate = document.getElementById('bulkSkuEndDate').value;
+            var endTime = document.getElementById('bulkSkuEndTime').value;
             var msgEl = document.getElementById('bulkAddMsg');
             
             if (!text) {
@@ -958,6 +977,18 @@
                     if (config.skus.indexOf(sku) === -1) {
                         config.skus.push(sku);
                         added++;
+                        
+                        // Apply period to each new SKU
+                        if (endDate) {
+                            var endISO = endDate + 'T' + (endTime || '23:59:59');
+                            if (!config.sku_periods) config.sku_periods = {};
+                            config.sku_periods[sku] = endISO;
+                        }
+                        if (startDate) {
+                            var startISO = startDate + 'T' + (startTime || '00:00:00');
+                            if (!config.sku_start_periods) config.sku_start_periods = {};
+                            config.sku_start_periods[sku] = startISO;
+                        }
                     }
                 });
                 
@@ -968,6 +999,10 @@
                         msgEl.innerHTML = '✅ Added ' + added + ' SKU(s)';
                         msgEl.style.color = '#2ecc71';
                         document.getElementById('bulkSkuInput').value = '';
+                        document.getElementById('bulkSkuStartDate').value = '';
+                        document.getElementById('bulkSkuStartTime').value = '00:00:00';
+                        document.getElementById('bulkSkuEndDate').value = '';
+                        document.getElementById('bulkSkuEndTime').value = '23:59:59';
                         reloadDashboard();
                     } else {
                         msgEl.innerHTML = '❌ Error: ' + (resp.message || 'Unknown');

@@ -1,0 +1,10 @@
+{
+  "skus": [
+    "B0961005_S_4891609190294"
+  ],
+  "check_interval_minutes": 30,
+  "monitor_start": "2026-07-12",
+  "monitor_end": "2026-12-31",
+  "discord_webhook_url": "",
+  "notify_on_restock": true
+}

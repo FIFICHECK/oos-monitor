@@ -205,7 +205,7 @@ def send_discord_notification(sku, product_name, status, prev_status, stock_leve
         print(f"  ❌ Failed to send Discord notification: {e}")
 
 def check_monitor_period(config, sku=None):
-    """Check if current time is within the monitoring period for a SKU (or globally)."""
+    """Check monitoring period for a SKU. Returns 'ok', 'pending' (not started), or 'expired' (past end)."""
     now = datetime.now()
     
     if sku:
@@ -216,7 +216,7 @@ def check_monitor_period(config, sku=None):
             try:
                 start_dt = datetime.fromisoformat(sku_start)
                 if now < start_dt:
-                    return False  # Not yet active
+                    return "pending"  # Not yet active
             except:
                 pass
         
@@ -227,7 +227,7 @@ def check_monitor_period(config, sku=None):
             try:
                 end_dt = datetime.fromisoformat(sku_end)
                 if now > end_dt:
-                    return False  # Expired
+                    return "expired"  # Past end
             except:
                 pass
     
@@ -237,10 +237,10 @@ def check_monitor_period(config, sku=None):
         try:
             end_dt = datetime.fromisoformat(monitor_end)
             if now > end_dt:
-                return False
+                return "expired"
         except:
             pass
-    return True
+    return "ok"
 
 def main():
     config = load_config()
@@ -267,7 +267,20 @@ def main():
         
         for sku in config['skus']:
             # Check per-SKU period
-            if not check_monitor_period(config, sku):
+            period_status = check_monitor_period(config, sku)
+            if period_status == "pending":
+                print(f"  ⏳ {sku}... [pending — starts after {config.get('sku_start_periods', {}).get(sku, '?')}]")
+                results.append({
+                    "sku": sku,
+                    "status": "pending",
+                    "reason": "Not yet started",
+                    "product_name": "",
+                    "price": "",
+                    "stock_level": None,
+                    "checked_at": datetime.now().isoformat()
+                })
+                continue
+            elif period_status == "expired":
                 print(f"  ⏰ {sku}... [expired — monitor period ended]")
                 results.append({
                     "sku": sku,
@@ -353,7 +366,7 @@ def main():
     
     # Add to history (keep last 100 events)
     for r in results:
-        if r["status"] in ("oos", "super_low_stock", "low_stock", "in_stock"):
+        if r["status"] in ("oos", "super_low_stock", "low_stock", "in_stock", "pending"):
             dashboard["history"].append({
                 "sku": r["sku"],
                 "product_name": r["product_name"],
@@ -371,10 +384,11 @@ def main():
     super_low_stock = sum(1 for r in results if r["status"] == "super_low_stock")
     low_stock = sum(1 for r in results if r["status"] == "low_stock")
     oos_count = sum(1 for r in results if r["status"] == "oos")
+    pending = sum(1 for r in results if r["status"] == "pending")
     expired = sum(1 for r in results if r["status"] == "expired")
     errors = sum(1 for r in results if r["status"] == "error")
     
-    print(f"\n✅ Done — In Stock: {in_stock}, Super Low: {super_low_stock}, Low: {low_stock}, OOS: {oos_count}, Expired: {expired}, Errors: {errors}")
+    print(f"\n✅ Done — In Stock: {in_stock}, Super Low: {super_low_stock}, Low: {low_stock}, OOS: {oos_count}, Pending: {pending}, Expired: {expired}, Errors: {errors}")
     
     # Output alerts
     if super_low_stock > 0:

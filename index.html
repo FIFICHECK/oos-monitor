@@ -383,27 +383,65 @@
         <!-- How to Add SKUs -->
         <div class="config-area">
             <details>
-                <summary>⚙️ How to Add / Remove SKUs</summary>
+                <summary>⚙️ Manage SKUs (Add / Remove / Set Period)</summary>
                 <div style="margin-top:10px;font-size:0.85rem;color:#ccc;">
-                    <p>Run these commands in terminal:</p>
-                    <pre>
-# Add SKU
-python3 ~/oos-monitor/manage_skus.py add B0961005_S_XXXXXXXXXXXX
-
-# List all
-python3 ~/oos-monitor/manage_skus.py list
-
-# Remove
-python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
+                    
+                    <!-- Token Setup -->
+                    <div style="background:#0f3460;padding:12px;border-radius:8px;margin-bottom:12px;">
+                        <p style="margin-bottom:6px;font-weight:bold;color:#888;font-size:0.8rem;">🔑 GitHub Token (enter once, stored in your browser)</p>
+                        <div style="display:flex;gap:8px;">
+                            <input type="password" id="gitTokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" 
+                                   style="flex:1;padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-family:monospace;font-size:0.8rem;">
+                            <button onclick="saveGitToken()" style="
+                                background:#3498db;color:#fff;border:none;padding:8px 16px;
+                                border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.8rem;
+                            ">💾 Save Token</button>
+                        </div>
+                        <div id="tokenStatus" style="margin-top:4px;font-size:0.75rem;color:#888;"></div>
+                    </div>
+                    
+                    <!-- Add SKU Form -->
+                    <div style="background:#0f3460;padding:12px;border-radius:8px;margin-bottom:12px;">
+                        <p style="margin-bottom:8px;font-weight:bold;color:#ffd700;">➕ Add SKU</p>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+                            <input type="text" id="newSkuInput" placeholder="B0961005_S_XXXXXXXXXXXX" 
+                                   style="flex:1;min-width:250px;padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-family:monospace;font-size:0.8rem;">
+                            <input type="datetime-local" id="newSkuPeriod" 
+                                   style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <button onclick="addSkuViaAPI()" style="
+                                background:#2ecc71;color:#fff;border:none;padding:8px 16px;
+                                border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.8rem;
+                            ">➕ Add</button>
+                        </div>
+                        <div style="margin-top:6px;font-size:0.75rem;color:#888;">
+                            Leave period blank to use default (current: <span id="defaultPeriodDisplay">--</span>)
+                        </div>
+                        <div id="addSkuMsg" style="margin-top:6px;font-size:0.8rem;"></div>
+                    </div>
+                    
+                    <!-- Bulk Add -->
+                    <div style="background:#0f3460;padding:12px;border-radius:8px;margin-bottom:12px;">
+                        <p style="margin-bottom:8px;font-weight:bold;color:#888;font-size:0.8rem;">📋 Bulk Add (one SKU per line)</p>
+                        <textarea id="bulkSkuInput" rows="3" placeholder="B0961005_S_XXXXXXXXXXXX&#10;B0961005_S_YYYYYYYYYYYY" 
+                                  style="width:100%;padding:8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-family:monospace;font-size:0.8rem;"></textarea>
+                        <button onclick="bulkAddSkuViaAPI()" style="
+                            margin-top:6px;background:#3498db;color:#fff;border:none;padding:8px 16px;
+                            border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.8rem;
+                        ">📋 Bulk Add</button>
+                        <span id="bulkAddMsg" style="margin-left:10px;font-size:0.8rem;"></span>
+                    </div>
                     
                     <hr style="border-color:#0f3460;margin:12px 0;">
                     
-                    <p>⏱️ Monitor Period: <strong id="settingsPeriod" style="color:#ffd700;">Loading...</strong></p>
+                    <p>⏱️ Global Monitor Period: <strong id="settingsPeriod" style="color:#ffd700;">Loading...</strong></p>
                     
                     <hr style="border-color:#0f3460;margin:12px 0;">
                     
+                    <!-- SKU List with Remove buttons -->
                     <p>Current SKUs (<span id="skuCount">0</span>):</p>
-                    <div id="skuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:200px;overflow-y:auto;"></div>
+                    <div id="skuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:250px;overflow-y:auto;"></div>
+                    
+                    <div id="apiStatusMsg" style="margin-top:8px;font-size:0.8rem;"></div>
                 </div>
             </details>
         </div>
@@ -646,8 +684,19 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                 expiredBody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:#666;">No completed SKUs yet</td></tr>';
             }
             
-            // SKU list display
+            // SKU list display with remove buttons
             document.getElementById('skuCount').textContent = config.skus.length;
+            document.getElementById('defaultPeriodDisplay').textContent = config.monitor_end || '--';
+            
+            // Token status
+            var tokenStatus = document.getElementById('tokenStatus');
+            if (getGitToken()) {
+                tokenStatus.innerHTML = '✅ Token configured';
+                tokenStatus.style.color = '#2ecc71';
+            } else {
+                tokenStatus.innerHTML = '⚠️ No token — enter your GitHub token above to enable Add/Remove';
+                tokenStatus.style.color = '#f39c12';
+            }
             
             // Settings period
             document.getElementById('settingsPeriod').textContent = periodText.replace('📅 ', '');
@@ -655,9 +704,10 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
             if (config.skus.length > 0) {
                 skuListEl.innerHTML = config.skus.map(function(sku, i) {
                     const pEnd = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
-                    return '<div style="padding:4px 0;border-bottom:1px solid #0f3460;display:flex;justify-content:space-between;">'
-                        + '<span>' + (i+1) + '. <code style="color:#3498db;">' + sku + '</code></span>'
-                        + '<span style="color:#ffd700;font-size:0.75rem;">⏱️ ' + pEnd + '</span>'
+                    return '<div style="padding:4px 0;border-bottom:1px solid #0f3460;display:flex;justify-content:space-between;align-items:center;">'
+                        + '<span>' + (i+1) + '. <code style="color:#3498db;">' + sku + '</code>'
+                        + ' <span style="color:#ffd700;font-size:0.75rem;">⏱️ ' + pEnd + '</span></span>'
+                        + '<button onclick="removeSkuViaAPI(\'' + sku + '\')" style="background:#e74c3c;color:#fff;border:none;padding:2px 8px;border-radius:3px;cursor:pointer;font-size:0.7rem;">✕</button>'
                         + '</div>';
                 }).join('');
             } else {
@@ -710,6 +760,222 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeSkuModal({target: document.getElementById('skuModal')});
         });
+        
+        // === GitHub API Functions for interactive SKU management ===
+        // 🔐 Token stored in localStorage — enter once in Settings
+        function getGitToken() {
+            return localStorage.getItem('oos_monitor_token') || '';
+        }
+        
+        function setGitToken(token) {
+            localStorage.setItem('oos_monitor_token', token);
+        }
+        
+        var GIT_OWNER = 'FIFICHECK';
+        var GIT_REPO = 'oos-monitor';
+        var GIT_BRANCH = 'main';
+        
+        function showApiMsg(msg, isError) {
+            var el = document.getElementById('apiStatusMsg');
+            el.innerHTML = msg;
+            el.style.color = isError ? '#e74c3c' : '#2ecc71';
+            setTimeout(function() { el.innerHTML = ''; }, 5000);
+        }
+        
+        function saveGitToken() {
+            var token = document.getElementById('gitTokenInput').value.trim();
+            if (!token) { document.getElementById('tokenStatus').innerHTML = '⚠️ Enter a token'; return; }
+            setGitToken(token);
+            document.getElementById('tokenStatus').innerHTML = '✅ Token saved!';
+            document.getElementById('tokenStatus').style.color = '#2ecc71';
+            document.getElementById('gitTokenInput').value = '';
+            setTimeout(function() { 
+                document.getElementById('tokenStatus').innerHTML = '';
+                location.reload();
+            }, 1000);
+        }
+        
+        function ensureToken() {
+            var token = getGitToken();
+            if (!token) {
+                showApiMsg('⚠️ Please enter your GitHub token in Settings first', true);
+                return false;
+            }
+            return true;
+        }
+        
+        function getConfigFromGit() {
+            return fetch('https://api.github.com/repos/' + GIT_OWNER + '/' + GIT_REPO + '/contents/config.json', {
+                headers: {'Authorization': 'token ' + getGitToken()}
+            }).then(function(r) { return r.json(); });
+        }
+        
+        function pushConfigToGit(content, sha, msg) {
+            return fetch('https://api.github.com/repos/' + GIT_OWNER + '/' + GIT_REPO + '/contents/config.json', {
+                method: 'PUT',
+                headers: {
+                    'Authorization': 'token ' + getGitToken(),
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: msg || 'Update SKU list from dashboard',
+                    content: content,
+                    sha: sha,
+                    branch: GIT_BRANCH
+                })
+            }).then(function(r) { return r.json(); });
+        }
+        
+        function reloadDashboard() {
+            setTimeout(function() { location.reload(); }, 1500);
+            showApiMsg('✅ Done! Refreshing page...');
+        }
+        
+        function addSkuViaAPI() {
+            if (!ensureToken()) return;
+            var sku = document.getElementById('newSkuInput').value.trim();
+            var period = document.getElementById('newSkuPeriod').value;
+            var msgEl = document.getElementById('addSkuMsg');
+            
+            if (!sku) {
+                msgEl.innerHTML = '⚠️ Please enter a SKU';
+                msgEl.style.color = '#e74c3c';
+                return;
+            }
+            if (!sku.startsWith('B0961005_S_')) {
+                msgEl.innerHTML = '⚠️ SKU should start with B0961005_S_';
+                msgEl.style.color = '#e74c3c';
+                return;
+            }
+            
+            msgEl.innerHTML = '⏳ Saving...';
+            msgEl.style.color = '#888';
+            
+            getConfigFromGit().then(function(data) {
+                var config = JSON.parse(atob(data.content));
+                var sha = data.sha;
+                
+                if (config.skus.indexOf(sku) !== -1) {
+                    msgEl.innerHTML = '⚠️ SKU already exists';
+                    msgEl.style.color = '#f39c12';
+                    return;
+                }
+                
+                config.skus.push(sku);
+                
+                if (period) {
+                    var periodISO = period.replace('T', 'T') + ':00';
+                    if (!config.sku_periods) config.sku_periods = {};
+                    config.sku_periods[sku] = periodISO;
+                }
+                
+                var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(config, null, 2))));
+                
+                return pushConfigToGit(newContent, sha, 'Add SKU ' + sku + ' from dashboard').then(function(resp) {
+                    if (resp.content) {
+                        msgEl.innerHTML = '✅ Added: ' + sku;
+                        msgEl.style.color = '#2ecc71';
+                        document.getElementById('newSkuInput').value = '';
+                        document.getElementById('newSkuPeriod').value = '';
+                        reloadDashboard();
+                    } else {
+                        msgEl.innerHTML = '❌ Error: ' + (resp.message || 'Unknown');
+                        msgEl.style.color = '#e74c3c';
+                    }
+                });
+            }).catch(function(e) {
+                msgEl.innerHTML = '❌ Error: ' + e.message;
+                msgEl.style.color = '#e74c3c';
+            });
+        }
+        
+        function bulkAddSkuViaAPI() {
+            if (!ensureToken()) return;
+            var text = document.getElementById('bulkSkuInput').value.trim();
+            var msgEl = document.getElementById('bulkAddMsg');
+            
+            if (!text) {
+                msgEl.innerHTML = '⚠️ Enter SKUs';
+                msgEl.style.color = '#e74c3c';
+                return;
+            }
+            
+            var skus = text.split('\n').map(function(s) { return s.trim(); }).filter(function(s) { return s.length > 0; });
+            if (skus.length === 0) {
+                msgEl.innerHTML = '⚠️ No valid SKUs';
+                msgEl.style.color = '#e74c3c';
+                return;
+            }
+            
+            msgEl.innerHTML = '⏳ Adding ' + skus.length + ' SKU(s)...';
+            msgEl.style.color = '#888';
+            
+            getConfigFromGit().then(function(data) {
+                var config = JSON.parse(atob(data.content));
+                var sha = data.sha;
+                var added = 0;
+                
+                skus.forEach(function(sku) {
+                    if (config.skus.indexOf(sku) === -1) {
+                        config.skus.push(sku);
+                        added++;
+                    }
+                });
+                
+                var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(config, null, 2))));
+                
+                return pushConfigToGit(newContent, sha, 'Bulk add ' + added + ' SKU(s) from dashboard').then(function(resp) {
+                    if (resp.content) {
+                        msgEl.innerHTML = '✅ Added ' + added + ' SKU(s)';
+                        msgEl.style.color = '#2ecc71';
+                        document.getElementById('bulkSkuInput').value = '';
+                        reloadDashboard();
+                    } else {
+                        msgEl.innerHTML = '❌ Error: ' + (resp.message || 'Unknown');
+                        msgEl.style.color = '#e74c3c';
+                    }
+                });
+            }).catch(function(e) {
+                msgEl.innerHTML = '❌ Error: ' + e.message;
+                msgEl.style.color = '#e74c3c';
+            });
+        }
+        
+        function removeSkuViaAPI(sku) {
+            if (!ensureToken()) return;
+            if (!confirm('Remove ' + sku + '?')) return;
+            
+            showApiMsg('⏳ Removing ' + sku + '...');
+            
+            getConfigFromGit().then(function(data) {
+                var config = JSON.parse(atob(data.content));
+                var sha = data.sha;
+                
+                var idx = config.skus.indexOf(sku);
+                if (idx === -1) {
+                    showApiMsg('⚠️ SKU not found', true);
+                    return;
+                }
+                
+                config.skus.splice(idx, 1);
+                
+                if (config.sku_periods && config.sku_periods[sku]) {
+                    delete config.sku_periods[sku];
+                }
+                
+                var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(config, null, 2))));
+                
+                return pushConfigToGit(newContent, sha, 'Remove SKU ' + sku + ' from dashboard').then(function(resp) {
+                    if (resp.content) {
+                        reloadDashboard();
+                    } else {
+                        showApiMsg('❌ Error: ' + (resp.message || 'Unknown'), true);
+                    }
+                });
+            }).catch(function(e) {
+                showApiMsg('❌ Error: ' + e.message, true);
+            });
+        }
         
         loadData();
         setInterval(loadData, 30000);

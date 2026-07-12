@@ -183,7 +183,7 @@
         td.nowrap, td.sku-cell, td.tag-cell, td.price-cell, td.link-cell, td.period-cell {
             white-space: nowrap;
         }
-        td.sku-cell code { font-size: 0.75rem; cursor: pointer; word-break: break-all; }
+        td.sku-cell code { cursor: pointer; }
         td.sku-cell code:hover { color: #fff; text-decoration: underline; }
         td.name-cell { word-break: break-word; }
         
@@ -391,6 +391,7 @@
             .config-area textarea { font-size: 0.7rem !important; padding: 6px 8px !important; }
             .toolbar .table-search { min-width: 100px; font-size: 0.65rem; }
             .toolbar .dl-btn { font-size: 0.65rem; padding: 4px 8px; }
+            #skuListDisplay { font-size: 0.6rem !important; }
         }
         
         @media (max-width: 480px) {
@@ -401,6 +402,7 @@
             .stat-card h3 { font-size: 0.55rem; }
             .stat-card .value { font-size: 1rem; }
             .table-scroll { margin-bottom: 6px; }
+            #skuListDisplay { font-size: 0.5rem !important; }
         }
     </style>
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>

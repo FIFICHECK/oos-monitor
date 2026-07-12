@@ -311,12 +311,40 @@
             color: #2ecc71;
         }
         
+        /* Table scroll wrapper for mobile */
+        .table-scroll {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 10px;
+        }
+        .table-scroll table {
+            margin-bottom: 0;
+            min-width: 600px;
+        }
+        
         @media (max-width: 768px) {
             .header h1 { font-size: 1.3rem; }
+            .header p { font-size: 0.8rem; }
             .stat-card .value { font-size: 1.5rem; }
-            th, td { padding: 8px 10px; font-size: 0.8rem; }
+            .stat-card { padding: 12px; }
+            .stats { gap: 8px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+            th, td { padding: 6px 6px; font-size: 0.7rem; }
             .marquee-label { font-size: 0.7rem; padding: 0 10px; }
+            .marquee-item { font-size: 0.8rem; margin: 0 15px; }
             .footer .version-badge { flex-wrap: wrap; justify-content: center; gap: 6px; padding: 10px 14px; }
+            .main { padding: 10px 10px; }
+            .section-title { font-size: 0.95rem; }
+            .config-area { padding: 10px; }
+            .config-area input,
+            .config-area textarea { font-size: 0.7rem !important; padding: 6px 8px !important; }
+        }
+        @media (max-width: 480px) {
+            .header h1 { font-size: 1.1rem; }
+            th, td { padding: 4px 4px; font-size: 0.65rem; }
+            .stats { grid-template-columns: repeat(3, 1fr); }
+            .stat-card h3 { font-size: 0.65rem; }
+            .stat-card .value { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -385,7 +413,7 @@
                 <tr><td colspan="5" style="text-align:center;color:#666;">No low stock items (10-29 PCS)</td></tr>
             </tbody>
         </table>
-        
+        </div>
         <!-- Super Low Stock Section (< 10 PCS) -->
         <h2 class="section-title" style="color:#e74c3c;" id="superLowStockTitle">🔴 Super Low Stock (尚餘少量-不足10PCS)</h2>
         <table>
@@ -402,7 +430,7 @@
                 <tr><td colspan="5" style="text-align:center;color:#666;">No super low stock items (&lt; 10 PCS)</td></tr>
             </tbody>
         </table>
-        
+        </div>
         <!-- OOS Section -->
         <h2 class="section-title red">🔴 Out of Stock</h2>
         <table>
@@ -419,7 +447,7 @@
                 <tr><td colspan="5" style="text-align:center;color:#666;">No OOS items</td></tr>
             </tbody>
         </table>
-        
+        </div>
         <!-- All SKUs -->
         <h2 class="section-title blue">📋 All Monitored SKUs</h2>
         <table>
@@ -439,7 +467,7 @@
                 <tr><td colspan="8" style="text-align:center;color:#666;">No data yet</td></tr>
             </tbody>
         </table>
-        
+        </div>
         <!-- All Pending Monitored SKUs -->
         <h2 class="section-title" style="color:#888;">⏳ All Pending Monitored SKUs Table</h2>
         <table>
@@ -459,7 +487,7 @@
                 <tr><td colspan="8" style="text-align:center;color:#666;">No pending SKUs</td></tr>
             </tbody>
         </table>
-        
+        </div>
         <!-- Monitored SKUs History (completed/expired SKUs) -->
         <h2 class="section-title" style="color:#888;">📜 Monitored SKUs History</h2>
         <table>
@@ -477,7 +505,7 @@
                 <tr><td colspan="6" style="text-align:center;color:#666;">No completed SKUs yet</td></tr>
             </tbody>
         </table>
-        
+        </div>
         <!-- Status Changes (hidden, used for modal popup data) -->
         <div id="hiddenHistoryContainer" style="display:none;"></div>
         

@@ -528,6 +528,10 @@
             }
         }
         
+        function maskStoreId(sku) {
+            return sku.replace('B0961005', 'BXXXXXXX');
+        }
+        
         function updateDashboard(data, config) {
             const oosCount = data.oos_skus ? data.oos_skus.length : 0;
             const superLowStockCount = data.super_low_stock_skus ? data.super_low_stock_skus.length : 0;
@@ -635,7 +639,7 @@
                             ? '<span class="stock-count">' + item.sku.stock_level + '</span>' 
                             : '';
                         items.push('<span class="marquee-item ' + cls + '">'
-                            + icon + ' ' + (item.sku.product_name || item.sku.sku)
+                            + icon + ' ' + (item.sku.product_name || maskStoreId(item.sku.sku))
                             + ' ' + stockHtml
                             + (item.sku.price ? ' <span class="price">$' + item.sku.price + '</span>' : '')
                             + ' <a href="https://www.hktvmall.com/hktv/p/' + item.sku.sku + '" target="_blank" style="color:#3498db;font-size:0.75rem;">🔗</a>'
@@ -736,7 +740,7 @@
                     if (notYetStarted) {
                         // Future start date — show as Not Started
                         var startDisplay = new Date(config.sku_start_periods[sku]).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
-                        allRows.push('<tr style="opacity:0.6;"><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
+                        allRows.push('<tr style="opacity:0.6;"><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + maskStoreId(sku) + '</code></td>'
                             + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
                             + '<td class="tag-cell"><span class="tag" style="background:#888;color:#fff;">⏳ Pending</span></td>'
                             + '<td class="price-cell">--</td>'
@@ -754,7 +758,7 @@
                         var stockDisplay = s.stock_level !== null && s.stock_level !== undefined 
                             ? s.stock_level + ' 件' : '--';
                         
-                        allRows.push('<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
+                        allRows.push('<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + maskStoreId(sku) + '</code></td>'
                             + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                             + '<td class="tag-cell">' + stockDisplay + '</td>'
                             + '<td class="tag-cell">' + tag + '</td>'
@@ -763,7 +767,7 @@
                             + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>');
                     } else {
                         // New SKU — not yet in dashboard_data.json (Pending, active now)
-                        allRows.push('<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
+                        allRows.push('<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + maskStoreId(sku) + '</code></td>'
                             + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
                             + '<td class="tag-cell"><span class="tag tag-error">Pending</span></td>'
                             + '<td class="price-cell">--</td>'
@@ -830,7 +834,7 @@
                 skuListEl.innerHTML = config.skus.map(function(sku, i) {
                     const pEnd = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
                     return '<div style="padding:4px 0;border-bottom:1px solid #0f3460;display:flex;justify-content:space-between;align-items:center;">'
-                        + '<span>' + (i+1) + '. <code style="color:#3498db;">' + sku + '</code>'
+                        + '<span>' + (i+1) + '. <code style="color:#3498db;">' + maskStoreId(sku) + '</code>'
                         + ' <span style="color:#ffd700;font-size:0.75rem;">⏱️ ' + pEnd + '</span></span>'
                         + '<button onclick="removeSkuViaAPI(\'' + sku + '\')" style="background:#e74c3c;color:#fff;border:none;padding:2px 8px;border-radius:3px;cursor:pointer;font-size:0.7rem;">✕</button>'
                         + '</div>';
@@ -846,7 +850,7 @@
             const title = document.getElementById('modalTitle');
             const body = document.getElementById('modalBody');
             
-            title.textContent = '📜 Status History: ' + sku;
+            title.textContent = '📜 Status History: ' + maskStoreId(sku);
             body.innerHTML = '<div class="modal-no-history">Loading...</div>';
             modal.classList.add('show');
             

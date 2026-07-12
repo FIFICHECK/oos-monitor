@@ -785,11 +785,11 @@
                     var periodStart = (config.sku_start_periods && config.sku_start_periods[sku]) || '';
                     var periodDisplay = '';
                     if (periodStart) {
-                        periodDisplay += new Date(periodStart).toLocaleString('zh-HK', {year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+                        periodDisplay += new Date(periodStart).toLocaleString('zh-HK', {year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false});
                         periodDisplay += ' - ';
                     }
                     if (periodEnd !== '--') {
-                        periodDisplay += new Date(periodEnd).toLocaleString('zh-HK', {year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+                        periodDisplay += new Date(periodEnd).toLocaleString('zh-HK', {year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false});
                     } else {
                         periodDisplay += '--';
                     }

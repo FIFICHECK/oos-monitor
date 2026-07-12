@@ -746,8 +746,8 @@
                         // Has data from dashboard_data.json
                         var tag = '';
                         if (s.status === 'oos') tag = '<span class="tag tag-oos">OOS</span>';
-                        else if (s.status === 'super_low_stock') tag = '<span class="tag" style="background:#e74c3c;color:#fff;">🔴 ' + (s.stock_level || 'SuperLow') + '</span>';
-                        else if (s.status === 'low_stock') tag = '<span class="tag tag-low">' + (s.stock_level || 'Low') + '</span>';
+                        else if (s.status === 'super_low_stock') tag = '<span class="tag" style="background:#e74c3c;color:#fff;">🔴 Super Low</span>';
+                        else if (s.status === 'low_stock') tag = '<span class="tag tag-low">Low</span>';
                         else if (s.status === 'in_stock') tag = '<span class="tag tag-stock">OK</span>';
                         else tag = '<span class="tag tag-error">Err</span>';
                         

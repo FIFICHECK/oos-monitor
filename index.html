@@ -430,8 +430,12 @@
                 <div class="value red" id="oosCount">0</div>
             </div>
             <div class="stat-card">
-                <h3>⏱️ Next Cron Check</h3>
+                <h3>⏱️ Next Cron</h3>
                 <div class="value" style="font-size:1rem;color:#3498db;font-family:monospace" id="nextCronTimer">--</div>
+            </div>
+            <div class="stat-card">
+                <h3>🔄 Page Refresh</h3>
+                <div class="value" style="font-size:1rem;color:#2ecc71;font-family:monospace" id="pageRefreshTimer">00:30</div>
             </div>
             <div class="stat-card">
                 <h3>Last Checked</h3>
@@ -745,6 +749,7 @@
                 const dashData = await dashResp.json();
                 const config = await cfgResp.json();
                 updateDashboard(dashData, config);
+                if (typeof resetRefreshTimer === 'function') resetRefreshTimer();
 
             } catch (e) {
                 console.error('Failed to load data:', e);
@@ -821,8 +826,14 @@
             document.getElementById('superLowStockCount').textContent = superLowStockCount;
             document.getElementById('pendingCount').textContent = pendingCount;
             document.getElementById('inStockCount').textContent = activeTotal - oosCount - lowStockCount;
-            document.getElementById('lastChecked').textContent = data.last_checked 
-                ? new Date(data.last_checked).toLocaleString('zh-HK') : '--';
+            var lcEl = document.getElementById('lastChecked');
+                if (data.last_checked) {
+                    lcEl.textContent = new Date(data.last_checked).toLocaleString('zh-HK');
+                    lcEl.dataset.iso = data.last_checked;
+                } else {
+                    lcEl.textContent = '--';
+                    lcEl.dataset.iso = '';
+                }
             
             // Marquee
             const marqueeContent = document.getElementById('marqueeContent');
@@ -1438,15 +1449,25 @@
         }
         
         loadData();
-            // Cron countdown timer - calculate next check based on last_checked + 30min
+            // Cron countdown (30 min) + page refresh countdown (30 sec)
     var cronInterval = 30; // minutes
     var cronEl = document.getElementById('nextCronTimer');
+    var refreshEl = document.getElementById('pageRefreshTimer');
+    var refreshSeconds = 30;
+    
+    function resetRefreshTimer() {
+        refreshSeconds = 30;
+        if (refreshEl) refreshEl.textContent = '00:30';
+    }
+    
     function updateCronCountdown() {
         var lastEl = document.getElementById('lastChecked');
-        if (!lastEl || lastEl.textContent === '--' || !cronEl) return;
-        // Parse last checked time
-        var lastText = lastEl.textContent;
-        var lastDate = new Date(lastText);
+        if (!cronEl) return;
+        if (!lastEl || !lastEl.dataset.iso) {
+            cronEl.textContent = '--';
+            return;
+        }
+        var lastDate = new Date(lastEl.dataset.iso);
         if (isNaN(lastDate.getTime())) {
             cronEl.textContent = '--';
             return;
@@ -1455,8 +1476,7 @@
         var now = new Date();
         var diff = nextDate - now;
         if (diff < 0) {
-            // Cron check is overdue - show that next check should have happened
-            cronEl.textContent = '⏳ 即將檢查...';
+            cronEl.textContent = '⏳';
             cronEl.style.color = '#f39c12';
             return;
         }
@@ -1465,7 +1485,19 @@
         cronEl.textContent = mins.toString().padStart(2, '0') + ':' + secs.toString().padStart(2, '0');
         cronEl.style.color = diff < 60000 ? '#2ecc71' : '#3498db';
     }
+    
+    function updateRefreshTimer() {
+        refreshSeconds--;
+        if (refreshSeconds < 0) refreshSeconds = 30;
+        if (refreshEl) {
+            var m = Math.floor(refreshSeconds / 60);
+            var s = refreshSeconds % 60;
+            refreshEl.textContent = m.toString().padStart(2, '0') + ':' + s.toString().padStart(2, '0');
+        }
+    }
+    
     setInterval(updateCronCountdown, 1000);
+    setInterval(updateRefreshTimer, 1000);
     setInterval(loadData, 30000);
     </script>
 </body>

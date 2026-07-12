@@ -168,8 +168,48 @@
         td.nowrap, td.sku-cell, td.tag-cell, td.price-cell, td.link-cell, td.period-cell {
             white-space: nowrap;
         }
-        td.sku-cell code { font-size: 0.75rem; }
+        td.sku-cell code { font-size: 0.75rem; cursor: pointer; }
+        td.sku-cell code:hover { color: #fff; text-decoration: underline; }
         td.name-cell { word-break: break-word; }
+        
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed; z-index: 1000;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            justify-content: center; align-items: center;
+        }
+        .modal-overlay.show { display: flex; }
+        .modal-box {
+            background: #16213e;
+            border: 1px solid #0f3460;
+            border-radius: 12px;
+            width: 90%; max-width: 700px;
+            max-height: 80vh;
+            display: flex; flex-direction: column;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .modal-header {
+            padding: 15px 20px;
+            border-bottom: 2px solid #0f3460;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .modal-header h3 { font-size: 1rem; color: #ffd700; margin: 0; }
+        .modal-header .close-btn {
+            background: none; border: none; color: #888;
+            font-size: 1.5rem; cursor: pointer; padding: 0 5px;
+        }
+        .modal-header .close-btn:hover { color: #e74c3c; }
+        .modal-body {
+            padding: 15px 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+        .modal-body table { margin-bottom: 0; }
+        .modal-body table th { font-size: 0.7rem; padding: 6px 8px; }
+        .modal-body table td { font-size: 0.8rem; padding: 5px 8px; }
+        .modal-no-history { text-align: center; padding: 30px; color: #666; }
         tr:hover { background: rgba(233, 69, 96, 0.05); }
         
         .tag {
@@ -364,6 +404,19 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
         </div>
     </div>
     
+    <!-- Status History Modal -->
+    <div class="modal-overlay" id="skuModal" onclick="closeSkuModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modalTitle">📜 Status Change History</h3>
+                <button class="close-btn" onclick="closeSkuModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <div class="modal-no-history">Loading...</div>
+            </div>
+        </div>
+    </div>
+    
     <div class="footer">
         OOS Monitor v1.1 | Auto-refreshes every 30s | Low stock threshold: &lt; 10
     </div>
@@ -530,7 +583,7 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                         ? new Date(periodEnd).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'})
                         : '--';
                     
-                    return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
+                    return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                         + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                         + '<td class="tag-cell">' + stockDisplay + '</td>'
                         + '<td class="tag-cell">' + tag + '</td>'
@@ -544,7 +597,7 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                     const periodDisplay = periodEnd !== '--' 
                         ? new Date(periodEnd).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'})
                         : '--';
-                    return '<tr><td class="sku-cell"><code>' + sku + '</code></td>'
+                    return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
                         + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
                         + '<td class="tag-cell"><span class="tag tag-error">Pending</span></td>'
                         + '<td class="price-cell">--</td>'
@@ -593,6 +646,52 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                 skuListEl.innerHTML = '<div style="color:#e74c3c;">⚠️ No SKUs configured</div>';
             }
         }
+        
+        // Modal functions
+        function showSkuHistory(sku) {
+            const modal = document.getElementById('skuModal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            
+            title.textContent = '📜 Status History: ' + sku;
+            body.innerHTML = '<div class="modal-no-history">Loading...</div>';
+            modal.classList.add('show');
+            
+            fetch('dashboard_data.json?' + Date.now()).then(function(r) { return r.json(); }).then(function(data) {
+                const history = (data.history || []).filter(function(h) { return h.sku === sku; });
+                
+                if (history.length === 0) {
+                    body.innerHTML = '<div class="modal-no-history">📭 No status changes recorded yet</div>';
+                } else {
+                    const recent = history.slice().reverse();
+                    let html = '<table><thead><tr><th style="width:25%;">Time</th><th style="width:20%;">Status</th><th style="width:55%;">Detail</th></tr></thead><tbody>';
+                    html += recent.map(function(h) {
+                        var tag = '';
+                        if (h.status === 'oos') tag = '<span class="tag tag-oos">OOS</span>';
+                        else if (h.status === 'low_stock') tag = '<span class="tag tag-low">Low (' + (h.stock_level || '?') + ')</span>';
+                        else if (h.status === 'in_stock') tag = '<span class="tag tag-stock">In Stock</span>';
+                        else tag = '<span>' + h.status + '</span>';
+                        
+                        var time = new Date(h.checked_at).toLocaleString('zh-HK');
+                        var detail = h.product_name || '--';
+                        return '<tr><td class="time nowrap">' + time + '</td><td>' + tag + '</td><td class="name-cell">' + detail + '</td></tr>';
+                    }).join('');
+                    html += '</tbody></table>';
+                    body.innerHTML = html;
+                }
+            }).catch(function(e) {
+                body.innerHTML = '<div class="modal-no-history">⚠️ Error loading history</div>';
+            });
+        }
+        
+        function closeSkuModal(event) {
+            if (event && event.target !== document.getElementById('skuModal')) return;
+            document.getElementById('skuModal').classList.remove('show');
+        }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeSkuModal({target: document.getElementById('skuModal')});
+        });
         
         loadData();
         setInterval(loadData, 30000);

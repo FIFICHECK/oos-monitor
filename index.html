@@ -513,7 +513,17 @@
             const totalSku = config.skus ? config.skus.length : 0;
             // Count expired to subtract from active count
             var expiredCount = data.all_skus ? data.all_skus.filter(function(s) { return s.status === 'expired'; }).length : 0;
-            var activeTotal = totalSku - expiredCount;
+            // Count SKUs with future start dates (not yet active)
+            var notStartedCount = 0;
+            if (config.sku_start_periods) {
+                var now = new Date();
+                config.skus.forEach(function(sku) {
+                    if (config.sku_start_periods[sku] && new Date(config.sku_start_periods[sku]) > now) {
+                        notStartedCount++;
+                    }
+                });
+            }
+            var activeTotal = totalSku - expiredCount - notStartedCount;
             
             // Header
             const statusEl = document.getElementById('headerStatus');
@@ -665,7 +675,25 @@
                         ? new Date(periodEnd).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'})
                         : '--';
                     
-                    if (s) {
+                    // Check if SKU has a future start date (not yet started)
+                    var notYetStarted = false;
+                    if (config.sku_start_periods && config.sku_start_periods[sku]) {
+                        var startDt = new Date(config.sku_start_periods[sku]);
+                        if (startDt > new Date()) {
+                            notYetStarted = true;
+                        }
+                    }
+                    
+                    if (notYetStarted) {
+                        // Future start date — show as Not Started
+                        var startDisplay = new Date(config.sku_start_periods[sku]).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+                        allRows.push('<tr style="opacity:0.6;"><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
+                            + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
+                            + '<td class="tag-cell"><span class="tag" style="background:#888;color:#fff;">⏳ Pending</span></td>'
+                            + '<td class="price-cell">--</td>'
+                            + '<td class="period-cell" style="color:#888;font-size:0.8rem;">Starts ' + startDisplay + '</td>'
+                            + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>');
+                    } else if (s) {
                         // Has data from dashboard_data.json
                         var tag = '';
                         if (s.status === 'oos') tag = '<span class="tag tag-oos">OOS</span>';
@@ -684,7 +712,7 @@
                             + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + periodDisplay + '</td>'
                             + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>');
                     } else {
-                        // New SKU — not yet in dashboard_data.json
+                        // New SKU — not yet in dashboard_data.json (Pending, active now)
                         allRows.push('<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
                             + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
                             + '<td class="tag-cell"><span class="tag tag-error">Pending</span></td>'

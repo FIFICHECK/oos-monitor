@@ -54,10 +54,20 @@ def extract_stock_level(html_content):
         return int(match.group(1))
     return None
 
-def extract_price(body_text):
-    """Extract price from page text."""
-    prices = re.findall(r'\$\s*([0-9,]+\.[0-9]{2})', body_text)
-    return prices[0] if prices else ""
+def extract_price(page, add_to_cart_buttons):
+    """Extract selling price from add-to-cart button's data-price attribute."""
+    try:
+        if add_to_cart_buttons.count() > 0:
+            price_attr = add_to_cart_buttons.first.get_attribute("data-price")
+            if price_attr:
+                # data-price format: "$ 359.00" → extract "359.00"
+                import re
+                match = re.search(r'([0-9,]+\.[0-9]{2})', price_attr)
+                if match:
+                    return match.group(1)
+    except:
+        pass
+    return ""
 
 def check_sku(page, sku_id):
     """Check if a SKU is in stock, low stock, or OOS on HKTVmall."""
@@ -107,7 +117,7 @@ def check_sku(page, sku_id):
             "status": status,
             "reason": reason,
             "product_name": product_name[:100],
-            "price": extract_price(body_text),
+            "price": extract_price(page, add_to_cart_buttons),
             "stock_level": stock_level,
             "checked_at": datetime.now().isoformat()
         }
@@ -187,15 +197,28 @@ def send_discord_notification(sku, product_name, status, prev_status, stock_leve
 
 def check_monitor_period(config, sku=None):
     """Check if current time is within the monitoring period for a SKU (or globally)."""
-    # First check per-SKU period
+    now = datetime.now()
+    
     if sku:
-        periods = config.get("sku_periods", {})
-        sku_end = periods.get(sku)
+        # Check per-SKU start period (if set, only check after this time)
+        start_periods = config.get("sku_start_periods", {})
+        sku_start = start_periods.get(sku)
+        if sku_start:
+            try:
+                start_dt = datetime.fromisoformat(sku_start)
+                if now < start_dt:
+                    return False  # Not yet active
+            except:
+                pass
+        
+        # Check per-SKU end period
+        end_periods = config.get("sku_periods", {})
+        sku_end = end_periods.get(sku)
         if sku_end:
             try:
                 end_dt = datetime.fromisoformat(sku_end)
-                if datetime.now() > end_dt:
-                    return False
+                if now > end_dt:
+                    return False  # Expired
             except:
                 pass
     
@@ -204,7 +227,7 @@ def check_monitor_period(config, sku=None):
     if monitor_end:
         try:
             end_dt = datetime.fromisoformat(monitor_end)
-            if datetime.now() > end_dt:
+            if now > end_dt:
                 return False
         except:
             pass

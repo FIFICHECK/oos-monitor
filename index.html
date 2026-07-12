@@ -897,8 +897,8 @@
                 if (pendingSet[sku]) {
                     var startD = config.sku_start_periods[sku] || '';
                     var endD = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
-                    var startShort = startD ? new Date(startD).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}) : '--';
-                    var endShort = endD !== '--' ? new Date(endD).toLocaleString('zh-HK', {month:'short', day:'numeric'}) : '--';
+                    var startShort = startD ? new Date(startD).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
+                    var endShort = endD !== '--' ? new Date(endD).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     pendingSkus.push({sku: sku, start: startShort, end: endShort});
                 }
             });

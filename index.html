@@ -1198,7 +1198,14 @@
         function ensureToken() {
             var token = getGitToken();
             if (!token) {
-                showApiMsg('⚠️ Please enter your GitHub token in Settings first', true);
+                showApiMsg('⚠️ 未設定 Token！請先喺上方 ⚙️ Settings 輸入 GitHub Token，㩒「Save Token」見到 ✅ Token configured 之後再入 SKU', true);
+                // Scroll to settings section and highlight it
+                var settings = document.querySelector('.config-area');
+                if (settings) {
+                    settings.style.border = '2px solid #e74c3c';
+                    settings.scrollIntoView({behavior:'smooth', block:'center'});
+                    setTimeout(function() { settings.style.border = '1px solid #0f3460'; }, 4000);
+                }
                 return false;
             }
             return true;

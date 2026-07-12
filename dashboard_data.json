@@ -1,6 +1,6 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-12T17:10:49.013279",
+  "last_checked": "2026-07-12T17:11:45.098917",
   "history": [
     {
       "sku": "B0961005_S_4891609190294",
@@ -194,6 +194,41 @@
       "status": "in_stock",
       "stock_level": 633,
       "checked_at": "2026-07-12T17:10:48.931379"
+    },
+    {
+      "sku": "B0961005_S_4891609190294",
+      "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
+      "status": "in_stock",
+      "stock_level": 63,
+      "checked_at": "2026-07-12T17:11:30.102552"
+    },
+    {
+      "sku": "B0961005_S_4897020276715",
+      "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
+      "status": "in_stock",
+      "stock_level": 131,
+      "checked_at": "2026-07-12T17:11:33.879813"
+    },
+    {
+      "sku": "B0961005_S_9311770608084",
+      "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期:04/2027】",
+      "status": "in_stock",
+      "stock_level": 180,
+      "checked_at": "2026-07-12T17:11:37.510623"
+    },
+    {
+      "sku": "B0961005_S_9311770615426",
+      "product_name": "Swisse | ULTIBOOST 維他命B+ 60片裝【香港行貨】【最佳使用日期:08/2027】",
+      "status": "in_stock",
+      "stock_level": 25,
+      "checked_at": "2026-07-12T17:11:41.284571"
+    },
+    {
+      "sku": "B0961005_S_9556174902219",
+      "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
+      "status": "in_stock",
+      "stock_level": 630,
+      "checked_at": "2026-07-12T17:11:45.019331"
     }
   ],
   "low_stock_skus": [],
@@ -204,7 +239,7 @@
       "status": "in_stock",
       "stock_level": 63,
       "price": "359.00",
-      "checked_at": "2026-07-12T17:10:34.176386"
+      "checked_at": "2026-07-12T17:11:30.102552"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -212,7 +247,7 @@
       "status": "in_stock",
       "stock_level": 131,
       "price": "178.00",
-      "checked_at": "2026-07-12T17:10:37.942126"
+      "checked_at": "2026-07-12T17:11:33.879813"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -220,7 +255,7 @@
       "status": "in_stock",
       "stock_level": 180,
       "price": "149.00",
-      "checked_at": "2026-07-12T17:10:41.541013"
+      "checked_at": "2026-07-12T17:11:37.510623"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -228,15 +263,15 @@
       "status": "in_stock",
       "stock_level": 25,
       "price": "114.00",
-      "checked_at": "2026-07-12T17:10:45.147993"
+      "checked_at": "2026-07-12T17:11:41.284571"
     },
     {
       "sku": "B0961005_S_9556174902219",
       "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
       "status": "in_stock",
-      "stock_level": 633,
+      "stock_level": 630,
       "price": "15.50",
-      "checked_at": "2026-07-12T17:10:48.931379"
+      "checked_at": "2026-07-12T17:11:45.019331"
     }
   ]
 }

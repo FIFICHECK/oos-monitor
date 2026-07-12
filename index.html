@@ -97,7 +97,7 @@
             font-size: 1rem;
         }
         
-        .main { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .main { max-width: 1400px; margin: 0 auto; padding: 20px; }
         
         .stats {
             display: grid;
@@ -147,21 +147,29 @@
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 10px;
+            table-layout: fixed;
         }
         th {
             background: #0f3460;
-            padding: 12px 15px;
+            padding: 8px 8px;
             text-align: left;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #aaa;
             text-transform: uppercase;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
         td {
-            padding: 10px 15px;
+            padding: 6px 8px;
             border-bottom: 1px solid #0f3460;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            word-break: break-word;
         }
+        td.nowrap, td.sku-cell, td.tag-cell, td.price-cell, td.link-cell, td.period-cell {
+            white-space: nowrap;
+        }
+        td.sku-cell code { font-size: 0.75rem; }
+        td.name-cell { word-break: break-word; }
         tr:hover { background: rgba(233, 69, 96, 0.05); }
         
         .tag {
@@ -263,11 +271,11 @@
         <table>
             <thead>
                 <tr>
-                    <th>SKU</th>
-                    <th>Product Name</th>
-                    <th>庫存</th>
-                    <th>Price</th>
-                    <th>Link</th>
+                    <th style="width:22%;">SKU</th>
+                    <th style="width:38%;">Product Name</th>
+                    <th style="width:10%;">庫存</th>
+                    <th style="width:12%;">Price</th>
+                    <th style="width:8%;">Link</th>
                 </tr>
             </thead>
             <tbody id="lowStockBody">
@@ -280,11 +288,11 @@
         <table>
             <thead>
                 <tr>
-                    <th>SKU</th>
-                    <th>Product Name</th>
-                    <th>Status</th>
-                    <th>Checked</th>
-                    <th>Link</th>
+                    <th style="width:22%;">SKU</th>
+                    <th style="width:38%;">Product Name</th>
+                    <th style="width:10%;">Status</th>
+                    <th style="width:14%;">Checked</th>
+                    <th style="width:8%;">Link</th>
                 </tr>
             </thead>
             <tbody id="oosTableBody">
@@ -297,13 +305,13 @@
         <table>
             <thead>
                 <tr>
-                    <th>SKU</th>
-                    <th>Product Name</th>
-                    <th>庫存</th>
-                    <th>Status</th>
-                    <th>Price</th>
-                    <th>Monitor Until</th>
-                    <th>Link</th>
+                    <th style="width:22%;">SKU</th>
+                    <th style="width:30%;">Product Name</th>
+                    <th style="width:8%;">庫存</th>
+                    <th style="width:8%;">Status</th>
+                    <th style="width:10%;">Price</th>
+                    <th style="width:14%;">Monitor Until</th>
+                    <th style="width:8%;">Link</th>
                 </tr>
             </thead>
             <tbody id="allSkuBody">
@@ -316,10 +324,10 @@
         <table>
             <thead>
                 <tr>
-                    <th>Time</th>
-                    <th>SKU</th>
-                    <th>Product</th>
-                    <th>Change</th>
+                    <th style="width:20%;">Time</th>
+                    <th style="width:25%;">SKU</th>
+                    <th style="width:40%;">Product</th>
+                    <th style="width:15%;">Change</th>
                 </tr>
             </thead>
             <tbody id="historyBody">
@@ -475,13 +483,13 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
             // Low Stock Table
             const lowBody = document.getElementById('lowStockBody');
             if (lowStockCount > 0 && data.low_stock_skus) {
-                lowBody.innerHTML = data.low_stock_skus.map(s => 
-                    '<tr><td><code>' + s.sku + '</code></td>'
-                    + '<td>' + (s.product_name || 'N/A') + '</td>'
-                    + '<td><span class="tag tag-low">' + s.stock_level + ' 件</span></td>'
-                    + '<td>' + (s.price ? '$' + s.price : '--') + '</td>'
-                    + '<td><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>'
-                ).join('');
+                lowBody.innerHTML = data.low_stock_skus.map(function(s) {
+                    return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
+                    + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
+                    + '<td class="tag-cell"><span class="tag tag-low">' + s.stock_level + ' 件</span></td>'
+                    + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
+                    + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>';
+                }).join('');
                 document.getElementById('lowStockTitle').style.display = 'block';
             } else {
                 lowBody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#2ecc71;">✅ No low stock items</td></tr>';
@@ -491,13 +499,13 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
             // OOS Table
             const oosBody = document.getElementById('oosTableBody');
             if (oosCount > 0 && data.oos_skus) {
-                oosBody.innerHTML = data.oos_skus.map(s => 
-                    '<tr><td><code>' + s.sku + '</code></td>'
-                    + '<td>' + (s.product_name || 'N/A') + '</td>'
-                    + '<td><span class="tag tag-oos">OOS</span></td>'
-                    + '<td class="time">' + (s.checked_at ? new Date(s.checked_at).toLocaleString('zh-HK') : '--') + '</td>'
-                    + '<td><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>'
-                ).join('');
+                oosBody.innerHTML = data.oos_skus.map(function(s) {
+                    return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
+                    + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
+                    + '<td class="tag-cell"><span class="tag tag-oos">OOS</span></td>'
+                    + '<td class="time nowrap">' + (s.checked_at ? new Date(s.checked_at).toLocaleString('zh-HK') : '--') + '</td>'
+                    + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>';
+                }).join('');
             } else {
                 oosBody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#2ecc71;">✅ All products in stock</td></tr>';
             }
@@ -522,13 +530,13 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                         ? new Date(periodEnd).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'})
                         : '--';
                     
-                    return '<tr><td><code>' + s.sku + '</code></td>'
-                        + '<td>' + (s.product_name || 'N/A') + '</td>'
-                        + '<td>' + stockDisplay + '</td>'
-                        + '<td>' + tag + '</td>'
-                        + '<td>' + (s.price ? '$' + s.price : '--') + '</td>'
-                        + '<td style="color:#ffd700;font-size:0.8rem;">' + periodDisplay + '</td>'
-                        + '<td><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>';
+                    return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
+                        + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
+                        + '<td class="tag-cell">' + stockDisplay + '</td>'
+                        + '<td class="tag-cell">' + tag + '</td>'
+                        + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
+                        + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + periodDisplay + '</td>'
+                        + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>';
                 }).join('');
             } else if (config.skus && config.skus.length > 0) {
                 allBody.innerHTML = config.skus.map(function(sku) {
@@ -536,12 +544,12 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                     const periodDisplay = periodEnd !== '--' 
                         ? new Date(periodEnd).toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'})
                         : '--';
-                    return '<tr><td><code>' + sku + '</code></td>'
-                        + '<td>--</td><td>--</td>'
-                        + '<td><span class="tag tag-error">Pending</span></td>'
-                        + '<td>--</td>'
-                        + '<td style="color:#ffd700;font-size:0.8rem;">' + periodDisplay + '</td>'
-                        + '<td><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>';
+                    return '<tr><td class="sku-cell"><code>' + sku + '</code></td>'
+                        + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
+                        + '<td class="tag-cell"><span class="tag tag-error">Pending</span></td>'
+                        + '<td class="price-cell">--</td>'
+                        + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + periodDisplay + '</td>'
+                        + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>';
                 }).join('');
             } else {
                 allBody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:#e74c3c;">⚠️ No SKUs configured</td></tr>';
@@ -558,10 +566,10 @@ python3 ~/oos-monitor/manage_skus.py remove B0961005_S_XXXXXXXXXXXX</pre>
                     else if (h.status === 'low_stock') { tag = '<span class="tag tag-low">Low (' + (h.stock_level || '?') + ')</span>'; rowClass = ' style="border-left:3px solid #f39c12;"'; }
                     else { tag = '<span class="tag tag-stock">Restocked</span>'; rowClass = ' style="border-left:3px solid #2ecc71;"'; }
                     
-                    return '<tr' + rowClass + '><td class="time">' + new Date(h.checked_at).toLocaleString('zh-HK') + '</td>'
-                        + '<td><code>' + h.sku + '</code></td>'
-                        + '<td>' + (h.product_name || 'N/A') + '</td>'
-                        + '<td>' + tag + '</td></tr>';
+                    return '<tr' + rowClass + '><td class="time nowrap">' + new Date(h.checked_at).toLocaleString('zh-HK') + '</td>'
+                        + '<td class="sku-cell"><code>' + h.sku + '</code></td>'
+                        + '<td class="name-cell">' + (h.product_name || 'N/A') + '</td>'
+                        + '<td class="tag-cell">' + tag + '</td></tr>';
                 }).join('');
             } else {
                 histBody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:#666;">No history yet</td></tr>';

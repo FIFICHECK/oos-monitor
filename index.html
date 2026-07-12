@@ -284,8 +284,31 @@
         .footer {
             text-align: center;
             padding: 20px;
-            color: #555;
+            margin-top: 30px;
+            border-top: 1px solid #0f3460;
             font-size: 0.8rem;
+        }
+        .footer .version-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #0f3460;
+            padding: 8px 18px;
+            border-radius: 20px;
+            color: #888;
+        }
+        .footer .version-badge .v {
+            color: #e94560;
+            font-weight: bold;
+        }
+        .footer .version-badge .sep {
+            color: #333;
+        }
+        .footer .version-badge .info {
+            color: #ffd700;
+        }
+        .footer .version-badge .info.green {
+            color: #2ecc71;
         }
         
         @media (max-width: 768px) {
@@ -293,6 +316,7 @@
             .stat-card .value { font-size: 1.5rem; }
             th, td { padding: 8px 10px; font-size: 0.8rem; }
             .marquee-label { font-size: 0.7rem; padding: 0 10px; }
+            .footer .version-badge { flex-wrap: wrap; justify-content: center; gap: 6px; padding: 10px 14px; }
         }
     </style>
 </head>
@@ -563,7 +587,13 @@
     </div>
     
     <div class="footer">
-        OOS Monitor v1.1 | Auto-refreshes every 30s | Low stock threshold: &lt; 10
+        <div class="version-badge">
+            <span class="v">📦 OOS Monitor v1.2</span>
+            <span class="sep">|</span>
+            <span class="info">🔄 30s refresh</span>
+            <span class="sep">|</span>
+            <span class="info green">📊 Low stock: &lt; 10</span>
+        </div>
     </div>
     
     <script>

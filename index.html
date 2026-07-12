@@ -406,15 +406,21 @@
                         <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
                             <input type="text" id="newSkuInput" placeholder="B0961005_S_XXXXXXXXXXXX or StoreCode_S_SKU_ID" 
                                    style="flex:1;min-width:250px;padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-family:monospace;font-size:0.8rem;">
-                            <input type="datetime-local" id="newSkuPeriod" 
-                                   style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+                                <span style="color:#888;font-size:0.75rem;">🟢 Start</span>
+                                <input type="datetime-local" id="newSkuStart" step="1"
+                                       style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                                <span style="color:#ffd700;font-size:0.75rem;">🔴 End</span>
+                                <input type="datetime-local" id="newSkuEnd" step="1"
+                                       style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            </div>
                             <button onclick="addSkuViaAPI()" style="
                                 background:#2ecc71;color:#fff;border:none;padding:8px 16px;
                                 border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.8rem;
                             ">➕ Add</button>
                         </div>
                         <div style="margin-top:6px;font-size:0.75rem;color:#888;">
-                            Leave period blank to use default (current: <span id="defaultPeriodDisplay">--</span>)
+                            Leave both blank for default period. End defaults to current global period if blank.
                         </div>
                         <div id="addSkuMsg" style="margin-top:6px;font-size:0.8rem;"></div>
                     </div>
@@ -686,7 +692,6 @@
             
             // SKU list display with remove buttons
             document.getElementById('skuCount').textContent = config.skus.length;
-            document.getElementById('defaultPeriodDisplay').textContent = config.monitor_end || '--';
             
             // Token status
             var tokenStatus = document.getElementById('tokenStatus');
@@ -840,7 +845,8 @@
         function addSkuViaAPI() {
             if (!ensureToken()) return;
             var sku = document.getElementById('newSkuInput').value.trim();
-            var period = document.getElementById('newSkuPeriod').value;
+            var startPeriod = document.getElementById('newSkuStart').value;
+            var endPeriod = document.getElementById('newSkuEnd').value;
             var msgEl = document.getElementById('addSkuMsg');
             
             if (!sku) {
@@ -864,11 +870,14 @@
                 
                 config.skus.push(sku);
                 
-                if (period) {
-                    var periodISO = period.replace('T', 'T') + ':00';
+                // Handle periods
+                if (endPeriod) {
+                    var endISO = endPeriod.replace('T', 'T');
+                    if (endISO.length === 16) endISO += ':00';  // add :ss if missing
                     if (!config.sku_periods) config.sku_periods = {};
-                    config.sku_periods[sku] = periodISO;
+                    config.sku_periods[sku] = endISO;
                 }
+                // We could also store start_periods but for now just use end period
                 
                 var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(config, null, 2))));
                 
@@ -877,7 +886,8 @@
                         msgEl.innerHTML = '✅ Added: ' + sku;
                         msgEl.style.color = '#2ecc71';
                         document.getElementById('newSkuInput').value = '';
-                        document.getElementById('newSkuPeriod').value = '';
+                        document.getElementById('newSkuStart').value = '';
+                        document.getElementById('newSkuEnd').value = '';
                         reloadDashboard();
                     } else {
                         msgEl.innerHTML = '❌ Error: ' + (resp.message || 'Unknown');

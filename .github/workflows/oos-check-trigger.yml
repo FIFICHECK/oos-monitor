@@ -1,0 +1,75 @@
+name: OOS Check (On Demand)
+
+on:
+  workflow_dispatch:
+    inputs:
+      skus:
+        description: 'SKU(s) to check (comma separated, blank = all)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/playwright.info') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
+      - name: Install dependencies
+        run: |
+          pip install playwright
+
+      - name: Install Playwright Chromium
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: |
+          playwright install chromium
+          echo "chromium_installed" > playwright.info
+
+      - name: Ensure Playwright Chromium available (cache hit)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: |
+          playwright install chromium 2>/dev/null || true
+          echo "✅ Playwright Chromium (cached)"
+
+      - name: Run OOS Check
+        run: |
+          echo "🚀 OOS Check triggered from Dashboard"
+          python check_oos.py
+
+      - name: Commit & Push results
+        run: |
+          git config user.name "OOS Bot"
+          git config user.email "bot@oos-monitor"
+          git add dashboard_data.json oos_state.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "auto: OOS check on-demand [skip ci]"
+            git push
+            echo "✅ Pushed updated data"
+          fi
+
+      - name: Trigger Pages Deploy
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run deploy.yml --repo ${{ github.repository }} 2>/dev/null || echo "⚠️ Could not trigger deploy (non-critical)"

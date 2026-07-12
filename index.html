@@ -952,13 +952,14 @@
                 
                 return pushConfigToGit(newContent, sha, 'Add SKU ' + sku + ' from dashboard').then(function(resp) {
                     if (resp.content) {
-                        msgEl.innerHTML = '✅ Added: ' + sku;
+                        msgEl.innerHTML = '✅ Added: ' + sku + ' 🚀 Triggering check...';
                         msgEl.style.color = '#2ecc71';
                         document.getElementById('newSkuInput').value = '';
                         document.getElementById('newSkuStartDate').value = '';
                         document.getElementById('newSkuStartTime').value = '00:00:00';
                         document.getElementById('newSkuEndDate').value = '';
                         document.getElementById('newSkuEndTime').value = '23:59:59';
+                        triggerOosCheck();
                         reloadDashboard();
                     } else {
                         msgEl.innerHTML = '❌ Error: ' + (resp.message || 'Unknown');
@@ -1024,13 +1025,14 @@
                 
                 return pushConfigToGit(newContent, sha, 'Bulk add ' + added + ' SKU(s) from dashboard').then(function(resp) {
                     if (resp.content) {
-                        msgEl.innerHTML = '✅ Added ' + added + ' SKU(s)';
+                        msgEl.innerHTML = '✅ Added ' + added + ' SKU(s) 🚀 Triggering check...';
                         msgEl.style.color = '#2ecc71';
                         document.getElementById('bulkSkuInput').value = '';
                         document.getElementById('bulkSkuStartDate').value = '';
                         document.getElementById('bulkSkuStartTime').value = '00:00:00';
                         document.getElementById('bulkSkuEndDate').value = '';
                         document.getElementById('bulkSkuEndTime').value = '23:59:59';
+                        if (added > 0) triggerOosCheck();
                         reloadDashboard();
                     } else {
                         msgEl.innerHTML = '❌ Error: ' + (resp.message || 'Unknown');
@@ -1041,6 +1043,24 @@
                 msgEl.innerHTML = '❌ Error: ' + e.message;
                 msgEl.style.color = '#e74c3c';
             });
+        }
+        
+        function triggerOosCheck() {
+            var token = localStorage.getItem('oos_git_token');
+            if (!token) return;
+            
+            fetch('https://api.github.com/repos/FIFICHECK/oos-monitor/actions/workflows/oos-check-trigger.yml/dispatches', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'token ' + token,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ ref: 'main', inputs: {} })
+            }).catch(function(e) {
+                console.log('Trigger OOS check failed (non-critical):', e);
+            });
+            console.log('🚀 OOS check triggered');
         }
         
         function removeSkuViaAPI(sku) {

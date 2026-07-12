@@ -1,56 +1,7 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-13T02:45:23.510626",
+  "last_checked": "2026-07-13T03:15:58.278494",
   "history": [
-    {
-      "sku": "B0961005_S_4894436008671",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T20:48:35.122721"
-    },
-    {
-      "sku": "B0961005_S_4892218083908",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T20:48:35.122729"
-    },
-    {
-      "sku": "B0961005_S_4987176297532",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T20:48:35.122735"
-    },
-    {
-      "sku": "B0961005_S_4987176173560",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T20:48:35.122740"
-    },
-    {
-      "sku": "B0961005_S_4987176297662",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T20:48:35.122745"
-    },
-    {
-      "sku": "B0961005_S_4987176297563",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T20:48:35.122750"
-    },
-    {
-      "sku": "B0961005_S_4897091050078",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T20:48:35.122754"
-    },
     {
       "sku": "B0961005_S_4891609190294",
       "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
@@ -701,6 +652,55 @@
       "status": "pending",
       "stock_level": null,
       "checked_at": "2026-07-13T02:45:23.448121"
+    },
+    {
+      "sku": "B0961005_S_4894436008671",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T03:15:58.200270"
+    },
+    {
+      "sku": "B0961005_S_4892218083908",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T03:15:58.200276"
+    },
+    {
+      "sku": "B0961005_S_4902320706674",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T03:15:58.200281"
+    },
+    {
+      "sku": "B0961005_S_4905522709861",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T03:15:58.200286"
+    },
+    {
+      "sku": "B0961005_S_4904616341235",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T03:15:58.200291"
+    },
+    {
+      "sku": "B0961005_S_4902828031500",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T03:15:58.200295"
+    },
+    {
+      "sku": "B0961005_S_4897091050078",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T03:15:58.200299"
     }
   ],
   "low_stock_skus": [],
@@ -711,7 +711,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.447987"
+      "checked_at": "2026-07-13T03:15:58.200212"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -719,7 +719,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448007"
+      "checked_at": "2026-07-13T03:15:58.200234"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -727,7 +727,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448016"
+      "checked_at": "2026-07-13T03:15:58.200242"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -735,7 +735,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448026"
+      "checked_at": "2026-07-13T03:15:58.200257"
     },
     {
       "sku": "B0961005_S_9556174902219",
@@ -743,7 +743,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448032"
+      "checked_at": "2026-07-13T03:15:58.200263"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -751,7 +751,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448089"
+      "checked_at": "2026-07-13T03:15:58.200270"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -759,7 +759,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448096"
+      "checked_at": "2026-07-13T03:15:58.200276"
     },
     {
       "sku": "B0961005_S_4902320706674",
@@ -767,7 +767,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448103"
+      "checked_at": "2026-07-13T03:15:58.200281"
     },
     {
       "sku": "B0961005_S_4905522709861",
@@ -775,7 +775,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448107"
+      "checked_at": "2026-07-13T03:15:58.200286"
     },
     {
       "sku": "B0961005_S_4904616341235",
@@ -783,7 +783,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448112"
+      "checked_at": "2026-07-13T03:15:58.200291"
     },
     {
       "sku": "B0961005_S_4902828031500",
@@ -791,7 +791,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448117"
+      "checked_at": "2026-07-13T03:15:58.200295"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -799,7 +799,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T02:45:23.448121"
+      "checked_at": "2026-07-13T03:15:58.200299"
     }
   ],
   "super_low_stock_skus": [],

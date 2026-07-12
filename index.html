@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOS Monitor Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #16213e, #0f3460);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e94560;
+        }
+        .header h1 {
+            font-size: 1.8rem;
+            color: #e94560;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        .badge-ok { background: #2ecc71; color: #fff; }
+        .badge-warn { background: #e74c3c; color: #fff; animation: pulse 1.5s infinite; }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        /* Marquee Section */
+        .marquee-container {
+            background: #0f3460;
+            overflow: hidden;
+            padding: 12px 0;
+            border-bottom: 2px solid #e94560;
+            position: relative;
+        }
+        .marquee-label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: #e94560;
+            color: #fff;
+            padding: 0 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        .marquee-track {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 30px;
+            color: #ff6b6b;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .marquee-item .price {
+            color: #ffd700;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* No OOS message */
+        .no-oos-marquee {
+            text-align: center;
+            padding: 12px;
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        
+        /* Main content */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Stats cards */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .stat-card {
+            background: #16213e;
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+            border: 1px solid #0f3460;
+        }
+        .stat-card h3 {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .stat-card .value.green { color: #2ecc71; }
+        .stat-card .value.red { color: #e74c3c; }
+        .stat-card .value.blue { color: #3498db; }
+        
+        /* OOS Table */
+        .section-title {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #e94560;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #16213e;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th {
+            background: #0f3460;
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 0.8rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #0f3460;
+            font-size: 0.9rem;
+        }
+        tr:hover { background: rgba(233, 69, 96, 0.05); }
+        .oos-tag {
+            background: #e74c3c;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .stock-tag {
+            background: #2ecc71;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .time { color: #666; font-size: 0.8rem; }
+        
+        /* History */
+        .history-table { margin-top: 25px; }
+        .history-entry.oos { border-left: 3px solid #e74c3c; }
+        .history-entry.instock { border-left: 3px solid #2ecc71; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.3rem; }
+            .stat-card .value { font-size: 1.5rem; }
+            th, td { padding: 8px 10px; font-size: 0.8rem; }
+            .marquee-label { font-size: 0.7rem; padding: 0 10px; }
+        }
+        
+        /* Last checked */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            font-size: 0.8rem;
+        }
+        
+        /* Settings toggle */
+        .config-area {
+            background: #16213e;
+            border: 1px solid #0f3460;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 25px;
+        }
+        .config-area summary {
+            cursor: pointer;
+            color: #888;
+            font-size: 0.85rem;
+        }
+        .config-area textarea {
+            width: 100%;
+            height: 120px;
+            background: #0f3460;
+            border: 1px solid #1a1a2e;
+            color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📦 OOS Monitor</h1>
+        <p>HKTVmall 缺貨監察 Dashboard</p>
+        <div id="headerStatus" class="status-badge badge-ok">Loading...</div>
+    </div>
+    
+    <!-- Marquee Section -->
+    <div class="marquee-container" id="marqueeContainer">
+        <div class="marquee-label">🔴 OOS Alert</div>
+        <div id="marqueeContent">
+            <div class="no-oos-marquee">✅ All products in stock</div>
+        </div>
+    </div>
+    
+    <div class="main">
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Monitored SKUs</h3>
+                <div class="value blue" id="totalSku">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>In Stock</h3>
+                <div class="value green" id="inStockCount">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Out of Stock</h3>
+                <div class="value red" id="oosCount">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Last Checked</h3>
+                <div class="value" style="font-size:0.9rem;color:#888" id="lastChecked">--</div>
+            </div>
+        </div>
+        
+        <!-- OOS Table -->
+        <h2 class="section-title">🔴 Currently Out of Stock</h2>
+        <div id="oosTableContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Product Name</th>
+                        <th>Status</th>
+                        <th>Checked</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody id="oosTableBody">
+                    <tr><td colspan="5" style="text-align:center;color:#666;">No data yet</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- All SKUs status -->
+        <h2 class="section-title" style="margin-top:25px;">📋 All Monitored SKUs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Product Name</th>
+                    <th>Status</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody id="allSkuBody">
+                <tr><td colspan="4" style="text-align:center;color:#666;">No data yet</td></tr>
+            </tbody>
+        </table>
+        
+        <!-- Status History -->
+        <div class="history-table">
+            <h2 class="section-title">📜 Status Changes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>SKU</th>
+                        <th>Product</th>
+                        <th>Change</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody">
+                    <tr><td colspan="4" style="text-align:center;color:#666;">No history yet</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Config -->
+        <div class="config-area">
+            <details>
+                <summary>⚙️ Settings</summary>
+                <p style="color:#888;font-size:0.8rem;margin-top:8px;">
+                    Edit SKU list (one per line, format: B0961005_S_XXXXXXXXXXXX):
+                </p>
+                <textarea id="skuEditor"></textarea>
+                <button onclick="saveSKUs()" style="
+                    background:#e94560;color:#fff;border:none;padding:8px 20px;
+                    border-radius:5px;margin-top:8px;cursor:pointer;font-weight:bold;
+                ">💾 Save SKUs</button>
+                <span id="saveMsg" style="color:#2ecc71;margin-left:10px;font-size:0.8rem;"></span>
+            </details>
+        </div>
+    </div>
+    
+    <div class="footer">
+        OOS Monitor v1.0 | Auto-refreshes every 30 seconds
+    </div>
+    
+    <script>
+        // Load config
+        async function loadData() {
+            try {
+                // Load dashboard data
+                const dashResp = await fetch('dashboard_data.json?' + Date.now());
+                const dashData = await dashResp.json();
+                
+                // Load config for SKU list
+                const cfgResp = await fetch('config.json?' + Date.now());
+                const config = await cfgResp.json();
+                
+                updateDashboard(dashData, config);
+            } catch (e) {
+                console.error('Failed to load data:', e);
+                document.getElementById('headerStatus').textContent = '⚠️ Error loading data';
+                document.getElementById('headerStatus').className = 'status-badge badge-warn';
+            }
+        }
+        
+        function updateDashboard(data, config) {
+            // Header status
+            const oosCount = data.oos_skus ? data.oos_skus.length : 0;
+            const statusEl = document.getElementById('headerStatus');
+            if (oosCount > 0) {
+                statusEl.textContent = `⚠️ ${oosCount} SKU(s) Out of Stock`;
+                statusEl.className = 'status-badge badge-warn';
+            } else {
+                statusEl.textContent = '✅ All in Stock';
+                statusEl.className = 'status-badge badge-ok';
+            }
+            
+            // Stats
+            const totalSku = config.skus ? config.skus.length : 0;
+            document.getElementById('totalSku').textContent = totalSku;
+            document.getElementById('oosCount').textContent = oosCount;
+            document.getElementById('inStockCount').textContent = totalSku - oosCount;
+            document.getElementById('lastChecked').textContent = data.last_checked 
+                ? new Date(data.last_checked).toLocaleString('zh-HK') : '--';
+            
+            // Marquee
+            const marqueeContent = document.getElementById('marqueeContent');
+            if (oosCount > 0 && data.oos_skus) {
+                // Double the items for seamless scroll
+                let items = [];
+                for (let i = 0; i < 2; i++) {
+                    data.oos_skus.forEach(sku => {
+                        items.push(`<span class="marquee-item">
+                            🔴 ${sku.product_name || sku.sku}
+                            ${sku.price ? `<span class="price">$${sku.price}</span>` : ''}
+                            <a href="https://www.hktvmall.com/hktv/p/${sku.sku}" target="_blank" style="color:#3498db;font-size:0.75rem;">🔗</a>
+                        </span>`);
+                    });
+                }
+                marqueeContent.innerHTML = `<div class="marquee-track">${items.join('')}</div>`;
+            } else {
+                marqueeContent.innerHTML = '<div class="no-oos-marquee">✅ All products in stock</div>';
+            }
+            
+            // OOS Table
+            const oosBody = document.getElementById('oosTableBody');
+            if (oosCount > 0 && data.oos_skus) {
+                oosBody.innerHTML = data.oos_skus.map(sku => `
+                    <tr>
+                        <td><code>${sku.sku}</code></td>
+                        <td>${sku.product_name || 'N/A'}</td>
+                        <td><span class="oos-tag">OOS</span></td>
+                        <td class="time">${sku.checked_at ? new Date(sku.checked_at).toLocaleString('zh-HK') : '--'}</td>
+                        <td><a href="https://www.hktvmall.com/hktv/p/${sku.sku}" target="_blank">View</a></td>
+                    </tr>
+                `).join('');
+            } else {
+                oosBody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#2ecc71;">✅ All products in stock</td></tr>';
+            }
+            
+            // All SKUs table
+            const allBody = document.getElementById('allSkuBody');
+            // We need to merge state with SKU list
+            // For now, show SKUs from config with status
+            let skuStates = {};
+            if (data.oos_skus) {
+                data.oos_skus.forEach(s => { skuStates[s.sku] = 'oos'; });
+            }
+            
+            allBody.innerHTML = config.skus.map(sku => {
+                const isOos = skuStates[sku] === 'oos';
+                return `<tr>
+                    <td><code>${sku}</code></td>
+                    <td>${isOos ? (data.oos_skus.find(s => s.sku === sku)?.product_name || 'N/A') : 'In Stock'}</td>
+                    <td>${isOos ? '<span class="oos-tag">OOS</span>' : '<span class="stock-tag">In Stock</span>'}</td>
+                    <td><a href="https://www.hktvmall.com/hktv/p/${sku}" target="_blank">View</a></td>
+                </tr>`;
+            }).join('');
+            
+            // History
+            const histBody = document.getElementById('historyBody');
+            if (data.history && data.history.length > 0) {
+                const recent = data.history.slice().reverse().slice(0, 20);
+                histBody.innerHTML = recent.map(h => `
+                    <tr class="${h.status === 'oos' ? 'history-entry oos' : 'history-entry instock'}">
+                        <td class="time">${new Date(h.checked_at).toLocaleString('zh-HK')}</td>
+                        <td><code>${h.sku}</code></td>
+                        <td>${h.product_name || 'N/A'}</td>
+                        <td>${h.status === 'oos' ? '<span class="oos-tag">OOS</span>' : '<span class="stock-tag">Restocked</span>'}</td>
+                    </tr>
+                `).join('');
+            } else {
+                histBody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:#666;">No history yet</td></tr>';
+            }
+            
+            // Editor
+            document.getElementById('skuEditor').value = config.skus.join('\n');
+        }
+        
+        async function saveSKUs() {
+            const text = document.getElementById('skuEditor').value;
+            const skus = text.split('\n').map(s => s.trim()).filter(s => s.length > 0);
+            
+            try {
+                const resp = await fetch('config.json');
+                const config = await resp.json();
+                config.skus = skus;
+                
+                // Save via API or show instructions
+                document.getElementById('saveMsg').textContent = '⚠️ For now, update ~/oos-monitor/config.json directly';
+                setTimeout(() => document.getElementById('saveMsg').textContent = '', 3000);
+            } catch(e) {
+                document.getElementById('saveMsg').textContent = 'Error: ' + e.message;
+            }
+        }
+        
+        // Auto-refresh every 30s
+        loadData();
+        setInterval(loadData, 30000);
+    </script>
+</body>
+</html>

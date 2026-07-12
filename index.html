@@ -169,7 +169,7 @@
         td.nowrap, td.sku-cell, td.tag-cell, td.price-cell, td.link-cell, td.period-cell {
             white-space: nowrap;
         }
-        td.sku-cell code { font-size: 0.75rem; cursor: pointer; }
+        td.sku-cell code { font-size: 0.75rem; cursor: pointer; word-break: break-all; }
         td.sku-cell code:hover { color: #fff; text-decoration: underline; }
         td.name-cell { word-break: break-word; }
         
@@ -365,7 +365,12 @@
             .stat-card .value { font-size: 1.5rem; }
             .stat-card { padding: 12px; }
             .stats { gap: 8px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
-            th, td { padding: 6px 6px; font-size: 0.7rem; }
+            th, td { padding: 4px 4px; font-size: 0.65rem; }
+            td.sku-cell code { font-size: 0.6rem; word-break: break-all; }
+            td.name-cell { word-break: break-word; }
+            td.price-cell, td.period-cell, td.link-cell { white-space: nowrap; font-size: 0.6rem; }
+            td.tag-cell { white-space: nowrap; }
+            td.tag-cell .tag { font-size: 0.55rem; padding: 2px 6px; }
             .marquee-label { font-size: 0.7rem; padding: 0 10px; }
             .marquee-item { font-size: 0.8rem; margin: 0 15px; }
             .footer .version-badge { flex-wrap: wrap; justify-content: center; gap: 6px; padding: 10px 14px; }
@@ -374,16 +379,22 @@
             .config-area { padding: 10px; }
             .config-area input,
             .config-area textarea { font-size: 0.7rem !important; padding: 6px 8px !important; }
+            .toolbar .table-search { min-width: 100px; font-size: 0.65rem; }
+            .toolbar .dl-btn { font-size: 0.65rem; padding: 4px 8px; }
         }
+        
         @media (max-width: 480px) {
             .header h1 { font-size: 1.1rem; }
-            th, td { padding: 4px 4px; font-size: 0.65rem; }
+            th, td { padding: 2px 3px; font-size: 0.55rem; }
+            td.sku-cell code { font-size: 0.5rem; }
+            td.price-cell, td.period-cell, td.link-cell { font-size: 0.5rem; }
             .stats { grid-template-columns: repeat(3, 1fr); }
-            .stat-card h3 { font-size: 0.65rem; }
-            .stat-card .value { font-size: 1.2rem; }
+            .stat-card { padding: 8px; }
+            .stat-card h3 { font-size: 0.55rem; }
+            .stat-card .value { font-size: 1rem; }
+            .table-scroll { margin-bottom: 6px; }
         }
     </style>
-
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 </head>
 <body>

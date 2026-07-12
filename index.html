@@ -150,6 +150,20 @@
             margin-bottom: 10px;
             table-layout: fixed;
         }
+        /* On mobile, let tables scroll naturally instead of squeezing columns */
+        @media (max-width: 768px) {
+            .table-scroll table { table-layout: auto; }
+            .table-scroll th,
+            .table-scroll td { white-space: nowrap; }
+            .table-scroll td.name-cell { white-space: normal; min-width: 250px; }
+            .table-scroll td.sku-cell { min-width: 180px; }
+            .table-scroll td.price-cell,
+            .table-scroll td.period-cell,
+            .table-scroll td.link-cell,
+            .table-scroll td.tag-cell,
+            .table-scroll td.nowrap { white-space: nowrap; }
+            .table-scroll td.sku-cell code { word-break: keep-all; }
+        }
         th {
             background: #0f3460;
             padding: 8px 8px;
@@ -366,10 +380,6 @@
             .stat-card { padding: 12px; }
             .stats { gap: 8px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
             th, td { padding: 4px 4px; font-size: 0.65rem; }
-            td.sku-cell code { font-size: 0.6rem; word-break: break-all; }
-            td.name-cell { word-break: break-word; }
-            td.price-cell, td.period-cell, td.link-cell { white-space: nowrap; font-size: 0.6rem; }
-            td.tag-cell { white-space: nowrap; }
             td.tag-cell .tag { font-size: 0.55rem; padding: 2px 6px; }
             .marquee-label { font-size: 0.7rem; padding: 0 10px; }
             .marquee-item { font-size: 0.8rem; margin: 0 15px; }
@@ -386,8 +396,6 @@
         @media (max-width: 480px) {
             .header h1 { font-size: 1.1rem; }
             th, td { padding: 2px 3px; font-size: 0.55rem; }
-            td.sku-cell code { font-size: 0.5rem; }
-            td.price-cell, td.period-cell, td.link-cell { font-size: 0.5rem; }
             .stats { grid-template-columns: repeat(3, 1fr); }
             .stat-card { padding: 8px; }
             .stat-card h3 { font-size: 0.55rem; }

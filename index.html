@@ -494,15 +494,17 @@
             <thead>
                 <tr>
                     <th style="width:20%;">SKU</th>
-                    <th style="width:30%;">Product Name</th>
-                    <th style="width:14%;">Period</th>
-                    <th style="width:12%;">Final Status</th>
-                    <th style="width:16%;">Changes</th>
+                    <th style="width:28%;">Product Name</th>
+                    <th style="width:8%;">庫存</th>
+                    <th style="width:8%;">Final Status</th>
+                    <th style="width:10%;">Price</th>
+                    <th style="width:10%;">Starts</th>
+                    <th style="width:8%;">End</th>
                     <th style="width:8%;">Link</th>
                 </tr>
             </thead>
             <tbody id="expiredSkuBody">
-                <tr><td colspan="6" style="text-align:center;color:#666;">No completed SKUs yet</td></tr>
+                <tr><td colspan="8" style="text-align:center;color:#666;">No completed SKUs yet</td></tr>
             </tbody>
         </table>
         </div>
@@ -925,22 +927,31 @@
             
             if (expiredSkus.length > 0) {
                 expiredBody.innerHTML = expiredSkus.map(function(s) {
-                    var period = skuPeriods[s.sku] || config.monitor_end || '--';
-                    var periodShort = period !== '--' ? new Date(period).toLocaleString('zh-HK', {month:'short', day:'numeric'}) : '--';
+                    var periodEnd = skuPeriods[s.sku] || config.monitor_end || '--';
+                    var periodStart = (config.sku_start_periods && config.sku_start_periods[s.sku]) || '';
                     
-                    // Count changes from history
-                    var changeCount = (data.history || []).filter(function(h) { return h.sku === s.sku; }).length;
+                    var startDisplay = periodStart
+                        ? new Date(periodStart).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false})
+                        : '--';
+                    var endDisplay = periodEnd !== '--'
+                        ? new Date(periodEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false})
+                        : '--';
+                    
+                    var lastStock = s.stock_level !== null && s.stock_level !== undefined ? s.stock_level + ' 件' : '--';
+                    var lastPrice = s.price ? '$' + s.price : '--';
                     
                     var tag = '<span class="tag tag-error">Expired</span>';
                     return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history" style="color:#888;">' + s.sku + '</code></td>'
                         + '<td class="name-cell" style="color:#888;">' + (s.product_name || 'N/A') + '</td>'
-                        + '<td style="color:#666;font-size:0.8rem;">' + periodShort + '</td>'
+                        + '<td style="color:#888;font-size:0.8rem;">' + lastStock + '</td>'
                         + '<td>' + tag + '</td>'
-                        + '<td style="color:#888;font-size:0.8rem;">' + changeCount + ' change(s)</td>'
+                        + '<td style="color:#888;font-size:0.8rem;">' + lastPrice + '</td>'
+                        + '<td style="color:#666;font-size:0.8rem;">' + startDisplay + '</td>'
+                        + '<td style="color:#666;font-size:0.8rem;">' + endDisplay + '</td>'
                         + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank" style="color:#666;">View</a></td></tr>';
                 }).join('');
             } else {
-                expiredBody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:#666;">No completed SKUs yet</td></tr>';
+                expiredBody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:#666;">No completed SKUs yet</td></tr>';
             }
             
             // SKU list display with remove buttons

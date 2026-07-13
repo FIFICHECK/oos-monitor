@@ -961,7 +961,34 @@
                     const mins = Math.floor((diff % 3600000) / 60000);
                     periodText += '  ⏱️ ' + hours + 'h ' + mins + 'm remaining';
                 } else {
-                    periodText += '  ⏰ Expired';
+                    // Expired — find next upcoming monitoring period from SKU periods
+                    var nextStart = null;
+                    var nextEnd = null;
+                    if (config.sku_start_periods) {
+                        for (var sk in config.sku_start_periods) {
+                            var s = new Date(config.sku_start_periods[sk]);
+                            if (s > now && (!nextStart || s < nextStart)) {
+                                nextStart = s;
+                                nextEnd = config.sku_periods && config.sku_periods[sk] ? new Date(config.sku_periods[sk]) : null;
+                            }
+                        }
+                    }
+                    if (nextStart) {
+                        var startStr = nextStart.toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+                        var endStr = nextEnd ? nextEnd.toLocaleString('zh-HK', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}) : '--';
+                        var daysUntil = Math.floor((nextStart - now) / 86400000);
+                        var hoursUntil = Math.floor(((nextStart - now) % 86400000) / 3600000);
+                        periodText = '📅 Next period: ' + startStr + ' → ' + endStr;
+                        if (daysUntil > 0) {
+                            periodText += '  ⏳ Starts in ' + daysUntil + 'd ' + hoursUntil + 'h';
+                        } else if (hoursUntil > 0) {
+                            periodText += '  ⏳ Starts in ' + hoursUntil + 'h';
+                        } else {
+                            periodText += '  ⏳ Starting soon';
+                        }
+                    } else {
+                        periodText += '  ⏰ Expired — No upcoming periods';
+                    }
                 }
             } else {
                 periodText += 'Not set';

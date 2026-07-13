@@ -942,11 +942,6 @@
         
         
         function updateDashboard(data, config) {
-            const oosCount = data.oos_skus ? data.oos_skus.length : 0;
-            const superLowStockCount = data.super_low_stock_skus ? data.super_low_stock_skus.length : 0;
-            const lowStock30Count = data.low_stock_30_skus ? data.low_stock_30_skus.length : 0;
-            const lowStockCount = superLowStockCount + lowStock30Count;
-            const totalSku = config.skus ? config.skus.length : 0;
             // Build pendingSet from config (used in multiple places)
             var pendingSet = {};
             var now = new Date();
@@ -957,6 +952,22 @@
                     }
                 }
             }
+            // Build expiredSet from all_skus
+            var expiredSet = {};
+            if (data.all_skus) {
+                data.all_skus.forEach(function(s) {
+                    if (s.status === 'expired') expiredSet[s.sku] = true;
+                });
+            }
+            // Filter status arrays to exclude pending and expired SKUs
+            var activeOos = data.oos_skus ? data.oos_skus.filter(function(s) { return !pendingSet[s.sku] && !expiredSet[s.sku]; }) : [];
+            var activeSuperLow = data.super_low_stock_skus ? data.super_low_stock_skus.filter(function(s) { return !pendingSet[s.sku] && !expiredSet[s.sku]; }) : [];
+            var activeLow30 = data.low_stock_30_skus ? data.low_stock_30_skus.filter(function(s) { return !pendingSet[s.sku] && !expiredSet[s.sku]; }) : [];
+            const oosCount = activeOos.length;
+            const superLowStockCount = activeSuperLow.length;
+            const lowStock30Count = activeLow30.length;
+            const lowStockCount = superLowStockCount + lowStock30Count;
+            const totalSku = config.skus ? config.skus.length : 0;
             // Count expired (exclude pending SKUs that were wrongly marked as expired)
             var expiredCount = data.all_skus ? data.all_skus.filter(function(s) { 
                 return s.status === 'expired' && !pendingSet[s.sku];
@@ -1048,21 +1059,15 @@
             const marqueeLabel = document.getElementById('marqueeLabel');
             
             let alertItems = [];
-            if (data.oos_skus) {
-                data.oos_skus.forEach(s => {
-                    alertItems.push({ type: 'oos', sku: s });
-                });
-            }
-            if (data.super_low_stock_skus) {
-                data.super_low_stock_skus.forEach(s => {
-                    alertItems.push({ type: 'super_low_stock', sku: s });
-                });
-            }
-            if (data.low_stock_30_skus) {
-                data.low_stock_30_skus.forEach(s => {
-                    alertItems.push({ type: 'low_stock', sku: s });
-                });
-            }
+            activeOos.forEach(s => {
+                alertItems.push({ type: 'oos', sku: s });
+            });
+            activeSuperLow.forEach(s => {
+                alertItems.push({ type: 'super_low_stock', sku: s });
+            });
+            activeLow30.forEach(s => {
+                alertItems.push({ type: 'low_stock', sku: s });
+            });
             
             if (alertItems.length > 0) {
                 if (oosCount > 0) {
@@ -1172,14 +1177,6 @@
                 var skuDataMap = {};
                 if (data.all_skus) {
                     data.all_skus.forEach(function(s) { skuDataMap[s.sku] = s; });
-                }
-                
-                // Also build lookup of already-expired SKUs
-                var expiredSet = {};
-                if (data.all_skus) {
-                    data.all_skus.forEach(function(s) { 
-                        if (s.status === 'expired') expiredSet[s.sku] = true; 
-                    });
                 }
                 
                 var allRows = [];

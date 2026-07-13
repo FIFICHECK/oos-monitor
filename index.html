@@ -400,6 +400,18 @@
             background: #2980b9;
         }
         
+        /* Batch delete */
+        .batch-bar {
+            display: flex; gap: 8px; align-items: center;
+            margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .batch-bar label { font-size: 0.75rem; color: #888; display: flex; align-items: center; gap: 4px; cursor: pointer; }
+        .batch-bar input[type="checkbox"] { accent-color: #e94560; width: 14px; height: 14px; cursor: pointer; }
+        .del-btn { background: #c0392b; color: #fff; border: none; padding: 5px 14px; border-radius: 5px; cursor: pointer; font-size: 0.75rem; font-weight: bold; }
+        .del-btn:hover { background: #e74c3c; }
+        .del-btn:disabled { background: #444; color: #666; cursor: not-allowed; }
+        .sku-checkbox { accent-color: #e94560; width: 14px; height: 14px; cursor: pointer; vertical-align: middle; margin-right: 6px; }
+        
         /* Table scroll wrapper for mobile */
         .table-scroll {
             width: 100%;
@@ -712,6 +724,10 @@
                     <hr style="border-color:#0f3460;margin:12px 0;">
                     
                     <!-- SKU List with Remove buttons -->
+                    <div class="batch-bar">
+                        <label><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"> 全選</label>
+                        <button class="del-btn" id="batchDeleteBtn" onclick="batchDeleteSku()" disabled>🗑️ Delete Selected (<span id="selectedCount">0</span>)</button>
+                    </div>
                     <p>Current SKUs (<span id="skuCount">0</span>):</p>
                     <div id="skuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:250px;overflow-y:auto;"></div>
                     
@@ -778,6 +794,7 @@
 
                 <h4>🗑️ 移除 SKU</h4>
                 <p>喺 <code>SKU List</code> 區域，每個 SKU 右邊有個 <code>✕</code> 按鈕，點擊即刪除。</p>
+                <p>亦可剔選多個 SKU（右上角 <code>全選</code> 剔選全部），然後按 <code>🗑️ Delete Selected</code> 一次過批量刪除。</p>
 
                 <h4>📜 Status History</h4>
                 <p>Click 任何 SKU 編碼（藍色連結）即可彈出視窗睇該 SKU 嘅狀態變化紀錄。</p>
@@ -1298,7 +1315,8 @@
                 skuListEl.innerHTML = config.skus.map(function(sku, i) {
                     const pEnd = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
                     return '<div style="padding:4px 0;border-bottom:1px solid #0f3460;display:flex;justify-content:space-between;align-items:center;">'
-                        + '<span>' + (i+1) + '. <code style="color:#3498db;">' + sku + '</code>'
+                        + '<span><input type="checkbox" class="sku-checkbox" data-sku="' + sku + '" onchange="updateBatchDeleteBtn()">'
+                        + (i+1) + '. <code style="color:#3498db;">' + sku + '</code>'
                         + ' <span style="color:#ffd700;font-size:0.75rem;">⏱️ ' + pEnd + '</span></span>'
                         + '<button onclick="removeSkuViaAPI(\'' + sku + '\')" style="background:#e74c3c;color:#fff;border:none;padding:2px 8px;border-radius:3px;cursor:pointer;font-size:0.7rem;">✕</button>'
                         + '</div>';
@@ -1306,6 +1324,9 @@
             } else {
                 skuListEl.innerHTML = '<div style="color:#e74c3c;">⚠️ No SKUs configured</div>';
             }
+            // Reset batch delete state
+            document.getElementById('selectAllCheckbox').checked = false;
+            updateBatchDeleteBtn();
         }
         
         // Modal functions
@@ -1641,6 +1662,58 @@
                 
                 return pushConfigToGit(newContent, sha, 'Remove SKU ' + sku + ' from dashboard').then(function(resp) {
                     if (resp.content) {
+                        reloadDashboard();
+                    } else {
+                        showApiMsg('❌ Error: ' + (resp.message || 'Unknown'), true);
+                    }
+                });
+            }).catch(function(e) {
+                showApiMsg('❌ Error: ' + e.message, true);
+            });
+        }
+        
+        // ── Batch Delete Functions ──
+        function toggleSelectAll(master) {
+            document.querySelectorAll('.sku-checkbox').forEach(function(cb) {
+                cb.checked = master.checked;
+            });
+            updateBatchDeleteBtn();
+        }
+        function updateBatchDeleteBtn() {
+            var checked = document.querySelectorAll('.sku-checkbox:checked').length;
+            var btn = document.getElementById('batchDeleteBtn');
+            document.getElementById('selectedCount').textContent = checked;
+            btn.disabled = checked === 0;
+        }
+        function batchDeleteSku() {
+            var checked = document.querySelectorAll('.sku-checkbox:checked');
+            if (checked.length === 0) return;
+            if (!ensureToken()) return;
+            if (!confirm('🗑️ Delete ' + checked.length + ' selected SKU(s)?')) return;
+            
+            showApiMsg('⏳ Deleting ' + checked.length + ' SKU(s)...');
+            var skusToDelete = [];
+            checked.forEach(function(cb) { skusToDelete.push(cb.getAttribute('data-sku')); });
+            
+            getConfigFromGit().then(function(data) {
+                var config = JSON.parse(atob(data.content));
+                var sha = data.sha;
+                
+                skusToDelete.forEach(function(sku) {
+                    var idx = config.skus.indexOf(sku);
+                    if (idx !== -1) {
+                        config.skus.splice(idx, 1);
+                        if (config.sku_periods && config.sku_periods[sku]) {
+                            delete config.sku_periods[sku];
+                        }
+                    }
+                });
+                
+                var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(config, null, 2))));
+                var msg = 'Batch delete ' + skusToDelete.length + ' SKU(s)';
+                return pushConfigToGit(newContent, sha, msg).then(function(resp) {
+                    if (resp.content) {
+                        showApiMsg('✅ Deleted ' + skusToDelete.length + ' SKU(s) — reloading...');
                         reloadDashboard();
                     } else {
                         showApiMsg('❌ Error: ' + (resp.message || 'Unknown'), true);

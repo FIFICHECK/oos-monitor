@@ -1127,7 +1127,7 @@
                     var pEnd = (config.sku_periods && config.sku_periods[s.sku]) || config.monitor_end || '--';
                     var stD = pStart ? new Date(pStart).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var enD = pEnd !== '--' ? new Date(pEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
+                    return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell"><span class="tag tag-low">' + s.stock_level + ' 件</span></td>'
                     + '<td class="tag-cell"><span class="tag tag-low">Low</span></td>'
@@ -1148,7 +1148,7 @@
                     var pEnd = (config.sku_periods && config.sku_periods[s.sku]) || config.monitor_end || '--';
                     var stD = pStart ? new Date(pStart).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var enD = pEnd !== '--' ? new Date(pEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
+                    return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell"><span class="tag" style="background:#e74c3c;color:#fff;">' + s.stock_level + ' 件</span></td>'
                     + '<td class="tag-cell"><span class="tag" style="background:#e74c3c;color:#fff;">🔴 Super Low</span></td>'
@@ -1170,7 +1170,7 @@
                     var pEnd = (config.sku_periods && config.sku_periods[s.sku]) || config.monitor_end || '--';
                     var stD = pStart ? new Date(pStart).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var enD = pEnd !== '--' ? new Date(pEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    return '<tr><td class="sku-cell"><code>' + s.sku + '</code></td>'
+                    return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell"><span class="tag tag-oos">OOS</span></td>'
                     + '<td class="tag-cell"><span class="tag tag-oos">OOS</span></td>'

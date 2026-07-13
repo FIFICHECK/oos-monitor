@@ -1,48 +1,48 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-13T10:29:01.376005",
+  "last_checked": "2026-07-13T10:29:19.348445",
   "history": [],
   "low_stock_skus": [],
   "all_skus": [
     {
       "sku": "B0961005_S_4891609190294",
-      "product_name": "",
+      "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
       "status": "expired",
-      "stock_level": null,
+      "stock_level": 33,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291803"
+      "checked_at": "2026-07-13T10:29:19.283691"
     },
     {
       "sku": "B0961005_S_4897020276715",
-      "product_name": "",
+      "product_name": "WholeLove Plus | 全植物醫學級益生菌元配方 400 億 30 包【最佳使用日期:09/2027】",
       "status": "expired",
-      "stock_level": null,
+      "stock_level": 21,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291831"
+      "checked_at": "2026-07-13T10:29:19.283714"
     },
     {
       "sku": "B0961005_S_9311770608084",
-      "product_name": "",
+      "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期:04/2027】",
       "status": "expired",
-      "stock_level": null,
+      "stock_level": 172,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291843"
+      "checked_at": "2026-07-13T10:29:19.283724"
     },
     {
       "sku": "B0961005_S_9311770615426",
-      "product_name": "",
+      "product_name": "Swisse | ULTIBOOST 維他命B+ 60片裝【香港行貨】【最佳使用日期:08/2027】",
       "status": "expired",
-      "stock_level": null,
+      "stock_level": 23,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291852"
+      "checked_at": "2026-07-13T10:29:19.283732"
     },
     {
       "sku": "B0961005_S_9556174902219",
-      "product_name": "",
+      "product_name": "桂格 | 即食燕麥片 紅色 800克 【香港行貨】【最佳使用日期:09/2027】",
       "status": "expired",
-      "stock_level": null,
+      "stock_level": 363,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291860"
+      "checked_at": "2026-07-13T10:29:19.283740"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -50,7 +50,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291871"
+      "checked_at": "2026-07-13T10:29:19.283747"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -58,7 +58,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291880"
+      "checked_at": "2026-07-13T10:29:19.283753"
     },
     {
       "sku": "B0961005_S_4902320706674",
@@ -66,7 +66,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291888"
+      "checked_at": "2026-07-13T10:29:19.283759"
     },
     {
       "sku": "B0961005_S_4905522709861",
@@ -74,7 +74,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291896"
+      "checked_at": "2026-07-13T10:29:19.283763"
     },
     {
       "sku": "B0961005_S_4904616341235",
@@ -82,7 +82,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291904"
+      "checked_at": "2026-07-13T10:29:19.283768"
     },
     {
       "sku": "B0961005_S_4902828031500",
@@ -90,7 +90,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291912"
+      "checked_at": "2026-07-13T10:29:19.283772"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -98,7 +98,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:29:01.291919"
+      "checked_at": "2026-07-13T10:29:19.283777"
     }
   ],
   "super_low_stock_skus": [],

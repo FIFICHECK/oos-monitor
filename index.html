@@ -742,6 +742,20 @@
                     <div id="expiredSkuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:200px;overflow-y:auto;"></div>
                     
                     <div id="apiStatusMsg" style="margin-top:8px;font-size:0.8rem;"></div>
+                    <hr style="border-color:#0f3460;margin:10px 0;">
+                    <div style="display:flex;gap:8px;margin-top:6px;">
+                        <button onclick="triggerOosCheck()" style="
+                            flex:1;background:#2ecc71;color:#fff;border:none;padding:10px 16px;
+                            border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.85rem;
+                        ">🚀 Save &amp; Run Now</button>
+                        <button onclick="reloadDashboard()" style="
+                            background:#3498db;color:#fff;border:none;padding:10px 16px;
+                            border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.85rem;
+                        ">🔄 Refresh Page</button>
+                    </div>
+                    <div style="margin-top:6px;font-size:0.75rem;color:#888;text-align:center;">
+                        Add/remove SKUs are saved to GitHub automatically. Click <strong>🚀 Save &amp; Run Now</strong> to check immediately.
+                    </div>
                 </div>
             </details>
         </div>
@@ -1677,8 +1691,8 @@
         }
         
         function triggerOosCheck() {
-            var token = localStorage.getItem('oos_git_token');
-            if (!token) return;
+            if (!ensureToken()) return;
+            var token = getGitToken();
             
             fetch('https://api.github.com/repos/FIFICHECK/oos-monitor/actions/workflows/oos-check-trigger.yml/dispatches', {
                 method: 'POST',
@@ -1688,10 +1702,11 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ ref: 'main', inputs: {} })
+            }).then(function(r) {
+                showApiMsg('🚀 OOS check triggered! Data will update in ~2-3 min');
             }).catch(function(e) {
-                console.log('Trigger OOS check failed (non-critical):', e);
+                showApiMsg('⚠️ Trigger failed: ' + e.message, true);
             });
-            console.log('🚀 OOS check triggered');
         }
         
         function removeSkuViaAPI(sku) {

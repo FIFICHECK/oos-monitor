@@ -798,8 +798,8 @@
 
                 <h4>📊 Dashboard 區域說明</h4>
                 <ul>
-                    <li><span class="step">頂部 Header</span> — 標題、監測期間倒數、整體狀態（OK/OOS/Low）</li>
-                    <li><span class="step">跑馬燈</span> — 自動滾動顯示 OOS / Low Stock 產品</li>
+                    <li><span class="step">頂部 Header</span> — 標題、監測期間倒數。下方可同時顯示 <strong>🔴 OOS / 🔴 Super Low / 🟡 Low Stock 3 個獨立 badges</strong>（閃爍），全部正常時顯示 ✅ All in Stock</li>
+                    <li><span class="step">跑馬燈</span> — 自動滾動顯示 OOS / Super Low / Low Stock 產品</li>
                     <li><span class="step">統計卡片</span> — Active / Pending / In Stock / Low / Super Low / OOS / Last Checked</li>
                     <li><span class="step">表格區域</span> — Out of Stock → Super Low → Low Stock → All SKUs → Pending → <strong>Expiry SKUs</strong></li>
                     <li><span class="step">設定面板</span> — 底部可展開，管理 SKU 清單</li>
@@ -834,15 +834,36 @@
                 <p>亦可剔選多個 SKU（右上角 <code>全選</code> 剔選全部），然後按 <code>🗑️ Delete Selected</code> 一次過批量刪除。兩個表各自有獨立嘅 batch delete。</p>
 
                 <h4>📜 Status History</h4>
-                <p>Click 任何 SKU 編碼（藍色連結）即可彈出視窗睇該 SKU 嘅狀態變化紀錄。</p>
+                <p>Click 任何表格中嘅 SKU 編碼（藍色連結）即可彈出視窗睇該 SKU 嘅狀態變化紀錄。所有表格（OOS、Super Low、Low Stock、All SKUs、Expiry SKUs）嘅 SKU 都支援 click 睇歷史。</p>
                 <ul>
                     <li>Active SKU：顯示所有紀錄（由開始監測至今）</li>
                     <li>Expired SKU：只顯示 <strong>監測期間內</strong>（Start ~ End）嘅紀錄</li>
                     <li>每個 SKU 保留最近 1000 條紀錄</li>
+                    <li>Super Low 同 Low Stock 嘅 tag 會顯示當時庫存數，例如 <code>🔴 Super Low (3)</code></li>
                 </ul>
 
                 <h4>📤 Export to Excel</h4>
                 <p>每個 table 右上角有個 <code>📥 Export XLSX</code> 按鈕，一鍵匯出該 table 做 Excel。</p>
+
+                <h4>🔍 搜尋功能</h4>
+                <p>每個 table 右上方都有搜尋框，輸入關鍵字即可即時 filter。搜尋範圍包括 <strong>SKU、Product Name、日期（Start / End Date）</strong>。</p>
+
+                <h4>🚀 Save & Run Now</h4>
+                <p>Settings 底部有個綠色 <strong>「🚀 Save & Run Now」</strong> 掣。Click 後會立即透過 GitHub Actions 執行一次完整 check，唔使等 30 分鐘 cron job。</p>
+                <ul>
+                    <li>加完 SKU 後唔想等 -> Click 🚀 掣</li>
+                    <li>大約 2-3 分鐘後完成</li>
+                    <li>旁邊嘅 <strong>🔄 Refresh Page</strong> 掣可以即時 reload Dashboard</li>
+                </ul>
+
+                <h4>🔔 Discord 自動通知</h4>
+                <p>系統會自動監測 OOS、Super Low Stock 同 Low Stock 嘅新 SKU，並 Send 通知到 <strong>#general</strong> 同 <strong>check OOS status thread</strong>：</p>
+                <ul>
+                    <li>🟡 每個 SKU 第一次變 Low Stock -> Send 1 次</li>
+                    <li>🔴 惡化到 Super Low -> Send 1 次</li>
+                    <li>🔴 再惡化到 OOS -> Send 1 次</li>
+                    <li>同一 status 唔會重複 send</li>
+                </ul>
 
                 <h4>⏱️ 自動更新</h4>
                 <ul>

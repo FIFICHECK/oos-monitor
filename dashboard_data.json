@@ -1,6 +1,6 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-13T14:41:45.320540",
+  "last_checked": "2026-07-13T07:09:21.131574",
   "history": [],
   "low_stock_skus": [],
   "all_skus": [
@@ -10,7 +10,7 @@
       "status": "expired",
       "stock_level": 33,
       "price": "359.00",
-      "checked_at": "2026-07-13T14:41:45.274781"
+      "checked_at": "2026-07-13T07:09:00.773199"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -18,7 +18,7 @@
       "status": "expired",
       "stock_level": 21,
       "price": "178.00",
-      "checked_at": "2026-07-13T14:41:45.274793"
+      "checked_at": "2026-07-13T07:09:00.773216"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -26,7 +26,7 @@
       "status": "expired",
       "stock_level": 172,
       "price": "149.00",
-      "checked_at": "2026-07-13T14:41:45.274797"
+      "checked_at": "2026-07-13T07:09:00.773226"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -34,7 +34,7 @@
       "status": "expired",
       "stock_level": 23,
       "price": "114.00",
-      "checked_at": "2026-07-13T14:41:45.274800"
+      "checked_at": "2026-07-13T07:09:00.773234"
     },
     {
       "sku": "B0961005_S_9556174902219",
@@ -42,7 +42,7 @@
       "status": "expired",
       "stock_level": 363,
       "price": "15.50",
-      "checked_at": "2026-07-13T14:41:45.274803"
+      "checked_at": "2026-07-13T07:09:00.773242"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -50,7 +50,7 @@
       "status": "pending",
       "stock_level": 428,
       "price": "368.00",
-      "checked_at": "2026-07-13T14:41:45.274807"
+      "checked_at": "2026-07-13T07:09:00.773251"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -58,7 +58,7 @@
       "status": "pending",
       "stock_level": 1,
       "price": "128.00",
-      "checked_at": "2026-07-13T14:41:45.274810"
+      "checked_at": "2026-07-13T07:09:00.773261"
     },
     {
       "sku": "B0961005_S_4987176297532",
@@ -66,7 +66,7 @@
       "status": "pending",
       "stock_level": 17,
       "price": "39.00",
-      "checked_at": "2026-07-13T14:41:45.274813"
+      "checked_at": "2026-07-13T07:09:00.773281"
     },
     {
       "sku": "B0961005_S_4987176173560",
@@ -74,7 +74,7 @@
       "status": "pending",
       "stock_level": 9,
       "price": "39.00",
-      "checked_at": "2026-07-13T14:41:45.274815"
+      "checked_at": "2026-07-13T07:09:00.773286"
     },
     {
       "sku": "B0961005_S_4987176297662",
@@ -82,7 +82,7 @@
       "status": "pending",
       "stock_level": 16,
       "price": "39.00",
-      "checked_at": "2026-07-13T14:41:45.274817"
+      "checked_at": "2026-07-13T07:09:00.773295"
     },
     {
       "sku": "B0961005_S_4987176297563",
@@ -90,7 +90,7 @@
       "status": "pending",
       "stock_level": 19,
       "price": "39.00",
-      "checked_at": "2026-07-13T14:41:45.274819"
+      "checked_at": "2026-07-13T07:09:00.773299"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -98,7 +98,7 @@
       "status": "pending",
       "stock_level": 300,
       "price": "129.00",
-      "checked_at": "2026-07-13T14:41:45.274821"
+      "checked_at": "2026-07-13T07:09:00.773303"
     },
     {
       "sku": "H5528001_S_TRT121055",
@@ -106,23 +106,23 @@
       "status": "pending",
       "stock_level": 149,
       "price": "358.00",
-      "checked_at": "2026-07-13T14:41:45.274828"
+      "checked_at": "2026-07-13T07:09:00.773307"
     },
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
-      "product_name": "",
-      "status": "expired",
-      "stock_level": null,
-      "price": "",
-      "checked_at": "2026-07-13T14:41:45.274832"
+      "product_name": "東芝 | F-LYA20(W)HKG 12吋 2合1座地座檯電風扇連遙控 香港行貨",
+      "status": "pending",
+      "stock_level": 15,
+      "price": "328.00",
+      "checked_at": "2026-07-13T07:09:11.345792"
     },
     {
       "sku": "H6588001_S_Panasonic_SRN210DH",
-      "product_name": "",
-      "status": "expired",
-      "stock_level": null,
-      "price": "",
-      "checked_at": "2026-07-13T14:41:45.274834"
+      "product_name": "樂聲牌 | SR-N210DH 1.0公升 零塗層IH磁應西施電飯煲 香港行貨 | 零塗層電飯煲",
+      "status": "pending",
+      "stock_level": 1,
+      "price": "329.00",
+      "checked_at": "2026-07-13T07:09:21.084106"
     }
   ],
   "super_low_stock_skus": [],

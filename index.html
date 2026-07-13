@@ -638,24 +638,6 @@
             </tbody>
         </table>
         </div>
-        <!-- Monitored SKUs History (status change log) -->
-        <h2 class="section-title" style="color:#888;">📜 Status Change Log</h2>
-        <div class="toolbar"><input type="text" class="table-search" data-table="expiredSkuBody" placeholder="🔍 Search SKU or product name..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('expiredSkuBody')">📥 下載</button></div>
-        <div class="table-scroll"><table>
-            <thead>
-                <tr>
-                    <th style="width:22%;">SKU</th>
-                    <th style="width:32%;">Product Name</th>
-                    <th style="width:22%;">Checked At</th>
-                    <th style="width:14%;">Status</th>
-                    <th style="width:10%;">Link</th>
-                </tr>
-            </thead>
-            <tbody id="expiredSkuBody">
-                <tr><td colspan="5" style="text-align:center;color:#666;">No completed SKUs yet</td></tr>
-            </tbody>
-        </table>
-        </div>
         <!-- Status Changes (hidden, used for modal popup data) -->
         <div id="hiddenHistoryContainer" style="display:none;"></div>
         
@@ -797,7 +779,7 @@
                     <li><span class="step">頂部 Header</span> — 標題、監測期間倒數、整體狀態（OK/OOS/Low）</li>
                     <li><span class="step">跑馬燈</span> — 自動滾動顯示 OOS / Low Stock 產品</li>
                     <li><span class="step">統計卡片</span> — Active / Pending / In Stock / Low / Super Low / OOS / Last Checked</li>
-                    <li><span class="step">表格區域</span> — Out of Stock → Super Low → Low Stock → All SKUs → Pending → <strong>Expiry SKUs</strong> → Status Change Log</li>
+                    <li><span class="step">表格區域</span> — Out of Stock → Super Low → Low Stock → All SKUs → Pending → <strong>Expiry SKUs</strong></li>
                     <li><span class="step">設定面板</span> — 底部可展開，管理 SKU 清單</li>
                 </ul>
 
@@ -1332,31 +1314,6 @@
                 expiryBody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:#666;">No expired SKUs yet</td></tr>';
             }
             
-            // 📜 Monitored SKUs History — status change log from history array
-            const historyBody = document.getElementById('expiredSkuBody');
-            if (data.history && data.history.length > 0) {
-                // Show last 50 entries, newest first, grouped reverse-chronological
-                var recentHistory = data.history.slice().reverse().slice(0, 50);
-                historyBody.innerHTML = recentHistory.map(function(h) {
-                    var tag = '';
-                    if (h.status === 'oos') tag = '<span class="tag tag-oos">OOS</span>';
-                    else if (h.status === 'super_low_stock') tag = '<span class="tag" style="background:#e74c3c;color:#fff;">Super Low (' + (h.stock_level || '?') + ')</span>';
-                    else if (h.status === 'low_stock') tag = '<span class="tag tag-low">Low (' + (h.stock_level || '?') + ')</span>';
-                    else if (h.status === 'in_stock') tag = '<span class="tag tag-stock">In Stock</span>';
-                    else tag = '<span class="tag" style="background:#888;color:#fff;">' + h.status + '</span>';
-                    
-                    var time = new Date(h.checked_at).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false});
-                    var detail = h.product_name || '--';
-                    return '<tr>'
-                        + '<td class="sku-cell"><code onclick="showSkuHistory(\'' + h.sku + '\')" title="Click to view history" style="color:#3498db;cursor:pointer;">' + h.sku + '</code></td>'
-                        + '<td class="name-cell">' + detail + '</td>'
-                        + '<td class="time">' + time + '</td>'
-                        + '<td>' + tag + '</td>'
-                        + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + h.sku + '" target="_blank">View</a></td></tr>';
-                }).join('');
-            } else {
-                historyBody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#666;">No history records yet</td></tr>';
-            }
             
             // Token status
             var tokenStatus = document.getElementById('tokenStatus');

@@ -1,6 +1,6 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-13T10:59:21.073703",
+  "last_checked": "2026-07-13T11:21:02.799396",
   "history": [],
   "low_stock_skus": [],
   "all_skus": [
@@ -10,7 +10,7 @@
       "status": "expired",
       "stock_level": 33,
       "price": "359.00",
-      "checked_at": "2026-07-13T10:59:21.004242"
+      "checked_at": "2026-07-13T11:20:51.538710"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -18,7 +18,7 @@
       "status": "expired",
       "stock_level": 21,
       "price": "178.00",
-      "checked_at": "2026-07-13T10:59:21.004264"
+      "checked_at": "2026-07-13T11:20:51.538734"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -26,7 +26,7 @@
       "status": "expired",
       "stock_level": 172,
       "price": "149.00",
-      "checked_at": "2026-07-13T10:59:21.004274"
+      "checked_at": "2026-07-13T11:20:51.538743"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -34,7 +34,7 @@
       "status": "expired",
       "stock_level": 23,
       "price": "114.00",
-      "checked_at": "2026-07-13T10:59:21.004281"
+      "checked_at": "2026-07-13T11:20:51.538749"
     },
     {
       "sku": "B0961005_S_9556174902219",
@@ -42,63 +42,63 @@
       "status": "expired",
       "stock_level": 363,
       "price": "15.50",
-      "checked_at": "2026-07-13T10:59:21.004288"
+      "checked_at": "2026-07-13T11:20:51.538756"
     },
     {
       "sku": "B0961005_S_4894436008671",
-      "product_name": "",
+      "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
       "status": "pending",
-      "stock_level": null,
+      "stock_level": 428,
       "price": "",
-      "checked_at": "2026-07-13T10:59:21.004295"
+      "checked_at": "2026-07-13T11:20:51.538764"
     },
     {
       "sku": "B0961005_S_4892218083908",
-      "product_name": "",
+      "product_name": "OLLY | 女士多元維他命營養補充軟糖 90粒【最佳使用日期:07/2027】",
       "status": "pending",
-      "stock_level": null,
+      "stock_level": 1,
       "price": "",
-      "checked_at": "2026-07-13T10:59:21.004301"
+      "checked_at": "2026-07-13T11:20:51.538771"
     },
     {
       "sku": "B0961005_S_4902320706674",
-      "product_name": "",
+      "product_name": "Oops | HKTV Mall",
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:59:21.004311"
+      "checked_at": "2026-07-13T11:20:54.407382"
     },
     {
       "sku": "B0961005_S_4905522709861",
-      "product_name": "",
+      "product_name": "Oops | HKTV Mall",
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:59:21.004316"
+      "checked_at": "2026-07-13T11:20:57.330902"
     },
     {
       "sku": "B0961005_S_4904616341235",
-      "product_name": "",
+      "product_name": "Oops | HKTV Mall",
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:59:21.004322"
+      "checked_at": "2026-07-13T11:21:00.124244"
     },
     {
       "sku": "B0961005_S_4902828031500",
-      "product_name": "",
+      "product_name": "Oops | HKTV Mall",
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T10:59:21.004327"
+      "checked_at": "2026-07-13T11:21:02.756111"
     },
     {
       "sku": "B0961005_S_4897091050078",
-      "product_name": "",
+      "product_name": "Swisse | Ultiboost 無腥味高濃度野生魚油 200粒裝【香港行貨】【最佳使用日期:09/2028】",
       "status": "pending",
-      "stock_level": null,
+      "stock_level": 300,
       "price": "",
-      "checked_at": "2026-07-13T10:59:21.004331"
+      "checked_at": "2026-07-13T11:21:02.756129"
     }
   ],
   "super_low_stock_skus": [],

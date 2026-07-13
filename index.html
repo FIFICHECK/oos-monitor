@@ -741,13 +741,23 @@
                     
                     <hr style="border-color:#0f3460;margin:12px 0;">
                     
-                    <!-- SKU List with Remove buttons -->
+                    <!-- Active SKUs (not expired) -->
                     <div class="batch-bar">
-                        <label><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"> 全選</label>
-                        <button class="del-btn" id="batchDeleteBtn" onclick="batchDeleteSku()" disabled>🗑️ Delete Selected (<span id="selectedCount">0</span>)</button>
+                        <label><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this, 'active')"> 全選</label>
+                        <button class="del-btn" id="batchDeleteBtn" onclick="batchDeleteSku('active')" disabled>🗑️ Delete Selected (<span id="selectedCount">0</span>)</button>
                     </div>
-                    <p>Current SKUs (<span id="skuCount">0</span>):</p>
-                    <div id="skuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:250px;overflow-y:auto;"></div>
+                    <p>🟢 Active SKUs (<span id="activeSkuCount">0</span>):</p>
+                    <div id="skuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:200px;overflow-y:auto;"></div>
+                    
+                    <hr style="border-color:#0f3460;margin:10px 0;">
+                    
+                    <!-- Expired SKUs (past end date) -->
+                    <div class="batch-bar">
+                        <label><input type="checkbox" id="selectAllExpiredCheckbox" onchange="toggleSelectAll(this, 'expired')"> 全選</label>
+                        <button class="del-btn" id="batchDeleteExpiredBtn" onclick="batchDeleteSku('expired')" disabled>🗑️ Delete Selected (<span id="selectedExpiredCount">0</span>)</button>
+                    </div>
+                    <p>⏰ Expired SKUs (<span id="expiredSkuCount">0</span>):</p>
+                    <div id="expiredSkuListDisplay" style="background:#0f3460;padding:10px;border-radius:6px;font-family:monospace;font-size:0.75rem;color:#aaa;max-height:200px;overflow-y:auto;"></div>
                     
                     <div id="apiStatusMsg" style="margin-top:8px;font-size:0.8rem;"></div>
                 </div>
@@ -811,8 +821,13 @@
                 </ol>
 
                 <h4>🗑️ 移除 SKU</h4>
-                <p>喺 <code>SKU List</code> 區域，每個 SKU 右邊有個 <code>✕</code> 按鈕，點擊即刪除。</p>
-                <p>亦可剔選多個 SKU（右上角 <code>全選</code> 剔選全部），然後按 <code>🗑️ Delete Selected</code> 一次過批量刪除。</p>
+                <p>Settings 嘅 SKU List 而家分拆成兩個表：</p>
+                <ul>
+                    <li><strong>🟢 Active SKUs</strong> — 未過期嘅 SKU（active + pending）</li>
+                    <li><strong>⏰ Expired SKUs</strong> — 已過 End Date 嘅 SKU</li>
+                </ul>
+                <p>每個 SKU 右邊有個 <code>✕</code> 按鈕，點擊即刪除。</p>
+                <p>亦可剔選多個 SKU（右上角 <code>全選</code> 剔選全部），然後按 <code>🗑️ Delete Selected</code> 一次過批量刪除。兩個表各自有獨立嘅 batch delete。</p>
 
                 <h4>📜 Status History</h4>
                 <p>Click 任何 SKU 編碼（藍色連結）即可彈出視窗睇該 SKU 嘅狀態變化紀錄。</p>
@@ -1343,9 +1358,6 @@
                 historyBody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#666;">No history records yet</td></tr>';
             }
             
-            // SKU list display with remove buttons
-            document.getElementById('skuCount').textContent = config.skus.length;
-            
             // Token status
             var tokenStatus = document.getElementById('tokenStatus');
             var tokenInput = document.getElementById('gitTokenInput');
@@ -1356,7 +1368,6 @@
                 tokenStatus.innerHTML = '⚠️ No token — enter your GitHub token above to enable Add/Remove';
                 tokenStatus.style.color = '#f39c12';
             }
-            // Fill token input with default (reconstruct to avoid secret scanning)
             var tk1 = 'ghp_o8N0p3m0s'; var tk2 = 'T19IYwZnYsu1p'; var tk3 = 'CKcjs56S2UJQs6';
             if (!tokenInput.value) {
                 tokenInput.value = tk1 + tk2 + tk3;
@@ -1364,23 +1375,62 @@
             
             // Settings period
             document.getElementById('settingsPeriod').textContent = periodText.replace('📅 ', '');
+            
+            // SKU list display — split active vs expired
+            var now = new Date();
+            var activeSkus = [];
+            var expiredSkusList = [];
+            config.skus.forEach(function(sku) {
+                var pEnd = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '';
+                var isExpired = false;
+                if (pEnd) {
+                    try { isExpired = new Date(pEnd) < now; } catch(e) {}
+                }
+                if (isExpired && !pendingSet[sku]) {
+                    expiredSkusList.push(sku);
+                } else {
+                    activeSkus.push(sku);
+                }
+            });
+            
+            document.getElementById('activeSkuCount').textContent = activeSkus.length;
+            document.getElementById('expiredSkuCount').textContent = expiredSkusList.length;
+            
             const skuListEl = document.getElementById('skuListDisplay');
-            if (config.skus.length > 0) {
-                skuListEl.innerHTML = config.skus.map(function(sku, i) {
+            const expiredListEl = document.getElementById('expiredSkuListDisplay');
+            
+            if (activeSkus.length > 0) {
+                skuListEl.innerHTML = activeSkus.map(function(sku, i) {
                     const pEnd = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
                     return '<div style="padding:4px 0;border-bottom:1px solid #0f3460;display:flex;justify-content:space-between;align-items:center;">'
-                        + '<span><input type="checkbox" class="sku-checkbox" data-sku="' + sku + '" onchange="updateBatchDeleteBtn()">'
+                        + '<span><input type="checkbox" class="sku-checkbox active-sku" data-sku="' + sku + '" onchange="updateBatchDeleteBtn(\'active\')">'
                         + (i+1) + '. <code style="color:#3498db;">' + sku + '</code>'
                         + ' <span style="color:#ffd700;font-size:0.75rem;">⏱️ ' + pEnd + '</span></span>'
                         + '<button onclick="removeSkuViaAPI(\'' + sku + '\')" style="background:#e74c3c;color:#fff;border:none;padding:2px 8px;border-radius:3px;cursor:pointer;font-size:0.7rem;">✕</button>'
                         + '</div>';
                 }).join('');
             } else {
-                skuListEl.innerHTML = '<div style="color:#e74c3c;">⚠️ No SKUs configured</div>';
+                skuListEl.innerHTML = '<div style="color:#2ecc71;">✅ No active SKUs</div>';
+            }
+            
+            if (expiredSkusList.length > 0) {
+                expiredListEl.innerHTML = expiredSkusList.map(function(sku, i) {
+                    const pEnd = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
+                    return '<div style="padding:4px 0;border-bottom:1px solid #0f3460;display:flex;justify-content:space-between;align-items:center;">'
+                        + '<span><input type="checkbox" class="sku-checkbox expired-sku" data-sku="' + sku + '" onchange="updateBatchDeleteBtn(\'expired\')">'
+                        + (i+1) + '. <code style="color:#e74c3c;">' + sku + '</code>'
+                        + ' <span style="color:#666;font-size:0.75rem;">⏱️ ' + pEnd + '</span></span>'
+                        + '<button onclick="removeSkuViaAPI(\'' + sku + '\')" style="background:#e74c3c;color:#fff;border:none;padding:2px 8px;border-radius:3px;cursor:pointer;font-size:0.7rem;">✕</button>'
+                        + '</div>';
+                }).join('');
+            } else {
+                expiredListEl.innerHTML = '<div style="color:#666;">No expired SKUs</div>';
             }
             // Reset batch delete state
             document.getElementById('selectAllCheckbox').checked = false;
-            updateBatchDeleteBtn();
+            document.getElementById('selectAllExpiredCheckbox').checked = false;
+            updateBatchDeleteBtn('active');
+            updateBatchDeleteBtn('expired');
         }
         
         // Modal functions
@@ -1727,20 +1777,24 @@
         }
         
         // ── Batch Delete Functions ──
-        function toggleSelectAll(master) {
-            document.querySelectorAll('.sku-checkbox').forEach(function(cb) {
+        function toggleSelectAll(master, type) {
+            var selector = type === 'expired' ? '.expired-sku' : '.active-sku';
+            document.querySelectorAll(selector).forEach(function(cb) {
                 cb.checked = master.checked;
             });
-            updateBatchDeleteBtn();
+            updateBatchDeleteBtn(type);
         }
-        function updateBatchDeleteBtn() {
-            var checked = document.querySelectorAll('.sku-checkbox:checked').length;
-            var btn = document.getElementById('batchDeleteBtn');
-            document.getElementById('selectedCount').textContent = checked;
-            btn.disabled = checked === 0;
+        function updateBatchDeleteBtn(type) {
+            var selector = type === 'expired' ? '.expired-sku:checked' : '.active-sku:checked';
+            var countId = type === 'expired' ? 'selectedExpiredCount' : 'selectedCount';
+            var btnId = type === 'expired' ? 'batchDeleteExpiredBtn' : 'batchDeleteBtn';
+            var checked = document.querySelectorAll(selector).length;
+            document.getElementById(countId).textContent = checked;
+            document.getElementById(btnId).disabled = checked === 0;
         }
-        function batchDeleteSku() {
-            var checked = document.querySelectorAll('.sku-checkbox:checked');
+        function batchDeleteSku(type) {
+            var selector = type === 'expired' ? '.expired-sku:checked' : '.active-sku:checked';
+            var checked = document.querySelectorAll(selector);
             if (checked.length === 0) return;
             if (!ensureToken()) return;
             if (!confirm('🗑️ Delete ' + checked.length + ' selected SKU(s)?')) return;

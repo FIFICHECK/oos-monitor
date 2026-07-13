@@ -270,16 +270,65 @@ def main():
             # Check per-SKU period
             period_status = check_monitor_period(config, sku)
             if period_status == "pending":
-                print(f"  ⏳ {sku}... [pending — starts after {config.get('sku_start_periods', {}).get(sku, '?')}]")
-                results.append({
-                    "sku": sku,
-                    "status": "pending",
-                    "reason": "Not yet started",
-                    "product_name": "",
-                    "price": "",
-                    "stock_level": None,
-                    "checked_at": datetime.now().isoformat()
-                })
+                prev_state = state.get(sku, {})
+                if prev_state.get("product_name"):
+                    print(f"  ⏳ {sku}... [pending — cached: {prev_state.get('product_name', '')[:40]}]")
+                    results.append({
+                        "sku": sku,
+                        "status": "pending",
+                        "reason": "Not yet started",
+                        "product_name": prev_state["product_name"],
+                        "price": prev_state.get("price", ""),
+                        "stock_level": prev_state.get("stock_level"),
+                        "checked_at": datetime.now().isoformat()
+                    })
+                else:
+                    # First time seeing this SKU — do a quick scan for product info
+                    print(f"  ⏳ {sku}... [pending — scanning for product info...]", end=" ", flush=True)
+                    try:
+                        page.goto(f"https://www.hktvmall.com/hktv/p/{sku}", timeout=25000, wait_until="networkidle")
+                        page.wait_for_timeout(2000)
+                        title = page.title()
+                        product_name = title.replace(" | HKTVmall 香港最大網購平台", "").strip()[:100]
+                        html_content = page.content()
+                        stock_level = extract_stock_level(html_content)
+                        add_to_cart_buttons = page.locator('button[data-product-id]')
+                        price = extract_price(page, add_to_cart_buttons)
+                        # Fallback: try to extract price from HTML if button didn't have it
+                        if not price:
+                            pm = re.search(r'\"price\"\s*:\s*\"?(\d+\.?\d*)', html_content)
+                            if pm:
+                                price = pm.group(1)
+                        # Cache in state
+                        state[sku] = {
+                            "status": "pending",
+                            "product_name": product_name,
+                            "stock_level": stock_level,
+                            "price": price,
+                            "last_change": "",
+                            "last_checked": datetime.now().isoformat()
+                        }
+                        print(f"[{product_name[:30]}]")
+                        results.append({
+                            "sku": sku,
+                            "status": "pending",
+                            "reason": "Not yet started",
+                            "product_name": product_name,
+                            "price": price,
+                            "stock_level": stock_level,
+                            "checked_at": datetime.now().isoformat()
+                        })
+                    except Exception as e:
+                        print(f"[ERROR: {str(e)[:30]}]")
+                        results.append({
+                            "sku": sku,
+                            "status": "pending",
+                            "reason": "Not yet started",
+                            "product_name": "",
+                            "price": "",
+                            "stock_level": None,
+                            "checked_at": datetime.now().isoformat()
+                        })
                 continue
             elif period_status == "expired":
                 # Use last known data from state for expired SKUs

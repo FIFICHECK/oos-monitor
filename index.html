@@ -227,6 +227,44 @@
         .modal-no-history { text-align: center; padding: 30px; color: #666; }
         tr:hover { background: rgba(233, 69, 96, 0.05); }
         
+        /* ── Help Button ── */
+        .help-btn {
+            position: fixed; top: 20px; right: 20px; z-index: 999;
+            width: 36px; height: 36px; border-radius: 50%;
+            background: #e94560; color: #fff; border: none;
+            font-size: 1.2rem; font-weight: bold; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 2px 12px rgba(233,69,96,0.4);
+            transition: all 0.2s;
+        }
+        .help-btn:hover { transform: scale(1.1); background: #ff6b81; }
+        
+        /* ── Manual Modal ── */
+        .manual-body {
+            padding: 20px 25px;
+            overflow-y: auto;
+            flex: 1;
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+        .manual-body h4 {
+            color: #e94560;
+            font-size: 1rem;
+            margin: 20px 0 8px 0;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #0f3460;
+        }
+        .manual-body h4:first-child { margin-top: 0; }
+        .manual-body p { margin: 6px 0; color: #ccc; }
+        .manual-body ul { margin: 6px 0 6px 20px; color: #ccc; }
+        .manual-body li { margin: 4px 0; }
+        .manual-body code {
+            background: #0f3460; padding: 1px 6px; border-radius: 4px;
+            font-size: 0.8rem; color: #ffd700;
+        }
+        .manual-body .tag-demo { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.75rem; font-weight: bold; }
+        .manual-body .step { color: #3498db; font-weight: bold; }
+        
         .tag {
             padding: 2px 8px;
             border-radius: 4px;
@@ -414,6 +452,9 @@
         <div class="monitor-period" id="monitorPeriod">Monitoring until: --</div>
         <div id="headerStatus" class="status-badge badge-ok">Loading...</div>
     </div>
+    
+    <!-- Help Button -->
+    <button class="help-btn" onclick="openManual()" title="使用手冊">?</button>
     
     <!-- Marquee -->
     <div class="marquee-container" id="marqueeContainer">
@@ -680,6 +721,82 @@
         </div>
     </div>
     
+<!-- Manual / Tutorial Modal -->
+    <div class="modal-overlay" id="manualModal" onclick="closeManual(event)">
+        <div class="modal-box" onclick="event.stopPropagation()" style="max-width: 750px;">
+            <div class="modal-header">
+                <h3>📖 OOS Monitor 使用手冊</h3>
+                <button class="close-btn" onclick="closeManual()">&times;</button>
+            </div>
+            <div class="manual-body">
+                <h4>📌 什麼是 OOS Monitor？</h4>
+                <p>自動檢查 HKTVmall 產品庫存狀況，每 30 分鐘監測一次。支援以下狀態：</p>
+                <ul>
+                    <li><span class="tag-demo" style="background:#2ecc71;color:#fff;">✅ In Stock</span> — 庫存 ≥ 30，有「加入購物車」按鈕</li>
+                    <li><span class="tag-demo" style="background:#f39c12;color:#fff;">🟡 Low Stock</span> — 庫存 10-29</li>
+                    <li><span class="tag-demo" style="background:#e74c3c;color:#fff;">🔴 Super Low</span> — 庫存 < 10</li>
+                    <li><span class="tag-demo" style="background:#e74c3c;color:#fff;">🔴 OOS</span> — 缺貨（暫時無法購買 / 已售罄）</li>
+                    <li><span class="tag-demo" style="background:#888;color:#fff;">⏳ Pending</span> — 未到監測開始日期</li>
+                    <li><span class="tag-demo" style="background:#666;color:#fff;">⏰ Expired</span> — 已過監測結束日期（移至歷史）</li>
+                </ul>
+
+                <h4>📊 Dashboard 區域說明</h4>
+                <ul>
+                    <li><span class="step">頂部 Header</span> — 標題、監測期間倒數、整體狀態（OK/OOS/Low）</li>
+                    <li><span class="step">跑馬燈</span> — 自動滾動顯示 OOS / Low Stock 產品</li>
+                    <li><span class="step">統計卡片</span> — Active / Pending / In Stock / Low / Super Low / OOS / Last Checked</li>
+                    <li><span class="step">表格區域</span> — Out of Stock → Super Low → Low Stock → All SKUs → Pending → History</li>
+                    <li><span class="step">設定面板</span> — 底部可展開，管理 SKU 清單</li>
+                </ul>
+
+                <h4>➕ 新增 SKU</h4>
+                <p><span class="step">方法一（單個）：</span></p>
+                <ol>
+                    <li>展開底部 <code>⚙️ Settings</code> 面板</li>
+                    <li>喺 <code>Add SKU</code> 輸入產品 ID（格式：<code>B0961005_S_4892218083908</code>）</li>
+                    <li>可選設定 <code>Start</code> 日期時間（監測開始時間）及 <code>End</code> 日期時間（監測結束時間）</li>
+                    <li>按 <code>➕ Add SKU</code> 按鈕</li>
+                    <li>系統會自動 trigger 即時檢查</li>
+                </ol>
+                <p><span class="step">方法二（批量）：</span></p>
+                <ol>
+                    <li>喺 <code>Bulk Add SKUs</code> 區域，每行一個 SKU 貼上</li>
+                    <li>可選設定批量 Start/End 時間</li>
+                    <li>按 <code>📋 Bulk Add</code> 提交</li>
+                </ol>
+
+                <h4>🗑️ 移除 SKU</h4>
+                <p>喺 <code>SKU List</code> 區域，每個 SKU 右邊有個 <code>✕</code> 按鈕，點擊即刪除。</p>
+
+                <h4>📜 Status History</h4>
+                <p>Click 任何 SKU 編碼（藍色連結）即可彈出視窗睇該 SKU 嘅狀態變化紀錄。</p>
+                <ul>
+                    <li>Active SKU：顯示所有紀錄（由開始監測至今）</li>
+                    <li>Expired SKU：只顯示 <strong>監測期間內</strong>（Start ~ End）嘅紀錄</li>
+                    <li>每個 SKU 保留最近 1000 條紀錄</li>
+                </ul>
+
+                <h4>📤 Export to Excel</h4>
+                <p>每個 table 右上角有個 <code>📥 Export XLSX</code> 按鈕，一鍵匯出該 table 做 Excel。</p>
+
+                <h4>⏱️ 自動更新</h4>
+                <ul>
+                    <li>Dashboard 每 <strong>30 秒</strong> 自動 refresh 畫面</li>
+                    <li>後端 cron job 每 <strong>30 分鐘</strong> 檢查一次產品庫存</li>
+                    <li>右上角有 Next Cron 倒數計時器</li>
+                </ul>
+
+                <h4>💡 小貼士</h4>
+                <ul>
+                    <li>如果啱啱加咗 SKU 但未見到，等 1-2 分鐘後 <strong>Ctrl+F5 硬刷新</strong> 頁面</li>
+                    <li>設定 Start/End 時間可以精準控制每個 SKU 嘅監測窗口，唔使 manual 加減</li>
+                    <li>手機瀏覽可以左右滑動睇更多欄位（Horizontal Scroll）</li>
+                    <li>Dashboard 數據存在 GitHub，清除 browser cache 唔會影響數據</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- Status History Modal -->
     <div class="modal-overlay" id="skuModal" onclick="closeSkuModal(event)">
         <div class="modal-box" onclick="event.stopPropagation()">
@@ -1212,8 +1329,18 @@
             document.getElementById('skuModal').classList.remove('show');
         }
         
+        function openManual() {
+            document.getElementById('manualModal').classList.add('show');
+        }
+        function closeManual(event) {
+            if (event && event.target !== document.getElementById('manualModal')) return;
+            document.getElementById('manualModal').classList.remove('show');
+        }
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeSkuModal({target: document.getElementById('skuModal')});
+            if (e.key === 'Escape') {
+                closeSkuModal({target: document.getElementById('skuModal')});
+                closeManual({target: document.getElementById('manualModal')});
+            }
         });
         
         // === GitHub API Functions for interactive SKU management ===

@@ -143,19 +143,19 @@
     "last_checked": "2026-07-13T11:54:59.111515"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
-    "status": "low_stock",
-    "product_name": "東芝 | F-LYA20(W)HKG 12吋 2合1座地座檯電風扇連遙控 香港行貨",
-    "stock_level": 13,
-    "price": "328.00",
-    "last_change": "2026-07-13T15:13:07.529321",
-    "last_checked": "2026-07-13T20:53:59.445240"
+    "status": "error",
+    "product_name": "",
+    "stock_level": null,
+    "price": "",
+    "last_change": "2026-07-13T21:25:19.082066",
+    "last_checked": "2026-07-13T21:25:19.082067"
   },
   "H6588001_S_Panasonic_SRN210DH": {
-    "status": "super_low_stock",
-    "product_name": "樂聲牌 | SR-N210DH 1.0公升 零塗層IH磁應西施電飯煲 香港行貨 | 零塗層電飯煲",
-    "stock_level": 1,
-    "price": "1,490.00",
-    "last_change": "2026-07-13T15:13:11.109113",
-    "last_checked": "2026-07-13T20:54:03.514589"
+    "status": "error",
+    "product_name": "",
+    "stock_level": null,
+    "price": "",
+    "last_change": "2026-07-13T21:25:44.084270",
+    "last_checked": "2026-07-13T21:25:44.084272"
   }
 }

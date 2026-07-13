@@ -14,6 +14,7 @@ import time
 import re
 from datetime import datetime
 from pathlib import Path
+from collections import defaultdict
 
 # === CONFIG ===
 CONFIG_PATH = os.path.expanduser("~/oos-monitor/config.json")
@@ -281,14 +282,16 @@ def main():
                 })
                 continue
             elif period_status == "expired":
-                print(f"  ⏰ {sku}... [expired — monitor period ended]")
+                # Use last known data from state for expired SKUs
+                prev_state = state.get(sku, {})
+                print(f"  ⏰ {sku}... [expired — last known: {prev_state.get('product_name', '')[:40]}]")
                 results.append({
                     "sku": sku,
                     "status": "expired",
                     "reason": "Monitor period ended",
-                    "product_name": "",
-                    "price": "",
-                    "stock_level": None,
+                    "product_name": prev_state.get("product_name", ""),
+                    "price": prev_state.get("price", ""),
+                    "stock_level": prev_state.get("stock_level"),
                     "checked_at": datetime.now().isoformat()
                 })
                 continue
@@ -325,6 +328,7 @@ def main():
                 "status": result["status"],
                 "product_name": result["product_name"],
                 "stock_level": result.get("stock_level"),
+                "price": result.get("price", ""),
                 "last_change": datetime.now().isoformat() if result["status"] != prev_status else prev.get("last_change"),
                 "last_checked": datetime.now().isoformat()
             }
@@ -364,9 +368,9 @@ def main():
     dashboard["all_skus"] = all_skus_list
     dashboard["last_checked"] = datetime.now().isoformat()
     
-    # Add to history (keep last 100 events)
+    # Add to history with per-SKU limit (keep last 1000 entries per SKU)
     for r in results:
-        if r["status"] in ("oos", "super_low_stock", "low_stock", "in_stock", "pending"):
+        if r["status"] in ("oos", "super_low_stock", "low_stock", "in_stock"):
             dashboard["history"].append({
                 "sku": r["sku"],
                 "product_name": r["product_name"],
@@ -374,7 +378,13 @@ def main():
                 "stock_level": r.get("stock_level"),
                 "checked_at": r["checked_at"]
             })
-    dashboard["history"] = dashboard["history"][-100:]  # Keep last 100
+    # Per-SKU limit: keep last 1000 entries for each SKU
+    sku_groups = defaultdict(list)
+    for h in dashboard["history"]:
+        sku_groups[h["sku"]].append(h)
+    dashboard["history"] = []
+    for sku, entries in sku_groups.items():
+        dashboard["history"].extend(entries[-1000:])
     
     save_state(state)
     save_dashboard_data(dashboard)

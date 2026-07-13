@@ -1,6 +1,6 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-13T11:30:05.390936",
+  "last_checked": "2026-07-13T11:49:46.961572",
   "history": [],
   "low_stock_skus": [],
   "all_skus": [
@@ -10,7 +10,7 @@
       "status": "expired",
       "stock_level": 33,
       "price": "359.00",
-      "checked_at": "2026-07-13T11:29:54.961605"
+      "checked_at": "2026-07-13T11:49:24.812951"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -18,7 +18,7 @@
       "status": "expired",
       "stock_level": 21,
       "price": "178.00",
-      "checked_at": "2026-07-13T11:29:54.961642"
+      "checked_at": "2026-07-13T11:49:24.812982"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -26,7 +26,7 @@
       "status": "expired",
       "stock_level": 172,
       "price": "149.00",
-      "checked_at": "2026-07-13T11:29:54.961658"
+      "checked_at": "2026-07-13T11:49:24.812998"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -34,7 +34,7 @@
       "status": "expired",
       "stock_level": 23,
       "price": "114.00",
-      "checked_at": "2026-07-13T11:29:54.961671"
+      "checked_at": "2026-07-13T11:49:24.813011"
     },
     {
       "sku": "B0961005_S_9556174902219",
@@ -42,63 +42,63 @@
       "status": "expired",
       "stock_level": 363,
       "price": "15.50",
-      "checked_at": "2026-07-13T11:29:54.961684"
+      "checked_at": "2026-07-13T11:49:24.813022"
     },
     {
       "sku": "B0961005_S_4894436008671",
       "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
       "status": "pending",
       "stock_level": 428,
-      "price": "",
-      "checked_at": "2026-07-13T11:29:54.961850"
+      "price": "368.00",
+      "checked_at": "2026-07-13T11:49:24.813036"
     },
     {
       "sku": "B0961005_S_4892218083908",
       "product_name": "OLLY | 女士多元維他命營養補充軟糖 90粒【最佳使用日期:07/2027】",
       "status": "pending",
       "stock_level": 1,
-      "price": "",
-      "checked_at": "2026-07-13T11:29:54.961890"
+      "price": "128.00",
+      "checked_at": "2026-07-13T11:49:24.813049"
     },
     {
       "sku": "B0961005_S_4987176297532",
-      "product_name": "502 Bad Gateway",
+      "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
       "status": "pending",
-      "stock_level": null,
-      "price": "",
-      "checked_at": "2026-07-13T11:29:57.598433"
+      "stock_level": 17,
+      "price": "39.00",
+      "checked_at": "2026-07-13T11:49:31.642888"
     },
     {
       "sku": "B0961005_S_4987176173560",
-      "product_name": "502 Bad Gateway",
+      "product_name": "Rejoice飄柔 | 滋潤去屑潤髮乳 650g 【最佳使用日期: 07/04/2029】",
       "status": "pending",
-      "stock_level": null,
-      "price": "",
-      "checked_at": "2026-07-13T11:30:00.154324"
+      "stock_level": 9,
+      "price": "39.00",
+      "checked_at": "2026-07-13T11:49:36.663766"
     },
     {
       "sku": "B0961005_S_4987176297662",
-      "product_name": "502 Bad Gateway",
+      "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
       "status": "pending",
-      "stock_level": null,
-      "price": "",
-      "checked_at": "2026-07-13T11:30:02.728467"
+      "stock_level": 16,
+      "price": "39.00",
+      "checked_at": "2026-07-13T11:49:41.836596"
     },
     {
       "sku": "B0961005_S_4987176297563",
-      "product_name": "502 Bad Gateway",
+      "product_name": "Rejoice飄柔 | 蓬鬆去屑洗髮露 600g 【最佳使用日期: 02/11/2028】",
       "status": "pending",
-      "stock_level": null,
-      "price": "",
-      "checked_at": "2026-07-13T11:30:05.328008"
+      "stock_level": 19,
+      "price": "39.00",
+      "checked_at": "2026-07-13T11:49:46.866151"
     },
     {
       "sku": "B0961005_S_4897091050078",
       "product_name": "Swisse | Ultiboost 無腥味高濃度野生魚油 200粒裝【香港行貨】【最佳使用日期:09/2028】",
       "status": "pending",
       "stock_level": 300,
-      "price": "",
-      "checked_at": "2026-07-13T11:30:05.328028"
+      "price": "129.00",
+      "checked_at": "2026-07-13T11:49:46.866164"
     }
   ],
   "super_low_stock_skus": [],

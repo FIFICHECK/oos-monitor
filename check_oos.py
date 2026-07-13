@@ -17,10 +17,11 @@ from pathlib import Path
 from collections import defaultdict
 
 # === CONFIG ===
-CONFIG_PATH = os.path.expanduser("~/oos-monitor/config.json")
-STATE_PATH = os.path.expanduser("~/oos-monitor/oos_state.json")
-DASHBOARD_DATA_PATH = os.path.expanduser("~/oos-monitor/dashboard_data.json")
-DISCORD_WEBHOOK_PATH = os.path.expanduser("~/oos-monitor/discord_webhook.txt")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CONFIG_PATH = os.path.join(BASE_DIR, "config.json")
+STATE_PATH = os.path.join(BASE_DIR, "oos_state.json")
+DASHBOARD_DATA_PATH = os.path.join(BASE_DIR, "dashboard_data.json")
+DISCORD_WEBHOOK_PATH = os.path.join(BASE_DIR, "discord_webhook.txt")
 LOW_STOCK_THRESHOLD = 10  # Alert when stock < 10
 LOW_STOCK_THRESHOLD_30 = 30  # Alert when stock < 30
 

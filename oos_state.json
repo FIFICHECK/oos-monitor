@@ -145,10 +145,10 @@
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
     "product_name": "東芝 | F-LYA20(W)HKG 12吋 2合1座地座檯電風扇連遙控 香港行貨",
-    "stock_level": 15,
+    "stock_level": 14,
     "price": "328.00",
     "last_change": "2026-07-13T15:13:07.529321",
-    "last_checked": "2026-07-13T15:43:50.891876"
+    "last_checked": "2026-07-13T16:14:57.189007"
   },
   "H6588001_S_Panasonic_SRN210DH": {
     "status": "super_low_stock",
@@ -156,6 +156,6 @@
     "stock_level": 2,
     "price": "1,490.00",
     "last_change": "2026-07-13T15:13:11.109113",
-    "last_checked": "2026-07-13T15:43:54.617946"
+    "last_checked": "2026-07-13T16:15:02.660294"
   }
 }

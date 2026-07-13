@@ -671,13 +671,13 @@
                                 <span style="color:#888;font-size:0.75rem;">🟢 Start</span>
                                 <input type="date" id="newSkuStartDate" 
                                        style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
-                                <input type="text" id="newSkuStartTime" placeholder="00:00 (24h)" value="00:00" maxlength="5" pattern="[0-2][0-9]:[0-5][0-9]" 
-                                       style="width:120px;padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                                <input type="time" id="newSkuStartTime" step="1" value="00:00:00" 
+                                       style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                                 <span style="color:#ffd700;font-size:0.75rem;">🔴 End</span>
                                 <input type="date" id="newSkuEndDate" 
                                        style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
-                                <input type="text" id="newSkuEndTime" placeholder="23:59 (24h)" value="" maxlength="5" pattern="[0-2][0-9]:[0-5][0-9]" 
-                                       style="width:120px;padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                                <input type="time" id="newSkuEndTime" step="1" value="" 
+                                       style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                             </div>
                             <button onclick="addSkuViaAPI()" style="
                                 background:#2ecc71;color:#fff;border:none;padding:8px 16px;
@@ -699,13 +699,13 @@
                             <span style="color:#888;font-size:0.75rem;">🟢 Start</span>
                             <input type="date" id="bulkSkuStartDate" 
                                    style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
-                            <input type="text" id="bulkSkuStartTime" placeholder="00:00 (24h)" value="00:00" maxlength="5" pattern="[0-2][0-9]:[0-5][0-9]" 
-                                   style="width:120px;padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <input type="time" id="bulkSkuStartTime" step="1" value="00:00:00" 
+                                   style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                             <span style="color:#ffd700;font-size:0.75rem;">🔴 End</span>
                             <input type="date" id="bulkSkuEndDate" 
                                    style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
-                            <input type="text" id="bulkSkuEndTime" placeholder="23:59 (24h)" value="" maxlength="5" pattern="[0-2][0-9]:[0-5][0-9]" 
-                                   style="width:120px;padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <input type="time" id="bulkSkuEndTime" step="1" value="" 
+                                   style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                             <button onclick="bulkAddSkuViaAPI()" style="
                                 background:#3498db;color:#fff;border:none;padding:6px 14px;
                                 border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.8rem;

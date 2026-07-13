@@ -229,6 +229,7 @@ def check_monitor_period(config, sku=None):
                 end_dt = datetime.fromisoformat(sku_end)
                 if now > end_dt:
                     return "expired"  # Past end
+                return "ok"  # Per-SKU end in future — SKU is active, skip global
             except:
                 pass
     

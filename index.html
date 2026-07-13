@@ -1439,6 +1439,7 @@
                     html += recent.map(function(h) {
                         var tag = '';
                         if (h.status === 'oos') tag = '<span class="tag tag-oos">OOS</span>';
+                        else if (h.status === 'super_low_stock') tag = '<span class="tag" style="background:#e74c3c;color:#fff;">🔴 Super Low (' + (h.stock_level || '?') + ')</span>';
                         else if (h.status === 'low_stock') tag = '<span class="tag tag-low">Low (' + (h.stock_level || '?') + ')</span>';
                         else if (h.status === 'in_stock') tag = '<span class="tag tag-stock">In Stock</span>';
                         else tag = '<span>' + h.status + '</span>';

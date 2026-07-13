@@ -947,7 +947,7 @@
             var now = new Date();
             if (config.sku_start_periods) {
                 for (var sk in config.sku_start_periods) {
-                    if (new Date(config.sku_start_periods[sk]) > now) {
+                    if (config.skus.indexOf(sk) !== -1 && new Date(config.sku_start_periods[sk]) > now) {
                         pendingSet[sk] = true;
                     }
                 }

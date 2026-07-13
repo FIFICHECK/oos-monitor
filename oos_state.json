@@ -45,5 +45,61 @@
     "stock_level": 104,
     "last_change": "2026-07-12T18:46:10.760358",
     "last_checked": "2026-07-12T19:16:48.538162"
+  },
+  "B0961005_S_4894436008671": {
+    "status": "pending",
+    "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
+    "stock_level": 428,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:19:20.170069"
+  },
+  "B0961005_S_4892218083908": {
+    "status": "pending",
+    "product_name": "OLLY | 女士多元維他命營養補充軟糖 90粒【最佳使用日期:07/2027】",
+    "stock_level": 1,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:19:23.298618"
+  },
+  "B0961005_S_4897091050078": {
+    "status": "pending",
+    "product_name": "Swisse | Ultiboost 無腥味高濃度野生魚油 200粒裝【香港行貨】【最佳使用日期:09/2028】",
+    "stock_level": 300,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:19:35.264210"
+  },
+  "B0961005_S_4902320706674": {
+    "status": "pending",
+    "product_name": "Oops | HKTV Mall",
+    "stock_level": null,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:20:54.407349"
+  },
+  "B0961005_S_4905522709861": {
+    "status": "pending",
+    "product_name": "Oops | HKTV Mall",
+    "stock_level": null,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:20:57.330857"
+  },
+  "B0961005_S_4904616341235": {
+    "status": "pending",
+    "product_name": "Oops | HKTV Mall",
+    "stock_level": null,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:21:00.124207"
+  },
+  "B0961005_S_4902828031500": {
+    "status": "pending",
+    "product_name": "Oops | HKTV Mall",
+    "stock_level": null,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:21:02.756080"
   }
 }

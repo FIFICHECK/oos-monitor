@@ -38,6 +38,9 @@
         .badge-ok { background: #2ecc71; color: #fff; }
         .bade-warn { background: #e74c3c; color: #fff; animation: pulse 1.5s infinite; }
         .badge-low { background: #f39c12; color: #fff; animation: pulse 1.5s infinite; }
+        .badge-container { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+        .badge-container .status-badge { margin-top: 0; }
+        .badge-hidden { display: none !important; }
         
         @keyframes pulse {
             0%, 100% { opacity: 1; }
@@ -462,7 +465,12 @@
         <h1>📦 OOS Monitor</h1>
         <p>HKTVmall 庫存監察 Dashboard</p>
         <div class="monitor-period" id="monitorPeriod">Monitoring until: --</div>
-        <div id="headerStatus" class="status-badge badge-ok">Loading...</div>
+        <div class="badge-container">
+            <div id="badgeOOS" class="status-badge bade-warn badge-hidden">🔴 0 OOS</div>
+            <div id="badgeSuperLow" class="status-badge bade-warn badge-hidden">🔴 0 Super Low</div>
+            <div id="badgeLow" class="status-badge badge-low badge-hidden">🟡 0 Low Stock</div>
+            <div id="badgeOk" class="status-badge badge-ok">✅ All in Stock</div>
+        </div>
     </div>
     
     <!-- Help Button -->
@@ -948,9 +956,12 @@
 
             } catch (e) {
                 console.error('Failed to load data:', e);
-                const el = document.getElementById('headerStatus');
-                el.textContent = '⚠️ Error loading data';
-                el.className = 'status-badge bade-warn';
+                var badgeOk = document.getElementById('badgeOk');
+                if (badgeOk) {
+                    badgeOk.textContent = '⚠️ Error loading data';
+                    badgeOk.className = 'status-badge bade-warn';
+                    badgeOk.classList.remove('badge-hidden');
+                }
             }
         }
         
@@ -989,20 +1000,41 @@
             var pendingCount = Object.keys(pendingSet).length;
             var activeTotal = totalSku - expiredCount - pendingCount;
             
-            // Header
-            const statusEl = document.getElementById('headerStatus');
+            // Header badges — 3 independent status badges
+            var badgeOOS = document.getElementById('badgeOOS');
+            var badgeSuperLow = document.getElementById('badgeSuperLow');
+            var badgeLow = document.getElementById('badgeLow');
+            var badgeOk = document.getElementById('badgeOk');
+            
             if (oosCount > 0) {
-                statusEl.textContent = '🔴 ' + oosCount + ' SKU(s) Out of Stock';
-                statusEl.className = 'status-badge bade-warn';
-            } else if (superLowStockCount > 0) {
-                statusEl.textContent = '🔴 ' + superLowStockCount + ' SKU(s) Super Low Stock (<10)';
-                statusEl.className = 'status-badge bade-warn';
-            } else if (lowStockCount > 0) {
-                statusEl.textContent = '🟡 ' + lowStockCount + ' SKU(s) Low Stock';
-                statusEl.className = 'status-badge badge-low';
+                badgeOOS.textContent = '🔴 ' + oosCount + ' SKU(s) Out of Stock';
+                badgeOOS.className = 'status-badge bade-warn';
+                badgeOOS.classList.remove('badge-hidden');
             } else {
-                statusEl.textContent = '✅ All in Stock';
-                statusEl.className = 'status-badge badge-ok';
+                badgeOOS.classList.add('badge-hidden');
+            }
+            
+            if (superLowStockCount > 0) {
+                badgeSuperLow.textContent = '🔴 ' + superLowStockCount + ' SKU(s) Super Low Stock (<10)';
+                badgeSuperLow.className = 'status-badge bade-warn';
+                badgeSuperLow.classList.remove('badge-hidden');
+            } else {
+                badgeSuperLow.classList.add('badge-hidden');
+            }
+            
+            if (lowStockCount > 0) {
+                badgeLow.textContent = '🟡 ' + lowStockCount + ' SKU(s) Low Stock (<30)';
+                badgeLow.className = 'status-badge badge-low';
+                badgeLow.classList.remove('badge-hidden');
+            } else {
+                badgeLow.classList.add('badge-hidden');
+            }
+            
+            // Show "All in Stock" only when ALL counts are 0
+            if (oosCount === 0 && superLowStockCount === 0 && lowStockCount === 0) {
+                badgeOk.classList.remove('badge-hidden');
+            } else {
+                badgeOk.classList.add('badge-hidden');
             }
             // Header — monitoring period
             const periodEnd = config.monitor_end || '';

@@ -1158,18 +1158,35 @@
             const modal = document.getElementById('skuModal');
             const title = document.getElementById('modalTitle');
             const body = document.getElementById('modalBody');
-            
             title.textContent = '📜 Status History: ' + sku;
             body.innerHTML = '<div class="modal-no-history">Loading...</div>';
             modal.classList.add('show');
             
-            fetch('dashboard_data.json?' + Date.now()).then(function(r) { return r.json(); }).then(function(data) {
+            Promise.all([
+                fetch('dashboard_data.json?' + Date.now()).then(function(r) { return r.json(); }),
+                fetch('config.json?' + Date.now()).then(function(r) { return r.json(); })
+            ]).then(function(results) {
+                const data = results[0];
+                const config = results[1];
                 const history = (data.history || []).filter(function(h) { return h.sku === sku; });
                 
-                if (history.length === 0) {
+                // For expired/completed SKUs: only show entries within monitor period
+                const skuStart = config.sku_start_periods ? config.sku_start_periods[sku] : null;
+                const skuEnd = config.sku_periods ? config.sku_periods[sku] : null;
+                const startTime = skuStart ? new Date(skuStart).getTime() : 0;
+                const endTime = skuEnd ? new Date(skuEnd).getTime() : Infinity;
+                
+                const filtered = skuStart || skuEnd 
+                    ? history.filter(function(h) {
+                        var t = new Date(h.checked_at).getTime();
+                        return t >= startTime && t <= endTime;
+                      })
+                    : history;
+                
+                if (filtered.length === 0) {
                     body.innerHTML = '<div class="modal-no-history">📭 No status changes recorded yet</div>';
                 } else {
-                    const recent = history.slice().reverse();
+                    const recent = filtered.slice().reverse();
                     let html = '<table><thead><tr><th style="width:25%;">Time</th><th style="width:20%;">Status</th><th style="width:55%;">Detail</th></tr></thead><tbody>';
                     html += recent.map(function(h) {
                         var tag = '';

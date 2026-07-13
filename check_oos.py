@@ -287,28 +287,38 @@ def main():
                     print(f"  ⏳ {sku}... [pending — scanning for product info...]", end=" ", flush=True)
                     try:
                         page.goto(f"https://www.hktvmall.com/hktv/p/{sku}", timeout=25000, wait_until="networkidle")
-                        page.wait_for_timeout(2000)
-                        title = page.title()
-                        product_name = title.replace(" | HKTVmall 香港最大網購平台", "").strip()[:100]
+                        page.wait_for_timeout(3000)
+                        title = page.title().strip()
                         html_content = page.content()
-                        stock_level = extract_stock_level(html_content)
-                        add_to_cart_buttons = page.locator('button[data-product-id]')
-                        price = extract_price(page, add_to_cart_buttons)
-                        # Fallback: try to extract price from HTML if button didn't have it
-                        if not price:
-                            pm = re.search(r'\"price\"\s*:\s*\"?(\d+\.?\d*)', html_content)
+                        
+                        # Validate title — skip error/redirect pages
+                        if "Oops" in title or "502" in title or "404" in title or "Error" in title or "| HKTVmall" not in title:
+                            product_name = ""
+                            stock_level = None
+                            price = ""
+                            print(f"[INVALID PAGE: {title[:30]}]")
+                        else:
+                            product_name = title.replace(" | HKTVmall 香港最大網購平台", "").strip()[:100]
+                            stock_level = extract_stock_level(html_content)
+                            # Extract price from data-price attribute in HTML
+                            pm = re.search(r'data-price="[^\d]*(\d+\.\d{2})', html_content)
                             if pm:
                                 price = pm.group(1)
-                        # Cache in state
-                        state[sku] = {
-                            "status": "pending",
-                            "product_name": product_name,
-                            "stock_level": stock_level,
-                            "price": price,
-                            "last_change": "",
-                            "last_checked": datetime.now().isoformat()
-                        }
-                        print(f"[{product_name[:30]}]")
+                            else:
+                                # Fallback: JSON-LD price
+                                pm2 = re.search(r'"price"\s*:\s*"(\d+\.?\d*)"', html_content)
+                                price = pm2.group(1) if pm2 else ""
+                            print(f"[{product_name[:30]} ${price}]")
+                        # Cache in state (only if valid)
+                        if product_name:
+                            state[sku] = {
+                                "status": "pending",
+                                "product_name": product_name,
+                                "stock_level": stock_level,
+                                "price": price,
+                                "last_change": "",
+                                "last_checked": datetime.now().isoformat()
+                            }
                         results.append({
                             "sku": sku,
                             "status": "pending",

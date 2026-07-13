@@ -1,56 +1,7 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-13T08:27:40.140051",
+  "last_checked": "2026-07-13T08:58:10.266608",
   "history": [
-    {
-      "sku": "B0961005_S_4902828031500",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T23:53:15.321866"
-    },
-    {
-      "sku": "B0961005_S_4897091050078",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-12T23:53:15.321872"
-    },
-    {
-      "sku": "B0961005_S_4894436008671",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-13T01:44:54.211123"
-    },
-    {
-      "sku": "B0961005_S_4892218083908",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-13T01:44:54.211129"
-    },
-    {
-      "sku": "B0961005_S_4902320706674",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-13T01:44:54.211134"
-    },
-    {
-      "sku": "B0961005_S_4905522709861",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-13T01:44:54.211138"
-    },
-    {
-      "sku": "B0961005_S_4904616341235",
-      "product_name": "",
-      "status": "pending",
-      "stock_level": null,
-      "checked_at": "2026-07-13T01:44:54.211142"
-    },
     {
       "sku": "B0961005_S_4902828031500",
       "product_name": "",
@@ -701,6 +652,55 @@
       "status": "pending",
       "stock_level": null,
       "checked_at": "2026-07-13T08:27:40.072737"
+    },
+    {
+      "sku": "B0961005_S_4894436008671",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T08:58:10.193993"
+    },
+    {
+      "sku": "B0961005_S_4892218083908",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T08:58:10.193999"
+    },
+    {
+      "sku": "B0961005_S_4902320706674",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T08:58:10.194004"
+    },
+    {
+      "sku": "B0961005_S_4905522709861",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T08:58:10.194009"
+    },
+    {
+      "sku": "B0961005_S_4904616341235",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T08:58:10.194014"
+    },
+    {
+      "sku": "B0961005_S_4902828031500",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T08:58:10.194018"
+    },
+    {
+      "sku": "B0961005_S_4897091050078",
+      "product_name": "",
+      "status": "pending",
+      "stock_level": null,
+      "checked_at": "2026-07-13T08:58:10.194023"
     }
   ],
   "low_stock_skus": [],
@@ -711,7 +711,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072644"
+      "checked_at": "2026-07-13T08:58:10.193941"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -719,7 +719,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072665"
+      "checked_at": "2026-07-13T08:58:10.193963"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -727,7 +727,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072677"
+      "checked_at": "2026-07-13T08:58:10.193971"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -735,7 +735,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072690"
+      "checked_at": "2026-07-13T08:58:10.193981"
     },
     {
       "sku": "B0961005_S_9556174902219",
@@ -743,7 +743,7 @@
       "status": "expired",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072698"
+      "checked_at": "2026-07-13T08:58:10.193986"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -751,7 +751,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072707"
+      "checked_at": "2026-07-13T08:58:10.193993"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -759,7 +759,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072713"
+      "checked_at": "2026-07-13T08:58:10.193999"
     },
     {
       "sku": "B0961005_S_4902320706674",
@@ -767,7 +767,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072718"
+      "checked_at": "2026-07-13T08:58:10.194004"
     },
     {
       "sku": "B0961005_S_4905522709861",
@@ -775,7 +775,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072723"
+      "checked_at": "2026-07-13T08:58:10.194009"
     },
     {
       "sku": "B0961005_S_4904616341235",
@@ -783,7 +783,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072728"
+      "checked_at": "2026-07-13T08:58:10.194014"
     },
     {
       "sku": "B0961005_S_4902828031500",
@@ -791,7 +791,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072733"
+      "checked_at": "2026-07-13T08:58:10.194018"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -799,7 +799,7 @@
       "status": "pending",
       "stock_level": null,
       "price": "",
-      "checked_at": "2026-07-13T08:27:40.072737"
+      "checked_at": "2026-07-13T08:58:10.194023"
     }
   ],
   "super_low_stock_skus": [],

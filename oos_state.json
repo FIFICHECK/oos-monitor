@@ -148,7 +148,7 @@
     "stock_level": 14,
     "price": "328.00",
     "last_change": "2026-07-13T15:13:07.529321",
-    "last_checked": "2026-07-13T16:14:57.189007"
+    "last_checked": "2026-07-13T16:45:56.134466"
   },
   "H6588001_S_Panasonic_SRN210DH": {
     "status": "super_low_stock",
@@ -156,6 +156,6 @@
     "stock_level": 2,
     "price": "1,490.00",
     "last_change": "2026-07-13T15:13:11.109113",
-    "last_checked": "2026-07-13T16:15:02.660294"
+    "last_checked": "2026-07-13T16:46:00.695653"
   }
 }

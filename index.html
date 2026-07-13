@@ -671,13 +671,13 @@
                                 <span style="color:#888;font-size:0.75rem;">🟢 Start</span>
                                 <input type="date" id="newSkuStartDate" 
                                        style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
-                                <input type="time" id="newSkuStartTime" step="1" value="00:00:00"
-                                       style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                                <input type="text" id="newSkuStartTime" placeholder="00:00 (24h)" value="00:00" maxlength="5" pattern="[0-2][0-9]:[0-5][0-9]" 
+                                       style="width:120px;padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                                 <span style="color:#ffd700;font-size:0.75rem;">🔴 End</span>
                                 <input type="date" id="newSkuEndDate" 
                                        style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
-                                <input type="time" id="newSkuEndTime" step="1" value="23:59:59"
-                                       style="padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                                <input type="text" id="newSkuEndTime" placeholder="23:59 (24h)" value="" maxlength="5" pattern="[0-2][0-9]:[0-5][0-9]" 
+                                       style="width:120px;padding:8px 10px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                             </div>
                             <button onclick="addSkuViaAPI()" style="
                                 background:#2ecc71;color:#fff;border:none;padding:8px 16px;
@@ -699,13 +699,13 @@
                             <span style="color:#888;font-size:0.75rem;">🟢 Start</span>
                             <input type="date" id="bulkSkuStartDate" 
                                    style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
-                            <input type="time" id="bulkSkuStartTime" step="1" value="00:00:00"
-                                   style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <input type="text" id="bulkSkuStartTime" placeholder="00:00 (24h)" value="00:00" maxlength="5" pattern="[0-2][0-9]:[0-5][0-9]" 
+                                   style="width:120px;padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                             <span style="color:#ffd700;font-size:0.75rem;">🔴 End</span>
                             <input type="date" id="bulkSkuEndDate" 
                                    style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
-                            <input type="time" id="bulkSkuEndTime" step="1" value="23:59:59"
-                                   style="padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
+                            <input type="text" id="bulkSkuEndTime" placeholder="23:59 (24h)" value="" maxlength="5" pattern="[0-2][0-9]:[0-5][0-9]" 
+                                   style="width:120px;padding:6px 8px;border-radius:5px;border:1px solid #1a1a2e;background:#16213e;color:#eee;font-size:0.8rem;">
                             <button onclick="bulkAddSkuViaAPI()" style="
                                 background:#3498db;color:#fff;border:none;padding:6px 14px;
                                 border-radius:5px;cursor:pointer;font-weight:bold;font-size:0.8rem;
@@ -1551,13 +1551,19 @@
             showApiMsg('✅ Done! Refreshing page...');
         }
         
+        function padTime(val, def) {
+            val = val || def;
+            if (val.length === 5) return val + ':00';  // HH:MM → HH:MM:00
+            return val;
+        }
+        
         function addSkuViaAPI() {
             if (!ensureToken()) return;
             var sku = document.getElementById('newSkuInput').value.trim();
             var startDate = document.getElementById('newSkuStartDate').value;
-            var startTime = document.getElementById('newSkuStartTime').value;
+            var startTime = padTime(document.getElementById('newSkuStartTime').value, '00:00:00');
             var endDate = document.getElementById('newSkuEndDate').value;
-            var endTime = document.getElementById('newSkuEndTime').value;
+            var endTime = padTime(document.getElementById('newSkuEndTime').value, '23:59:59');
             var msgEl = document.getElementById('addSkuMsg');
             
             if (!sku) {
@@ -1601,9 +1607,9 @@
                         msgEl.style.color = '#2ecc71';
                         document.getElementById('newSkuInput').value = '';
                         document.getElementById('newSkuStartDate').value = '';
-                        document.getElementById('newSkuStartTime').value = '00:00:00';
+                        document.getElementById('newSkuStartTime').value = '00:00';
                         document.getElementById('newSkuEndDate').value = '';
-                        document.getElementById('newSkuEndTime').value = '23:59:59';
+                        document.getElementById('newSkuEndTime').value = '';
                         triggerOosCheck();
                         reloadDashboard();
                     } else {
@@ -1621,9 +1627,9 @@
             if (!ensureToken()) return;
             var text = document.getElementById('bulkSkuInput').value.trim();
             var startDate = document.getElementById('bulkSkuStartDate').value;
-            var startTime = document.getElementById('bulkSkuStartTime').value;
+            var startTime = padTime(document.getElementById('bulkSkuStartTime').value, '00:00:00');
             var endDate = document.getElementById('bulkSkuEndDate').value;
-            var endTime = document.getElementById('bulkSkuEndTime').value;
+            var endTime = padTime(document.getElementById('bulkSkuEndTime').value, '23:59:59');
             var msgEl = document.getElementById('bulkAddMsg');
             
             if (!text) {
@@ -1674,9 +1680,9 @@
                         msgEl.style.color = '#2ecc71';
                         document.getElementById('bulkSkuInput').value = '';
                         document.getElementById('bulkSkuStartDate').value = '';
-                        document.getElementById('bulkSkuStartTime').value = '00:00:00';
+                        document.getElementById('bulkSkuStartTime').value = '00:00';
                         document.getElementById('bulkSkuEndDate').value = '';
-                        document.getElementById('bulkSkuEndTime').value = '23:59:59';
+                        document.getElementById('bulkSkuEndTime').value = '';
                         if (added > 0) triggerOosCheck();
                         reloadDashboard();
                     } else {

@@ -101,5 +101,37 @@
     "price": "",
     "last_change": "",
     "last_checked": "2026-07-13T11:21:02.756080"
+  },
+  "B0961005_S_4987176297532": {
+    "status": "pending",
+    "product_name": "502 Bad Gateway",
+    "stock_level": null,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:29:57.598403"
+  },
+  "B0961005_S_4987176173560": {
+    "status": "pending",
+    "product_name": "502 Bad Gateway",
+    "stock_level": null,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:30:00.154286"
+  },
+  "B0961005_S_4987176297662": {
+    "status": "pending",
+    "product_name": "502 Bad Gateway",
+    "stock_level": null,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:30:02.728434"
+  },
+  "B0961005_S_4987176297563": {
+    "status": "pending",
+    "product_name": "502 Bad Gateway",
+    "stock_level": null,
+    "price": "",
+    "last_change": "",
+    "last_checked": "2026-07-13T11:30:05.327974"
   }
 }

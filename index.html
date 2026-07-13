@@ -1236,17 +1236,27 @@
                     var endD = (config.sku_periods && config.sku_periods[sku]) || config.monitor_end || '--';
                     var startShort = startD ? new Date(startD).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var endShort = endD !== '--' ? new Date(endD).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    pendingSkus.push({sku: sku, start: startShort, end: endShort});
+                    // Look up cached product info from all_skus
+                    var skuInfo = null;
+                    if (data.all_skus) {
+                        for (var si = 0; si < data.all_skus.length; si++) {
+                            if (data.all_skus[si].sku === sku) { skuInfo = data.all_skus[si]; break; }
+                        }
+                    }
+                    pendingSkus.push({sku: sku, start: startShort, end: endShort, info: skuInfo});
                 }
             });
             if (pendingSkus.length > 0) {
                 pendingBody.innerHTML = pendingSkus.map(function(p) {
+                    var name = (p.info && p.info.product_name) ? p.info.product_name : '--';
+                    var stock = (p.info && p.info.stock_level !== null && p.info.stock_level !== undefined) ? p.info.stock_level + ' 件' : '--';
+                    var price = (p.info && p.info.price) ? '$' + p.info.price : '--';
                     return '<tr style="color:#888;">'
                         + '<td class="sku-cell"><code style="color:#888;">' + p.sku + '</code></td>'
-                        + '<td class="name-cell" style="color:#888;">--</td>'
-                        + '<td class="tag-cell" style="color:#888;">--</td>'
+                        + '<td class="name-cell" style="color:#888;">' + name + '</td>'
+                        + '<td class="tag-cell" style="color:#888;">' + stock + '</td>'
                         + '<td class="tag-cell"><span class="tag" style="background:#888;color:#fff;">⏳ Pending</span></td>'
-                        + '<td style="color:#888;font-size:0.8rem;">--</td>'
+                        + '<td style="color:#888;font-size:0.8rem;">' + price + '</td>'
                         + '<td style="color:#ffd700;font-size:0.8rem;">' + p.start + '</td>'
                         + '<td style="color:#ffd700;font-size:0.8rem;">' + p.end + '</td>'
                         + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + p.sku + '" target="_blank" style="color:#888;">View</a></td></tr>';

@@ -157,5 +157,21 @@
     "price": "1,490.00",
     "last_change": "2026-07-13T21:57:01.834617",
     "last_checked": "2026-07-13T23:30:05.248335"
+  },
+  "S6501001_S_G4713294187765": {
+    "status": "pending",
+    "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+    "stock_level": 2,
+    "price": "198.00",
+    "last_change": "",
+    "last_checked": "2026-07-14T13:24:19.006885"
+  },
+  "S6501001_S_G4713294187789": {
+    "status": "pending",
+    "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
+    "stock_level": 4,
+    "price": "428.00",
+    "last_change": "",
+    "last_checked": "2026-07-14T13:24:28.170503"
   }
 }

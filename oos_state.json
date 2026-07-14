@@ -164,7 +164,7 @@
     "stock_level": 2,
     "price": "198.00",
     "last_change": "",
-    "last_checked": "2026-07-14T13:24:19.006885"
+    "last_checked": "2026-07-14T21:26:33.942132"
   },
   "S6501001_S_G4713294187789": {
     "status": "pending",
@@ -172,6 +172,6 @@
     "stock_level": 4,
     "price": "428.00",
     "last_change": "",
-    "last_checked": "2026-07-14T13:24:28.170503"
+    "last_checked": "2026-07-14T21:26:38.439435"
   }
 }

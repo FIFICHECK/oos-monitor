@@ -1,6 +1,6 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-15T09:47:47.010592",
+  "last_checked": "2026-07-15T10:18:51.922655",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -290,6 +290,13 @@
       "checked_at": "2026-07-15T09:47:43.308564"
     },
     {
+      "sku": "S6501001_S_G4713294187765",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+      "status": "super_low_stock",
+      "stock_level": 2,
+      "checked_at": "2026-07-15T10:18:47.987274"
+    },
+    {
       "sku": "S6501001_S_G4713294187789",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
       "status": "super_low_stock",
@@ -351,6 +358,13 @@
       "status": "super_low_stock",
       "stock_level": 4,
       "checked_at": "2026-07-15T09:47:46.972495"
+    },
+    {
+      "sku": "S6501001_S_G4713294187789",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
+      "status": "super_low_stock",
+      "stock_level": 4,
+      "checked_at": "2026-07-15T10:18:51.840192"
     }
   ],
   "low_stock_skus": [],
@@ -361,7 +375,7 @@
       "status": "expired",
       "stock_level": 33,
       "price": "359.00",
-      "checked_at": "2026-07-15T09:47:38.329488"
+      "checked_at": "2026-07-15T10:18:42.730824"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -369,7 +383,7 @@
       "status": "expired",
       "stock_level": 21,
       "price": "178.00",
-      "checked_at": "2026-07-15T09:47:38.329499"
+      "checked_at": "2026-07-15T10:18:42.730851"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -377,7 +391,7 @@
       "status": "expired",
       "stock_level": 172,
       "price": "149.00",
-      "checked_at": "2026-07-15T09:47:38.329503"
+      "checked_at": "2026-07-15T10:18:42.730973"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -385,7 +399,7 @@
       "status": "expired",
       "stock_level": 23,
       "price": "114.00",
-      "checked_at": "2026-07-15T09:47:38.329506"
+      "checked_at": "2026-07-15T10:18:42.731001"
     },
     {
       "sku": "B0961005_S_9556174902219",
@@ -393,7 +407,7 @@
       "status": "expired",
       "stock_level": 363,
       "price": "15.50",
-      "checked_at": "2026-07-15T09:47:38.329509"
+      "checked_at": "2026-07-15T10:18:42.731007"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -401,7 +415,7 @@
       "status": "pending",
       "stock_level": 428,
       "price": "368.00",
-      "checked_at": "2026-07-15T09:47:38.329514"
+      "checked_at": "2026-07-15T10:18:42.731015"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -409,7 +423,7 @@
       "status": "pending",
       "stock_level": 1,
       "price": "128.00",
-      "checked_at": "2026-07-15T09:47:38.329517"
+      "checked_at": "2026-07-15T10:18:42.731021"
     },
     {
       "sku": "B0961005_S_4987176297532",
@@ -417,7 +431,7 @@
       "status": "pending",
       "stock_level": 17,
       "price": "39.00",
-      "checked_at": "2026-07-15T09:47:38.329520"
+      "checked_at": "2026-07-15T10:18:42.731026"
     },
     {
       "sku": "B0961005_S_4987176173560",
@@ -425,7 +439,7 @@
       "status": "pending",
       "stock_level": 9,
       "price": "39.00",
-      "checked_at": "2026-07-15T09:47:38.329522"
+      "checked_at": "2026-07-15T10:18:42.731031"
     },
     {
       "sku": "B0961005_S_4987176297662",
@@ -433,7 +447,7 @@
       "status": "pending",
       "stock_level": 16,
       "price": "39.00",
-      "checked_at": "2026-07-15T09:47:38.329524"
+      "checked_at": "2026-07-15T10:18:42.731036"
     },
     {
       "sku": "B0961005_S_4987176297563",
@@ -441,7 +455,7 @@
       "status": "pending",
       "stock_level": 19,
       "price": "39.00",
-      "checked_at": "2026-07-15T09:47:38.329527"
+      "checked_at": "2026-07-15T10:18:42.731041"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -449,7 +463,7 @@
       "status": "pending",
       "stock_level": 300,
       "price": "129.00",
-      "checked_at": "2026-07-15T09:47:38.329533"
+      "checked_at": "2026-07-15T10:18:42.731053"
     },
     {
       "sku": "H5528001_S_TRT121055",
@@ -457,7 +471,7 @@
       "status": "pending",
       "stock_level": 149,
       "price": "358.00",
-      "checked_at": "2026-07-15T09:47:38.329537"
+      "checked_at": "2026-07-15T10:18:42.731059"
     },
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -465,7 +479,7 @@
       "status": "expired",
       "stock_level": 13,
       "price": "328.00",
-      "checked_at": "2026-07-15T09:47:38.329543"
+      "checked_at": "2026-07-15T10:18:42.731068"
     },
     {
       "sku": "H6588001_S_Panasonic_SRN210DH",
@@ -473,7 +487,7 @@
       "status": "expired",
       "stock_level": 1,
       "price": "1,490.00",
-      "checked_at": "2026-07-15T09:47:38.329547"
+      "checked_at": "2026-07-15T10:18:42.731072"
     },
     {
       "sku": "S6501001_S_G4713294187765",
@@ -481,7 +495,7 @@
       "status": "super_low_stock",
       "stock_level": 2,
       "price": "168.00",
-      "checked_at": "2026-07-15T09:47:43.308564"
+      "checked_at": "2026-07-15T10:18:47.987274"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -489,7 +503,7 @@
       "status": "super_low_stock",
       "stock_level": 4,
       "price": "370.00",
-      "checked_at": "2026-07-15T09:47:46.972495"
+      "checked_at": "2026-07-15T10:18:51.840192"
     }
   ],
   "super_low_stock_skus": [
@@ -498,14 +512,14 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "price": "168.00",
       "stock_level": 2,
-      "checked_at": "2026-07-15T09:47:43.308564"
+      "checked_at": "2026-07-15T10:18:47.987274"
     },
     {
       "sku": "S6501001_S_G4713294187789",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
       "price": "370.00",
       "stock_level": 4,
-      "checked_at": "2026-07-15T09:47:46.972495"
+      "checked_at": "2026-07-15T10:18:51.840192"
     }
   ],
   "low_stock_30_skus": []

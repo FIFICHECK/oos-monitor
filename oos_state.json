@@ -164,7 +164,7 @@
     "stock_level": 2,
     "price": "168.00",
     "last_change": "2026-07-15T00:07:27.480086",
-    "last_checked": "2026-07-15T16:31:09.753526"
+    "last_checked": "2026-07-15T17:03:05.308612"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,6 +172,46 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-07-15T00:07:30.987899",
-    "last_checked": "2026-07-15T16:31:13.386026"
+    "last_checked": "2026-07-15T17:03:08.837271"
+  },
+  "H6588001_S_Philips_HD9355": {
+    "status": "pending",
+    "product_name": "飛利浦 | 1.7L HD9355/92 Viva Collection 電熱水煲 香港行貨",
+    "stock_level": 13,
+    "price": "300.00",
+    "last_change": "",
+    "last_checked": "2026-07-15T17:03:13.593341"
+  },
+  "H6588001_S_Philips_NA321": {
+    "status": "pending",
+    "product_name": "飛利浦 | NA231/09 透視健康空氣炸鍋 香港行貨 6.2公升 2000系列",
+    "stock_level": 4,
+    "price": "750.00",
+    "last_change": "",
+    "last_checked": "2026-07-15T17:03:18.230003"
+  },
+  "H6588001_S_Toshiba_RC18DRNH": {
+    "status": "pending",
+    "product_name": "東芝 | RC-18DRNH 1.8公升 多功能備長炭本厚釜電飯煲 香港行貨",
+    "stock_level": 8,
+    "price": "569.00",
+    "last_change": "",
+    "last_checked": "2026-07-15T17:03:22.733483"
+  },
+  "H6588001_S_Philips_XC3031": {
+    "status": "pending",
+    "product_name": "飛利浦 | XC3031/61 無線吸塵機 香港行貨 3000系列",
+    "stock_level": 4,
+    "price": "474.00",
+    "last_change": "",
+    "last_checked": "2026-07-15T17:03:27.316616"
+  },
+  "H6588001_S_Xiaomi_SmartTowerFan2_BHR8865UK": {
+    "status": "pending",
+    "product_name": "小米 | 智能直流變頻塔扇 2 香港行貨 BHR8865UK 直立扇",
+    "stock_level": 20,
+    "price": "439.00",
+    "last_change": "",
+    "last_checked": "2026-07-15T17:03:31.993074"
   }
 }

@@ -164,7 +164,7 @@
     "stock_level": 2,
     "price": "168.00",
     "last_change": "2026-07-15T00:07:27.480086",
-    "last_checked": "2026-07-16T11:14:14.789729"
+    "last_checked": "2026-07-16T03:38:10.592696"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-07-15T00:07:30.987899",
-    "last_checked": "2026-07-16T11:14:18.501510"
+    "last_checked": "2026-07-16T03:38:20.191950"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "pending",
@@ -213,5 +213,21 @@
     "price": "439.00",
     "last_change": "",
     "last_checked": "2026-07-15T17:03:31.993074"
+  },
+  "H8427001_S_049100363745": {
+    "status": "pending",
+    "product_name": "康萃樂 | 成人益生菌素食膠囊150億-提高免疫型 30粒 (平行進口) 此日期前最佳：2027年06月底 新舊包裝隨機發貨",
+    "stock_level": 64,
+    "price": "119.90",
+    "last_change": "",
+    "last_checked": "2026-07-16T03:38:45.275497"
+  },
+  "H8427001_S_9300807287415": {
+    "status": "pending",
+    "product_name": "BLACKMORES | 三倍強效深海魚油 150粒 (平行進口) 不同版本 隨機發貨 此日期前最佳：2028年07月19日",
+    "stock_level": 16,
+    "price": "279.90",
+    "last_change": "",
+    "last_checked": "2026-07-16T03:39:09.359260"
   }
 }

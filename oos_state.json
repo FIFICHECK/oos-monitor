@@ -164,7 +164,7 @@
     "stock_level": 2,
     "price": "168.00",
     "last_change": "2026-07-16T14:52:40.947033",
-    "last_checked": "2026-07-16T14:52:40.947036"
+    "last_checked": "2026-07-16T15:24:16.446872"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-16T14:52:53.397187"
+    "last_checked": "2026-07-16T15:24:21.885698"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "pending",
@@ -231,19 +231,19 @@
     "last_checked": "2026-07-16T11:45:29.614242"
   },
   "B1870001_S_6971738651335": {
-    "status": "pending",
+    "status": "low_stock",
     "product_name": "安井 | 生椰拿鐵包 350g (急凍-18°C) (有效日期: 04/12/2026)",
     "stock_level": 14,
     "price": "33.00",
-    "last_change": "",
-    "last_checked": "2026-07-16T14:53:03.394604"
+    "last_change": "2026-07-16T15:24:32.399352",
+    "last_checked": "2026-07-16T15:24:32.399354"
   },
   "B1870001_S_6971738651267": {
-    "status": "pending",
+    "status": "low_stock",
     "product_name": "安井 | 楊枝甘露開心包 280g (急凍-18°C) (有效日期: 03/12/2026)",
     "stock_level": 14,
     "price": "29.90",
-    "last_change": "",
-    "last_checked": "2026-07-16T14:53:21.875350"
+    "last_change": "2026-07-16T15:24:36.006922",
+    "last_checked": "2026-07-16T15:24:36.006927"
   }
 }

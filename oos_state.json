@@ -159,20 +159,20 @@
     "last_checked": "2026-07-13T23:30:05.248335"
   },
   "S6501001_S_G4713294187765": {
-    "status": "error",
-    "product_name": "",
-    "stock_level": null,
-    "price": "",
-    "last_change": "2026-07-16T14:20:42.792751",
-    "last_checked": "2026-07-16T14:20:42.792752"
+    "status": "super_low_stock",
+    "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+    "stock_level": 2,
+    "price": "168.00",
+    "last_change": "2026-07-16T14:52:40.947033",
+    "last_checked": "2026-07-16T14:52:40.947036"
   },
   "S6501001_S_G4713294187789": {
-    "status": "error",
-    "product_name": "",
-    "stock_level": null,
-    "price": "",
-    "last_change": "2026-07-16T14:21:07.794649",
-    "last_checked": "2026-07-16T14:21:07.794650"
+    "status": "super_low_stock",
+    "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
+    "stock_level": 4,
+    "price": "370.00",
+    "last_change": "2026-07-16T14:52:53.397185",
+    "last_checked": "2026-07-16T14:52:53.397187"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "pending",
@@ -229,5 +229,21 @@
     "price": "279.90",
     "last_change": "",
     "last_checked": "2026-07-16T11:45:29.614242"
+  },
+  "B1870001_S_6971738651335": {
+    "status": "pending",
+    "product_name": "安井 | 生椰拿鐵包 350g (急凍-18°C) (有效日期: 04/12/2026)",
+    "stock_level": 14,
+    "price": "33.00",
+    "last_change": "",
+    "last_checked": "2026-07-16T14:53:03.394604"
+  },
+  "B1870001_S_6971738651267": {
+    "status": "pending",
+    "product_name": "安井 | 楊枝甘露開心包 280g (急凍-18°C) (有效日期: 03/12/2026)",
+    "stock_level": 14,
+    "price": "29.90",
+    "last_change": "",
+    "last_checked": "2026-07-16T14:53:21.875350"
   }
 }

@@ -159,20 +159,20 @@
     "last_checked": "2026-07-13T23:30:05.248335"
   },
   "S6501001_S_G4713294187765": {
-    "status": "super_low_stock",
-    "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-    "stock_level": 2,
-    "price": "168.00",
-    "last_change": "2026-07-15T00:07:27.480086",
-    "last_checked": "2026-07-16T13:49:24.134787"
+    "status": "error",
+    "product_name": "",
+    "stock_level": null,
+    "price": "",
+    "last_change": "2026-07-16T14:20:42.792751",
+    "last_checked": "2026-07-16T14:20:42.792752"
   },
   "S6501001_S_G4713294187789": {
-    "status": "super_low_stock",
-    "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
-    "stock_level": 4,
-    "price": "370.00",
-    "last_change": "2026-07-15T00:07:30.987899",
-    "last_checked": "2026-07-16T13:49:27.627641"
+    "status": "error",
+    "product_name": "",
+    "stock_level": null,
+    "price": "",
+    "last_change": "2026-07-16T14:21:07.794649",
+    "last_checked": "2026-07-16T14:21:07.794650"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "pending",

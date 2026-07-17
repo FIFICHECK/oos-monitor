@@ -1,6 +1,6 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-18T00:20:00.161367",
+  "last_checked": "2026-07-18T00:51:56.891279",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -766,6 +766,13 @@
       "checked_at": "2026-07-18T00:19:38.236436"
     },
     {
+      "sku": "S6501001_S_G4713294187765",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+      "status": "low_stock",
+      "stock_level": 12,
+      "checked_at": "2026-07-18T00:51:35.878523"
+    },
+    {
       "sku": "S6501001_S_G4713294187789",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
       "status": "super_low_stock",
@@ -1305,6 +1312,13 @@
       "checked_at": "2026-07-18T00:19:41.645110"
     },
     {
+      "sku": "S6501001_S_G4713294187789",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
+      "status": "super_low_stock",
+      "stock_level": 4,
+      "checked_at": "2026-07-18T00:51:39.263770"
+    },
+    {
       "sku": "B1870001_S_6971738651335",
       "product_name": "安井 | 生椰拿鐵包 350g (急凍-18°C) (有效日期: 04/12/2026)",
       "status": "low_stock",
@@ -1506,6 +1520,13 @@
       "status": "low_stock",
       "stock_level": 14,
       "checked_at": "2026-07-18T00:19:45.228431"
+    },
+    {
+      "sku": "B1870001_S_6971738651335",
+      "product_name": "安井 | 生椰拿鐵包 350g (急凍-18°C) (有效日期: 04/12/2026)",
+      "status": "low_stock",
+      "stock_level": 14,
+      "checked_at": "2026-07-18T00:51:43.041595"
     },
     {
       "sku": "B1870001_S_6971738651267",
@@ -1711,6 +1732,13 @@
       "checked_at": "2026-07-18T00:19:49.424156"
     },
     {
+      "sku": "B1870001_S_6971738651267",
+      "product_name": "安井 | 楊枝甘露開心包 280g (急凍-18°C) (有效日期: 03/12/2026)",
+      "status": "low_stock",
+      "stock_level": 14,
+      "checked_at": "2026-07-18T00:51:46.517808"
+    },
+    {
       "sku": "B0961005_S_4894436008671",
       "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
       "status": "in_stock",
@@ -1905,6 +1933,13 @@
       "status": "in_stock",
       "stock_level": 232,
       "checked_at": "2026-07-18T00:19:08.435970"
+    },
+    {
+      "sku": "B0961005_S_4894436008671",
+      "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
+      "status": "in_stock",
+      "stock_level": 230,
+      "checked_at": "2026-07-18T00:51:08.397016"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -2103,6 +2138,13 @@
       "checked_at": "2026-07-18T00:19:12.337551"
     },
     {
+      "sku": "B0961005_S_4892218083908",
+      "product_name": "OLLY | 女士多元維他命營養補充軟糖 90粒【最佳使用日期:07/2027】",
+      "status": "in_stock",
+      "stock_level": 156,
+      "checked_at": "2026-07-18T00:51:11.969944"
+    },
+    {
       "sku": "B0961005_S_4987176297532",
       "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
       "status": "low_stock",
@@ -2297,6 +2339,13 @@
       "status": "in_stock",
       "stock_level": 71,
       "checked_at": "2026-07-18T00:19:15.806917"
+    },
+    {
+      "sku": "B0961005_S_4987176297532",
+      "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
+      "status": "in_stock",
+      "stock_level": 69,
+      "checked_at": "2026-07-18T00:51:15.319091"
     },
     {
       "sku": "B0961005_S_4987176173560",
@@ -2495,6 +2544,13 @@
       "checked_at": "2026-07-18T00:19:19.196625"
     },
     {
+      "sku": "B0961005_S_4987176173560",
+      "product_name": "Rejoice飄柔 | 滋潤去屑潤髮乳 650g 【最佳使用日期: 07/04/2029】",
+      "status": "in_stock",
+      "stock_level": 32,
+      "checked_at": "2026-07-18T00:51:18.818690"
+    },
+    {
       "sku": "B0961005_S_4987176297662",
       "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
       "status": "low_stock",
@@ -2689,6 +2745,13 @@
       "status": "in_stock",
       "stock_level": 89,
       "checked_at": "2026-07-18T00:19:23.008217"
+    },
+    {
+      "sku": "B0961005_S_4987176297662",
+      "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
+      "status": "in_stock",
+      "stock_level": 88,
+      "checked_at": "2026-07-18T00:51:22.146555"
     },
     {
       "sku": "B0961005_S_4987176297563",
@@ -2887,6 +2950,13 @@
       "checked_at": "2026-07-18T00:19:26.727614"
     },
     {
+      "sku": "B0961005_S_4987176297563",
+      "product_name": "Rejoice飄柔 | 蓬鬆去屑洗髮露 600g 【最佳使用日期: 02/11/2028】",
+      "status": "in_stock",
+      "stock_level": 79,
+      "checked_at": "2026-07-18T00:51:25.722432"
+    },
+    {
       "sku": "B0961005_S_4897091050078",
       "product_name": "Swisse | Ultiboost 無腥味高濃度野生魚油 200粒裝【香港行貨】【最佳使用日期:09/2028】",
       "status": "in_stock",
@@ -3081,6 +3151,13 @@
       "status": "in_stock",
       "stock_level": 124,
       "checked_at": "2026-07-18T00:19:31.063353"
+    },
+    {
+      "sku": "B0961005_S_4897091050078",
+      "product_name": "Swisse | Ultiboost 無腥味高濃度野生魚油 200粒裝【香港行貨】【最佳使用日期:09/2028】",
+      "status": "in_stock",
+      "stock_level": 124,
+      "checked_at": "2026-07-18T00:51:29.064520"
     },
     {
       "sku": "H5528001_S_TRT121055",
@@ -3279,6 +3356,13 @@
       "checked_at": "2026-07-18T00:19:34.595629"
     },
     {
+      "sku": "H5528001_S_TRT121055",
+      "product_name": "南京同仁堂 | 南京同仁堂 蟲草膠囊 CS4 (60粒) #提升免疫力 #美容養顏 #延緩衰老 #強肺益腎 #最佳期限2027-09",
+      "status": "in_stock",
+      "stock_level": 149,
+      "checked_at": "2026-07-18T00:51:32.367895"
+    },
+    {
       "sku": "H0883003_S_DF01100",
       "product_name": "Defense | 【原箱100個】【白色(小童)】韓國 KF94 四層結構立體兒童口罩▼M【有效期：2028年】(平行進口)",
       "status": "in_stock",
@@ -3389,6 +3473,13 @@
       "status": "in_stock",
       "stock_level": 43,
       "checked_at": "2026-07-18T00:19:53.251731"
+    },
+    {
+      "sku": "H0883003_S_DF01100",
+      "product_name": "Defense | 【原箱100個】【白色(小童)】韓國 KF94 四層結構立體兒童口罩▼M【有效期：2028年】(平行進口)",
+      "status": "in_stock",
+      "stock_level": 43,
+      "checked_at": "2026-07-18T00:51:49.914501"
     },
     {
       "sku": "H0883003_S_Unic4903111961016",
@@ -3503,6 +3594,13 @@
       "checked_at": "2026-07-18T00:19:56.731048"
     },
     {
+      "sku": "H0883003_S_Unic4903111961016",
+      "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
+      "status": "in_stock",
+      "stock_level": 149,
+      "checked_at": "2026-07-18T00:51:53.370314"
+    },
+    {
       "sku": "H0883003_S_DF02100",
       "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
       "status": "in_stock",
@@ -3613,6 +3711,13 @@
       "status": "in_stock",
       "stock_level": 193,
       "checked_at": "2026-07-18T00:20:00.099173"
+    },
+    {
+      "sku": "H0883003_S_DF02100",
+      "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
+      "status": "in_stock",
+      "stock_level": 193,
+      "checked_at": "2026-07-18T00:51:56.842478"
     }
   ],
   "low_stock_skus": [],
@@ -3623,7 +3728,7 @@
       "status": "expired",
       "stock_level": 33,
       "price": "359.00",
-      "checked_at": "2026-07-18T00:19:03.337233"
+      "checked_at": "2026-07-18T00:51:04.126528"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -3631,7 +3736,7 @@
       "status": "expired",
       "stock_level": 21,
       "price": "178.00",
-      "checked_at": "2026-07-18T00:19:03.337251"
+      "checked_at": "2026-07-18T00:51:04.126545"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -3639,7 +3744,7 @@
       "status": "expired",
       "stock_level": 172,
       "price": "149.00",
-      "checked_at": "2026-07-18T00:19:03.337259"
+      "checked_at": "2026-07-18T00:51:04.126550"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -3647,7 +3752,7 @@
       "status": "expired",
       "stock_level": 23,
       "price": "114.00",
-      "checked_at": "2026-07-18T00:19:03.337265"
+      "checked_at": "2026-07-18T00:51:04.126553"
     },
     {
       "sku": "B0961005_S_9556174902219",
@@ -3655,15 +3760,15 @@
       "status": "expired",
       "stock_level": 363,
       "price": "15.50",
-      "checked_at": "2026-07-18T00:19:03.337271"
+      "checked_at": "2026-07-18T00:51:04.126556"
     },
     {
       "sku": "B0961005_S_4894436008671",
       "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
       "status": "in_stock",
-      "stock_level": 232,
+      "stock_level": 230,
       "price": "338.00",
-      "checked_at": "2026-07-18T00:19:08.435970"
+      "checked_at": "2026-07-18T00:51:08.397016"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -3671,15 +3776,15 @@
       "status": "in_stock",
       "stock_level": 156,
       "price": "128.00",
-      "checked_at": "2026-07-18T00:19:12.337551"
+      "checked_at": "2026-07-18T00:51:11.969944"
     },
     {
       "sku": "B0961005_S_4987176297532",
       "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
       "status": "in_stock",
-      "stock_level": 71,
+      "stock_level": 69,
       "price": "39.00",
-      "checked_at": "2026-07-18T00:19:15.806917"
+      "checked_at": "2026-07-18T00:51:15.319091"
     },
     {
       "sku": "B0961005_S_4987176173560",
@@ -3687,23 +3792,23 @@
       "status": "in_stock",
       "stock_level": 32,
       "price": "39.00",
-      "checked_at": "2026-07-18T00:19:19.196625"
+      "checked_at": "2026-07-18T00:51:18.818690"
     },
     {
       "sku": "B0961005_S_4987176297662",
       "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
       "status": "in_stock",
-      "stock_level": 89,
+      "stock_level": 88,
       "price": "39.00",
-      "checked_at": "2026-07-18T00:19:23.008217"
+      "checked_at": "2026-07-18T00:51:22.146555"
     },
     {
       "sku": "B0961005_S_4987176297563",
       "product_name": "Rejoice飄柔 | 蓬鬆去屑洗髮露 600g 【最佳使用日期: 02/11/2028】",
       "status": "in_stock",
-      "stock_level": 80,
+      "stock_level": 79,
       "price": "39.00",
-      "checked_at": "2026-07-18T00:19:26.727614"
+      "checked_at": "2026-07-18T00:51:25.722432"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -3711,7 +3816,7 @@
       "status": "in_stock",
       "stock_level": 124,
       "price": "129.00",
-      "checked_at": "2026-07-18T00:19:31.063353"
+      "checked_at": "2026-07-18T00:51:29.064520"
     },
     {
       "sku": "H5528001_S_TRT121055",
@@ -3719,7 +3824,7 @@
       "status": "in_stock",
       "stock_level": 149,
       "price": "99.00",
-      "checked_at": "2026-07-18T00:19:34.595629"
+      "checked_at": "2026-07-18T00:51:32.367895"
     },
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -3727,7 +3832,7 @@
       "status": "expired",
       "stock_level": 13,
       "price": "328.00",
-      "checked_at": "2026-07-18T00:19:34.595725"
+      "checked_at": "2026-07-18T00:51:32.367926"
     },
     {
       "sku": "H6588001_S_Panasonic_SRN210DH",
@@ -3735,7 +3840,7 @@
       "status": "expired",
       "stock_level": 1,
       "price": "1,490.00",
-      "checked_at": "2026-07-18T00:19:34.595729"
+      "checked_at": "2026-07-18T00:51:32.367929"
     },
     {
       "sku": "S6501001_S_G4713294187765",
@@ -3743,7 +3848,7 @@
       "status": "low_stock",
       "stock_level": 12,
       "price": "168.00",
-      "checked_at": "2026-07-18T00:19:38.236436"
+      "checked_at": "2026-07-18T00:51:35.878523"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -3751,7 +3856,7 @@
       "status": "super_low_stock",
       "stock_level": 4,
       "price": "370.00",
-      "checked_at": "2026-07-18T00:19:41.645110"
+      "checked_at": "2026-07-18T00:51:39.263770"
     },
     {
       "sku": "H6588001_S_Philips_HD9355",
@@ -3759,7 +3864,7 @@
       "status": "pending",
       "stock_level": 13,
       "price": "300.00",
-      "checked_at": "2026-07-18T00:19:41.645165"
+      "checked_at": "2026-07-18T00:51:39.263802"
     },
     {
       "sku": "H6588001_S_Philips_NA321",
@@ -3767,7 +3872,7 @@
       "status": "pending",
       "stock_level": 4,
       "price": "750.00",
-      "checked_at": "2026-07-18T00:19:41.645174"
+      "checked_at": "2026-07-18T00:51:39.263807"
     },
     {
       "sku": "H6588001_S_Toshiba_RC18DRNH",
@@ -3775,7 +3880,7 @@
       "status": "pending",
       "stock_level": 8,
       "price": "569.00",
-      "checked_at": "2026-07-18T00:19:41.645180"
+      "checked_at": "2026-07-18T00:51:39.263810"
     },
     {
       "sku": "H6588001_S_Philips_XC3031",
@@ -3783,7 +3888,7 @@
       "status": "pending",
       "stock_level": 4,
       "price": "474.00",
-      "checked_at": "2026-07-18T00:19:41.645216"
+      "checked_at": "2026-07-18T00:51:39.263813"
     },
     {
       "sku": "H6588001_S_Xiaomi_SmartTowerFan2_BHR8865UK",
@@ -3791,7 +3896,7 @@
       "status": "pending",
       "stock_level": 20,
       "price": "439.00",
-      "checked_at": "2026-07-18T00:19:41.645222"
+      "checked_at": "2026-07-18T00:51:39.263816"
     },
     {
       "sku": "H8427001_S_049100363745",
@@ -3799,7 +3904,7 @@
       "status": "pending",
       "stock_level": 64,
       "price": "119.90",
-      "checked_at": "2026-07-18T00:19:41.645228"
+      "checked_at": "2026-07-18T00:51:39.263819"
     },
     {
       "sku": "H8427001_S_9300807287415",
@@ -3807,7 +3912,7 @@
       "status": "pending",
       "stock_level": 16,
       "price": "279.90",
-      "checked_at": "2026-07-18T00:19:41.645234"
+      "checked_at": "2026-07-18T00:51:39.263821"
     },
     {
       "sku": "B1870001_S_6971738651335",
@@ -3815,7 +3920,7 @@
       "status": "low_stock",
       "stock_level": 14,
       "price": "33.00",
-      "checked_at": "2026-07-18T00:19:45.228431"
+      "checked_at": "2026-07-18T00:51:43.041595"
     },
     {
       "sku": "B1870001_S_6971738651267",
@@ -3823,7 +3928,7 @@
       "status": "low_stock",
       "stock_level": 14,
       "price": "29.90",
-      "checked_at": "2026-07-18T00:19:49.424156"
+      "checked_at": "2026-07-18T00:51:46.517808"
     },
     {
       "sku": "H0883003_S_DF01100",
@@ -3831,15 +3936,15 @@
       "status": "in_stock",
       "stock_level": 43,
       "price": "128.00",
-      "checked_at": "2026-07-18T00:19:53.251731"
+      "checked_at": "2026-07-18T00:51:49.914501"
     },
     {
       "sku": "H0883003_S_Unic4903111961016",
       "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
       "status": "in_stock",
-      "stock_level": 151,
+      "stock_level": 149,
       "price": "55.00",
-      "checked_at": "2026-07-18T00:19:56.731048"
+      "checked_at": "2026-07-18T00:51:53.370314"
     },
     {
       "sku": "H0883003_S_DF02100",
@@ -3847,7 +3952,7 @@
       "status": "in_stock",
       "stock_level": 193,
       "price": "128.00",
-      "checked_at": "2026-07-18T00:20:00.099173"
+      "checked_at": "2026-07-18T00:51:56.842478"
     }
   ],
   "super_low_stock_skus": [
@@ -3856,7 +3961,7 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
       "price": "370.00",
       "stock_level": 4,
-      "checked_at": "2026-07-18T00:19:41.645110"
+      "checked_at": "2026-07-18T00:51:39.263770"
     }
   ],
   "low_stock_30_skus": [
@@ -3865,21 +3970,21 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "price": "168.00",
       "stock_level": 12,
-      "checked_at": "2026-07-18T00:19:38.236436"
+      "checked_at": "2026-07-18T00:51:35.878523"
     },
     {
       "sku": "B1870001_S_6971738651335",
       "product_name": "安井 | 生椰拿鐵包 350g (急凍-18°C) (有效日期: 04/12/2026)",
       "price": "33.00",
       "stock_level": 14,
-      "checked_at": "2026-07-18T00:19:45.228431"
+      "checked_at": "2026-07-18T00:51:43.041595"
     },
     {
       "sku": "B1870001_S_6971738651267",
       "product_name": "安井 | 楊枝甘露開心包 280g (急凍-18°C) (有效日期: 03/12/2026)",
       "price": "29.90",
       "stock_level": 14,
-      "checked_at": "2026-07-18T00:19:49.424156"
+      "checked_at": "2026-07-18T00:51:46.517808"
     }
   ]
 }

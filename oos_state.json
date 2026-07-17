@@ -84,7 +84,7 @@
     "stock_level": 108,
     "price": "338.00",
     "last_change": "2026-07-17T09:28:55.280748",
-    "last_checked": "2026-07-17T14:33:40.079203"
+    "last_checked": "2026-07-17T15:08:30.833334"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 60,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-17T14:33:43.628190"
+    "last_checked": "2026-07-17T15:08:34.866846"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,15 +100,15 @@
     "stock_level": 124,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-17T14:34:02.930251"
+    "last_checked": "2026-07-17T15:08:57.120094"
   },
   "B0961005_S_4987176297532": {
     "status": "in_stock",
     "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
-    "stock_level": 77,
+    "stock_level": 76,
     "price": "39.00",
     "last_change": "2026-07-17T11:16:59.193725",
-    "last_checked": "2026-07-17T14:33:47.641032"
+    "last_checked": "2026-07-17T15:08:39.306440"
   },
   "B0961005_S_4987176173560": {
     "status": "in_stock",
@@ -116,23 +116,23 @@
     "stock_level": 33,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:02.678109",
-    "last_checked": "2026-07-17T14:33:50.998046"
+    "last_checked": "2026-07-17T15:08:42.678491"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
     "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
-    "stock_level": 99,
+    "stock_level": 98,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-17T14:33:54.857293"
+    "last_checked": "2026-07-17T15:08:49.734909"
   },
   "B0961005_S_4987176297563": {
     "status": "in_stock",
     "product_name": "Rejoice飄柔 | 蓬鬆去屑洗髮露 600g 【最佳使用日期: 02/11/2028】",
-    "stock_level": 96,
+    "stock_level": 94,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:10.283562",
-    "last_checked": "2026-07-17T14:33:58.998522"
+    "last_checked": "2026-07-17T15:08:53.073528"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 149,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-17T14:34:06.409801"
+    "last_checked": "2026-07-17T15:09:00.598209"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 12,
     "price": "168.00",
     "last_change": "2026-07-17T09:30:44.221087",
-    "last_checked": "2026-07-17T14:34:09.877645"
+    "last_checked": "2026-07-17T15:09:04.109355"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-17T14:34:13.723018"
+    "last_checked": "2026-07-17T15:09:09.235730"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "pending",
@@ -236,7 +236,7 @@
     "stock_level": 14,
     "price": "33.00",
     "last_change": "2026-07-16T15:24:32.399352",
-    "last_checked": "2026-07-17T14:34:17.267497"
+    "last_checked": "2026-07-17T15:09:18.931332"
   },
   "B1870001_S_6971738651267": {
     "status": "low_stock",
@@ -244,6 +244,6 @@
     "stock_level": 14,
     "price": "29.90",
     "last_change": "2026-07-16T15:24:36.006922",
-    "last_checked": "2026-07-17T14:34:20.685015"
+    "last_checked": "2026-07-17T15:09:22.343181"
   }
 }

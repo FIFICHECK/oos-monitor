@@ -79,68 +79,68 @@
     "last_checked": "2026-07-13T11:21:02.756080"
   },
   "B0961005_S_4894436008671": {
-    "status": "pending",
+    "status": "in_stock",
     "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
-    "stock_level": 428,
-    "price": "368.00",
-    "last_change": "",
-    "last_checked": "2026-07-13T11:48:59.979622"
+    "stock_level": 108,
+    "price": "338.00",
+    "last_change": "2026-07-17T09:28:55.280748",
+    "last_checked": "2026-07-17T09:28:55.280749"
   },
   "B0961005_S_4892218083908": {
-    "status": "pending",
+    "status": "in_stock",
     "product_name": "OLLY | 女士多元維他命營養補充軟糖 90粒【最佳使用日期:07/2027】",
-    "stock_level": 1,
+    "stock_level": 60,
     "price": "128.00",
-    "last_change": "",
-    "last_checked": "2026-07-13T11:49:05.052341"
+    "last_change": "2026-07-17T09:29:04.764423",
+    "last_checked": "2026-07-17T09:29:04.764425"
   },
   "B0961005_S_4897091050078": {
-    "status": "pending",
+    "status": "in_stock",
     "product_name": "Swisse | Ultiboost 無腥味高濃度野生魚油 200粒裝【香港行貨】【最佳使用日期:09/2028】",
-    "stock_level": 300,
+    "stock_level": 124,
     "price": "129.00",
-    "last_change": "",
-    "last_checked": "2026-07-13T11:49:10.140677"
+    "last_change": "2026-07-17T09:30:14.786493",
+    "last_checked": "2026-07-17T09:30:14.786494"
   },
   "B0961005_S_4987176297532": {
-    "status": "pending",
+    "status": "low_stock",
     "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
-    "stock_level": 17,
+    "stock_level": 10,
     "price": "39.00",
-    "last_change": "",
-    "last_checked": "2026-07-13T11:49:31.642868"
+    "last_change": "2026-07-17T09:29:21.234999",
+    "last_checked": "2026-07-17T09:29:21.235000"
   },
   "B0961005_S_4987176173560": {
-    "status": "pending",
+    "status": "super_low_stock",
     "product_name": "Rejoice飄柔 | 滋潤去屑潤髮乳 650g 【最佳使用日期: 07/04/2029】",
     "stock_level": 9,
     "price": "39.00",
-    "last_change": "",
-    "last_checked": "2026-07-13T11:49:36.663745"
+    "last_change": "2026-07-17T09:29:35.861855",
+    "last_checked": "2026-07-17T09:29:35.861857"
   },
   "B0961005_S_4987176297662": {
-    "status": "pending",
+    "status": "low_stock",
     "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
-    "stock_level": 16,
+    "stock_level": 20,
     "price": "39.00",
-    "last_change": "",
-    "last_checked": "2026-07-13T11:49:41.836575"
+    "last_change": "2026-07-17T09:29:54.819723",
+    "last_checked": "2026-07-17T09:29:54.819725"
   },
   "B0961005_S_4987176297563": {
-    "status": "pending",
+    "status": "low_stock",
     "product_name": "Rejoice飄柔 | 蓬鬆去屑洗髮露 600g 【最佳使用日期: 02/11/2028】",
-    "stock_level": 19,
+    "stock_level": 15,
     "price": "39.00",
-    "last_change": "",
-    "last_checked": "2026-07-13T11:49:46.866129"
+    "last_change": "2026-07-17T09:30:05.019767",
+    "last_checked": "2026-07-17T09:30:05.019769"
   },
   "H5528001_S_TRT121055": {
-    "status": "pending",
+    "status": "in_stock",
     "product_name": "南京同仁堂 | 南京同仁堂 蟲草膠囊 CS4 (60粒) #提升免疫力 #美容養顏 #延緩衰老 #強肺益腎 #最佳期限2027-09",
     "stock_level": 149,
-    "price": "358.00",
-    "last_change": "",
-    "last_checked": "2026-07-13T11:54:59.111515"
+    "price": "99.00",
+    "last_change": "2026-07-17T09:30:24.990175",
+    "last_checked": "2026-07-17T09:30:24.990181"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -163,8 +163,8 @@
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
     "stock_level": 12,
     "price": "168.00",
-    "last_change": "2026-07-16T15:53:21.795236",
-    "last_checked": "2026-07-16T16:09:23.147597"
+    "last_change": "2026-07-17T09:30:44.221087",
+    "last_checked": "2026-07-17T09:30:44.221088"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-16T16:09:32.000255"
+    "last_checked": "2026-07-17T09:30:53.978065"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "pending",
@@ -236,7 +236,7 @@
     "stock_level": 14,
     "price": "33.00",
     "last_change": "2026-07-16T15:24:32.399352",
-    "last_checked": "2026-07-16T16:09:56.158965"
+    "last_checked": "2026-07-17T09:31:08.273893"
   },
   "B1870001_S_6971738651267": {
     "status": "low_stock",
@@ -244,6 +244,6 @@
     "stock_level": 14,
     "price": "29.90",
     "last_change": "2026-07-16T15:24:36.006922",
-    "last_checked": "2026-07-16T16:10:20.251115"
+    "last_checked": "2026-07-17T09:31:15.328606"
   }
 }

@@ -1273,7 +1273,7 @@
                         else if (s.status === 'super_low_stock') tag = '<span class="tag" style="background:#e74c3c;color:#fff;">🔴 Super Low</span>';
                         else if (s.status === 'low_stock') tag = '<span class="tag tag-low">Low</span>';
                         else if (s.status === 'pending') tag = '<span class="tag" style="background:#888;color:#fff;">⏳ Pending</span>';
-                        else if (s.status === 'in_stock') tag = '<span class="tag tag-stock">OK (' + (s.stock_level || '?') + ')</span>';
+                        else if (s.status === 'in_stock') tag = '<span class="tag tag-stock">OK</span>';
                         else tag = '<span class="tag tag-error">Err</span>';
                         
                         var stockDisplay = s.stock_level !== null && s.stock_level !== undefined 

@@ -84,7 +84,7 @@
     "stock_level": 235,
     "price": "338.00",
     "last_change": "2026-07-17T09:28:55.280748",
-    "last_checked": "2026-07-17T19:28:01.332924"
+    "last_checked": "2026-07-17T20:00:01.402904"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 60,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-17T19:28:04.830724"
+    "last_checked": "2026-07-17T20:00:04.847033"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,7 +100,7 @@
     "stock_level": 124,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-17T19:28:22.108120"
+    "last_checked": "2026-07-17T20:00:22.372399"
   },
   "B0961005_S_4987176297532": {
     "status": "in_stock",
@@ -108,7 +108,7 @@
     "stock_level": 76,
     "price": "39.00",
     "last_change": "2026-07-17T11:16:59.193725",
-    "last_checked": "2026-07-17T19:28:08.486224"
+    "last_checked": "2026-07-17T20:00:09.009505"
   },
   "B0961005_S_4987176173560": {
     "status": "in_stock",
@@ -116,23 +116,23 @@
     "stock_level": 33,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:02.678109",
-    "last_checked": "2026-07-17T19:28:11.892638"
+    "last_checked": "2026-07-17T20:00:12.282609"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
     "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
-    "stock_level": 93,
+    "stock_level": 92,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-17T19:28:15.315062"
+    "last_checked": "2026-07-17T20:00:15.725652"
   },
   "B0961005_S_4987176297563": {
     "status": "in_stock",
     "product_name": "Rejoice飄柔 | 蓬鬆去屑洗髮露 600g 【最佳使用日期: 02/11/2028】",
-    "stock_level": 88,
+    "stock_level": 87,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:10.283562",
-    "last_checked": "2026-07-17T19:28:18.732116"
+    "last_checked": "2026-07-17T20:00:19.050225"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 149,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-17T19:28:25.467227"
+    "last_checked": "2026-07-17T20:00:25.723361"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 12,
     "price": "168.00",
     "last_change": "2026-07-17T09:30:44.221087",
-    "last_checked": "2026-07-17T19:28:28.848231"
+    "last_checked": "2026-07-17T20:00:29.116376"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-17T19:28:32.206506"
+    "last_checked": "2026-07-17T20:00:32.526128"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "pending",
@@ -236,7 +236,7 @@
     "stock_level": 14,
     "price": "33.00",
     "last_change": "2026-07-16T15:24:32.399352",
-    "last_checked": "2026-07-17T19:28:35.545763"
+    "last_checked": "2026-07-17T20:00:36.040238"
   },
   "B1870001_S_6971738651267": {
     "status": "low_stock",
@@ -244,7 +244,7 @@
     "stock_level": 14,
     "price": "29.90",
     "last_change": "2026-07-16T15:24:36.006922",
-    "last_checked": "2026-07-17T19:28:38.921509"
+    "last_checked": "2026-07-17T20:00:39.440848"
   },
   "H0883003_S_DF01100": {
     "status": "in_stock",
@@ -252,15 +252,15 @@
     "stock_level": 43,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-17T19:28:42.476872"
+    "last_checked": "2026-07-17T20:00:42.791093"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
     "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
-    "stock_level": 156,
+    "stock_level": 155,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-17T19:28:46.030333"
+    "last_checked": "2026-07-17T20:00:46.169674"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,6 +268,6 @@
     "stock_level": 193,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-17T19:28:49.574755"
+    "last_checked": "2026-07-17T20:00:49.608296"
   }
 }

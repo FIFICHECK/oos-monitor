@@ -1790,6 +1790,9 @@
                 if (config.sku_periods && config.sku_periods[sku]) {
                     delete config.sku_periods[sku];
                 }
+                if (config.sku_start_periods && config.sku_start_periods[sku]) {
+                    delete config.sku_start_periods[sku];
+                }
                 
                 var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(config, null, 2))));
                 
@@ -1842,6 +1845,9 @@
                         config.skus.splice(idx, 1);
                         if (config.sku_periods && config.sku_periods[sku]) {
                             delete config.sku_periods[sku];
+                        }
+                        if (config.sku_start_periods && config.sku_start_periods[sku]) {
+                            delete config.sku_start_periods[sku];
                         }
                     }
                 });

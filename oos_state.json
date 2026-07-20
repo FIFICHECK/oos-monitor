@@ -84,7 +84,7 @@
     "stock_level": 44,
     "price": "338.00",
     "last_change": "2026-07-20T09:22:32.039836",
-    "last_checked": "2026-07-20T14:50:52.140244"
+    "last_checked": "2026-07-20T15:22:52.055281"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 132,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-20T14:50:55.523834"
+    "last_checked": "2026-07-20T15:22:55.547495"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,7 +100,7 @@
     "stock_level": 121,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-20T14:51:12.426119"
+    "last_checked": "2026-07-20T15:23:12.758020"
   },
   "B0961005_S_4987176297532": {
     "status": "low_stock",
@@ -108,7 +108,7 @@
     "stock_level": 12,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:33.179944",
-    "last_checked": "2026-07-20T14:50:59.174747"
+    "last_checked": "2026-07-20T15:22:59.063459"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,7 +116,7 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-20T14:51:02.414523"
+    "last_checked": "2026-07-20T15:23:02.555577"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
@@ -124,7 +124,7 @@
     "stock_level": 58,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-20T14:51:05.779379"
+    "last_checked": "2026-07-20T15:23:05.919705"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-20T14:51:09.043350"
+    "last_checked": "2026-07-20T15:23:09.338613"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 141,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-20T14:51:15.779604"
+    "last_checked": "2026-07-20T15:23:16.248427"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 12,
     "price": "168.00",
     "last_change": "2026-07-17T09:30:44.221087",
-    "last_checked": "2026-07-20T14:51:19.363047"
+    "last_checked": "2026-07-20T15:23:19.686306"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 3,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-20T14:51:22.654483"
+    "last_checked": "2026-07-20T15:23:23.368427"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -180,15 +180,15 @@
     "stock_level": 25,
     "price": "300.00",
     "last_change": "2026-07-20T08:42:01.872226",
-    "last_checked": "2026-07-20T14:51:26.115673"
+    "last_checked": "2026-07-20T15:23:27.226682"
   },
   "H6588001_S_Philips_NA321": {
     "status": "low_stock",
     "product_name": "飛利浦 | NA231/09 透視健康空氣炸鍋 香港行貨 6.2公升 2000系列",
-    "stock_level": 15,
+    "stock_level": 14,
     "price": "698.00",
     "last_change": "2026-07-20T08:42:05.290458",
-    "last_checked": "2026-07-20T14:51:29.737624"
+    "last_checked": "2026-07-20T15:23:30.623742"
   },
   "H6588001_S_Toshiba_RC18DRNH": {
     "status": "low_stock",
@@ -196,7 +196,7 @@
     "stock_level": 20,
     "price": "569.00",
     "last_change": "2026-07-20T08:42:08.835002",
-    "last_checked": "2026-07-20T14:51:33.171828"
+    "last_checked": "2026-07-20T15:23:34.173129"
   },
   "H6588001_S_Philips_XC3031": {
     "status": "super_low_stock",
@@ -204,7 +204,7 @@
     "stock_level": 7,
     "price": "1,460.00",
     "last_change": "2026-07-20T08:42:12.233915",
-    "last_checked": "2026-07-20T14:51:36.473478"
+    "last_checked": "2026-07-20T15:23:37.486517"
   },
   "H6588001_S_Xiaomi_SmartTowerFan2_BHR8865UK": {
     "status": "low_stock",
@@ -212,7 +212,7 @@
     "stock_level": 24,
     "price": "410.00",
     "last_change": "2026-07-20T08:42:18.592772",
-    "last_checked": "2026-07-20T14:51:40.110131"
+    "last_checked": "2026-07-20T15:23:41.042835"
   },
   "H8427001_S_049100363745": {
     "status": "pending",
@@ -236,7 +236,7 @@
     "stock_level": 14,
     "price": "33.00",
     "last_change": "2026-07-16T15:24:32.399352",
-    "last_checked": "2026-07-20T14:51:43.488187"
+    "last_checked": "2026-07-20T15:23:44.488166"
   },
   "B1870001_S_6971738651267": {
     "status": "low_stock",
@@ -244,7 +244,7 @@
     "stock_level": 14,
     "price": "29.90",
     "last_change": "2026-07-16T15:24:36.006922",
-    "last_checked": "2026-07-20T14:51:46.776130"
+    "last_checked": "2026-07-20T15:23:47.865446"
   },
   "H0883003_S_DF01100": {
     "status": "in_stock",
@@ -252,7 +252,7 @@
     "stock_level": 38,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-20T14:51:51.612032"
+    "last_checked": "2026-07-20T15:23:51.653112"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 135,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-20T14:51:55.095913"
+    "last_checked": "2026-07-20T15:23:55.626483"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,6 +268,6 @@
     "stock_level": 182,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-20T14:51:58.560019"
+    "last_checked": "2026-07-20T15:23:59.041088"
   }
 }

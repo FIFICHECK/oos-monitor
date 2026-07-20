@@ -4,10 +4,10 @@
       "sku": "B0961005_S_4987176297563",
       "product_name": "Rejoice飄柔 | 蓬鬆去屑洗髮露 600g 【最佳使用日期: 02/11/2028】",
       "price": "39.00",
-      "checked_at": "2026-07-20T14:51:09.043328"
+      "checked_at": "2026-07-20T15:23:09.338591"
     }
   ],
-  "last_checked": "2026-07-20T14:51:58.623520",
+  "last_checked": "2026-07-20T15:23:59.108494",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -864,6 +864,13 @@
       "checked_at": "2026-07-20T14:51:19.363018"
     },
     {
+      "sku": "S6501001_S_G4713294187765",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+      "status": "low_stock",
+      "stock_level": 12,
+      "checked_at": "2026-07-20T15:23:19.686282"
+    },
+    {
       "sku": "S6501001_S_G4713294187789",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
       "status": "super_low_stock",
@@ -1494,6 +1501,13 @@
       "checked_at": "2026-07-20T14:51:22.654459"
     },
     {
+      "sku": "S6501001_S_G4713294187789",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
+      "status": "super_low_stock",
+      "stock_level": 3,
+      "checked_at": "2026-07-20T15:23:23.368403"
+    },
+    {
       "sku": "B1870001_S_6971738651335",
       "product_name": "安井 | 生椰拿鐵包 350g (急凍-18°C) (有效日期: 04/12/2026)",
       "status": "low_stock",
@@ -1786,6 +1800,13 @@
       "status": "low_stock",
       "stock_level": 14,
       "checked_at": "2026-07-20T14:51:43.488162"
+    },
+    {
+      "sku": "B1870001_S_6971738651335",
+      "product_name": "安井 | 生椰拿鐵包 350g (急凍-18°C) (有效日期: 04/12/2026)",
+      "status": "low_stock",
+      "stock_level": 14,
+      "checked_at": "2026-07-20T15:23:44.488143"
     },
     {
       "sku": "B1870001_S_6971738651267",
@@ -2082,6 +2103,13 @@
       "checked_at": "2026-07-20T14:51:46.776108"
     },
     {
+      "sku": "B1870001_S_6971738651267",
+      "product_name": "安井 | 楊枝甘露開心包 280g (急凍-18°C) (有效日期: 03/12/2026)",
+      "status": "low_stock",
+      "stock_level": 14,
+      "checked_at": "2026-07-20T15:23:47.865420"
+    },
+    {
       "sku": "B0961005_S_4894436008671",
       "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
       "status": "in_stock",
@@ -2367,6 +2395,13 @@
       "status": "in_stock",
       "stock_level": 44,
       "checked_at": "2026-07-20T14:50:52.140219"
+    },
+    {
+      "sku": "B0961005_S_4894436008671",
+      "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
+      "status": "in_stock",
+      "stock_level": 44,
+      "checked_at": "2026-07-20T15:22:52.055254"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -2656,6 +2691,13 @@
       "checked_at": "2026-07-20T14:50:55.523809"
     },
     {
+      "sku": "B0961005_S_4892218083908",
+      "product_name": "OLLY | 女士多元維他命營養補充軟糖 90粒【最佳使用日期:07/2027】",
+      "status": "in_stock",
+      "stock_level": 132,
+      "checked_at": "2026-07-20T15:22:55.547471"
+    },
+    {
       "sku": "B0961005_S_4987176297532",
       "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
       "status": "low_stock",
@@ -2941,6 +2983,13 @@
       "status": "low_stock",
       "stock_level": 12,
       "checked_at": "2026-07-20T14:50:59.174719"
+    },
+    {
+      "sku": "B0961005_S_4987176297532",
+      "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
+      "status": "low_stock",
+      "stock_level": 12,
+      "checked_at": "2026-07-20T15:22:59.063417"
     },
     {
       "sku": "B0961005_S_4987176173560",
@@ -3230,6 +3279,13 @@
       "checked_at": "2026-07-20T14:51:02.414424"
     },
     {
+      "sku": "B0961005_S_4987176173560",
+      "product_name": "Rejoice飄柔 | 滋潤去屑潤髮乳 650g 【最佳使用日期: 07/04/2029】",
+      "status": "low_stock",
+      "stock_level": 15,
+      "checked_at": "2026-07-20T15:23:02.555551"
+    },
+    {
       "sku": "B0961005_S_4987176297662",
       "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
       "status": "low_stock",
@@ -3515,6 +3571,13 @@
       "status": "in_stock",
       "stock_level": 58,
       "checked_at": "2026-07-20T14:51:05.779357"
+    },
+    {
+      "sku": "B0961005_S_4987176297662",
+      "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
+      "status": "in_stock",
+      "stock_level": 58,
+      "checked_at": "2026-07-20T15:23:05.919673"
     },
     {
       "sku": "B0961005_S_4987176297563",
@@ -3804,6 +3867,13 @@
       "checked_at": "2026-07-20T14:51:09.043328"
     },
     {
+      "sku": "B0961005_S_4987176297563",
+      "product_name": "Rejoice飄柔 | 蓬鬆去屑洗髮露 600g 【最佳使用日期: 02/11/2028】",
+      "status": "oos",
+      "stock_level": 0,
+      "checked_at": "2026-07-20T15:23:09.338591"
+    },
+    {
       "sku": "B0961005_S_4897091050078",
       "product_name": "Swisse | Ultiboost 無腥味高濃度野生魚油 200粒裝【香港行貨】【最佳使用日期:09/2028】",
       "status": "in_stock",
@@ -4089,6 +4159,13 @@
       "status": "in_stock",
       "stock_level": 121,
       "checked_at": "2026-07-20T14:51:12.426097"
+    },
+    {
+      "sku": "B0961005_S_4897091050078",
+      "product_name": "Swisse | Ultiboost 無腥味高濃度野生魚油 200粒裝【香港行貨】【最佳使用日期:09/2028】",
+      "status": "in_stock",
+      "stock_level": 121,
+      "checked_at": "2026-07-20T15:23:12.757999"
     },
     {
       "sku": "H5528001_S_TRT121055",
@@ -4378,6 +4455,13 @@
       "checked_at": "2026-07-20T14:51:15.779583"
     },
     {
+      "sku": "H5528001_S_TRT121055",
+      "product_name": "南京同仁堂 | 南京同仁堂 蟲草膠囊 CS4 (60粒) #提升免疫力 #美容養顏 #延緩衰老 #強肺益腎 #最佳期限2027-09",
+      "status": "in_stock",
+      "stock_level": 141,
+      "checked_at": "2026-07-20T15:23:16.248405"
+    },
+    {
       "sku": "H0883003_S_DF01100",
       "product_name": "Defense | 【原箱100個】【白色(小童)】韓國 KF94 四層結構立體兒童口罩▼M【有效期：2028年】(平行進口)",
       "status": "in_stock",
@@ -4579,6 +4663,13 @@
       "status": "in_stock",
       "stock_level": 38,
       "checked_at": "2026-07-20T14:51:51.612010"
+    },
+    {
+      "sku": "H0883003_S_DF01100",
+      "product_name": "Defense | 【原箱100個】【白色(小童)】韓國 KF94 四層結構立體兒童口罩▼M【有效期：2028年】(平行進口)",
+      "status": "in_stock",
+      "stock_level": 38,
+      "checked_at": "2026-07-20T15:23:51.653087"
     },
     {
       "sku": "H0883003_S_Unic4903111961016",
@@ -4784,6 +4875,13 @@
       "checked_at": "2026-07-20T14:51:55.095891"
     },
     {
+      "sku": "H0883003_S_Unic4903111961016",
+      "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
+      "status": "in_stock",
+      "stock_level": 135,
+      "checked_at": "2026-07-20T15:23:55.626458"
+    },
+    {
       "sku": "H0883003_S_DF02100",
       "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
       "status": "in_stock",
@@ -4987,6 +5085,13 @@
       "checked_at": "2026-07-20T14:51:58.559999"
     },
     {
+      "sku": "H0883003_S_DF02100",
+      "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
+      "status": "in_stock",
+      "stock_level": 182,
+      "checked_at": "2026-07-20T15:23:59.041066"
+    },
+    {
       "sku": "H6588001_S_Philips_HD9355",
       "product_name": "飛利浦 | 1.7L HD9355/92 Viva Collection 電熱水煲 香港行貨",
       "status": "low_stock",
@@ -5069,6 +5174,13 @@
       "status": "low_stock",
       "stock_level": 25,
       "checked_at": "2026-07-20T14:51:26.115652"
+    },
+    {
+      "sku": "H6588001_S_Philips_HD9355",
+      "product_name": "飛利浦 | 1.7L HD9355/92 Viva Collection 電熱水煲 香港行貨",
+      "status": "low_stock",
+      "stock_level": 25,
+      "checked_at": "2026-07-20T15:23:27.226660"
     },
     {
       "sku": "H6588001_S_Philips_NA321",
@@ -5155,6 +5267,13 @@
       "checked_at": "2026-07-20T14:51:29.737601"
     },
     {
+      "sku": "H6588001_S_Philips_NA321",
+      "product_name": "飛利浦 | NA231/09 透視健康空氣炸鍋 香港行貨 6.2公升 2000系列",
+      "status": "low_stock",
+      "stock_level": 14,
+      "checked_at": "2026-07-20T15:23:30.623717"
+    },
+    {
       "sku": "H6588001_S_Toshiba_RC18DRNH",
       "product_name": "東芝 | RC-18DRNH 1.8公升 多功能備長炭本厚釜電飯煲 香港行貨",
       "status": "low_stock",
@@ -5237,6 +5356,13 @@
       "status": "low_stock",
       "stock_level": 20,
       "checked_at": "2026-07-20T14:51:33.171793"
+    },
+    {
+      "sku": "H6588001_S_Toshiba_RC18DRNH",
+      "product_name": "東芝 | RC-18DRNH 1.8公升 多功能備長炭本厚釜電飯煲 香港行貨",
+      "status": "low_stock",
+      "stock_level": 20,
+      "checked_at": "2026-07-20T15:23:34.173107"
     },
     {
       "sku": "H6588001_S_Philips_XC3031",
@@ -5323,6 +5449,13 @@
       "checked_at": "2026-07-20T14:51:36.473453"
     },
     {
+      "sku": "H6588001_S_Philips_XC3031",
+      "product_name": "飛利浦 | XC3031/61 無線吸塵機 香港行貨 3000系列",
+      "status": "super_low_stock",
+      "stock_level": 7,
+      "checked_at": "2026-07-20T15:23:37.486494"
+    },
+    {
       "sku": "H6588001_S_Xiaomi_SmartTowerFan2_BHR8865UK",
       "product_name": "小米 | 智能直流變頻塔扇 2 香港行貨 BHR8865UK 直立扇",
       "status": "low_stock",
@@ -5405,6 +5538,13 @@
       "status": "low_stock",
       "stock_level": 24,
       "checked_at": "2026-07-20T14:51:40.110107"
+    },
+    {
+      "sku": "H6588001_S_Xiaomi_SmartTowerFan2_BHR8865UK",
+      "product_name": "小米 | 智能直流變頻塔扇 2 香港行貨 BHR8865UK 直立扇",
+      "status": "low_stock",
+      "stock_level": 24,
+      "checked_at": "2026-07-20T15:23:41.042807"
     }
   ],
   "low_stock_skus": [],
@@ -5415,7 +5555,7 @@
       "status": "expired",
       "stock_level": 33,
       "price": "359.00",
-      "checked_at": "2026-07-20T14:50:47.841213"
+      "checked_at": "2026-07-20T15:22:48.058054"
     },
     {
       "sku": "B0961005_S_4897020276715",
@@ -5423,7 +5563,7 @@
       "status": "expired",
       "stock_level": 21,
       "price": "178.00",
-      "checked_at": "2026-07-20T14:50:47.841229"
+      "checked_at": "2026-07-20T15:22:48.058066"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -5431,7 +5571,7 @@
       "status": "expired",
       "stock_level": 172,
       "price": "149.00",
-      "checked_at": "2026-07-20T14:50:47.841236"
+      "checked_at": "2026-07-20T15:22:48.058070"
     },
     {
       "sku": "B0961005_S_9311770615426",
@@ -5439,7 +5579,7 @@
       "status": "expired",
       "stock_level": 23,
       "price": "114.00",
-      "checked_at": "2026-07-20T14:50:47.841241"
+      "checked_at": "2026-07-20T15:22:48.058073"
     },
     {
       "sku": "B0961005_S_9556174902219",
@@ -5447,7 +5587,7 @@
       "status": "expired",
       "stock_level": 363,
       "price": "15.50",
-      "checked_at": "2026-07-20T14:50:47.841247"
+      "checked_at": "2026-07-20T15:22:48.058076"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -5455,7 +5595,7 @@
       "status": "in_stock",
       "stock_level": 44,
       "price": "338.00",
-      "checked_at": "2026-07-20T14:50:52.140219"
+      "checked_at": "2026-07-20T15:22:52.055254"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -5463,7 +5603,7 @@
       "status": "in_stock",
       "stock_level": 132,
       "price": "128.00",
-      "checked_at": "2026-07-20T14:50:55.523809"
+      "checked_at": "2026-07-20T15:22:55.547471"
     },
     {
       "sku": "B0961005_S_4987176297532",
@@ -5471,7 +5611,7 @@
       "status": "low_stock",
       "stock_level": 12,
       "price": "39.00",
-      "checked_at": "2026-07-20T14:50:59.174719"
+      "checked_at": "2026-07-20T15:22:59.063417"
     },
     {
       "sku": "B0961005_S_4987176173560",
@@ -5479,7 +5619,7 @@
       "status": "low_stock",
       "stock_level": 15,
       "price": "39.00",
-      "checked_at": "2026-07-20T14:51:02.414424"
+      "checked_at": "2026-07-20T15:23:02.555551"
     },
     {
       "sku": "B0961005_S_4987176297662",
@@ -5487,7 +5627,7 @@
       "status": "in_stock",
       "stock_level": 58,
       "price": "39.00",
-      "checked_at": "2026-07-20T14:51:05.779357"
+      "checked_at": "2026-07-20T15:23:05.919673"
     },
     {
       "sku": "B0961005_S_4987176297563",
@@ -5495,7 +5635,7 @@
       "status": "oos",
       "stock_level": 0,
       "price": "39.00",
-      "checked_at": "2026-07-20T14:51:09.043328"
+      "checked_at": "2026-07-20T15:23:09.338591"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -5503,7 +5643,7 @@
       "status": "in_stock",
       "stock_level": 121,
       "price": "129.00",
-      "checked_at": "2026-07-20T14:51:12.426097"
+      "checked_at": "2026-07-20T15:23:12.757999"
     },
     {
       "sku": "H5528001_S_TRT121055",
@@ -5511,7 +5651,7 @@
       "status": "in_stock",
       "stock_level": 141,
       "price": "99.00",
-      "checked_at": "2026-07-20T14:51:15.779583"
+      "checked_at": "2026-07-20T15:23:16.248405"
     },
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -5519,7 +5659,7 @@
       "status": "expired",
       "stock_level": 13,
       "price": "328.00",
-      "checked_at": "2026-07-20T14:51:15.779613"
+      "checked_at": "2026-07-20T15:23:16.248438"
     },
     {
       "sku": "H6588001_S_Panasonic_SRN210DH",
@@ -5527,7 +5667,7 @@
       "status": "expired",
       "stock_level": 1,
       "price": "1,490.00",
-      "checked_at": "2026-07-20T14:51:15.779616"
+      "checked_at": "2026-07-20T15:23:16.248441"
     },
     {
       "sku": "S6501001_S_G4713294187765",
@@ -5535,7 +5675,7 @@
       "status": "low_stock",
       "stock_level": 12,
       "price": "168.00",
-      "checked_at": "2026-07-20T14:51:19.363018"
+      "checked_at": "2026-07-20T15:23:19.686282"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -5543,7 +5683,7 @@
       "status": "super_low_stock",
       "stock_level": 3,
       "price": "370.00",
-      "checked_at": "2026-07-20T14:51:22.654459"
+      "checked_at": "2026-07-20T15:23:23.368403"
     },
     {
       "sku": "H6588001_S_Philips_HD9355",
@@ -5551,15 +5691,15 @@
       "status": "low_stock",
       "stock_level": 25,
       "price": "300.00",
-      "checked_at": "2026-07-20T14:51:26.115652"
+      "checked_at": "2026-07-20T15:23:27.226660"
     },
     {
       "sku": "H6588001_S_Philips_NA321",
       "product_name": "飛利浦 | NA231/09 透視健康空氣炸鍋 香港行貨 6.2公升 2000系列",
       "status": "low_stock",
-      "stock_level": 15,
+      "stock_level": 14,
       "price": "698.00",
-      "checked_at": "2026-07-20T14:51:29.737601"
+      "checked_at": "2026-07-20T15:23:30.623717"
     },
     {
       "sku": "H6588001_S_Toshiba_RC18DRNH",
@@ -5567,7 +5707,7 @@
       "status": "low_stock",
       "stock_level": 20,
       "price": "569.00",
-      "checked_at": "2026-07-20T14:51:33.171793"
+      "checked_at": "2026-07-20T15:23:34.173107"
     },
     {
       "sku": "H6588001_S_Philips_XC3031",
@@ -5575,7 +5715,7 @@
       "status": "super_low_stock",
       "stock_level": 7,
       "price": "1,460.00",
-      "checked_at": "2026-07-20T14:51:36.473453"
+      "checked_at": "2026-07-20T15:23:37.486494"
     },
     {
       "sku": "H6588001_S_Xiaomi_SmartTowerFan2_BHR8865UK",
@@ -5583,7 +5723,7 @@
       "status": "low_stock",
       "stock_level": 24,
       "price": "410.00",
-      "checked_at": "2026-07-20T14:51:40.110107"
+      "checked_at": "2026-07-20T15:23:41.042807"
     },
     {
       "sku": "H8427001_S_049100363745",
@@ -5591,7 +5731,7 @@
       "status": "pending",
       "stock_level": 64,
       "price": "119.90",
-      "checked_at": "2026-07-20T14:51:40.110141"
+      "checked_at": "2026-07-20T15:23:41.042844"
     },
     {
       "sku": "H8427001_S_9300807287415",
@@ -5599,7 +5739,7 @@
       "status": "pending",
       "stock_level": 16,
       "price": "279.90",
-      "checked_at": "2026-07-20T14:51:40.110146"
+      "checked_at": "2026-07-20T15:23:41.042850"
     },
     {
       "sku": "B1870001_S_6971738651335",
@@ -5607,7 +5747,7 @@
       "status": "low_stock",
       "stock_level": 14,
       "price": "33.00",
-      "checked_at": "2026-07-20T14:51:43.488162"
+      "checked_at": "2026-07-20T15:23:44.488143"
     },
     {
       "sku": "B1870001_S_6971738651267",
@@ -5615,7 +5755,7 @@
       "status": "low_stock",
       "stock_level": 14,
       "price": "29.90",
-      "checked_at": "2026-07-20T14:51:46.776108"
+      "checked_at": "2026-07-20T15:23:47.865420"
     },
     {
       "sku": "H0883003_S_DF01100",
@@ -5623,7 +5763,7 @@
       "status": "in_stock",
       "stock_level": 38,
       "price": "128.00",
-      "checked_at": "2026-07-20T14:51:51.612010"
+      "checked_at": "2026-07-20T15:23:51.653087"
     },
     {
       "sku": "H0883003_S_Unic4903111961016",
@@ -5631,7 +5771,7 @@
       "status": "in_stock",
       "stock_level": 135,
       "price": "55.00",
-      "checked_at": "2026-07-20T14:51:55.095891"
+      "checked_at": "2026-07-20T15:23:55.626458"
     },
     {
       "sku": "H0883003_S_DF02100",
@@ -5639,7 +5779,7 @@
       "status": "in_stock",
       "stock_level": 182,
       "price": "128.00",
-      "checked_at": "2026-07-20T14:51:58.559999"
+      "checked_at": "2026-07-20T15:23:59.041066"
     }
   ],
   "super_low_stock_skus": [
@@ -5648,14 +5788,14 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
       "price": "370.00",
       "stock_level": 3,
-      "checked_at": "2026-07-20T14:51:22.654459"
+      "checked_at": "2026-07-20T15:23:23.368403"
     },
     {
       "sku": "H6588001_S_Philips_XC3031",
       "product_name": "飛利浦 | XC3031/61 無線吸塵機 香港行貨 3000系列",
       "price": "1,460.00",
       "stock_level": 7,
-      "checked_at": "2026-07-20T14:51:36.473453"
+      "checked_at": "2026-07-20T15:23:37.486494"
     }
   ],
   "low_stock_30_skus": [
@@ -5664,63 +5804,63 @@
       "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
       "price": "39.00",
       "stock_level": 12,
-      "checked_at": "2026-07-20T14:50:59.174719"
+      "checked_at": "2026-07-20T15:22:59.063417"
     },
     {
       "sku": "B0961005_S_4987176173560",
       "product_name": "Rejoice飄柔 | 滋潤去屑潤髮乳 650g 【最佳使用日期: 07/04/2029】",
       "price": "39.00",
       "stock_level": 15,
-      "checked_at": "2026-07-20T14:51:02.414424"
+      "checked_at": "2026-07-20T15:23:02.555551"
     },
     {
       "sku": "S6501001_S_G4713294187765",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "price": "168.00",
       "stock_level": 12,
-      "checked_at": "2026-07-20T14:51:19.363018"
+      "checked_at": "2026-07-20T15:23:19.686282"
     },
     {
       "sku": "H6588001_S_Philips_HD9355",
       "product_name": "飛利浦 | 1.7L HD9355/92 Viva Collection 電熱水煲 香港行貨",
       "price": "300.00",
       "stock_level": 25,
-      "checked_at": "2026-07-20T14:51:26.115652"
+      "checked_at": "2026-07-20T15:23:27.226660"
     },
     {
       "sku": "H6588001_S_Philips_NA321",
       "product_name": "飛利浦 | NA231/09 透視健康空氣炸鍋 香港行貨 6.2公升 2000系列",
       "price": "698.00",
-      "stock_level": 15,
-      "checked_at": "2026-07-20T14:51:29.737601"
+      "stock_level": 14,
+      "checked_at": "2026-07-20T15:23:30.623717"
     },
     {
       "sku": "H6588001_S_Toshiba_RC18DRNH",
       "product_name": "東芝 | RC-18DRNH 1.8公升 多功能備長炭本厚釜電飯煲 香港行貨",
       "price": "569.00",
       "stock_level": 20,
-      "checked_at": "2026-07-20T14:51:33.171793"
+      "checked_at": "2026-07-20T15:23:34.173107"
     },
     {
       "sku": "H6588001_S_Xiaomi_SmartTowerFan2_BHR8865UK",
       "product_name": "小米 | 智能直流變頻塔扇 2 香港行貨 BHR8865UK 直立扇",
       "price": "410.00",
       "stock_level": 24,
-      "checked_at": "2026-07-20T14:51:40.110107"
+      "checked_at": "2026-07-20T15:23:41.042807"
     },
     {
       "sku": "B1870001_S_6971738651335",
       "product_name": "安井 | 生椰拿鐵包 350g (急凍-18°C) (有效日期: 04/12/2026)",
       "price": "33.00",
       "stock_level": 14,
-      "checked_at": "2026-07-20T14:51:43.488162"
+      "checked_at": "2026-07-20T15:23:44.488143"
     },
     {
       "sku": "B1870001_S_6971738651267",
       "product_name": "安井 | 楊枝甘露開心包 280g (急凍-18°C) (有效日期: 03/12/2026)",
       "price": "29.90",
       "stock_level": 14,
-      "checked_at": "2026-07-20T14:51:46.776108"
+      "checked_at": "2026-07-20T15:23:47.865420"
     }
   ]
 }

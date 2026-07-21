@@ -81,10 +81,10 @@
   "B0961005_S_4894436008671": {
     "status": "in_stock",
     "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
-    "stock_level": 33,
+    "stock_level": 31,
     "price": "338.00",
     "last_change": "2026-07-20T09:22:32.039836",
-    "last_checked": "2026-07-22T00:28:32.845608"
+    "last_checked": "2026-07-22T01:03:02.415264"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 127,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-22T00:28:36.303175"
+    "last_checked": "2026-07-22T01:03:13.786157"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,15 +100,15 @@
     "stock_level": 121,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-22T00:28:57.703874"
+    "last_checked": "2026-07-22T01:03:32.216862"
   },
   "B0961005_S_4987176297532": {
-    "status": "super_low_stock",
+    "status": "oos",
     "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
-    "stock_level": 1,
+    "stock_level": 0,
     "price": "39.00",
-    "last_change": "2026-07-20T20:49:20.388018",
-    "last_checked": "2026-07-22T00:28:41.075222"
+    "last_change": "2026-07-22T01:03:17.232181",
+    "last_checked": "2026-07-22T01:03:17.232183"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,15 +116,15 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-22T00:28:44.452212"
+    "last_checked": "2026-07-22T01:03:21.278003"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
     "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
-    "stock_level": 54,
+    "stock_level": 53,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-22T00:28:51.115007"
+    "last_checked": "2026-07-22T01:03:25.337700"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-22T00:28:54.427026"
+    "last_checked": "2026-07-22T01:03:28.717523"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-22T00:29:04.680535"
+    "last_checked": "2026-07-22T01:03:41.744435"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 12,
     "price": "168.00",
     "last_change": "2026-07-17T09:30:44.221087",
-    "last_checked": "2026-07-22T00:29:11.450120"
+    "last_checked": "2026-07-22T01:03:45.128076"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 3,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-22T00:29:14.794739"
+    "last_checked": "2026-07-22T01:03:58.310160"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 36,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-22T00:29:18.195615"
+    "last_checked": "2026-07-22T01:04:02.039773"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 138,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-22T00:29:21.567899"
+    "last_checked": "2026-07-22T01:04:11.895967"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 197,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-22T00:29:30.770278"
+    "last_checked": "2026-07-22T01:04:15.277529"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,14 +276,14 @@
     "stock_level": 6,
     "price": "1,188.00",
     "last_change": "2026-07-21T12:46:18.710455",
-    "last_checked": "2026-07-22T00:29:34.286423"
+    "last_checked": "2026-07-22T01:04:21.630886"
   },
   "H6588001_S_Philips_AC0650": {
-    "status": "low_stock",
+    "status": "super_low_stock",
     "product_name": "飛利浦 | AC0650/20 智能空氣清新機 香港行貨 600i 系列",
-    "stock_level": 10,
+    "stock_level": 9,
     "price": "599.00",
-    "last_change": "2026-07-21T15:39:18.910174",
-    "last_checked": "2026-07-22T00:29:39.920273"
+    "last_change": "2026-07-22T01:04:28.815182",
+    "last_checked": "2026-07-22T01:04:28.815184"
   }
 }

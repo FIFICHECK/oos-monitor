@@ -593,7 +593,7 @@
                     <th style="width:26%;">Product Name</th>
                     <th style="width:7%;">庫存</th>
                     <th style="width:7%;">Status</th>
-                    <th style="width:8%;text-align:right;padding-right:12px;">Sold</th>
+                    <th style="width:8%;text-align:center;padding-right:12px;">Sold</th>
                     <th style="width:9%;">Price</th>
                     <th style="width:10%;">Starts</th>
                     <th style="width:7%;">End</th>
@@ -615,7 +615,7 @@
                     <th style="width:26%;">Product Name</th>
                     <th style="width:7%;">庫存</th>
                     <th style="width:7%;">Status</th>
-                    <th style="width:8%;text-align:right;padding-right:12px;">Sold</th>
+                    <th style="width:8%;text-align:center;padding-right:12px;">Sold</th>
                     <th style="width:9%;">Price</th>
                     <th style="width:10%;">Starts</th>
                     <th style="width:7%;">End</th>
@@ -637,7 +637,7 @@
                     <th style="width:26%;">Product Name</th>
                     <th style="width:7%;">Last 庫存</th>
                     <th style="width:7%;">Status</th>
-                    <th style="width:8%;text-align:right;padding-right:12px;">Sold</th>
+                    <th style="width:8%;text-align:center;padding-right:12px;">Sold</th>
                     <th style="width:9%;">Last Price</th>
                     <th style="width:10%;">Starts</th>
                     <th style="width:7%;">End</th>
@@ -1288,7 +1288,7 @@
                             + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                             + '<td class="tag-cell">' + stockDisplay + '</td>'
                             + '<td class="tag-cell">' + tag + '</td>'
-                            + '<td class="tag-cell" style="text-align:right;padding-right:12px;">' + soldDisplay + '</td>'
+                            + '<td class="tag-cell" style="text-align:center;">' + soldDisplay + '</td>'
                             + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
                             + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + startDisplay + '</td>'
                             + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + endDisplay + '</td>'
@@ -1298,7 +1298,7 @@
                         allRows.push('<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
                             + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
                             + '<td class="tag-cell"><span class="tag tag-error">Pending</span></td>'
-                            + '<td class="tag-cell" style="text-align:right;padding-right:12px;color:#555;">--</td>'
+                            + '<td class="tag-cell" style="text-align:center;color:#555;">--</td>'
                             + '<td class="price-cell">--</td>'
                             + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + startDisplay + '</td>'
                             + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + endDisplay + '</td>'
@@ -1342,7 +1342,7 @@
                         + '<td class="name-cell" style="color:#888;">' + name + '</td>'
                         + '<td class="tag-cell" style="color:#888;">' + stock + '</td>'
                         + '<td class="tag-cell"><span class="tag" style="background:#888;color:#fff;">⏳ Pending</span></td>'
-                        + '<td class="tag-cell" style="text-align:right;padding-right:12px;color:#555;">--</td>'
+                        + '<td class="tag-cell" style="text-align:center;color:#555;">--</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + price + '</td>'
                         + '<td style="color:#ffd700;font-size:0.8rem;">' + p.start + '</td>'
                         + '<td style="color:#ffd700;font-size:0.8rem;">' + p.end + '</td>'
@@ -1379,7 +1379,7 @@
                         + '<td class="name-cell" style="color:#888;">' + (s.product_name || 'N/A') + '</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + lastStock + '</td>'
                         + '<td>' + tag + '</td>'
-                        + '<td class="tag-cell" style="text-align:right;padding-right:12px;">' + soldDisplay + '</td>'
+                        + '<td class="tag-cell" style="text-align:center;">' + soldDisplay + '</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + lastPrice + '</td>'
                         + '<td style="color:#666;font-size:0.8rem;">' + startDisplay + '</td>'
                         + '<td style="color:#666;font-size:0.8rem;">' + endDisplay + '</td>'

@@ -84,7 +84,7 @@
     "stock_level": 37,
     "price": "338.00",
     "last_change": "2026-07-20T09:22:32.039836",
-    "last_checked": "2026-07-21T16:42:23.595769"
+    "last_checked": "2026-07-21T17:14:24.244515"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 127,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-21T16:42:27.173619"
+    "last_checked": "2026-07-21T17:14:27.709990"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,7 +100,7 @@
     "stock_level": 123,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-21T16:42:45.664242"
+    "last_checked": "2026-07-21T17:14:44.995058"
   },
   "B0961005_S_4987176297532": {
     "status": "super_low_stock",
@@ -108,7 +108,7 @@
     "stock_level": 7,
     "price": "39.00",
     "last_change": "2026-07-20T20:49:20.388018",
-    "last_checked": "2026-07-21T16:42:30.989875"
+    "last_checked": "2026-07-21T17:14:31.430873"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,7 +116,7 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-21T16:42:34.766501"
+    "last_checked": "2026-07-21T17:14:34.776479"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
@@ -124,7 +124,7 @@
     "stock_level": 55,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-21T16:42:38.278808"
+    "last_checked": "2026-07-21T17:14:38.146107"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-21T16:42:41.979036"
+    "last_checked": "2026-07-21T17:14:41.522932"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-21T16:42:49.629158"
+    "last_checked": "2026-07-21T17:14:49.101189"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 12,
     "price": "168.00",
     "last_change": "2026-07-17T09:30:44.221087",
-    "last_checked": "2026-07-21T16:42:53.830069"
+    "last_checked": "2026-07-21T17:14:52.502264"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 3,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-21T16:42:57.687925"
+    "last_checked": "2026-07-21T17:14:55.871805"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -220,7 +220,7 @@
     "stock_level": 192,
     "price": "119.90",
     "last_change": "2026-07-20T23:33:01.707528",
-    "last_checked": "2026-07-21T16:43:01.881010"
+    "last_checked": "2026-07-21T17:14:59.657102"
   },
   "H8427001_S_9300807287415": {
     "status": "in_stock",
@@ -228,7 +228,7 @@
     "stock_level": 188,
     "price": "279.90",
     "last_change": "2026-07-20T23:33:05.230198",
-    "last_checked": "2026-07-21T16:43:05.551325"
+    "last_checked": "2026-07-21T17:15:03.209852"
   },
   "B1870001_S_6971738651335": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 39,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-21T16:43:09.311591"
+    "last_checked": "2026-07-21T17:15:06.776736"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 138,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-21T16:43:12.960359"
+    "last_checked": "2026-07-21T17:15:10.204895"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 200,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-21T16:43:16.569297"
+    "last_checked": "2026-07-21T17:15:13.639700"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,14 +276,14 @@
     "stock_level": 6,
     "price": "1,188.00",
     "last_change": "2026-07-21T12:46:18.710455",
-    "last_checked": "2026-07-21T16:43:20.346986"
+    "last_checked": "2026-07-21T17:15:17.086835"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
     "product_name": "飛利浦 | AC0650/20 智能空氣清新機 香港行貨 600i 系列",
-    "stock_level": 14,
+    "stock_level": 13,
     "price": "599.00",
     "last_change": "2026-07-21T15:39:18.910174",
-    "last_checked": "2026-07-21T16:43:24.164015"
+    "last_checked": "2026-07-21T17:15:20.544086"
   }
 }

@@ -1487,8 +1487,26 @@
                 if (filtered.length === 0) {
                     body.innerHTML = '<div class="modal-no-history">📭 No status changes recorded yet</div>';
                 } else {
+                    // ── Stock Diff Summary ──
+                    var firstStock = filtered[0].stock_level;
+                    var lastStock = filtered[filtered.length - 1].stock_level;
+                    var diffHtml = '';
+                    if (firstStock != null && lastStock != null && filtered.length >= 2) {
+                        var diff = firstStock - lastStock;
+                        var label = diff >= 0 ? '📉 Sold' : '📈 Restocked';
+                        diffHtml = '<div style="background:#0f3460;padding:12px;border-radius:8px;margin-bottom:12px;text-align:center;">'
+                            + '<div style="display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:8px;">'
+                            + '<div><span style="color:#888;font-size:0.75rem;">Start</span><br><span style="font-size:1.4rem;font-weight:bold;color:#2ecc71;">' + firstStock + '</span></div>'
+                            + '<div style="color:#ffd700;font-size:1.3rem;font-weight:bold;">−</div>'
+                            + '<div><span style="color:#888;font-size:0.75rem;">End</span><br><span style="font-size:1.4rem;font-weight:bold;color:#e94560;">' + lastStock + '</span></div>'
+                            + '<div style="color:#ffd700;font-size:1.3rem;font-weight:bold;">=</div>'
+                            + '<div><span style="color:#888;font-size:0.75rem;">' + label + '</span><br><span style="font-size:1.4rem;font-weight:bold;color:#ffd700;">' + Math.abs(diff) + '</span></div>'
+                            + '</div>'
+                            + '<div style="color:#aaa;font-size:0.8rem;margin-top:4px;">' + firstStock + ' − ' + lastStock + ' = ' + Math.abs(diff) + ' 件' + (diff >= 0 ? ' 售出' : ' 補貨') + '</div>'
+                            + '</div>';
+                    }
                     const recent = filtered.slice().reverse();
-                    let html = '<table><thead><tr><th style="width:25%;">Time</th><th style="width:20%;">Status</th><th style="width:55%;">Detail</th></tr></thead><tbody>';
+                    let html = diffHtml + '<table><thead><tr><th style="width:25%;">Time</th><th style="width:20%;">Status</th><th style="width:55%;">Detail</th></tr></thead><tbody>';
                     html += recent.map(function(h) {
                         var tag = '';
                         if (h.status === 'oos') tag = '<span class="tag tag-oos">OOS</span>';

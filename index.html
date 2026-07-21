@@ -1465,12 +1465,17 @@
             updateBatchDeleteBtn('expired');
         }
         
-        // ── Compute Sold from history (first stock - last stock) ──
+        // ── Compute Sold: sum only decreases (ignore restocks) ──
         function computeSold(sku, history) {
             if (!history || history.length < 2) return null;
             var entries = history.filter(function(h) { return h.sku === sku && h.stock_level != null; });
             if (entries.length < 2) return null;
-            return entries[0].stock_level - entries[entries.length - 1].stock_level;
+            var sold = 0;
+            for (var i = 1; i < entries.length; i++) {
+                var diff = entries[i-1].stock_level - entries[i].stock_level;
+                if (diff > 0) sold += diff;
+            }
+            return sold;
         }
         
         // Modal functions
@@ -1506,22 +1511,25 @@
                 if (filtered.length === 0) {
                     body.innerHTML = '<div class="modal-no-history">📭 No status changes recorded yet</div>';
                 } else {
-                    // ── Stock Diff Summary ──
+                    // ── Stock Diff Summary (cumulative decreases only) ──
                     var firstStock = filtered[0].stock_level;
                     var lastStock = filtered[filtered.length - 1].stock_level;
+                    var soldTotal = 0;
+                    for (var hi = 1; hi < filtered.length; hi++) {
+                        var d = filtered[hi-1].stock_level - filtered[hi].stock_level;
+                        if (d > 0) soldTotal += d;
+                    }
                     var diffHtml = '';
                     if (firstStock != null && lastStock != null && filtered.length >= 2) {
-                        var diff = firstStock - lastStock;
-                        var label = diff >= 0 ? '📉 Sold' : '📈 Restocked';
                         diffHtml = '<div style="background:#0f3460;padding:12px;border-radius:8px;margin-bottom:12px;text-align:center;">'
                             + '<div style="display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:8px;">'
                             + '<div><span style="color:#888;font-size:0.75rem;">Start</span><br><span style="font-size:1.4rem;font-weight:bold;color:#2ecc71;">' + firstStock + '</span></div>'
-                            + '<div style="color:#ffd700;font-size:1.3rem;font-weight:bold;">−</div>'
+                            + '<div style="color:#888;font-size:1.2rem;font-weight:bold;">→</div>'
                             + '<div><span style="color:#888;font-size:0.75rem;">End</span><br><span style="font-size:1.4rem;font-weight:bold;color:#e94560;">' + lastStock + '</span></div>'
-                            + '<div style="color:#ffd700;font-size:1.3rem;font-weight:bold;">=</div>'
-                            + '<div><span style="color:#888;font-size:0.75rem;">' + label + '</span><br><span style="font-size:1.4rem;font-weight:bold;color:#ffd700;">' + Math.abs(diff) + '</span></div>'
+                            + '<div style="color:#888;font-size:0.8rem;padding:0 8px;">📉</div>'
+                            + '<div><span style="color:#888;font-size:0.75rem;">Total Sold</span><br><span style="font-size:1.4rem;font-weight:bold;color:#ffd700;">' + soldTotal + '</span></div>'
                             + '</div>'
-                            + '<div style="color:#aaa;font-size:0.8rem;margin-top:4px;">' + firstStock + ' − ' + lastStock + ' = ' + Math.abs(diff) + ' 件' + (diff >= 0 ? ' 售出' : ' 補貨') + '</div>'
+                            + '<div style="color:#aaa;font-size:0.8rem;margin-top:4px;">累計減少 = ' + soldTotal + ' 件售出' + (soldTotal > 0 ? '（補貨已忽略）' : '）') + '</div>'
                             + '</div>';
                     }
                     const recent = filtered.slice().reverse();

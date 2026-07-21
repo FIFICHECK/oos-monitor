@@ -84,7 +84,7 @@
     "stock_level": 37,
     "price": "338.00",
     "last_change": "2026-07-20T09:22:32.039836",
-    "last_checked": "2026-07-21T13:49:26.258447"
+    "last_checked": "2026-07-21T14:25:27.094296"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 127,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-21T13:49:32.372805"
+    "last_checked": "2026-07-21T14:25:35.579612"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,15 +100,15 @@
     "stock_level": 123,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-21T13:50:04.927433"
+    "last_checked": "2026-07-21T14:26:25.637391"
   },
   "B0961005_S_4987176297532": {
     "status": "super_low_stock",
     "product_name": "Rejoice飄柔 | 控油去屑洗髮露 600g 【最佳使用日期: 05/01/2029】",
-    "stock_level": 9,
+    "stock_level": 8,
     "price": "39.00",
     "last_change": "2026-07-20T20:49:20.388018",
-    "last_checked": "2026-07-21T13:49:35.972628"
+    "last_checked": "2026-07-21T14:25:45.007288"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,7 +116,7 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-21T13:49:44.881054"
+    "last_checked": "2026-07-21T14:25:55.280194"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
@@ -124,7 +124,7 @@
     "stock_level": 55,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-21T13:49:48.175480"
+    "last_checked": "2026-07-21T14:26:05.763756"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,15 +132,15 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-21T13:49:55.288489"
+    "last_checked": "2026-07-21T14:26:15.294648"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
     "product_name": "南京同仁堂 | 南京同仁堂 蟲草膠囊 CS4 (60粒) #提升免疫力 #美容養顏 #延緩衰老 #強肺益腎 #最佳期限2027-09",
-    "stock_level": 137,
+    "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-21T13:50:14.867390"
+    "last_checked": "2026-07-21T14:26:29.074593"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 12,
     "price": "168.00",
     "last_change": "2026-07-17T09:30:44.221087",
-    "last_checked": "2026-07-21T13:50:24.357399"
+    "last_checked": "2026-07-21T14:26:45.408206"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 3,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-21T13:50:35.455789"
+    "last_checked": "2026-07-21T14:26:55.240594"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -220,7 +220,7 @@
     "stock_level": 192,
     "price": "119.90",
     "last_change": "2026-07-20T23:33:01.707528",
-    "last_checked": "2026-07-21T13:50:39.277024"
+    "last_checked": "2026-07-21T14:27:05.427424"
   },
   "H8427001_S_9300807287415": {
     "status": "in_stock",
@@ -228,7 +228,7 @@
     "stock_level": 188,
     "price": "279.90",
     "last_change": "2026-07-20T23:33:05.230198",
-    "last_checked": "2026-07-21T13:50:45.947357"
+    "last_checked": "2026-07-21T14:27:15.655922"
   },
   "B1870001_S_6971738651335": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 39,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-21T13:50:55.169348"
+    "last_checked": "2026-07-21T14:27:25.638616"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 138,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-21T13:51:08.383013"
+    "last_checked": "2026-07-21T14:27:35.561700"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 200,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-21T13:51:24.768014"
+    "last_checked": "2026-07-21T14:27:45.560942"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 4,
     "price": "1,188.00",
     "last_change": "2026-07-21T12:46:18.710455",
-    "last_checked": "2026-07-21T13:51:43.786062"
+    "last_checked": "2026-07-21T14:27:55.535791"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "super_low_stock",
@@ -284,6 +284,6 @@
     "stock_level": 4,
     "price": "599.00",
     "last_change": "2026-07-21T12:46:25.617203",
-    "last_checked": "2026-07-21T13:51:55.172925"
+    "last_checked": "2026-07-21T14:28:05.224385"
   }
 }

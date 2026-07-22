@@ -84,7 +84,7 @@
     "stock_level": 34,
     "price": "338.00",
     "last_change": "2026-07-20T09:22:32.039836",
-    "last_checked": "2026-07-22T16:15:51.680259"
+    "last_checked": "2026-07-22T16:47:53.951312"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 127,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-22T16:15:55.250003"
+    "last_checked": "2026-07-22T16:47:58.929570"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,7 +100,7 @@
     "stock_level": 122,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-22T16:16:12.443655"
+    "last_checked": "2026-07-22T16:48:19.246040"
   },
   "B0961005_S_4987176297532": {
     "status": "oos",
@@ -108,7 +108,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-22T01:03:17.232181",
-    "last_checked": "2026-07-22T16:15:58.638539"
+    "last_checked": "2026-07-22T16:48:03.435535"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,7 +116,7 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-22T16:16:02.349619"
+    "last_checked": "2026-07-22T16:48:08.818836"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
@@ -124,7 +124,7 @@
     "stock_level": 49,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-22T16:16:05.773617"
+    "last_checked": "2026-07-22T16:48:12.613676"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-22T16:16:09.073218"
+    "last_checked": "2026-07-22T16:48:15.914929"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-22T16:16:15.978362"
+    "last_checked": "2026-07-22T16:48:22.541224"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -161,10 +161,10 @@
   "S6501001_S_G4713294187765": {
     "status": "low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-    "stock_level": 11,
+    "stock_level": 10,
     "price": "168.00",
     "last_change": "2026-07-22T16:16:19.510871",
-    "last_checked": "2026-07-22T16:16:19.510873"
+    "last_checked": "2026-07-22T16:48:25.907490"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-22T16:16:22.995998"
+    "last_checked": "2026-07-22T16:48:29.428745"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-22T16:16:26.524157"
+    "last_checked": "2026-07-22T16:48:33.017773"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 133,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-22T16:16:30.240674"
+    "last_checked": "2026-07-22T16:48:36.402066"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 195,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-22T16:16:33.678690"
+    "last_checked": "2026-07-22T16:48:40.504465"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 6,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-22T16:16:37.279403"
+    "last_checked": "2026-07-22T16:48:43.862547"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "super_low_stock",
@@ -284,6 +284,6 @@
     "stock_level": 8,
     "price": "599.00",
     "last_change": "2026-07-22T01:04:28.815182",
-    "last_checked": "2026-07-22T16:16:40.664308"
+    "last_checked": "2026-07-22T16:48:47.438636"
   }
 }

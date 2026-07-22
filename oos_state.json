@@ -84,7 +84,7 @@
     "stock_level": 34,
     "price": "338.00",
     "last_change": "2026-07-20T09:22:32.039836",
-    "last_checked": "2026-07-22T19:59:56.257352"
+    "last_checked": "2026-07-22T20:34:13.652395"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,15 +92,15 @@
     "stock_level": 127,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-22T19:59:59.760460"
+    "last_checked": "2026-07-22T20:34:17.109632"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
     "product_name": "Swisse | Ultiboost 無腥味高濃度野生魚油 200粒裝【香港行貨】【最佳使用日期:09/2028】",
-    "stock_level": 121,
+    "stock_level": 120,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-22T20:00:16.836482"
+    "last_checked": "2026-07-22T20:34:34.151842"
   },
   "B0961005_S_4987176297532": {
     "status": "oos",
@@ -108,7 +108,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-22T01:03:17.232181",
-    "last_checked": "2026-07-22T20:00:03.345056"
+    "last_checked": "2026-07-22T20:34:20.713176"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,15 +116,15 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-22T20:00:06.650201"
+    "last_checked": "2026-07-22T20:34:24.102342"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
     "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
-    "stock_level": 46,
+    "stock_level": 45,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-22T20:00:10.037280"
+    "last_checked": "2026-07-22T20:34:27.375380"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-22T20:00:13.448915"
+    "last_checked": "2026-07-22T20:34:30.665619"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-22T20:00:20.155531"
+    "last_checked": "2026-07-22T20:34:37.559756"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 10,
     "price": "168.00",
     "last_change": "2026-07-22T16:16:19.510871",
-    "last_checked": "2026-07-22T20:00:23.545533"
+    "last_checked": "2026-07-22T20:34:41.035781"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-22T20:00:26.881695"
+    "last_checked": "2026-07-22T20:34:45.184737"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-22T20:00:30.308474"
+    "last_checked": "2026-07-22T20:34:48.650719"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 133,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-22T20:00:33.851680"
+    "last_checked": "2026-07-22T20:34:52.107066"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 194,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-22T20:00:37.329400"
+    "last_checked": "2026-07-22T20:34:55.478227"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 6,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-22T20:00:40.794530"
+    "last_checked": "2026-07-22T20:34:58.783129"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "super_low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 7,
     "price": "599.00",
     "last_change": "2026-07-22T01:04:28.815182",
-    "last_checked": "2026-07-22T20:00:44.801496"
+    "last_checked": "2026-07-22T20:35:02.191165"
   },
   "B0961005_S_4891609702053": {
     "status": "pending",

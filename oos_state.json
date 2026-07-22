@@ -84,7 +84,7 @@
     "stock_level": 29,
     "price": "338.00",
     "last_change": "2026-07-22T23:14:59.739695",
-    "last_checked": "2026-07-23T05:08:06.715804"
+    "last_checked": "2026-07-23T05:40:12.407745"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 126,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-23T05:08:10.078235"
+    "last_checked": "2026-07-23T05:40:15.854260"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,7 +100,7 @@
     "stock_level": 119,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-23T05:08:27.463890"
+    "last_checked": "2026-07-23T05:40:32.505537"
   },
   "B0961005_S_4987176297532": {
     "status": "oos",
@@ -108,7 +108,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-22T01:03:17.232181",
-    "last_checked": "2026-07-23T05:08:13.647410"
+    "last_checked": "2026-07-23T05:40:19.112648"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,7 +116,7 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-23T05:08:17.011411"
+    "last_checked": "2026-07-23T05:40:22.394859"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
@@ -124,7 +124,7 @@
     "stock_level": 43,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-23T05:08:20.280949"
+    "last_checked": "2026-07-23T05:40:25.653708"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-23T05:08:23.623873"
+    "last_checked": "2026-07-23T05:40:28.964387"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-23T05:08:30.848493"
+    "last_checked": "2026-07-23T05:40:35.884186"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 10,
     "price": "168.00",
     "last_change": "2026-07-22T16:16:19.510871",
-    "last_checked": "2026-07-23T05:08:34.672847"
+    "last_checked": "2026-07-23T05:40:39.151688"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-23T05:08:38.099285"
+    "last_checked": "2026-07-23T05:40:42.605311"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-23T05:08:41.570615"
+    "last_checked": "2026-07-23T05:40:46.044235"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 128,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-23T05:08:45.280559"
+    "last_checked": "2026-07-23T05:40:49.409015"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 190,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-23T05:08:48.774785"
+    "last_checked": "2026-07-23T05:40:52.849399"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 6,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-23T05:08:52.295101"
+    "last_checked": "2026-07-23T05:40:56.169839"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "super_low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 6,
     "price": "599.00",
     "last_change": "2026-07-22T01:04:28.815182",
-    "last_checked": "2026-07-23T05:08:55.857608"
+    "last_checked": "2026-07-23T05:40:59.725925"
   },
   "B0961005_S_4891609702053": {
     "status": "pending",

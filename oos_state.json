@@ -84,7 +84,7 @@
     "stock_level": 30,
     "price": "338.00",
     "last_change": "2026-07-23T15:22:18.573076",
-    "last_checked": "2026-07-23T22:25:27.645188"
+    "last_checked": "2026-07-23T22:57:28.556352"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 126,
     "price": "128.00",
     "last_change": "2026-07-23T15:22:21.896022",
-    "last_checked": "2026-07-23T22:25:31.032898"
+    "last_checked": "2026-07-23T22:57:31.995917"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,7 +100,7 @@
     "stock_level": 120,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-23T22:25:47.635028"
+    "last_checked": "2026-07-23T22:57:48.993642"
   },
   "B0961005_S_4987176297532": {
     "status": "oos",
@@ -108,15 +108,15 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-22T01:03:17.232181",
-    "last_checked": "2026-07-23T22:25:34.376398"
+    "last_checked": "2026-07-23T22:57:35.444680"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
     "product_name": "Rejoice飄柔 | 滋潤去屑潤髮乳 650g 【最佳使用日期: 07/04/2029】",
-    "stock_level": 15,
+    "stock_level": 14,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-23T22:25:37.692487"
+    "last_checked": "2026-07-23T22:57:38.881300"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
@@ -124,7 +124,7 @@
     "stock_level": 34,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-23T22:25:40.976686"
+    "last_checked": "2026-07-23T22:57:42.334130"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-23T22:25:44.304608"
+    "last_checked": "2026-07-23T22:57:45.680069"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-23T22:25:50.939603"
+    "last_checked": "2026-07-23T22:57:52.330657"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 8,
     "price": "168.00",
     "last_change": "2026-07-23T11:35:48.397821",
-    "last_checked": "2026-07-23T22:25:54.274929"
+    "last_checked": "2026-07-23T22:57:55.739503"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 1,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-23T22:25:57.701350"
+    "last_checked": "2026-07-23T22:57:59.065778"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 35,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-23T22:26:01.195599"
+    "last_checked": "2026-07-23T22:58:02.416154"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 129,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-23T22:26:04.635363"
+    "last_checked": "2026-07-23T22:58:05.905093"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 193,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-23T22:26:08.005991"
+    "last_checked": "2026-07-23T22:58:09.395311"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 4,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-23T22:26:11.439056"
+    "last_checked": "2026-07-23T22:58:12.731982"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "in_stock",
@@ -284,15 +284,15 @@
     "stock_level": 35,
     "price": "599.00",
     "last_change": "2026-07-23T13:14:28.322275",
-    "last_checked": "2026-07-23T22:26:14.852836"
+    "last_checked": "2026-07-23T22:58:16.559615"
   },
   "B0961005_S_4891609702053": {
-    "status": "pending",
+    "status": "in_stock",
     "product_name": "健肝素 | Essentiale 健肝素60粒【最佳使用日期: 30/09/2027】",
-    "stock_level": 0,
-    "price": "328.00",
-    "last_change": "",
-    "last_checked": "2026-07-22T17:20:47.738254"
+    "stock_level": 560,
+    "price": "285.00",
+    "last_change": "2026-07-23T22:58:20.031311",
+    "last_checked": "2026-07-23T22:58:20.031313"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",

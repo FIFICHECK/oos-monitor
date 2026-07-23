@@ -84,7 +84,7 @@
     "stock_level": 30,
     "price": "338.00",
     "last_change": "2026-07-23T09:24:34.192021",
-    "last_checked": "2026-07-23T12:08:42.593562"
+    "last_checked": "2026-07-23T12:41:16.722921"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 126,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-23T12:08:46.585269"
+    "last_checked": "2026-07-23T12:41:20.105782"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,7 +100,7 @@
     "stock_level": 121,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-23T12:09:03.826688"
+    "last_checked": "2026-07-23T12:41:38.117754"
   },
   "B0961005_S_4987176297532": {
     "status": "oos",
@@ -108,7 +108,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-22T01:03:17.232181",
-    "last_checked": "2026-07-23T12:08:50.035798"
+    "last_checked": "2026-07-23T12:41:23.414159"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,15 +116,15 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-23T12:08:53.496477"
+    "last_checked": "2026-07-23T12:41:26.876812"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
     "product_name": "Rejoice飄柔 | 滋養去屑洗髮露 600g 【最佳使用日期: 22/01/2029】",
-    "stock_level": 42,
+    "stock_level": 39,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-23T12:08:57.018668"
+    "last_checked": "2026-07-23T12:41:30.196426"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-23T12:09:00.387958"
+    "last_checked": "2026-07-23T12:41:33.654720"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-23T12:09:07.246243"
+    "last_checked": "2026-07-23T12:41:41.686295"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 9,
     "price": "168.00",
     "last_change": "2026-07-23T11:35:48.397821",
-    "last_checked": "2026-07-23T12:09:10.569339"
+    "last_checked": "2026-07-23T12:41:45.104680"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-23T12:09:13.864698"
+    "last_checked": "2026-07-23T12:41:48.510391"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-23T12:09:17.201307"
+    "last_checked": "2026-07-23T12:41:51.894123"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 126,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-23T12:09:20.509189"
+    "last_checked": "2026-07-23T12:41:58.036498"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 188,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-23T12:09:23.864216"
+    "last_checked": "2026-07-23T12:42:03.556336"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 5,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-23T12:09:27.353028"
+    "last_checked": "2026-07-23T12:42:08.098179"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "super_low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 6,
     "price": "599.00",
     "last_change": "2026-07-22T01:04:28.815182",
-    "last_checked": "2026-07-23T12:09:31.401475"
+    "last_checked": "2026-07-23T12:42:12.457523"
   },
   "B0961005_S_4891609702053": {
     "status": "pending",

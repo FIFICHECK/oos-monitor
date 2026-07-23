@@ -84,7 +84,7 @@
     "stock_level": 29,
     "price": "338.00",
     "last_change": "2026-07-22T23:14:59.739695",
-    "last_checked": "2026-07-23T07:48:10.425642"
+    "last_checked": "2026-07-23T08:20:35.161835"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 126,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-23T07:48:13.848416"
+    "last_checked": "2026-07-23T08:20:38.494070"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,7 +100,7 @@
     "stock_level": 119,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-23T07:48:30.823799"
+    "last_checked": "2026-07-23T08:20:55.110650"
   },
   "B0961005_S_4987176297532": {
     "status": "oos",
@@ -108,7 +108,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-22T01:03:17.232181",
-    "last_checked": "2026-07-23T07:48:17.189428"
+    "last_checked": "2026-07-23T08:20:41.824375"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,7 +116,7 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-23T07:48:20.471720"
+    "last_checked": "2026-07-23T08:20:45.104487"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
@@ -124,7 +124,7 @@
     "stock_level": 43,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-23T07:48:23.787096"
+    "last_checked": "2026-07-23T08:20:48.428125"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-23T07:48:27.074146"
+    "last_checked": "2026-07-23T08:20:51.716251"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-23T07:48:34.081507"
+    "last_checked": "2026-07-23T08:20:58.381447"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 10,
     "price": "168.00",
     "last_change": "2026-07-22T16:16:19.510871",
-    "last_checked": "2026-07-23T07:48:37.405498"
+    "last_checked": "2026-07-23T08:21:01.755531"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-23T07:48:40.699605"
+    "last_checked": "2026-07-23T08:21:05.246751"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-23T07:48:44.061442"
+    "last_checked": "2026-07-23T08:21:08.840729"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,15 +260,15 @@
     "stock_level": 128,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-23T07:48:47.452328"
+    "last_checked": "2026-07-23T08:21:12.418734"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
     "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
-    "stock_level": 190,
+    "stock_level": 189,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-23T07:48:50.792053"
+    "last_checked": "2026-07-23T08:21:15.891638"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 6,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-23T07:48:54.082123"
+    "last_checked": "2026-07-23T08:21:19.647054"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "super_low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 6,
     "price": "599.00",
     "last_change": "2026-07-22T01:04:28.815182",
-    "last_checked": "2026-07-23T07:48:57.470582"
+    "last_checked": "2026-07-23T08:21:23.024273"
   },
   "B0961005_S_4891609702053": {
     "status": "pending",

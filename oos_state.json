@@ -81,10 +81,10 @@
   "B0961005_S_4894436008671": {
     "status": "in_stock",
     "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 2027/10】",
-    "stock_level": 31,
+    "stock_level": 30,
     "price": "338.00",
     "last_change": "2026-07-23T09:24:34.192021",
-    "last_checked": "2026-07-23T11:02:38.685382"
+    "last_checked": "2026-07-23T11:35:20.092186"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -92,7 +92,7 @@
     "stock_level": 126,
     "price": "128.00",
     "last_change": "2026-07-17T09:29:04.764423",
-    "last_checked": "2026-07-23T11:02:42.422113"
+    "last_checked": "2026-07-23T11:35:23.607124"
   },
   "B0961005_S_4897091050078": {
     "status": "in_stock",
@@ -100,7 +100,7 @@
     "stock_level": 121,
     "price": "129.00",
     "last_change": "2026-07-17T09:30:14.786493",
-    "last_checked": "2026-07-23T11:03:00.097220"
+    "last_checked": "2026-07-23T11:35:41.277276"
   },
   "B0961005_S_4987176297532": {
     "status": "oos",
@@ -108,7 +108,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-22T01:03:17.232181",
-    "last_checked": "2026-07-23T11:02:46.085547"
+    "last_checked": "2026-07-23T11:35:27.109841"
   },
   "B0961005_S_4987176173560": {
     "status": "low_stock",
@@ -116,7 +116,7 @@
     "stock_level": 15,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:36.843256",
-    "last_checked": "2026-07-23T11:02:49.669193"
+    "last_checked": "2026-07-23T11:35:30.562451"
   },
   "B0961005_S_4987176297662": {
     "status": "in_stock",
@@ -124,7 +124,7 @@
     "stock_level": 42,
     "price": "39.00",
     "last_change": "2026-07-17T11:17:06.791678",
-    "last_checked": "2026-07-23T11:02:53.170971"
+    "last_checked": "2026-07-23T11:35:34.172685"
   },
   "B0961005_S_4987176297563": {
     "status": "oos",
@@ -132,7 +132,7 @@
     "stock_level": 0,
     "price": "39.00",
     "last_change": "2026-07-20T08:41:44.230330",
-    "last_checked": "2026-07-23T11:02:56.625576"
+    "last_checked": "2026-07-23T11:35:37.784812"
   },
   "H5528001_S_TRT121055": {
     "status": "in_stock",
@@ -140,7 +140,7 @@
     "stock_level": 135,
     "price": "99.00",
     "last_change": "2026-07-17T09:30:24.990175",
-    "last_checked": "2026-07-23T11:03:03.607574"
+    "last_checked": "2026-07-23T11:35:44.838914"
   },
   "H6588001_S_Toshiba_FLYA20WHKG": {
     "status": "low_stock",
@@ -159,12 +159,12 @@
     "last_checked": "2026-07-13T23:30:05.248335"
   },
   "S6501001_S_G4713294187765": {
-    "status": "low_stock",
+    "status": "super_low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-    "stock_level": 10,
+    "stock_level": 9,
     "price": "168.00",
-    "last_change": "2026-07-22T16:16:19.510871",
-    "last_checked": "2026-07-23T11:03:08.015005"
+    "last_change": "2026-07-23T11:35:48.397821",
+    "last_checked": "2026-07-23T11:35:48.397827"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-23T11:03:11.744433"
+    "last_checked": "2026-07-23T11:35:52.041877"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-23T11:03:15.363967"
+    "last_checked": "2026-07-23T11:35:55.716294"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 126,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-23T11:03:18.910525"
+    "last_checked": "2026-07-23T11:35:59.254541"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 188,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-23T11:03:22.390498"
+    "last_checked": "2026-07-23T11:36:02.817322"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 6,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-23T11:03:25.917856"
+    "last_checked": "2026-07-23T11:36:06.448636"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "super_low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 6,
     "price": "599.00",
     "last_change": "2026-07-22T01:04:28.815182",
-    "last_checked": "2026-07-23T11:03:29.361971"
+    "last_checked": "2026-07-23T11:36:10.044140"
   },
   "B0961005_S_4891609702053": {
     "status": "pending",

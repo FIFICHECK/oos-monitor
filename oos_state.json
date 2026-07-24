@@ -164,7 +164,7 @@
     "stock_level": 7,
     "price": "168.00",
     "last_change": "2026-07-23T11:35:48.397821",
-    "last_checked": "2026-07-24T11:05:29.502373"
+    "last_checked": "2026-07-24T11:38:53.941356"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 1,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-24T11:05:43.555137"
+    "last_checked": "2026-07-24T11:39:10.890707"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-24T11:05:57.135219"
+    "last_checked": "2026-07-24T11:39:14.348736"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 126,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-24T11:06:15.856172"
+    "last_checked": "2026-07-24T11:39:29.886227"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,15 +268,15 @@
     "stock_level": 190,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-24T11:06:37.080027"
+    "last_checked": "2026-07-24T11:39:33.435563"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
     "product_name": "小米 | 米家空氣淨化器 6 香港行貨 | AC-M25-SC | BHR08MWGB | 空清機 | 空氣清新機 | Mijia | Xiaomi",
-    "stock_level": 2,
+    "stock_level": 4,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-24T11:06:55.862820"
+    "last_checked": "2026-07-24T11:39:40.722559"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "in_stock",
@@ -284,7 +284,7 @@
     "stock_level": 35,
     "price": "599.00",
     "last_change": "2026-07-23T13:14:28.322275",
-    "last_checked": "2026-07-24T11:07:15.411229"
+    "last_checked": "2026-07-24T11:39:44.672082"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -292,7 +292,7 @@
     "stock_level": 557,
     "price": "285.00",
     "last_change": "2026-07-23T22:58:20.031311",
-    "last_checked": "2026-07-24T11:07:36.332017"
+    "last_checked": "2026-07-24T11:40:00.484195"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",

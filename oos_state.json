@@ -164,15 +164,15 @@
     "stock_level": 7,
     "price": "168.00",
     "last_change": "2026-07-23T11:35:48.397821",
-    "last_checked": "2026-07-24T16:26:55.728275"
+    "last_checked": "2026-07-24T16:58:52.409653"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
-    "stock_level": 1,
+    "stock_level": 9,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-24T16:27:06.071049"
+    "last_checked": "2026-07-24T16:58:55.774153"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-24T16:27:09.624818"
+    "last_checked": "2026-07-24T16:58:59.274577"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,15 +260,15 @@
     "stock_level": 122,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-24T16:27:13.075716"
+    "last_checked": "2026-07-24T16:59:02.735418"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
     "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
-    "stock_level": 190,
+    "stock_level": 189,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-24T16:27:16.672082"
+    "last_checked": "2026-07-24T16:59:06.149901"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 3,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-24T16:27:33.421733"
+    "last_checked": "2026-07-24T16:59:09.552672"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "in_stock",
@@ -284,15 +284,15 @@
     "stock_level": 35,
     "price": "599.00",
     "last_change": "2026-07-23T13:14:28.322275",
-    "last_checked": "2026-07-24T16:27:37.522740"
+    "last_checked": "2026-07-24T16:59:13.113761"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
     "product_name": "健肝素 | Essentiale 健肝素60粒【最佳使用日期: 30/09/2027】",
-    "stock_level": 550,
+    "stock_level": 548,
     "price": "285.00",
     "last_change": "2026-07-23T22:58:20.031311",
-    "last_checked": "2026-07-24T16:27:45.486276"
+    "last_checked": "2026-07-24T16:59:16.497568"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",

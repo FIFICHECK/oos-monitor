@@ -161,10 +161,10 @@
   "S6501001_S_G4713294187765": {
     "status": "super_low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-    "stock_level": 4,
+    "stock_level": 3,
     "price": "168.00",
     "last_change": "2026-07-25T00:55:02.783278",
-    "last_checked": "2026-07-25T14:04:34.189986"
+    "last_checked": "2026-07-25T14:36:21.148679"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 9,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-25T14:04:37.611482"
+    "last_checked": "2026-07-25T14:36:24.727014"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 33,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-25T14:04:41.031470"
+    "last_checked": "2026-07-25T14:36:28.164646"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 118,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-25T14:04:44.575692"
+    "last_checked": "2026-07-25T14:36:31.713185"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 185,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-25T14:04:47.982980"
+    "last_checked": "2026-07-25T14:36:35.039443"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 7,
     "price": "1,188.00",
     "last_change": "2026-07-22T10:28:29.741557",
-    "last_checked": "2026-07-25T14:04:51.345442"
+    "last_checked": "2026-07-25T14:36:38.653429"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "in_stock",
@@ -284,15 +284,15 @@
     "stock_level": 31,
     "price": "599.00",
     "last_change": "2026-07-23T13:14:28.322275",
-    "last_checked": "2026-07-25T14:04:54.729054"
+    "last_checked": "2026-07-25T14:36:42.274913"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
     "product_name": "健肝素 | Essentiale 健肝素60粒【最佳使用日期: 30/09/2027】",
-    "stock_level": 499,
+    "stock_level": 498,
     "price": "285.00",
     "last_change": "2026-07-23T22:58:20.031311",
-    "last_checked": "2026-07-25T14:04:58.040908"
+    "last_checked": "2026-07-25T14:36:45.601094"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",

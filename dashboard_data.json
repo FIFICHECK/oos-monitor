@@ -3,11 +3,11 @@
     {
       "sku": "S6501001_S_G4713294187765",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-      "price": "148.00",
-      "checked_at": "2026-07-25T22:07:36.340676"
+      "price": "20.00",
+      "checked_at": "2026-07-25T22:38:31.073191"
     }
   ],
-  "last_checked": "2026-07-25T22:07:59.906859",
+  "last_checked": "2026-07-25T22:38:54.651858",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -2502,6 +2502,13 @@
       "checked_at": "2026-07-25T22:07:36.340676"
     },
     {
+      "sku": "S6501001_S_G4713294187765",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+      "status": "oos",
+      "stock_level": 0,
+      "checked_at": "2026-07-25T22:38:31.073191"
+    },
+    {
       "sku": "S6501001_S_G4713294187789",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
       "status": "super_low_stock",
@@ -4775,6 +4782,13 @@
       "status": "super_low_stock",
       "stock_level": 8,
       "checked_at": "2026-07-25T22:07:39.705045"
+    },
+    {
+      "sku": "S6501001_S_G4713294187789",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
+      "status": "super_low_stock",
+      "stock_level": 8,
+      "checked_at": "2026-07-25T22:38:34.438405"
     },
     {
       "sku": "B1870001_S_6971738651335",
@@ -17923,6 +17937,13 @@
       "checked_at": "2026-07-25T22:07:43.100245"
     },
     {
+      "sku": "H0883003_S_DF01100",
+      "product_name": "Defense | 【原箱100個】【白色(小童)】韓國 KF94 四層結構立體兒童口罩▼M【有效期：2028年】(平行進口)",
+      "status": "in_stock",
+      "stock_level": 34,
+      "checked_at": "2026-07-25T22:38:37.871578"
+    },
+    {
       "sku": "H0883003_S_Unic4903111961016",
       "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
       "status": "in_stock",
@@ -19771,6 +19792,13 @@
       "checked_at": "2026-07-25T22:07:46.491710"
     },
     {
+      "sku": "H0883003_S_Unic4903111961016",
+      "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
+      "status": "in_stock",
+      "stock_level": 120,
+      "checked_at": "2026-07-25T22:38:41.292012"
+    },
+    {
       "sku": "H0883003_S_DF02100",
       "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
       "status": "in_stock",
@@ -21617,6 +21645,13 @@
       "status": "in_stock",
       "stock_level": 189,
       "checked_at": "2026-07-25T22:07:49.919149"
+    },
+    {
+      "sku": "H0883003_S_DF02100",
+      "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
+      "status": "in_stock",
+      "stock_level": 189,
+      "checked_at": "2026-07-25T22:38:44.572333"
     },
     {
       "sku": "H6588001_S_Philips_HD9355",
@@ -24594,6 +24629,13 @@
       "checked_at": "2026-07-25T22:07:53.234824"
     },
     {
+      "sku": "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB",
+      "product_name": "小米 | 米家空氣淨化器 6 香港行貨 | AC-M25-SC | BHR08MWGB | 空清機 | 空氣清新機 | Mijia | Xiaomi",
+      "status": "super_low_stock",
+      "stock_level": 7,
+      "checked_at": "2026-07-25T22:38:47.966592"
+    },
+    {
       "sku": "H6588001_S_Philips_AC0650",
       "product_name": "飛利浦 | AC0650/20 智能空氣清新機 香港行貨 600i 系列",
       "status": "super_low_stock",
@@ -25966,6 +26008,13 @@
       "checked_at": "2026-07-25T22:07:56.592415"
     },
     {
+      "sku": "H6588001_S_Philips_AC0650",
+      "product_name": "飛利浦 | AC0650/20 智能空氣清新機 香港行貨 600i 系列",
+      "status": "in_stock",
+      "stock_level": 31,
+      "checked_at": "2026-07-25T22:38:51.317273"
+    },
+    {
       "sku": "B0961005_S_4891609702053",
       "product_name": "健肝素 | Essentiale 健肝素60粒【最佳使用日期: 30/09/2027】",
       "status": "in_stock",
@@ -26594,6 +26643,13 @@
       "status": "in_stock",
       "stock_level": 445,
       "checked_at": "2026-07-25T22:07:59.844613"
+    },
+    {
+      "sku": "B0961005_S_4891609702053",
+      "product_name": "健肝素 | Essentiale 健肝素60粒【最佳使用日期: 30/09/2027】",
+      "status": "in_stock",
+      "stock_level": 445,
+      "checked_at": "2026-07-25T22:38:54.587206"
     }
   ],
   "low_stock_skus": [],
@@ -26604,7 +26660,7 @@
       "status": "expired",
       "stock_level": 30,
       "price": "338.00",
-      "checked_at": "2026-07-25T22:07:31.407511"
+      "checked_at": "2026-07-25T22:38:26.907763"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -26612,7 +26668,7 @@
       "status": "expired",
       "stock_level": 126,
       "price": "128.00",
-      "checked_at": "2026-07-25T22:07:31.407525"
+      "checked_at": "2026-07-25T22:38:26.907780"
     },
     {
       "sku": "B0961005_S_4987176297532",
@@ -26620,7 +26676,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "39.00",
-      "checked_at": "2026-07-25T22:07:31.407532"
+      "checked_at": "2026-07-25T22:38:26.907788"
     },
     {
       "sku": "B0961005_S_4987176173560",
@@ -26628,7 +26684,7 @@
       "status": "expired",
       "stock_level": 14,
       "price": "39.00",
-      "checked_at": "2026-07-25T22:07:31.407536"
+      "checked_at": "2026-07-25T22:38:26.907793"
     },
     {
       "sku": "B0961005_S_4987176297662",
@@ -26636,7 +26692,7 @@
       "status": "expired",
       "stock_level": 34,
       "price": "39.00",
-      "checked_at": "2026-07-25T22:07:31.407539"
+      "checked_at": "2026-07-25T22:38:26.907798"
     },
     {
       "sku": "B0961005_S_4987176297563",
@@ -26644,7 +26700,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "39.00",
-      "checked_at": "2026-07-25T22:07:31.407543"
+      "checked_at": "2026-07-25T22:38:26.907803"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -26652,7 +26708,7 @@
       "status": "expired",
       "stock_level": 120,
       "price": "129.00",
-      "checked_at": "2026-07-25T22:07:31.407548"
+      "checked_at": "2026-07-25T22:38:26.907808"
     },
     {
       "sku": "H5528001_S_TRT121055",
@@ -26660,15 +26716,15 @@
       "status": "expired",
       "stock_level": 135,
       "price": "99.00",
-      "checked_at": "2026-07-25T22:07:31.407552"
+      "checked_at": "2026-07-25T22:38:26.907813"
     },
     {
       "sku": "S6501001_S_G4713294187765",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "status": "oos",
       "stock_level": 0,
-      "price": "148.00",
-      "checked_at": "2026-07-25T22:07:36.340676"
+      "price": "20.00",
+      "checked_at": "2026-07-25T22:38:31.073191"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -26676,7 +26732,7 @@
       "status": "super_low_stock",
       "stock_level": 8,
       "price": "370.00",
-      "checked_at": "2026-07-25T22:07:39.705045"
+      "checked_at": "2026-07-25T22:38:34.438405"
     },
     {
       "sku": "H6588001_S_Philips_HD9355",
@@ -26684,7 +26740,7 @@
       "status": "expired",
       "stock_level": 22,
       "price": "300.00",
-      "checked_at": "2026-07-25T22:07:39.705080"
+      "checked_at": "2026-07-25T22:38:34.438438"
     },
     {
       "sku": "H6588001_S_Philips_NA321",
@@ -26692,7 +26748,7 @@
       "status": "expired",
       "stock_level": 11,
       "price": "698.00",
-      "checked_at": "2026-07-25T22:07:39.705084"
+      "checked_at": "2026-07-25T22:38:34.438442"
     },
     {
       "sku": "H6588001_S_Toshiba_RC18DRNH",
@@ -26700,7 +26756,7 @@
       "status": "expired",
       "stock_level": 20,
       "price": "569.00",
-      "checked_at": "2026-07-25T22:07:39.705087"
+      "checked_at": "2026-07-25T22:38:34.438445"
     },
     {
       "sku": "H6588001_S_Philips_XC3031",
@@ -26708,7 +26764,7 @@
       "status": "expired",
       "stock_level": 7,
       "price": "1,460.00",
-      "checked_at": "2026-07-25T22:07:39.705090"
+      "checked_at": "2026-07-25T22:38:34.438447"
     },
     {
       "sku": "H6588001_S_Xiaomi_SmartTowerFan2_BHR8865UK",
@@ -26716,7 +26772,7 @@
       "status": "expired",
       "stock_level": 15,
       "price": "410.00",
-      "checked_at": "2026-07-25T22:07:39.705099"
+      "checked_at": "2026-07-25T22:38:34.438450"
     },
     {
       "sku": "H8427001_S_049100363745",
@@ -26724,7 +26780,7 @@
       "status": "expired",
       "stock_level": 187,
       "price": "119.90",
-      "checked_at": "2026-07-25T22:07:39.705102"
+      "checked_at": "2026-07-25T22:38:34.438453"
     },
     {
       "sku": "H8427001_S_9300807287415",
@@ -26732,7 +26788,7 @@
       "status": "expired",
       "stock_level": 186,
       "price": "279.90",
-      "checked_at": "2026-07-25T22:07:39.705105"
+      "checked_at": "2026-07-25T22:38:34.438456"
     },
     {
       "sku": "H0883003_S_DF01100",
@@ -26740,7 +26796,7 @@
       "status": "in_stock",
       "stock_level": 34,
       "price": "128.00",
-      "checked_at": "2026-07-25T22:07:43.100245"
+      "checked_at": "2026-07-25T22:38:37.871578"
     },
     {
       "sku": "H0883003_S_Unic4903111961016",
@@ -26748,7 +26804,7 @@
       "status": "in_stock",
       "stock_level": 120,
       "price": "55.00",
-      "checked_at": "2026-07-25T22:07:46.491710"
+      "checked_at": "2026-07-25T22:38:41.292012"
     },
     {
       "sku": "H0883003_S_DF02100",
@@ -26756,7 +26812,7 @@
       "status": "in_stock",
       "stock_level": 189,
       "price": "128.00",
-      "checked_at": "2026-07-25T22:07:49.919149"
+      "checked_at": "2026-07-25T22:38:44.572333"
     },
     {
       "sku": "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB",
@@ -26764,7 +26820,7 @@
       "status": "super_low_stock",
       "stock_level": 7,
       "price": "1,188.00",
-      "checked_at": "2026-07-25T22:07:53.234824"
+      "checked_at": "2026-07-25T22:38:47.966592"
     },
     {
       "sku": "H6588001_S_Philips_AC0650",
@@ -26772,7 +26828,7 @@
       "status": "in_stock",
       "stock_level": 31,
       "price": "599.00",
-      "checked_at": "2026-07-25T22:07:56.592415"
+      "checked_at": "2026-07-25T22:38:51.317273"
     },
     {
       "sku": "B0961005_S_4891609702053",
@@ -26780,7 +26836,7 @@
       "status": "in_stock",
       "stock_level": 445,
       "price": "285.00",
-      "checked_at": "2026-07-25T22:07:59.844613"
+      "checked_at": "2026-07-25T22:38:54.587206"
     },
     {
       "sku": "B0961005_S_4897036691441_24",
@@ -26788,7 +26844,7 @@
       "status": "pending",
       "stock_level": 5,
       "price": "199.00",
-      "checked_at": "2026-07-25T22:07:59.844648"
+      "checked_at": "2026-07-25T22:38:54.587239"
     }
   ],
   "super_low_stock_skus": [
@@ -26797,14 +26853,14 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
       "price": "370.00",
       "stock_level": 8,
-      "checked_at": "2026-07-25T22:07:39.705045"
+      "checked_at": "2026-07-25T22:38:34.438405"
     },
     {
       "sku": "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB",
       "product_name": "小米 | 米家空氣淨化器 6 香港行貨 | AC-M25-SC | BHR08MWGB | 空清機 | 空氣清新機 | Mijia | Xiaomi",
       "price": "1,188.00",
       "stock_level": 7,
-      "checked_at": "2026-07-25T22:07:53.234824"
+      "checked_at": "2026-07-25T22:38:47.966592"
     }
   ],
   "low_stock_30_skus": []

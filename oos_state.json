@@ -164,7 +164,7 @@
     "stock_level": 2,
     "price": "168.00",
     "last_change": "2026-07-25T00:55:02.783278",
-    "last_checked": "2026-07-25T21:05:41.630659"
+    "last_checked": "2026-07-25T21:36:29.903384"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 8,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-25T21:05:45.510678"
+    "last_checked": "2026-07-25T21:36:33.303080"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-25T21:05:48.899548"
+    "last_checked": "2026-07-25T21:36:36.619307"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 121,
     "price": "55.00",
     "last_change": "2026-07-17T16:16:36.840685",
-    "last_checked": "2026-07-25T21:05:52.293481"
+    "last_checked": "2026-07-25T21:36:39.924725"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 189,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-25T21:05:55.617163"
+    "last_checked": "2026-07-25T21:36:43.220988"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 7,
     "price": "1,188.00",
     "last_change": "2026-07-25T17:12:01.005083",
-    "last_checked": "2026-07-25T21:05:59.024508"
+    "last_checked": "2026-07-25T21:36:46.609077"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "in_stock",
@@ -284,15 +284,15 @@
     "stock_level": 31,
     "price": "599.00",
     "last_change": "2026-07-25T17:12:04.664780",
-    "last_checked": "2026-07-25T21:06:02.430474"
+    "last_checked": "2026-07-25T21:36:50.348904"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
     "product_name": "健肝素 | Essentiale 健肝素60粒【最佳使用日期: 30/09/2027】",
-    "stock_level": 453,
+    "stock_level": 445,
     "price": "285.00",
     "last_change": "2026-07-23T22:58:20.031311",
-    "last_checked": "2026-07-25T21:06:05.688882"
+    "last_checked": "2026-07-25T21:36:53.611720"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",

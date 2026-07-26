@@ -162,9 +162,9 @@
     "status": "oos",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
     "stock_level": 0,
-    "price": "38.00",
+    "price": "80.00",
     "last_change": "2026-07-26T00:14:57.160436",
-    "last_checked": "2026-07-26T09:13:09.992323"
+    "last_checked": "2026-07-26T09:44:49.384320"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 7,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-26T09:13:13.467147"
+    "last_checked": "2026-07-26T09:44:57.651582"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 34,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-26T09:13:16.798429"
+    "last_checked": "2026-07-26T09:45:08.803449"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 120,
     "price": "55.00",
     "last_change": "2026-07-26T00:16:03.146605",
-    "last_checked": "2026-07-26T09:13:20.121215"
+    "last_checked": "2026-07-26T09:45:18.038051"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 187,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-26T09:13:23.440290"
+    "last_checked": "2026-07-26T09:45:28.143933"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 7,
     "price": "1,188.00",
     "last_change": "2026-07-25T17:12:01.005083",
-    "last_checked": "2026-07-26T09:13:26.815498"
+    "last_checked": "2026-07-26T09:45:31.542412"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "in_stock",
@@ -284,7 +284,7 @@
     "stock_level": 31,
     "price": "599.00",
     "last_change": "2026-07-26T00:16:51.217871",
-    "last_checked": "2026-07-26T09:13:30.288331"
+    "last_checked": "2026-07-26T09:45:38.259863"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -292,7 +292,7 @@
     "stock_level": 441,
     "price": "285.00",
     "last_change": "2026-07-26T00:17:13.338845",
-    "last_checked": "2026-07-26T09:13:33.634043"
+    "last_checked": "2026-07-26T09:45:45.189951"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",

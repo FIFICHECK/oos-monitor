@@ -164,7 +164,7 @@
     "stock_level": 0,
     "price": "118.00",
     "last_change": "2026-07-26T00:14:57.160436",
-    "last_checked": "2026-07-26T10:16:50.120722"
+    "last_checked": "2026-07-26T10:47:46.948005"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 7,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-26T10:16:53.559806"
+    "last_checked": "2026-07-26T10:47:50.330489"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -249,10 +249,10 @@
   "H0883003_S_DF01100": {
     "status": "in_stock",
     "product_name": "Defense | 【原箱100個】【白色(小童)】韓國 KF94 四層結構立體兒童口罩▼M【有效期：2028年】(平行進口)",
-    "stock_level": 34,
+    "stock_level": 33,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-26T10:16:56.941129"
+    "last_checked": "2026-07-26T10:47:53.841087"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 120,
     "price": "55.00",
     "last_change": "2026-07-26T00:16:03.146605",
-    "last_checked": "2026-07-26T10:17:00.332200"
+    "last_checked": "2026-07-26T10:47:57.400385"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 187,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:40.327892",
-    "last_checked": "2026-07-26T10:17:04.088869"
+    "last_checked": "2026-07-26T10:48:00.862609"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 7,
     "price": "1,188.00",
     "last_change": "2026-07-25T17:12:01.005083",
-    "last_checked": "2026-07-26T10:17:07.543999"
+    "last_checked": "2026-07-26T10:48:04.397093"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "in_stock",
@@ -284,7 +284,7 @@
     "stock_level": 31,
     "price": "599.00",
     "last_change": "2026-07-26T00:16:51.217871",
-    "last_checked": "2026-07-26T10:17:10.936079"
+    "last_checked": "2026-07-26T10:48:07.805576"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -292,7 +292,7 @@
     "stock_level": 440,
     "price": "285.00",
     "last_change": "2026-07-26T00:17:13.338845",
-    "last_checked": "2026-07-26T10:17:14.180350"
+    "last_checked": "2026-07-26T10:48:11.103802"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",

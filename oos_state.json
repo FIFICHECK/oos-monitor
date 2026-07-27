@@ -164,7 +164,7 @@
     "stock_level": 6,
     "price": "168.00",
     "last_change": "2026-07-27T15:44:28.567138",
-    "last_checked": "2026-07-27T16:16:38.732951"
+    "last_checked": "2026-07-27T16:47:31.313823"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-07-16T14:52:53.397185",
-    "last_checked": "2026-07-27T16:16:42.185167"
+    "last_checked": "2026-07-27T16:47:37.591504"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,15 +252,15 @@
     "stock_level": 33,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-27T16:16:45.661245"
+    "last_checked": "2026-07-27T16:47:48.748476"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
     "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
-    "stock_level": 112,
+    "stock_level": 111,
     "price": "55.00",
     "last_change": "2026-07-26T21:27:57.703132",
-    "last_checked": "2026-07-27T16:16:49.310287"
+    "last_checked": "2026-07-27T16:47:57.427948"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 181,
     "price": "128.00",
     "last_change": "2026-07-26T21:28:01.064259",
-    "last_checked": "2026-07-27T16:16:52.796357"
+    "last_checked": "2026-07-27T16:48:00.943473"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 4,
     "price": "1,188.00",
     "last_change": "2026-07-25T17:12:01.005083",
-    "last_checked": "2026-07-27T16:16:58.084136"
+    "last_checked": "2026-07-27T16:48:05.099986"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 28,
     "price": "599.00",
     "last_change": "2026-07-27T12:58:14.736144",
-    "last_checked": "2026-07-27T16:17:01.689727"
+    "last_checked": "2026-07-27T16:48:17.371031"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -292,7 +292,7 @@
     "stock_level": 302,
     "price": "285.00",
     "last_change": "2026-07-26T00:17:13.338845",
-    "last_checked": "2026-07-27T16:17:05.565266"
+    "last_checked": "2026-07-27T16:48:22.112777"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",

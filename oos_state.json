@@ -164,7 +164,7 @@
     "stock_level": 5,
     "price": "168.00",
     "last_change": "2026-07-29T11:26:28.599326",
-    "last_checked": "2026-07-29T12:30:54.095319"
+    "last_checked": "2026-07-29T13:47:06.653858"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 1,
     "price": "370.00",
     "last_change": "2026-07-29T00:48:19.618035",
-    "last_checked": "2026-07-29T12:30:57.868065"
+    "last_checked": "2026-07-29T13:47:10.117298"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,15 +252,15 @@
     "stock_level": 33,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-29T12:31:14.409205"
+    "last_checked": "2026-07-29T13:47:15.449398"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
     "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
-    "stock_level": 109,
+    "stock_level": 108,
     "price": "55.00",
     "last_change": "2026-07-26T21:27:57.703132",
-    "last_checked": "2026-07-29T12:31:24.842211"
+    "last_checked": "2026-07-29T13:47:19.008323"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 184,
     "price": "128.00",
     "last_change": "2026-07-26T21:28:01.064259",
-    "last_checked": "2026-07-29T12:31:34.918487"
+    "last_checked": "2026-07-29T13:47:22.575811"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 1,
     "price": "1,188.00",
     "last_change": "2026-07-25T17:12:01.005083",
-    "last_checked": "2026-07-29T12:31:44.613756"
+    "last_checked": "2026-07-29T13:47:26.234696"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
@@ -284,15 +284,15 @@
     "stock_level": 24,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-07-29T12:31:53.900593"
+    "last_checked": "2026-07-29T13:47:29.833001"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
     "product_name": "健肝素 | Essentiale 健肝素60粒【最佳使用日期: 30/09/2027】",
-    "stock_level": 273,
+    "stock_level": 270,
     "price": "285.00",
     "last_change": "2026-07-26T00:17:13.338845",
-    "last_checked": "2026-07-29T12:31:57.317126"
+    "last_checked": "2026-07-29T13:47:35.274919"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",

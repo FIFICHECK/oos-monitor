@@ -164,7 +164,7 @@
     "stock_level": 16,
     "price": "168.00",
     "last_change": "2026-07-30T12:01:49.968957",
-    "last_checked": "2026-07-30T18:53:30.272172"
+    "last_checked": "2026-07-30T19:24:33.708352"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 8,
     "price": "370.00",
     "last_change": "2026-07-29T00:48:19.618035",
-    "last_checked": "2026-07-30T18:53:33.654224"
+    "last_checked": "2026-07-30T19:24:37.289697"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 32,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-30T18:53:37.069441"
+    "last_checked": "2026-07-30T19:24:40.619141"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 100,
     "price": "55.00",
     "last_change": "2026-07-26T21:27:57.703132",
-    "last_checked": "2026-07-30T18:53:40.392579"
+    "last_checked": "2026-07-30T19:24:44.020309"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 176,
     "price": "128.00",
     "last_change": "2026-07-26T21:28:01.064259",
-    "last_checked": "2026-07-30T18:53:44.080563"
+    "last_checked": "2026-07-30T19:24:47.341124"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 9,
     "price": "1,188.00",
     "last_change": "2026-07-30T13:06:39.018051",
-    "last_checked": "2026-07-30T18:53:47.429900"
+    "last_checked": "2026-07-30T19:24:50.748486"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 23,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-07-30T18:53:51.642204"
+    "last_checked": "2026-07-30T19:24:54.095317"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -292,7 +292,7 @@
     "stock_level": 120,
     "price": "285.00",
     "last_change": "2026-07-26T00:17:13.338845",
-    "last_checked": "2026-07-30T18:53:54.893908"
+    "last_checked": "2026-07-30T19:24:57.488547"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",
@@ -340,6 +340,6 @@
     "stock_level": 6,
     "price": "860.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-07-30T18:53:58.413331"
+    "last_checked": "2026-07-30T19:25:01.053370"
   }
 }

@@ -5,7 +5,7 @@
     "stock_level": 91,
     "price": "359.00",
     "last_change": "2026-07-12T16:02:16.245561",
-    "last_checked": "2026-07-30T22:38:08.426176"
+    "last_checked": "2026-07-30T23:09:10.939475"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 16,
     "price": "168.00",
     "last_change": "2026-07-30T20:59:39.012415",
-    "last_checked": "2026-07-30T22:37:34.499197"
+    "last_checked": "2026-07-30T23:08:37.339195"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 8,
     "price": "370.00",
     "last_change": "2026-07-30T20:59:42.398765",
-    "last_checked": "2026-07-30T22:37:37.885834"
+    "last_checked": "2026-07-30T23:08:40.753178"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 32,
     "price": "128.00",
     "last_change": "2026-07-30T20:59:45.855007",
-    "last_checked": "2026-07-30T22:37:41.232504"
+    "last_checked": "2026-07-30T23:08:44.104795"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,15 +260,15 @@
     "stock_level": 98,
     "price": "55.00",
     "last_change": "2026-07-26T21:27:57.703132",
-    "last_checked": "2026-07-30T22:37:44.576376"
+    "last_checked": "2026-07-30T23:08:47.461453"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
     "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
-    "stock_level": 175,
+    "stock_level": 174,
     "price": "128.00",
     "last_change": "2026-07-26T21:28:01.064259",
-    "last_checked": "2026-07-30T22:37:47.907203"
+    "last_checked": "2026-07-30T23:08:50.733059"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 9,
     "price": "1,188.00",
     "last_change": "2026-07-30T13:06:39.018051",
-    "last_checked": "2026-07-30T22:37:51.339806"
+    "last_checked": "2026-07-30T23:08:54.134398"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
@@ -284,15 +284,15 @@
     "stock_level": 22,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-07-30T22:37:54.700088"
+    "last_checked": "2026-07-30T23:08:57.465096"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
     "product_name": "健肝素 | Essentiale 健肝素60粒【最佳使用日期: 30/09/2027】",
-    "stock_level": 118,
+    "stock_level": 117,
     "price": "285.00",
     "last_change": "2026-07-26T00:17:13.338845",
-    "last_checked": "2026-07-30T22:37:58.034278"
+    "last_checked": "2026-07-30T23:09:00.790785"
   },
   "B0961005_S_4897036691441_24": {
     "status": "in_stock",
@@ -300,7 +300,7 @@
     "stock_level": 101,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-07-30T22:38:01.617770"
+    "last_checked": "2026-07-30T23:09:04.384092"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 115,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-07-30T22:38:05.029936"
+    "last_checked": "2026-07-30T23:09:07.642874"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 6,
     "price": "860.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-07-30T22:38:11.753103"
+    "last_checked": "2026-07-30T23:09:14.295636"
   },
   "H5859001_S_ST5826": {
     "status": "pending",

@@ -545,7 +545,7 @@
                 </tr>
             </thead>
             <tbody id="lowStock30Body">
-                <tr><td colspan="8" style="text-align:center;color:#666;">No low stock items (10-29 PCS)</td></tr>
+                <tr><td colspan="10" style="text-align:center;color:#666;">No low stock items (10-29 PCS)</td></tr>
             </tbody>
         </table></div>
         <!-- Super Low Stock Section (< 10 PCS) -->
@@ -566,7 +566,7 @@
                 </tr>
             </thead>
             <tbody id="superLowStockBody">
-                <tr><td colspan="8" style="text-align:center;color:#666;">No super low stock items (&lt; 10 PCS)</td></tr>
+                <tr><td colspan="10" style="text-align:center;color:#666;">No super low stock items (&lt; 10 PCS)</td></tr>
             </tbody>
         </table></div>
         <!-- OOS Section -->
@@ -587,7 +587,7 @@
                 </tr>
             </thead>
             <tbody id="oosTableBody">
-                <tr><td colspan="8" style="text-align:center;color:#666;">No OOS items</td></tr>
+                <tr><td colspan="10" style="text-align:center;color:#666;">No OOS items</td></tr>
             </tbody>
         </table></div>
         </div>
@@ -1198,6 +1198,7 @@
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell"><span class="tag tag-low">' + s.stock_level + ' 件</span></td>'
                     + '<td class="tag-cell"><span class="tag tag-low">Low</span></td>'
+                    + '<td class="tag-cell" style="text-align:center;">--</td>'
                     + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
                     + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + stD + '</td>'
                     + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + enD + '</td>'
@@ -1205,7 +1206,7 @@
                 }).join('');
                 document.getElementById('lowStock30Title').style.display = 'block';
             } else {
-                lowBody30.innerHTML = '<tr><td colspan="8" style="text-align:center;color:#2ecc71;">✅ All stock >= 30</td></tr>';
+                lowBody30.innerHTML = '<tr><td colspan="10" style="text-align:center;color:#2ecc71;">✅ All stock >= 30</td></tr>';
             }
             // Super Low Stock Table (< 10 PCS)
             const superLowBody = document.getElementById('superLowStockBody');
@@ -1219,6 +1220,7 @@
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell"><span class="tag" style="background:#e74c3c;color:#fff;">' + s.stock_level + ' 件</span></td>'
                     + '<td class="tag-cell"><span class="tag" style="background:#e74c3c;color:#fff;">🔴 Super Low</span></td>'
+                    + '<td class="tag-cell" style="text-align:center;">--</td>'
                     + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
                     + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + stD + '</td>'
                     + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + enD + '</td>'
@@ -1226,7 +1228,7 @@
                 }).join('');
                 document.getElementById('superLowStockTitle').style.display = 'block';
             } else {
-                superLowBody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:#2ecc71;">✅ No super low stock items</td></tr>';
+                superLowBody.innerHTML = '<tr><td colspan="10" style="text-align:center;color:#2ecc71;">✅ No super low stock items</td></tr>';
             }
             
             // OOS Table
@@ -1241,13 +1243,14 @@
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell"><span class="tag tag-oos">OOS</span></td>'
                     + '<td class="tag-cell"><span class="tag tag-oos">OOS</span></td>'
+                    + '<td class="tag-cell" style="text-align:center;">--</td>'
                     + '<td class="price-cell">' + (s.price ? '$' + s.price : '--') + '</td>'
                     + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + stD + '</td>'
                     + '<td class="period-cell" style="color:#ffd700;font-size:0.8rem;">' + enD + '</td>'
                     + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + s.sku + '" target="_blank">View</a></td></tr>';
                 }).join('');
             } else {
-                oosBody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:#2ecc71;">✅ All products in stock</td></tr>';
+                oosBody.innerHTML = '<tr><td colspan="10" style="text-align:center;color:#2ecc71;">✅ All products in stock</td></tr>';
             }
             
             // All SKUs Table — merge config SKUs with available data

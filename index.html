@@ -1395,7 +1395,7 @@
                     var soldDisplay = soldVal !== null ? '<span style="color:#ffd700;font-weight:bold;">' + soldVal + '</span>' : '<span style="color:#555;">--</span>';
                     
                     var tag = '<span class="tag tag-error">Expired</span>';
-                    return '<tr><td style="font-size:0.75rem;">' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history" style="color:#888;">' + s.sku + '</code></td>'
+                    return '<tr><td style="color:#888;font-size:0.75rem;">' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history" style="color:#888;">' + s.sku + '</code></td>'
                         + '<td class="name-cell" style="color:#888;">' + (s.product_name || 'N/A') + '</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + lastStock + '</td>'
                         + '<td>' + tag + '</td>'

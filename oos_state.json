@@ -163,8 +163,8 @@
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
     "stock_level": 12,
     "price": "168.00",
-    "last_change": "2026-07-30T03:58:30.492397",
-    "last_checked": "2026-07-30T03:58:30.492398"
+    "last_change": "2026-07-30T12:01:49.968957",
+    "last_checked": "2026-07-30T12:01:49.968958"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 6,
     "price": "370.00",
     "last_change": "2026-07-29T00:48:19.618035",
-    "last_checked": "2026-07-30T03:58:39.515319"
+    "last_checked": "2026-07-30T12:01:53.342750"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 31,
     "price": "128.00",
     "last_change": "2026-07-17T16:16:20.544386",
-    "last_checked": "2026-07-30T03:59:03.607743"
+    "last_checked": "2026-07-30T12:01:56.701292"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 104,
     "price": "55.00",
     "last_change": "2026-07-26T21:27:57.703132",
-    "last_checked": "2026-07-30T03:59:27.711729"
+    "last_checked": "2026-07-30T12:02:00.040971"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 173,
     "price": "128.00",
     "last_change": "2026-07-26T21:28:01.064259",
-    "last_checked": "2026-07-30T03:59:51.821796"
+    "last_checked": "2026-07-30T12:02:03.458143"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 1,
     "price": "1,188.00",
     "last_change": "2026-07-29T16:30:31.660227",
-    "last_checked": "2026-07-30T04:00:15.943615"
+    "last_checked": "2026-07-30T12:02:06.778460"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 24,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-07-30T04:00:40.070700"
+    "last_checked": "2026-07-30T12:02:10.174043"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -292,7 +292,7 @@
     "stock_level": 123,
     "price": "285.00",
     "last_change": "2026-07-26T00:17:13.338845",
-    "last_checked": "2026-07-30T04:01:04.154527"
+    "last_checked": "2026-07-30T12:02:13.511242"
   },
   "B0961005_S_4897036691441_24": {
     "status": "pending",
@@ -335,11 +335,11 @@
     "last_checked": "2026-07-29T17:03:39.725103"
   },
   "H6588001_S_KDK_P40VH": {
-    "status": "pending",
+    "status": "super_low_stock",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
     "stock_level": 6,
     "price": "860.00",
-    "last_change": "",
-    "last_checked": "2026-07-30T04:01:29.257678"
+    "last_change": "2026-07-30T12:02:16.859253",
+    "last_checked": "2026-07-30T12:02:16.859256"
   }
 }

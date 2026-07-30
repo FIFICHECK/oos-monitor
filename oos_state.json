@@ -5,7 +5,7 @@
     "stock_level": 90,
     "price": "359.00",
     "last_change": "2026-07-12T16:02:16.245561",
-    "last_checked": "2026-07-31T05:56:14.216651"
+    "last_checked": "2026-07-31T06:27:13.865889"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 16,
     "price": "168.00",
     "last_change": "2026-07-30T20:59:39.012415",
-    "last_checked": "2026-07-31T05:55:42.860211"
+    "last_checked": "2026-07-31T06:26:44.102527"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 8,
     "price": "370.00",
     "last_change": "2026-07-30T20:59:42.398765",
-    "last_checked": "2026-07-31T05:55:46.245073"
+    "last_checked": "2026-07-31T06:26:47.473547"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,15 +252,15 @@
     "stock_level": 32,
     "price": "128.00",
     "last_change": "2026-07-30T20:59:45.855007",
-    "last_checked": "2026-07-31T05:55:49.577971"
+    "last_checked": "2026-07-31T06:26:50.805327"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
     "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
-    "stock_level": 98,
+    "stock_level": 96,
     "price": "55.00",
     "last_change": "2026-07-26T21:27:57.703132",
-    "last_checked": "2026-07-31T05:55:53.028050"
+    "last_checked": "2026-07-31T06:26:54.100210"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 173,
     "price": "128.00",
     "last_change": "2026-07-26T21:28:01.064259",
-    "last_checked": "2026-07-31T05:55:56.354343"
+    "last_checked": "2026-07-31T06:26:57.331091"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 9,
     "price": "1,188.00",
     "last_change": "2026-07-30T13:06:39.018051",
-    "last_checked": "2026-07-31T05:55:59.687130"
+    "last_checked": "2026-07-31T06:27:00.620224"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 21,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-07-31T05:56:03.079016"
+    "last_checked": "2026-07-31T06:27:03.961058"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -300,7 +300,7 @@
     "stock_level": 96,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-07-31T05:56:06.597097"
+    "last_checked": "2026-07-31T06:27:07.413491"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 115,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-07-31T05:56:10.665850"
+    "last_checked": "2026-07-31T06:27:10.642345"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 6,
     "price": "860.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-07-31T05:56:17.599498"
+    "last_checked": "2026-07-31T06:27:17.197267"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -348,6 +348,6 @@
     "stock_level": 499,
     "price": "102.00",
     "last_change": "2026-07-31T00:12:49.160416",
-    "last_checked": "2026-07-31T05:56:20.910183"
+    "last_checked": "2026-07-31T06:27:20.501141"
   }
 }

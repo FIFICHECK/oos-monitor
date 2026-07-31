@@ -1,6 +1,6 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-07-31T15:09:25.154555",
+  "last_checked": "2026-07-31T15:48:46.916021",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -4238,6 +4238,13 @@
       "checked_at": "2026-07-31T15:08:34.380647"
     },
     {
+      "sku": "S6501001_S_G4713294187765",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+      "status": "low_stock",
+      "stock_level": 16,
+      "checked_at": "2026-07-31T15:47:18.681681"
+    },
+    {
       "sku": "S6501001_S_G4713294187789",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
       "status": "super_low_stock",
@@ -8254,6 +8261,13 @@
       "status": "super_low_stock",
       "stock_level": 8,
       "checked_at": "2026-07-31T15:08:38.064899"
+    },
+    {
+      "sku": "S6501001_S_G4713294187789",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
+      "status": "super_low_stock",
+      "stock_level": 8,
+      "checked_at": "2026-07-31T15:47:28.165301"
     },
     {
       "sku": "B1870001_S_6971738651335",
@@ -23159,6 +23173,13 @@
       "checked_at": "2026-07-31T15:08:47.378658"
     },
     {
+      "sku": "H0883003_S_DF01100",
+      "product_name": "Defense | 【原箱100個】【白色(小童)】韓國 KF94 四層結構立體兒童口罩▼M【有效期：2028年】(平行進口)",
+      "status": "in_stock",
+      "stock_level": 32,
+      "checked_at": "2026-07-31T15:47:37.390592"
+    },
+    {
       "sku": "H0883003_S_Unic4903111961016",
       "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
       "status": "in_stock",
@@ -26755,6 +26776,13 @@
       "status": "in_stock",
       "stock_level": 96,
       "checked_at": "2026-07-31T15:08:50.771158"
+    },
+    {
+      "sku": "H0883003_S_Unic4903111961016",
+      "product_name": "unicharm | 【1盒30枚入】(普通碼/藍盒) 超立体三層結構立體口罩 ▼A1(61016)(平行進口)",
+      "status": "in_stock",
+      "stock_level": 96,
+      "checked_at": "2026-07-31T15:47:47.992061"
     },
     {
       "sku": "H0883003_S_DF02100",
@@ -30360,6 +30388,13 @@
       "status": "in_stock",
       "stock_level": 173,
       "checked_at": "2026-07-31T15:08:54.219520"
+    },
+    {
+      "sku": "H0883003_S_DF02100",
+      "product_name": "Defense | 【原箱100個】(白色)韓國 KF94 四層結構立體成人口罩 ▼M【有效期：2028年】(平行進口)(新舊包裝隨機發貨)",
+      "status": "in_stock",
+      "stock_level": 173,
+      "checked_at": "2026-07-31T15:48:07.261417"
     },
     {
       "sku": "H6588001_S_Philips_HD9355",
@@ -35101,6 +35136,13 @@
       "checked_at": "2026-07-31T15:08:57.621501"
     },
     {
+      "sku": "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB",
+      "product_name": "小米 | 米家空氣淨化器 6 香港行貨 | AC-M25-SC | BHR08MWGB | 空清機 | 空氣清新機 | Mijia | Xiaomi",
+      "status": "super_low_stock",
+      "stock_level": 8,
+      "checked_at": "2026-07-31T15:48:10.988200"
+    },
+    {
       "sku": "H6588001_S_Philips_AC0650",
       "product_name": "飛利浦 | AC0650/20 智能空氣清新機 香港行貨 600i 系列",
       "status": "super_low_stock",
@@ -38223,6 +38265,13 @@
       "checked_at": "2026-07-31T15:09:04.376460"
     },
     {
+      "sku": "H6588001_S_Philips_AC0650",
+      "product_name": "飛利浦 | AC0650/20 智能空氣清新機 香港行貨 600i 系列",
+      "status": "low_stock",
+      "stock_level": 20,
+      "checked_at": "2026-07-31T15:48:17.527468"
+    },
+    {
       "sku": "B0961005_S_4891609702053",
       "product_name": "健肝素 | Essentiale 健肝素60粒【最佳使用日期: 30/09/2027】",
       "status": "in_stock",
@@ -40771,6 +40820,13 @@
       "checked_at": "2026-07-31T15:09:21.795652"
     },
     {
+      "sku": "H6588001_S_KDK_P40VH",
+      "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
+      "status": "super_low_stock",
+      "stock_level": 6,
+      "checked_at": "2026-07-31T15:48:39.249821"
+    },
+    {
       "sku": "B0961005_S_4897036691441_24",
       "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
       "status": "in_stock",
@@ -40986,6 +41042,13 @@
       "status": "in_stock",
       "stock_level": 98,
       "checked_at": "2026-07-31T15:09:10.616338"
+    },
+    {
+      "sku": "B0961005_S_4897036691441_24",
+      "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
+      "status": "in_stock",
+      "stock_level": 99,
+      "checked_at": "2026-07-31T15:48:28.268327"
     },
     {
       "sku": "B0961005_S_9311770614047",
@@ -41205,6 +41268,13 @@
       "checked_at": "2026-07-31T15:09:13.969441"
     },
     {
+      "sku": "B0961005_S_9311770614047",
+      "product_name": "Swisse | Beauty 美基循環 NMN 120粒【香港行貨】【最佳使用日期:11/2026】",
+      "status": "in_stock",
+      "stock_level": 114,
+      "checked_at": "2026-07-31T15:48:31.820027"
+    },
+    {
       "sku": "B0961005_S_4891609190294",
       "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
       "status": "in_stock",
@@ -41422,6 +41492,13 @@
       "checked_at": "2026-07-31T15:09:18.103816"
     },
     {
+      "sku": "B0961005_S_4891609190294",
+      "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
+      "status": "in_stock",
+      "stock_level": 89,
+      "checked_at": "2026-07-31T15:48:35.693735"
+    },
+    {
       "sku": "H5859001_S_ST5826",
       "product_name": "KÉRASTASE | Nutritive 滋養護髮素 75ml x2",
       "status": "in_stock",
@@ -41616,6 +41693,13 @@
       "status": "in_stock",
       "stock_level": 499,
       "checked_at": "2026-07-31T15:09:25.103203"
+    },
+    {
+      "sku": "H5859001_S_ST5826",
+      "product_name": "KÉRASTASE | Nutritive 滋養護髮素 75ml x2",
+      "status": "in_stock",
+      "stock_level": 499,
+      "checked_at": "2026-07-31T15:48:46.864101"
     }
   ],
   "low_stock_skus": [],
@@ -41626,7 +41710,7 @@
       "status": "expired",
       "stock_level": 30,
       "price": "338.00",
-      "checked_at": "2026-07-31T15:08:30.048741"
+      "checked_at": "2026-07-31T15:47:11.825593"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -41634,7 +41718,7 @@
       "status": "expired",
       "stock_level": 126,
       "price": "128.00",
-      "checked_at": "2026-07-31T15:08:30.048757"
+      "checked_at": "2026-07-31T15:47:11.825627"
     },
     {
       "sku": "B0961005_S_4987176297532",
@@ -41642,7 +41726,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "39.00",
-      "checked_at": "2026-07-31T15:08:30.048765"
+      "checked_at": "2026-07-31T15:47:11.825639"
     },
     {
       "sku": "B0961005_S_4987176173560",
@@ -41650,7 +41734,7 @@
       "status": "expired",
       "stock_level": 14,
       "price": "39.00",
-      "checked_at": "2026-07-31T15:08:30.048770"
+      "checked_at": "2026-07-31T15:47:11.825705"
     },
     {
       "sku": "B0961005_S_4987176297662",
@@ -41658,7 +41742,7 @@
       "status": "expired",
       "stock_level": 34,
       "price": "39.00",
-      "checked_at": "2026-07-31T15:08:30.048775"
+      "checked_at": "2026-07-31T15:47:11.825723"
     },
     {
       "sku": "B0961005_S_4987176297563",
@@ -41666,7 +41750,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "39.00",
-      "checked_at": "2026-07-31T15:08:30.048780"
+      "checked_at": "2026-07-31T15:47:11.825735"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -41674,7 +41758,7 @@
       "status": "expired",
       "stock_level": 120,
       "price": "129.00",
-      "checked_at": "2026-07-31T15:08:30.048785"
+      "checked_at": "2026-07-31T15:47:11.825745"
     },
     {
       "sku": "H5528001_S_TRT121055",
@@ -41682,7 +41766,7 @@
       "status": "expired",
       "stock_level": 135,
       "price": "99.00",
-      "checked_at": "2026-07-31T15:08:30.048790"
+      "checked_at": "2026-07-31T15:47:11.825762"
     },
     {
       "sku": "S6501001_S_G4713294187765",
@@ -41690,7 +41774,7 @@
       "status": "low_stock",
       "stock_level": 16,
       "price": "168.00",
-      "checked_at": "2026-07-31T15:08:34.380647"
+      "checked_at": "2026-07-31T15:47:18.681681"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -41698,7 +41782,7 @@
       "status": "super_low_stock",
       "stock_level": 8,
       "price": "370.00",
-      "checked_at": "2026-07-31T15:08:38.064899"
+      "checked_at": "2026-07-31T15:47:28.165301"
     },
     {
       "sku": "H0883003_S_DF01100",
@@ -41706,7 +41790,7 @@
       "status": "in_stock",
       "stock_level": 32,
       "price": "128.00",
-      "checked_at": "2026-07-31T15:08:47.378658"
+      "checked_at": "2026-07-31T15:47:37.390592"
     },
     {
       "sku": "H0883003_S_Unic4903111961016",
@@ -41714,7 +41798,7 @@
       "status": "in_stock",
       "stock_level": 96,
       "price": "55.00",
-      "checked_at": "2026-07-31T15:08:50.771158"
+      "checked_at": "2026-07-31T15:47:47.992061"
     },
     {
       "sku": "H0883003_S_DF02100",
@@ -41722,7 +41806,7 @@
       "status": "in_stock",
       "stock_level": 173,
       "price": "128.00",
-      "checked_at": "2026-07-31T15:08:54.219520"
+      "checked_at": "2026-07-31T15:48:07.261417"
     },
     {
       "sku": "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB",
@@ -41730,7 +41814,7 @@
       "status": "super_low_stock",
       "stock_level": 8,
       "price": "1,188.00",
-      "checked_at": "2026-07-31T15:08:57.621501"
+      "checked_at": "2026-07-31T15:48:10.988200"
     },
     {
       "sku": "H6588001_S_Philips_AC0650",
@@ -41738,7 +41822,7 @@
       "status": "low_stock",
       "stock_level": 20,
       "price": "599.00",
-      "checked_at": "2026-07-31T15:09:04.376460"
+      "checked_at": "2026-07-31T15:48:17.527468"
     },
     {
       "sku": "B0961005_S_4891609702053",
@@ -41746,15 +41830,15 @@
       "status": "expired",
       "stock_level": 119,
       "price": "285.00",
-      "checked_at": "2026-07-31T15:09:04.376544"
+      "checked_at": "2026-07-31T15:48:17.527589"
     },
     {
       "sku": "B0961005_S_4897036691441_24",
       "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
       "status": "in_stock",
-      "stock_level": 98,
+      "stock_level": 99,
       "price": "168.00",
-      "checked_at": "2026-07-31T15:09:10.616338"
+      "checked_at": "2026-07-31T15:48:28.268327"
     },
     {
       "sku": "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G",
@@ -41762,7 +41846,7 @@
       "status": "pending",
       "stock_level": 66,
       "price": "109.00",
-      "checked_at": "2026-07-31T15:09:10.616398"
+      "checked_at": "2026-07-31T15:48:28.268405"
     },
     {
       "sku": "B0961005_S_9311770614047",
@@ -41770,15 +41854,15 @@
       "status": "in_stock",
       "stock_level": 114,
       "price": "299.00",
-      "checked_at": "2026-07-31T15:09:13.969441"
+      "checked_at": "2026-07-31T15:48:31.820027"
     },
     {
       "sku": "B0961005_S_4891609190294",
       "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
       "status": "in_stock",
-      "stock_level": 90,
+      "stock_level": 89,
       "price": "359.00",
-      "checked_at": "2026-07-31T15:09:18.103816"
+      "checked_at": "2026-07-31T15:48:35.693735"
     },
     {
       "sku": "H6588001_S_Toshiba_MWPMM20P",
@@ -41786,7 +41870,7 @@
       "status": "pending",
       "stock_level": 1,
       "price": "399.00",
-      "checked_at": "2026-07-31T15:09:18.103852"
+      "checked_at": "2026-07-31T15:48:35.693854"
     },
     {
       "sku": "H6588001_S_Toshiba_RC18NMFIH_White",
@@ -41794,7 +41878,7 @@
       "status": "pending",
       "stock_level": 9,
       "price": "715.00",
-      "checked_at": "2026-07-31T15:09:18.103856"
+      "checked_at": "2026-07-31T15:48:35.693867"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -41802,7 +41886,7 @@
       "status": "super_low_stock",
       "stock_level": 6,
       "price": "860.00",
-      "checked_at": "2026-07-31T15:09:21.795652"
+      "checked_at": "2026-07-31T15:48:39.249821"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -41810,7 +41894,7 @@
       "status": "pending",
       "stock_level": 172,
       "price": "149.00",
-      "checked_at": "2026-07-31T15:09:21.795684"
+      "checked_at": "2026-07-31T15:48:39.249888"
     },
     {
       "sku": "H5859001_S_ST5826",
@@ -41818,7 +41902,7 @@
       "status": "in_stock",
       "stock_level": 499,
       "price": "102.00",
-      "checked_at": "2026-07-31T15:09:25.103203"
+      "checked_at": "2026-07-31T15:48:46.864101"
     }
   ],
   "super_low_stock_skus": [
@@ -41827,21 +41911,21 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
       "price": "370.00",
       "stock_level": 8,
-      "checked_at": "2026-07-31T15:08:38.064899"
+      "checked_at": "2026-07-31T15:47:28.165301"
     },
     {
       "sku": "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB",
       "product_name": "小米 | 米家空氣淨化器 6 香港行貨 | AC-M25-SC | BHR08MWGB | 空清機 | 空氣清新機 | Mijia | Xiaomi",
       "price": "1,188.00",
       "stock_level": 8,
-      "checked_at": "2026-07-31T15:08:57.621501"
+      "checked_at": "2026-07-31T15:48:10.988200"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
       "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
       "price": "860.00",
       "stock_level": 6,
-      "checked_at": "2026-07-31T15:09:21.795652"
+      "checked_at": "2026-07-31T15:48:39.249821"
     }
   ],
   "low_stock_30_skus": [
@@ -41850,14 +41934,14 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "price": "168.00",
       "stock_level": 16,
-      "checked_at": "2026-07-31T15:08:34.380647"
+      "checked_at": "2026-07-31T15:47:18.681681"
     },
     {
       "sku": "H6588001_S_Philips_AC0650",
       "product_name": "飛利浦 | AC0650/20 智能空氣清新機 香港行貨 600i 系列",
       "price": "599.00",
       "stock_level": 20,
-      "checked_at": "2026-07-31T15:09:04.376460"
+      "checked_at": "2026-07-31T15:48:17.527468"
     }
   ]
 }

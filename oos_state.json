@@ -5,7 +5,7 @@
     "stock_level": 90,
     "price": "359.00",
     "last_change": "2026-07-12T16:02:16.245561",
-    "last_checked": "2026-07-31T23:27:40.399173"
+    "last_checked": "2026-08-01T00:00:05.402196"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 16,
     "price": "168.00",
     "last_change": "2026-07-31T12:52:03.499748",
-    "last_checked": "2026-07-31T23:27:10.172429"
+    "last_checked": "2026-07-31T23:59:34.724233"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 8,
     "price": "370.00",
     "last_change": "2026-07-31T12:52:07.087825",
-    "last_checked": "2026-07-31T23:27:13.519933"
+    "last_checked": "2026-07-31T23:59:38.169900"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 32,
     "price": "128.00",
     "last_change": "2026-07-30T20:59:45.855007",
-    "last_checked": "2026-07-31T23:27:17.075812"
+    "last_checked": "2026-07-31T23:59:41.580132"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 98,
     "price": "55.00",
     "last_change": "2026-07-26T21:27:57.703132",
-    "last_checked": "2026-07-31T23:27:20.545141"
+    "last_checked": "2026-07-31T23:59:45.157729"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 174,
     "price": "128.00",
     "last_change": "2026-07-26T21:28:01.064259",
-    "last_checked": "2026-07-31T23:27:23.829786"
+    "last_checked": "2026-07-31T23:59:48.469044"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 8,
     "price": "1,188.00",
     "last_change": "2026-07-30T13:06:39.018051",
-    "last_checked": "2026-07-31T23:27:27.140512"
+    "last_checked": "2026-07-31T23:59:51.875631"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 20,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-07-31T23:27:30.439708"
+    "last_checked": "2026-07-31T23:59:55.255055"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -297,10 +297,10 @@
   "B0961005_S_4897036691441_24": {
     "status": "in_stock",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
-    "stock_level": 94,
+    "stock_level": 93,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-07-31T23:27:33.918390"
+    "last_checked": "2026-07-31T23:59:58.681716"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 114,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-07-31T23:27:37.151735"
+    "last_checked": "2026-08-01T00:00:02.021155"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 6,
     "price": "860.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-07-31T23:27:43.713725"
+    "last_checked": "2026-08-01T00:00:09.365276"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -349,5 +349,13 @@
     "price": "102.00",
     "last_change": "2026-07-31T00:12:49.160416",
     "last_checked": "2026-07-31T23:27:46.926226"
+  },
+  "H5859001_S_ST4843": {
+    "status": "in_stock",
+    "product_name": "AESOP | 草本腋下身體噴霧 50ml",
+    "stock_level": 117,
+    "price": "244.00",
+    "last_change": "2026-08-01T00:00:12.742377",
+    "last_checked": "2026-08-01T00:00:12.742379"
   }
 }

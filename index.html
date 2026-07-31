@@ -1196,7 +1196,7 @@
                     var enD = pEnd !== '--' ? new Date(pEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var sSV = computeSold(s.sku, data.history);
                     var sSD = sSV !== null ? '<span style="color:#ffd700;font-weight:bold;">' + sSV + '</span>' : '<span style="color:#555;">--</span>';
-                    return '<tr><td><code style="font-size:0.75rem;">' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
+                    return '<tr><td><code>' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell">' + (s.stock_level !== null && s.stock_level !== undefined ? s.stock_level + ' 件' : '--') + '</td>'
                     + '<td class="tag-cell"><span class="tag tag-low">Low</span></td>'
@@ -1220,7 +1220,7 @@
                     var enD = pEnd !== '--' ? new Date(pEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var sSV = computeSold(s.sku, data.history);
                     var sSD = sSV !== null ? '<span style="color:#ffd700;font-weight:bold;">' + sSV + '</span>' : '<span style="color:#555;">--</span>';
-                    return '<tr><td><code style="font-size:0.75rem;">' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
+                    return '<tr><td><code>' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell">' + (s.stock_level !== null && s.stock_level !== undefined ? s.stock_level + ' 件' : '--') + '</td>'
                     + '<td class="tag-cell"><span class="tag" style="background:#e74c3c;color:#fff;">🔴 Super Low</span></td>'
@@ -1245,7 +1245,7 @@
                     var enD = pEnd !== '--' ? new Date(pEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var sSV = computeSold(s.sku, data.history);
                     var sSD = sSV !== null ? '<span style="color:#ffd700;font-weight:bold;">' + sSV + '</span>' : '<span style="color:#555;">--</span>';
-                    return '<tr><td><code style="font-size:0.75rem;">' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
+                    return '<tr><td><code>' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                     + '<td class="tag-cell">' + (s.stock_level !== null && s.stock_level !== undefined ? s.stock_level + ' 件' : '--') + '</td>'
                     + '<td class="tag-cell"><span class="tag tag-oos">OOS</span></td>'
@@ -1304,7 +1304,7 @@
                         var soldVal = computeSold(sku, data.history);
                         var soldDisplay = soldVal !== null ? '<span style="color:#ffd700;font-weight:bold;">' + soldVal + '</span>' : '<span style="color:#555;">--</span>';
                         
-                        allRows.push('<tr><td><code style="font-size:0.75rem;">' + (config.sku_rm && config.sku_rm[sku] ? config.sku_rm[sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
+                        allRows.push('<tr><td><code>' + (config.sku_rm && config.sku_rm[sku] ? config.sku_rm[sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
                             + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
                             + '<td class="tag-cell">' + stockDisplay + '</td>'
                             + '<td class="tag-cell">' + tag + '</td>'
@@ -1315,7 +1315,7 @@
                             + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank">View</a></td></tr>');
                     } else {
                         // New SKU — not yet in dashboard_data.json (Pending, active now)
-                        allRows.push('<tr><td><code style="font-size:0.75rem;">' + (config.sku_rm && config.sku_rm[sku] ? config.sku_rm[sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
+                        allRows.push('<tr><td><code>' + (config.sku_rm && config.sku_rm[sku] ? config.sku_rm[sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
                             + '<td class="name-cell">--</td><td class="tag-cell">--</td>'
                             + '<td class="tag-cell"><span class="tag tag-error">Pending</span></td>'
                             + '<td class="tag-cell" style="text-align:center;color:#555;">--</td>'
@@ -1357,7 +1357,7 @@
                     var name = (p.info && p.info.product_name) ? p.info.product_name : '--';
                     var stock = (p.info && p.info.stock_level !== null && p.info.stock_level !== undefined) ? p.info.stock_level + ' 件' : '--';
                     var price = (p.info && p.info.price) ? '$' + p.info.price : '--';
-                    return '<tr style="color:#888;"><td><code style="font-size:0.75rem;">' + (config.sku_rm && config.sku_rm[p.sku] ? config.sku_rm[p.sku] : '--') + '</code></td>'
+                    return '<tr style="color:#888;"><td><code>' + (config.sku_rm && config.sku_rm[p.sku] ? config.sku_rm[p.sku] : '--') + '</code></td>'
                         + '<td class="sku-cell"><code style="color:#888;">' + p.sku + '</code></td>'
                         + '<td class="name-cell" style="color:#888;">' + name + '</td>'
                         + '<td class="tag-cell" style="color:#888;">' + stock + '</td>'
@@ -1395,7 +1395,7 @@
                     var soldDisplay = soldVal !== null ? '<span style="color:#ffd700;font-weight:bold;">' + soldVal + '</span>' : '<span style="color:#555;">--</span>';
                     
                     var tag = '<span class="tag tag-error">Expired</span>';
-                    return '<tr><td><code style="color:#888;font-size:0.75rem;">' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history" style="color:#888;">' + s.sku + '</code></td>'
+                    return '<tr><td><code style="color:#888;">' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history" style="color:#888;">' + s.sku + '</code></td>'
                         + '<td class="name-cell" style="color:#888;">' + (s.product_name || 'N/A') + '</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + lastStock + '</td>'
                         + '<td>' + tag + '</td>'

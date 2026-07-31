@@ -5,7 +5,7 @@
     "stock_level": 87,
     "price": "359.00",
     "last_change": "2026-07-12T16:02:16.245561",
-    "last_checked": "2026-08-01T03:38:37.911639"
+    "last_checked": "2026-08-01T04:11:56.439325"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 16,
     "price": "168.00",
     "last_change": "2026-07-31T12:52:03.499748",
-    "last_checked": "2026-08-01T03:38:20.674976"
+    "last_checked": "2026-08-01T04:11:39.711193"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 8,
     "price": "370.00",
     "last_change": "2026-07-31T12:52:07.087825",
-    "last_checked": "2026-08-01T03:38:24.169396"
+    "last_checked": "2026-08-01T04:11:43.132260"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -281,10 +281,10 @@
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
     "product_name": "飛利浦 | AC0650/20 智能空氣清新機 香港行貨 600i 系列",
-    "stock_level": 20,
+    "stock_level": 19,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-08-01T03:38:27.611942"
+    "last_checked": "2026-08-01T04:11:46.525563"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -297,10 +297,10 @@
   "B0961005_S_4897036691441_24": {
     "status": "in_stock",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
-    "stock_level": 90,
+    "stock_level": 89,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-08-01T03:38:30.989991"
+    "last_checked": "2026-08-01T04:11:49.848904"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 114,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-08-01T03:38:34.653497"
+    "last_checked": "2026-08-01T04:11:53.181969"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 6,
     "price": "850.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-08-01T03:38:41.304422"
+    "last_checked": "2026-08-01T04:11:59.737409"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,6 +356,6 @@
     "stock_level": 117,
     "price": "244.00",
     "last_change": "2026-08-01T00:00:12.742377",
-    "last_checked": "2026-08-01T03:38:44.604296"
+    "last_checked": "2026-08-01T04:12:03.079954"
   }
 }

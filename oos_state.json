@@ -5,7 +5,7 @@
     "stock_level": 90,
     "price": "359.00",
     "last_change": "2026-07-12T16:02:16.245561",
-    "last_checked": "2026-07-31T11:46:51.977838"
+    "last_checked": "2026-07-31T12:20:44.804084"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -159,20 +159,20 @@
     "last_checked": "2026-07-13T23:30:05.248335"
   },
   "S6501001_S_G4713294187765": {
-    "status": "low_stock",
-    "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-    "stock_level": 16,
-    "price": "168.00",
-    "last_change": "2026-07-30T20:59:39.012415",
-    "last_checked": "2026-07-31T11:46:20.864834"
+    "status": "error",
+    "product_name": "",
+    "stock_level": null,
+    "price": "",
+    "last_change": "2026-07-31T12:19:28.862052",
+    "last_checked": "2026-07-31T12:19:28.862053"
   },
   "S6501001_S_G4713294187789": {
-    "status": "super_low_stock",
-    "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
-    "stock_level": 8,
-    "price": "370.00",
-    "last_change": "2026-07-30T20:59:42.398765",
-    "last_checked": "2026-07-31T11:46:24.286114"
+    "status": "error",
+    "product_name": "",
+    "stock_level": null,
+    "price": "",
+    "last_change": "2026-07-31T12:19:53.864536",
+    "last_checked": "2026-07-31T12:19:53.864538"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 32,
     "price": "128.00",
     "last_change": "2026-07-30T20:59:45.855007",
-    "last_checked": "2026-07-31T11:46:27.738008"
+    "last_checked": "2026-07-31T12:20:10.055834"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 96,
     "price": "55.00",
     "last_change": "2026-07-26T21:27:57.703132",
-    "last_checked": "2026-07-31T11:46:31.202046"
+    "last_checked": "2026-07-31T12:20:22.851726"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 173,
     "price": "128.00",
     "last_change": "2026-07-26T21:28:01.064259",
-    "last_checked": "2026-07-31T11:46:34.607388"
+    "last_checked": "2026-07-31T12:20:27.192265"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 8,
     "price": "1,188.00",
     "last_change": "2026-07-30T13:06:39.018051",
-    "last_checked": "2026-07-31T11:46:38.097092"
+    "last_checked": "2026-07-31T12:20:30.634314"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 20,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-07-31T11:46:41.639923"
+    "last_checked": "2026-07-31T12:20:34.108430"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -297,10 +297,10 @@
   "B0961005_S_4897036691441_24": {
     "status": "in_stock",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
-    "stock_level": 100,
+    "stock_level": 99,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-07-31T11:46:45.109330"
+    "last_checked": "2026-07-31T12:20:38.008987"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 115,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-07-31T11:46:48.590290"
+    "last_checked": "2026-07-31T12:20:41.276261"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 6,
     "price": "860.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-07-31T11:46:55.433128"
+    "last_checked": "2026-07-31T12:20:48.212119"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -348,6 +348,6 @@
     "stock_level": 499,
     "price": "102.00",
     "last_change": "2026-07-31T00:12:49.160416",
-    "last_checked": "2026-07-31T11:46:58.876900"
+    "last_checked": "2026-07-31T12:20:51.750937"
   }
 }

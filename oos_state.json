@@ -5,7 +5,7 @@
     "stock_level": 90,
     "price": "359.00",
     "last_change": "2026-07-12T16:02:16.245561",
-    "last_checked": "2026-07-31T13:57:50.794029"
+    "last_checked": "2026-07-31T14:31:26.916138"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 16,
     "price": "168.00",
     "last_change": "2026-07-31T12:52:03.499748",
-    "last_checked": "2026-07-31T13:57:19.882304"
+    "last_checked": "2026-07-31T14:29:26.146900"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 8,
     "price": "370.00",
     "last_change": "2026-07-31T12:52:07.087825",
-    "last_checked": "2026-07-31T13:57:23.253664"
+    "last_checked": "2026-07-31T14:29:44.418915"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -252,7 +252,7 @@
     "stock_level": 32,
     "price": "128.00",
     "last_change": "2026-07-30T20:59:45.855007",
-    "last_checked": "2026-07-31T13:57:26.898885"
+    "last_checked": "2026-07-31T14:29:57.039448"
   },
   "H0883003_S_Unic4903111961016": {
     "status": "in_stock",
@@ -260,7 +260,7 @@
     "stock_level": 96,
     "price": "55.00",
     "last_change": "2026-07-26T21:27:57.703132",
-    "last_checked": "2026-07-31T13:57:30.325291"
+    "last_checked": "2026-07-31T14:30:06.106917"
   },
   "H0883003_S_DF02100": {
     "status": "in_stock",
@@ -268,7 +268,7 @@
     "stock_level": 173,
     "price": "128.00",
     "last_change": "2026-07-26T21:28:01.064259",
-    "last_checked": "2026-07-31T13:57:33.753255"
+    "last_checked": "2026-07-31T14:30:26.433503"
   },
   "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB": {
     "status": "super_low_stock",
@@ -276,7 +276,7 @@
     "stock_level": 8,
     "price": "1,188.00",
     "last_change": "2026-07-30T13:06:39.018051",
-    "last_checked": "2026-07-31T13:57:37.132573"
+    "last_checked": "2026-07-31T14:30:43.863095"
   },
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 20,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-07-31T13:57:40.495711"
+    "last_checked": "2026-07-31T14:30:53.460856"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -300,7 +300,7 @@
     "stock_level": 99,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-07-31T13:57:43.906356"
+    "last_checked": "2026-07-31T14:31:12.620621"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 114,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-07-31T13:57:47.554546"
+    "last_checked": "2026-07-31T14:31:16.993789"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 6,
     "price": "860.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-07-31T13:57:54.162340"
+    "last_checked": "2026-07-31T14:31:36.677119"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -348,6 +348,6 @@
     "stock_level": 499,
     "price": "102.00",
     "last_change": "2026-07-31T00:12:49.160416",
-    "last_checked": "2026-07-31T13:57:57.490162"
+    "last_checked": "2026-07-31T14:31:46.431254"
   }
 }

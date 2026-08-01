@@ -2,10 +2,10 @@
   "B0961005_S_4891609190294": {
     "status": "in_stock",
     "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
-    "stock_level": 139,
+    "stock_level": 133,
     "price": "359.00",
     "last_change": "2026-07-12T16:02:16.245561",
-    "last_checked": "2026-08-01T10:58:14.316083"
+    "last_checked": "2026-08-01T11:31:34.733847"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 16,
     "price": "168.00",
     "last_change": "2026-08-01T09:51:45.262043",
-    "last_checked": "2026-08-01T10:57:35.413796"
+    "last_checked": "2026-08-01T11:31:01.831189"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 8,
     "price": "370.00",
     "last_change": "2026-07-31T12:52:07.087825",
-    "last_checked": "2026-08-01T10:57:43.976451"
+    "last_checked": "2026-08-01T11:31:05.300756"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 19,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-08-01T10:57:53.928979"
+    "last_checked": "2026-08-01T11:31:14.409292"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -300,7 +300,7 @@
     "stock_level": 229,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-08-01T10:57:57.305257"
+    "last_checked": "2026-08-01T11:31:17.855927"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 287,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-08-01T10:58:06.692439"
+    "last_checked": "2026-08-01T11:31:21.332584"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 5,
     "price": "850.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-08-01T10:58:24.062974"
+    "last_checked": "2026-08-01T11:31:51.625060"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,6 +356,6 @@
     "stock_level": 116,
     "price": "244.00",
     "last_change": "2026-08-01T00:00:12.742377",
-    "last_checked": "2026-08-01T10:58:33.567505"
+    "last_checked": "2026-08-01T11:31:55.410883"
   }
 }

@@ -5,7 +5,7 @@
     "stock_level": 0,
     "price": "305.00",
     "last_change": "2026-08-02T14:20:22.209792",
-    "last_checked": "2026-08-02T19:16:50.193574"
+    "last_checked": "2026-08-02T19:49:34.623479"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -161,18 +161,18 @@
   "S6501001_S_G4713294187765": {
     "status": "low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-    "stock_level": 12,
+    "stock_level": 11,
     "price": "168.00",
     "last_change": "2026-08-01T09:51:45.262043",
-    "last_checked": "2026-08-02T19:16:32.170954"
+    "last_checked": "2026-08-02T19:49:17.230686"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
-    "stock_level": 7,
+    "stock_level": 6,
     "price": "370.00",
     "last_change": "2026-07-31T12:52:07.087825",
-    "last_checked": "2026-08-02T19:16:35.873406"
+    "last_checked": "2026-08-02T19:49:20.731725"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 18,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-08-02T19:16:39.500563"
+    "last_checked": "2026-08-02T19:49:24.263089"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -297,10 +297,10 @@
   "B0961005_S_4897036691441_24": {
     "status": "in_stock",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
-    "stock_level": 102,
+    "stock_level": 100,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-08-02T19:16:43.018832"
+    "last_checked": "2026-08-02T19:49:27.724024"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 285,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-08-02T19:16:46.935008"
+    "last_checked": "2026-08-02T19:49:31.373620"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 5,
     "price": "850.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-08-02T19:16:53.556792"
+    "last_checked": "2026-08-02T19:49:38.024903"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -353,10 +353,10 @@
   "H5859001_S_ST4843": {
     "status": "in_stock",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-    "stock_level": 112,
+    "stock_level": 110,
     "price": "244.00",
     "last_change": "2026-08-01T00:00:12.742377",
-    "last_checked": "2026-08-02T19:16:56.912308"
+    "last_checked": "2026-08-02T19:49:41.433168"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

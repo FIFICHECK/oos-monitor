@@ -3,9 +3,9 @@
     "status": "oos",
     "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
     "stock_level": 0,
-    "price": "178.00",
+    "price": "305.00",
     "last_change": "2026-08-02T14:20:22.209792",
-    "last_checked": "2026-08-02T22:41:34.852585"
+    "last_checked": "2026-08-02T23:14:47.346396"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 9,
     "price": "168.00",
     "last_change": "2026-08-02T21:27:28.888819",
-    "last_checked": "2026-08-02T22:41:17.868562"
+    "last_checked": "2026-08-02T23:14:30.553137"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 5,
     "price": "370.00",
     "last_change": "2026-07-31T12:52:07.087825",
-    "last_checked": "2026-08-02T22:41:21.269225"
+    "last_checked": "2026-08-02T23:14:33.898977"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 18,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-08-02T22:41:24.721751"
+    "last_checked": "2026-08-02T23:14:37.404213"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -297,10 +297,10 @@
   "B0961005_S_4897036691441_24": {
     "status": "in_stock",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
-    "stock_level": 95,
+    "stock_level": 88,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-08-02T22:41:28.139225"
+    "last_checked": "2026-08-02T23:14:40.762645"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 283,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-08-02T22:41:31.572733"
+    "last_checked": "2026-08-02T23:14:44.141802"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 5,
     "price": "850.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-08-02T22:41:38.402156"
+    "last_checked": "2026-08-02T23:14:50.672546"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 110,
     "price": "244.00",
     "last_change": "2026-08-01T00:00:12.742377",
-    "last_checked": "2026-08-02T22:41:41.751262"
+    "last_checked": "2026-08-02T23:14:53.962241"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

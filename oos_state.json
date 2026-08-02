@@ -3,9 +3,9 @@
     "status": "oos",
     "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
     "stock_level": 0,
-    "price": "305.00",
+    "price": "208.00",
     "last_change": "2026-08-02T14:20:22.209792",
-    "last_checked": "2026-08-02T23:14:47.346396"
+    "last_checked": "2026-08-02T23:47:49.079276"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 9,
     "price": "168.00",
     "last_change": "2026-08-02T21:27:28.888819",
-    "last_checked": "2026-08-02T23:14:30.553137"
+    "last_checked": "2026-08-02T23:47:32.328584"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 5,
     "price": "370.00",
     "last_change": "2026-07-31T12:52:07.087825",
-    "last_checked": "2026-08-02T23:14:33.898977"
+    "last_checked": "2026-08-02T23:47:35.658478"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 18,
     "price": "599.00",
     "last_change": "2026-07-29T00:49:25.031251",
-    "last_checked": "2026-08-02T23:14:37.404213"
+    "last_checked": "2026-08-02T23:47:39.074850"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -297,10 +297,10 @@
   "B0961005_S_4897036691441_24": {
     "status": "in_stock",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
-    "stock_level": 88,
+    "stock_level": 80,
     "price": "168.00",
     "last_change": "2026-07-30T22:38:01.617768",
-    "last_checked": "2026-08-02T23:14:40.762645"
+    "last_checked": "2026-08-02T23:47:42.402400"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "pending",
@@ -316,7 +316,7 @@
     "stock_level": 283,
     "price": "299.00",
     "last_change": "2026-07-30T22:38:05.029934",
-    "last_checked": "2026-08-02T23:14:44.141802"
+    "last_checked": "2026-08-02T23:47:45.819414"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "pending",
@@ -340,7 +340,7 @@
     "stock_level": 5,
     "price": "850.00",
     "last_change": "2026-07-30T12:02:16.859253",
-    "last_checked": "2026-08-02T23:14:50.672546"
+    "last_checked": "2026-08-02T23:47:52.416420"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -353,10 +353,10 @@
   "H5859001_S_ST4843": {
     "status": "in_stock",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-    "stock_level": 110,
+    "stock_level": 108,
     "price": "244.00",
     "last_change": "2026-08-01T00:00:12.742377",
-    "last_checked": "2026-08-02T23:14:53.962241"
+    "last_checked": "2026-08-02T23:47:55.815650"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

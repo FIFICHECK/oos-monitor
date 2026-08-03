@@ -3,9 +3,9 @@
     "status": "oos",
     "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
     "stock_level": 0,
-    "price": "305.00",
+    "price": "228.00",
     "last_change": "2026-08-02T14:20:22.209792",
-    "last_checked": "2026-08-03T22:21:05.278880"
+    "last_checked": "2026-08-03T22:53:20.152637"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 9,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-03T22:20:44.550292"
+    "last_checked": "2026-08-03T22:52:57.352986"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 5,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-03T22:20:47.978929"
+    "last_checked": "2026-08-03T22:53:00.830181"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -284,7 +284,7 @@
     "stock_level": 14,
     "price": "599.00",
     "last_change": "2026-08-03T21:47:23.041930",
-    "last_checked": "2026-08-03T22:20:51.525828"
+    "last_checked": "2026-08-03T22:53:04.341699"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -300,7 +300,7 @@
     "stock_level": 28,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:26.464336",
-    "last_checked": "2026-08-03T22:20:55.048680"
+    "last_checked": "2026-08-03T22:53:07.895087"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
@@ -308,7 +308,7 @@
     "stock_level": 54,
     "price": "99.00",
     "last_change": "2026-08-03T21:47:29.905917",
-    "last_checked": "2026-08-03T22:20:58.632676"
+    "last_checked": "2026-08-03T22:53:11.538571"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -316,7 +316,7 @@
     "stock_level": 114,
     "price": "299.00",
     "last_change": "2026-08-03T21:47:34.150549",
-    "last_checked": "2026-08-03T22:21:01.962070"
+    "last_checked": "2026-08-03T22:53:14.888394"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "in_stock",
@@ -324,7 +324,7 @@
     "stock_level": 43,
     "price": "399.00",
     "last_change": "2026-08-03T21:47:42.314846",
-    "last_checked": "2026-08-03T22:21:08.617492"
+    "last_checked": "2026-08-03T22:53:23.803869"
   },
   "H6588001_S_Toshiba_RC18NMFIH_White": {
     "status": "super_low_stock",
@@ -332,7 +332,7 @@
     "stock_level": 5,
     "price": "715.00",
     "last_change": "2026-08-03T21:47:46.824633",
-    "last_checked": "2026-08-03T22:21:11.893971"
+    "last_checked": "2026-08-03T22:53:27.483292"
   },
   "H6588001_S_KDK_P40VH": {
     "status": "super_low_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-03T22:21:15.409689"
+    "last_checked": "2026-08-03T22:53:30.905529"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 108,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-03T22:21:18.763484"
+    "last_checked": "2026-08-03T22:53:34.299526"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

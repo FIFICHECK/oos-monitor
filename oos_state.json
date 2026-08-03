@@ -3,9 +3,9 @@
     "status": "oos",
     "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
     "stock_level": 0,
-    "price": "228.00",
+    "price": "189.00",
     "last_change": "2026-08-02T14:20:22.209792",
-    "last_checked": "2026-08-03T23:26:30.999037"
+    "last_checked": "2026-08-03T23:59:23.923987"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 9,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-03T23:26:10.613196"
+    "last_checked": "2026-08-03T23:59:02.357795"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 5,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-03T23:26:14.087561"
+    "last_checked": "2026-08-03T23:59:05.836006"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -281,10 +281,10 @@
   "H6588001_S_Philips_AC0650": {
     "status": "low_stock",
     "product_name": "飛利浦 | AC0650/20 智能空氣清新機 香港行貨 600i 系列",
-    "stock_level": 13,
+    "stock_level": 12,
     "price": "599.00",
     "last_change": "2026-08-03T21:47:23.041930",
-    "last_checked": "2026-08-03T23:26:17.454044"
+    "last_checked": "2026-08-03T23:59:09.424071"
   },
   "B0961005_S_4891609702053": {
     "status": "in_stock",
@@ -297,18 +297,18 @@
   "B0961005_S_4897036691441_24": {
     "status": "low_stock",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
-    "stock_level": 28,
+    "stock_level": 27,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:26.464336",
-    "last_checked": "2026-08-03T23:26:20.896749"
+    "last_checked": "2026-08-03T23:59:12.917247"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
     "product_name": "開心電訊 | 日本 Softbank 5日5G無限數據 (不限速) $168 ｜日本SIM卡｜日本電話卡｜日本數據卡｜日本上網｜",
-    "stock_level": 54,
+    "stock_level": 53,
     "price": "99.00",
     "last_change": "2026-08-03T21:47:29.905917",
-    "last_checked": "2026-08-03T23:26:24.328435"
+    "last_checked": "2026-08-03T23:59:17.173857"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -316,15 +316,15 @@
     "stock_level": 114,
     "price": "299.00",
     "last_change": "2026-08-03T21:47:34.150549",
-    "last_checked": "2026-08-03T23:26:27.716564"
+    "last_checked": "2026-08-03T23:59:20.618001"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "in_stock",
     "product_name": "東芝 | MWP-MM20P(WH) 旋鈕式微波爐 香港行貨 20公升",
-    "stock_level": 43,
+    "stock_level": 42,
     "price": "399.00",
     "last_change": "2026-08-03T21:47:42.314846",
-    "last_checked": "2026-08-03T23:26:34.354304"
+    "last_checked": "2026-08-03T23:59:27.338443"
   },
   "H6588001_S_Toshiba_RC18NMFIH_White": {
     "status": "super_low_stock",
@@ -332,7 +332,7 @@
     "stock_level": 5,
     "price": "715.00",
     "last_change": "2026-08-03T21:47:46.824633",
-    "last_checked": "2026-08-03T23:26:37.710430"
+    "last_checked": "2026-08-03T23:59:30.766333"
   },
   "H6588001_S_KDK_P40VH": {
     "status": "super_low_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-03T23:26:41.248314"
+    "last_checked": "2026-08-03T23:59:34.196526"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 108,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-03T23:26:44.606705"
+    "last_checked": "2026-08-03T23:59:37.669972"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

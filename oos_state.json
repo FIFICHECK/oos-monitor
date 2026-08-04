@@ -3,9 +3,9 @@
     "status": "oos",
     "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】【最佳使用日期:10/2028】(醫護人士專用包裝)",
     "stock_level": 0,
-    "price": "208.00",
+    "price": "305.00",
     "last_change": "2026-08-02T14:20:22.209792",
-    "last_checked": "2026-08-04T15:55:41.385507"
+    "last_checked": "2026-08-04T16:28:42.332084"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 9,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-04T15:55:24.645712"
+    "last_checked": "2026-08-04T16:28:24.317465"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 5,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-04T15:55:27.976751"
+    "last_checked": "2026-08-04T16:28:28.294535"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -300,23 +300,23 @@
     "stock_level": 26,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:26.464336",
-    "last_checked": "2026-08-04T15:55:31.468612"
+    "last_checked": "2026-08-04T16:28:31.885610"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
     "product_name": "開心電訊 | 日本 Softbank 5日5G無限數據 (不限速) $168 ｜日本SIM卡｜日本電話卡｜日本數據卡｜日本上網｜",
-    "stock_level": 52,
+    "stock_level": 50,
     "price": "99.00",
     "last_change": "2026-08-03T21:47:29.905917",
-    "last_checked": "2026-08-04T15:55:34.877105"
+    "last_checked": "2026-08-04T16:28:35.279930"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
     "product_name": "Swisse | Beauty 美基循環 NMN 120粒【香港行貨】【最佳使用日期:11/2026】",
-    "stock_level": 114,
+    "stock_level": 113,
     "price": "299.00",
     "last_change": "2026-08-03T21:47:34.150549",
-    "last_checked": "2026-08-04T15:55:38.148443"
+    "last_checked": "2026-08-04T16:28:38.812984"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-04T15:55:44.924198"
+    "last_checked": "2026-08-04T16:28:45.675901"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 107,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-04T15:55:48.193039"
+    "last_checked": "2026-08-04T16:28:49.048555"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

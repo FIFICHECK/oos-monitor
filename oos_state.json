@@ -5,7 +5,7 @@
     "stock_level": 105,
     "price": "359.00",
     "last_change": "2026-08-04T20:41:41.768483",
-    "last_checked": "2026-08-05T15:28:02.916570"
+    "last_checked": "2026-08-05T16:00:10.851373"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 7,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-05T15:27:45.417741"
+    "last_checked": "2026-08-05T15:59:52.832739"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-05T15:27:48.930851"
+    "last_checked": "2026-08-05T15:59:56.419470"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -297,10 +297,10 @@
   "B0961005_S_4897036691441_24": {
     "status": "low_stock",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
-    "stock_level": 18,
+    "stock_level": 17,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:26.464336",
-    "last_checked": "2026-08-05T15:27:52.352340"
+    "last_checked": "2026-08-05T16:00:00.386436"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
@@ -308,7 +308,7 @@
     "stock_level": 43,
     "price": "99.00",
     "last_change": "2026-08-03T21:47:29.905917",
-    "last_checked": "2026-08-05T15:27:56.000763"
+    "last_checked": "2026-08-05T16:00:03.994300"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -316,7 +316,7 @@
     "stock_level": 113,
     "price": "299.00",
     "last_change": "2026-08-03T21:47:34.150549",
-    "last_checked": "2026-08-05T15:27:59.464567"
+    "last_checked": "2026-08-05T16:00:07.475838"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-05T15:28:06.300261"
+    "last_checked": "2026-08-05T16:00:14.424560"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 106,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-05T15:28:10.694671"
+    "last_checked": "2026-08-05T16:00:17.890980"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

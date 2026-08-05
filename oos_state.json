@@ -5,7 +5,7 @@
     "stock_level": 103,
     "price": "359.00",
     "last_change": "2026-08-04T20:41:41.768483",
-    "last_checked": "2026-08-06T05:29:27.214399"
+    "last_checked": "2026-08-06T06:06:20.466466"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 6,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-06T05:29:09.500177"
+    "last_checked": "2026-08-06T06:06:03.737696"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-06T05:29:13.028589"
+    "last_checked": "2026-08-06T06:06:07.103181"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -300,7 +300,7 @@
     "stock_level": 9,
     "price": "168.00",
     "last_change": "2026-08-06T03:19:10.252715",
-    "last_checked": "2026-08-06T05:29:16.395163"
+    "last_checked": "2026-08-06T06:06:10.391905"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
@@ -308,7 +308,7 @@
     "stock_level": 37,
     "price": "99.00",
     "last_change": "2026-08-03T21:47:29.905917",
-    "last_checked": "2026-08-06T05:29:20.194180"
+    "last_checked": "2026-08-06T06:06:13.954564"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -316,7 +316,7 @@
     "stock_level": 113,
     "price": "299.00",
     "last_change": "2026-08-03T21:47:34.150549",
-    "last_checked": "2026-08-06T05:29:23.678908"
+    "last_checked": "2026-08-06T06:06:17.206676"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-06T05:29:30.853617"
+    "last_checked": "2026-08-06T06:06:23.764624"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 104,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-06T05:29:34.307343"
+    "last_checked": "2026-08-06T06:06:27.060596"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

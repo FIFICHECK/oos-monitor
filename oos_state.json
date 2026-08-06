@@ -21,7 +21,7 @@
     "stock_level": 32,
     "price": "149.00",
     "last_change": "2026-07-12T16:24:52.881852",
-    "last_checked": "2026-08-07T00:26:20.460847"
+    "last_checked": "2026-08-07T01:00:17.574322"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 5,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-07T00:24:47.056636"
+    "last_checked": "2026-08-07T00:59:38.348353"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 3,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-07T00:25:10.422852"
+    "last_checked": "2026-08-07T00:59:47.497602"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -308,7 +308,7 @@
     "stock_level": 29,
     "price": "99.00",
     "last_change": "2026-08-07T00:25:33.874449",
-    "last_checked": "2026-08-07T00:25:33.874452"
+    "last_checked": "2026-08-07T00:59:57.650681"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -337,10 +337,10 @@
   "H6588001_S_KDK_P40VH": {
     "status": "super_low_stock",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
-    "stock_level": 3,
+    "stock_level": 2,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-07T00:25:57.186342"
+    "last_checked": "2026-08-07T01:00:07.904920"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -353,10 +353,10 @@
   "H5859001_S_ST4843": {
     "status": "in_stock",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-    "stock_level": 104,
+    "stock_level": 103,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-07T00:26:43.781514"
+    "last_checked": "2026-08-07T01:00:40.785268"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
@@ -364,6 +364,6 @@
     "stock_level": 71,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-07T00:27:07.047373"
+    "last_checked": "2026-08-07T01:00:58.806388"
   }
 }

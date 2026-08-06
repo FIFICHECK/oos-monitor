@@ -5,7 +5,7 @@
     "stock_level": 103,
     "price": "359.00",
     "last_change": "2026-08-04T20:41:41.768483",
-    "last_checked": "2026-08-06T23:18:52.343779"
+    "last_checked": "2026-08-06T23:51:44.953178"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -21,7 +21,7 @@
     "stock_level": 32,
     "price": "149.00",
     "last_change": "2026-07-12T16:24:52.881852",
-    "last_checked": "2026-08-06T23:18:59.177953"
+    "last_checked": "2026-08-06T23:51:51.672044"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 5,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-06T23:18:34.328225"
+    "last_checked": "2026-08-06T23:51:27.233192"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 3,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-06T23:18:38.148006"
+    "last_checked": "2026-08-06T23:51:30.919800"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -298,9 +298,9 @@
     "status": "oos",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
     "stock_level": 0,
-    "price": "79.00",
+    "price": "137.00",
     "last_change": "2026-08-06T23:18:41.808686",
-    "last_checked": "2026-08-06T23:18:41.808688"
+    "last_checked": "2026-08-06T23:51:34.668201"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
@@ -308,7 +308,7 @@
     "stock_level": 30,
     "price": "99.00",
     "last_change": "2026-08-03T21:47:29.905917",
-    "last_checked": "2026-08-06T23:18:45.354516"
+    "last_checked": "2026-08-06T23:51:38.195099"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -316,7 +316,7 @@
     "stock_level": 113,
     "price": "299.00",
     "last_change": "2026-08-03T21:47:34.150549",
-    "last_checked": "2026-08-06T23:18:48.875359"
+    "last_checked": "2026-08-06T23:51:41.601498"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 3,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-06T23:18:55.770195"
+    "last_checked": "2026-08-06T23:51:48.323866"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 104,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-06T23:19:02.640208"
+    "last_checked": "2026-08-06T23:51:55.027985"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
@@ -364,6 +364,6 @@
     "stock_level": 71,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-06T23:19:06.212399"
+    "last_checked": "2026-08-06T23:51:58.400298"
   }
 }

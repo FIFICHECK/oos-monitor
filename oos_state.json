@@ -2,10 +2,10 @@
   "B0961005_S_4891609190294": {
     "status": "in_stock",
     "product_name": "動必骼 | 生物活性骨膠原蛋白肽 (100% Fortigel) 10克x30包裝【香港行貨】 (醫護人士專用包裝)【最佳使用日期: 11/2028】",
-    "stock_level": 103,
+    "stock_level": 104,
     "price": "359.00",
     "last_change": "2026-08-04T20:41:41.768483",
-    "last_checked": "2026-08-06T17:59:40.521075"
+    "last_checked": "2026-08-06T18:49:32.084284"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 6,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-06T17:59:23.376571"
+    "last_checked": "2026-08-06T18:49:06.831029"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-06T17:59:26.697075"
+    "last_checked": "2026-08-06T18:49:10.808794"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -295,12 +295,12 @@
     "last_checked": "2026-07-30T23:39:58.713119"
   },
   "B0961005_S_4897036691441_24": {
-    "status": "low_stock",
+    "status": "super_low_stock",
     "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
-    "stock_level": 11,
+    "stock_level": 7,
     "price": "168.00",
-    "last_change": "2026-08-06T09:18:27.582051",
-    "last_checked": "2026-08-06T17:59:30.181393"
+    "last_change": "2026-08-06T18:49:15.132813",
+    "last_checked": "2026-08-06T18:49:15.132815"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
@@ -308,15 +308,15 @@
     "stock_level": 32,
     "price": "99.00",
     "last_change": "2026-08-03T21:47:29.905917",
-    "last_checked": "2026-08-06T17:59:33.736080"
+    "last_checked": "2026-08-06T18:49:21.283734"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
     "product_name": "Swisse | Beauty 美基循環 NMN 120粒【香港行貨】【最佳使用日期: 11/2026】",
-    "stock_level": 112,
+    "stock_level": 113,
     "price": "299.00",
     "last_change": "2026-08-03T21:47:34.150549",
-    "last_checked": "2026-08-06T17:59:37.116021"
+    "last_checked": "2026-08-06T18:49:26.010179"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 3,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-06T17:59:44.056800"
+    "last_checked": "2026-08-06T18:49:36.900969"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 104,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-06T18:47:22.608588"
+    "last_checked": "2026-08-06T18:49:41.408684"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

@@ -5,7 +5,7 @@
     "stock_level": 103,
     "price": "359.00",
     "last_change": "2026-08-04T20:41:41.768483",
-    "last_checked": "2026-08-06T16:54:12.296950"
+    "last_checked": "2026-08-06T17:26:37.522201"
   },
   "B0961005_S_4897020276715": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 6,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-06T16:53:41.356303"
+    "last_checked": "2026-08-06T17:26:20.240751"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 4,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-06T16:53:48.341094"
+    "last_checked": "2026-08-06T17:26:23.710320"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -300,15 +300,15 @@
     "stock_level": 11,
     "price": "168.00",
     "last_change": "2026-08-06T09:18:27.582051",
-    "last_checked": "2026-08-06T16:53:52.136206"
+    "last_checked": "2026-08-06T17:26:27.255716"
   },
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
     "product_name": "開心電訊 | 日本 Softbank 5日5G無限數據 (不限速) $168 ｜日本SIM卡｜日本電話卡｜日本數據卡｜日本上網｜",
-    "stock_level": 33,
+    "stock_level": 32,
     "price": "99.00",
     "last_change": "2026-08-03T21:47:29.905917",
-    "last_checked": "2026-08-06T16:54:05.669071"
+    "last_checked": "2026-08-06T17:26:30.834956"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -316,7 +316,7 @@
     "stock_level": 112,
     "price": "299.00",
     "last_change": "2026-08-03T21:47:34.150549",
-    "last_checked": "2026-08-06T16:54:08.940600"
+    "last_checked": "2026-08-06T17:26:34.143137"
   },
   "H6588001_S_Toshiba_MWPMM20P": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 3,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-06T16:54:15.942884"
+    "last_checked": "2026-08-06T17:26:40.990766"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 104,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-06T16:54:23.433890"
+    "last_checked": "2026-08-06T17:26:44.390794"
   },
   "B0961005_S_9311770615914": {
     "status": "pending",

@@ -21,7 +21,7 @@
     "stock_level": 27,
     "price": "149.00",
     "last_change": "2026-08-08T01:38:35.561507",
-    "last_checked": "2026-08-08T03:49:23.926575"
+    "last_checked": "2026-08-08T04:22:16.629451"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,15 +164,15 @@
     "stock_level": 5,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-08T03:49:10.224361"
+    "last_checked": "2026-08-08T04:22:03.232009"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
-    "stock_level": 3,
+    "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-08T03:49:13.621847"
+    "last_checked": "2026-08-08T04:22:06.561225"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -308,7 +308,7 @@
     "stock_level": 73,
     "price": "99.00",
     "last_change": "2026-08-07T15:10:42.669610",
-    "last_checked": "2026-08-08T03:49:17.145399"
+    "last_checked": "2026-08-08T04:22:09.958986"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 5,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-08T03:49:20.622882"
+    "last_checked": "2026-08-08T04:22:13.414043"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 101,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-08T03:49:27.296059"
+    "last_checked": "2026-08-08T04:22:19.839485"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 63,
+    "stock_level": 62,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-08T03:49:30.580825"
+    "last_checked": "2026-08-08T04:22:23.045088"
   }
 }

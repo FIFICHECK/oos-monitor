@@ -16,12 +16,12 @@
     "price": "178.00"
   },
   "B0961005_S_9311770608084": {
-    "status": "low_stock",
+    "status": "in_stock",
     "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期: 04/2027】",
-    "stock_level": 28,
+    "stock_level": 31,
     "price": "149.00",
-    "last_change": "2026-08-07T15:48:17.835832",
-    "last_checked": "2026-08-07T16:20:15.915467"
+    "last_change": "2026-08-07T16:53:03.869434",
+    "last_checked": "2026-08-07T16:53:03.869436"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 5,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-07T16:20:01.904088"
+    "last_checked": "2026-08-07T16:52:50.298153"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 3,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-07T16:20:05.301449"
+    "last_checked": "2026-08-07T16:52:53.738315"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -308,7 +308,7 @@
     "stock_level": 77,
     "price": "99.00",
     "last_change": "2026-08-07T15:10:42.669610",
-    "last_checked": "2026-08-07T16:20:08.840305"
+    "last_checked": "2026-08-07T16:52:57.181809"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 3,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-07T16:20:12.369699"
+    "last_checked": "2026-08-07T16:53:00.520530"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 103,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-07T16:20:19.221233"
+    "last_checked": "2026-08-07T16:53:07.237580"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 67,
+    "stock_level": 71,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-07T16:20:22.798691"
+    "last_checked": "2026-08-07T16:53:10.528767"
   }
 }

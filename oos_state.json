@@ -16,12 +16,12 @@
     "price": "178.00"
   },
   "B0961005_S_9311770608084": {
-    "status": "in_stock",
+    "status": "low_stock",
     "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期: 04/2027】",
-    "stock_level": 30,
+    "stock_level": 29,
     "price": "149.00",
-    "last_change": "2026-08-08T08:56:28.710855",
-    "last_checked": "2026-08-08T10:52:08.596842"
+    "last_change": "2026-08-08T11:26:01.525900",
+    "last_checked": "2026-08-08T11:26:01.525906"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-08T10:51:29.052317"
+    "last_checked": "2026-08-08T11:25:03.752422"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -308,7 +308,7 @@
     "stock_level": 71,
     "price": "99.00",
     "last_change": "2026-08-07T15:10:42.669610",
-    "last_checked": "2026-08-08T10:51:32.605079"
+    "last_checked": "2026-08-08T11:25:29.187938"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -337,10 +337,10 @@
   "H6588001_S_KDK_P40VH": {
     "status": "super_low_stock",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
-    "stock_level": 5,
+    "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-08T10:51:47.892634"
+    "last_checked": "2026-08-08T11:25:52.417146"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -353,17 +353,17 @@
   "H5859001_S_ST4843": {
     "status": "in_stock",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-    "stock_level": 99,
+    "stock_level": 97,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-08T10:52:17.761600"
+    "last_checked": "2026-08-08T11:26:18.154106"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 65,
+    "stock_level": 62,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-08T10:52:28.504713"
+    "last_checked": "2026-08-08T11:26:28.809540"
   }
 }

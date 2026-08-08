@@ -21,7 +21,7 @@
     "stock_level": 28,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-08T17:50:26.158833"
+    "last_checked": "2026-08-08T18:27:26.628806"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 3,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-08T17:50:12.357356"
+    "last_checked": "2026-08-08T18:27:12.834343"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-08T17:50:15.698265"
+    "last_checked": "2026-08-08T18:27:16.221951"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -305,10 +305,10 @@
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
     "product_name": "開心電訊 | 日本 Softbank 5日5G無限數據 (不限速) $168 ｜日本SIM卡｜日本電話卡｜日本數據卡｜日本上網｜",
-    "stock_level": 71,
+    "stock_level": 69,
     "price": "99.00",
     "last_change": "2026-08-07T15:10:42.669610",
-    "last_checked": "2026-08-08T17:50:19.335664"
+    "last_checked": "2026-08-08T18:27:19.909756"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-08T17:50:22.844307"
+    "last_checked": "2026-08-08T18:27:23.356887"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 96,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-08T17:50:29.507770"
+    "last_checked": "2026-08-08T18:27:29.932929"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 58,
+    "stock_level": 57,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-08T17:50:32.722142"
+    "last_checked": "2026-08-08T18:27:33.215733"
   }
 }

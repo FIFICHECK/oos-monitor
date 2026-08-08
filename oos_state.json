@@ -21,7 +21,7 @@
     "stock_level": 29,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-08T21:26:43.489420"
+    "last_checked": "2026-08-08T21:59:39.275522"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 3,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-08T21:26:29.457526"
+    "last_checked": "2026-08-08T21:59:25.174570"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-08T21:26:32.871769"
+    "last_checked": "2026-08-08T21:59:28.709588"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -305,10 +305,10 @@
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
     "product_name": "開心電訊 | 日本 Softbank 5日5G無限數據 (不限速) $168 ｜日本SIM卡｜日本電話卡｜日本數據卡｜日本上網｜",
-    "stock_level": 64,
+    "stock_level": 63,
     "price": "99.00",
     "last_change": "2026-08-07T15:10:42.669610",
-    "last_checked": "2026-08-08T21:26:36.494059"
+    "last_checked": "2026-08-08T21:59:32.405255"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-08T21:26:39.926208"
+    "last_checked": "2026-08-08T21:59:35.717314"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 94,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-08T21:26:46.750952"
+    "last_checked": "2026-08-08T21:59:42.742164"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
@@ -364,6 +364,6 @@
     "stock_level": 51,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-08T21:26:49.945057"
+    "last_checked": "2026-08-08T21:59:46.041727"
   }
 }

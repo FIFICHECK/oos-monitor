@@ -21,7 +21,7 @@
     "stock_level": 27,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-09T09:52:57.793039"
+    "last_checked": "2026-08-09T10:25:07.549401"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 3,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-09T09:52:44.027527"
+    "last_checked": "2026-08-09T10:24:53.449692"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-09T09:52:47.443187"
+    "last_checked": "2026-08-09T10:24:56.906936"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -308,7 +308,7 @@
     "stock_level": 60,
     "price": "99.00",
     "last_change": "2026-08-07T15:10:42.669610",
-    "last_checked": "2026-08-09T09:52:51.001040"
+    "last_checked": "2026-08-09T10:25:00.742687"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-09T09:52:54.476883"
+    "last_checked": "2026-08-09T10:25:04.173357"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -353,17 +353,17 @@
   "H5859001_S_ST4843": {
     "status": "in_stock",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-    "stock_level": 93,
+    "stock_level": 92,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-09T09:53:01.153918"
+    "last_checked": "2026-08-09T10:25:10.951891"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 47,
+    "stock_level": 45,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-09T09:53:04.480410"
+    "last_checked": "2026-08-09T10:25:14.312603"
   }
 }

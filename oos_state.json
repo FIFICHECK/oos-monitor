@@ -18,10 +18,10 @@
   "B0961005_S_9311770608084": {
     "status": "low_stock",
     "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期: 04/2027】",
-    "stock_level": 29,
+    "stock_level": 27,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-09T08:42:58.231509"
+    "last_checked": "2026-08-09T09:17:50.148591"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 3,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-09T08:42:44.544832"
+    "last_checked": "2026-08-09T09:17:36.187065"
   },
   "S6501001_S_G4713294187789": {
     "status": "super_low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 2,
     "price": "370.00",
     "last_change": "2026-08-03T21:47:19.558029",
-    "last_checked": "2026-08-09T08:42:48.043805"
+    "last_checked": "2026-08-09T09:17:39.627441"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -305,10 +305,10 @@
   "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G": {
     "status": "in_stock",
     "product_name": "開心電訊 | 日本 Softbank 5日5G無限數據 (不限速) $168 ｜日本SIM卡｜日本電話卡｜日本數據卡｜日本上網｜",
-    "stock_level": 62,
+    "stock_level": 60,
     "price": "99.00",
     "last_change": "2026-08-07T15:10:42.669610",
-    "last_checked": "2026-08-09T08:42:51.635544"
+    "last_checked": "2026-08-09T09:17:43.235362"
   },
   "B0961005_S_9311770614047": {
     "status": "in_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-09T08:42:54.983861"
+    "last_checked": "2026-08-09T09:17:46.752625"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 93,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-09T08:43:01.615808"
+    "last_checked": "2026-08-09T09:17:53.529978"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 51,
+    "stock_level": 48,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-09T08:43:04.942608"
+    "last_checked": "2026-08-09T09:17:56.836505"
   }
 }

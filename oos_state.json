@@ -21,7 +21,7 @@
     "stock_level": 22,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-10T09:32:37.079974"
+    "last_checked": "2026-08-10T10:18:11.811412"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,15 +164,15 @@
     "stock_level": 1,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-10T09:32:05.628888"
+    "last_checked": "2026-08-10T10:17:53.036637"
   },
   "S6501001_S_G4713294187789": {
     "status": "oos",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
     "stock_level": 0,
-    "price": "50.00",
+    "price": "80.00",
     "last_change": "2026-08-10T09:32:14.394648",
-    "last_checked": "2026-08-10T09:32:14.394649"
+    "last_checked": "2026-08-10T10:17:58.889824"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -335,12 +335,12 @@
     "last_checked": "2026-08-03T23:59:30.766333"
   },
   "H6588001_S_KDK_P40VH": {
-    "status": "super_low_stock",
+    "status": "oos",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
-    "stock_level": 1,
-    "price": "850.00",
-    "last_change": "2026-08-03T21:47:50.721065",
-    "last_checked": "2026-08-10T09:32:26.888132"
+    "stock_level": 0,
+    "price": "498.00",
+    "last_change": "2026-08-10T10:18:06.610991",
+    "last_checked": "2026-08-10T10:18:06.610993"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 78,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-10T09:32:47.799741"
+    "last_checked": "2026-08-10T10:18:17.593445"
   },
   "B0961005_S_9311770615914": {
     "status": "in_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 31,
+    "stock_level": 30,
     "price": "69.00",
     "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-10T09:32:55.548206"
+    "last_checked": "2026-08-10T10:18:22.999258"
   }
 }

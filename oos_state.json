@@ -21,7 +21,7 @@
     "stock_level": 22,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-10T12:10:30.689185"
+    "last_checked": "2026-08-10T12:45:59.169788"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,15 +164,15 @@
     "stock_level": 1,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-10T12:10:18.855855"
+    "last_checked": "2026-08-10T12:45:47.380561"
   },
   "S6501001_S_G4713294187789": {
-    "status": "oos",
+    "status": "low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
-    "stock_level": 0,
-    "price": "376.00",
-    "last_change": "2026-08-10T09:32:14.394648",
-    "last_checked": "2026-08-10T12:10:22.361098"
+    "stock_level": 10,
+    "price": "370.00",
+    "last_change": "2026-08-10T12:45:52.112733",
+    "last_checked": "2026-08-10T12:45:52.112734"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -335,12 +335,12 @@
     "last_checked": "2026-08-03T23:59:30.766333"
   },
   "H6588001_S_KDK_P40VH": {
-    "status": "oos",
+    "status": "super_low_stock",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
-    "stock_level": 0,
-    "price": "419.00",
-    "last_change": "2026-08-10T10:18:06.610991",
-    "last_checked": "2026-08-10T12:10:27.470839"
+    "stock_level": 5,
+    "price": "850.00",
+    "last_change": "2026-08-10T12:45:55.870358",
+    "last_checked": "2026-08-10T12:45:55.870359"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 77,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-10T12:10:33.961298"
+    "last_checked": "2026-08-10T12:46:02.528804"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 29,
+    "stock_level": 28,
     "price": "69.00",
     "last_change": "2026-08-10T11:32:53.903718",
-    "last_checked": "2026-08-10T12:10:37.602415"
+    "last_checked": "2026-08-10T12:46:05.868903"
   }
 }

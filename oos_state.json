@@ -21,7 +21,7 @@
     "stock_level": 22,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-10T10:57:51.032768"
+    "last_checked": "2026-08-10T11:32:46.692872"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,15 +164,15 @@
     "stock_level": 1,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-10T10:57:01.738366"
+    "last_checked": "2026-08-10T11:32:34.618468"
   },
   "S6501001_S_G4713294187789": {
     "status": "oos",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
     "stock_level": 0,
-    "price": "148.00",
+    "price": "110.00",
     "last_change": "2026-08-10T09:32:14.394648",
-    "last_checked": "2026-08-10T10:57:11.908730"
+    "last_checked": "2026-08-10T11:32:38.117736"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -338,9 +338,9 @@
     "status": "oos",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
     "stock_level": 0,
-    "price": "419.00",
+    "price": "598.00",
     "last_change": "2026-08-10T10:18:06.610991",
-    "last_checked": "2026-08-10T10:57:32.922222"
+    "last_checked": "2026-08-10T11:32:43.122362"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 78,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-10T10:58:04.539374"
+    "last_checked": "2026-08-10T11:32:50.419253"
   },
   "B0961005_S_9311770615914": {
-    "status": "in_stock",
+    "status": "low_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 30,
+    "stock_level": 27,
     "price": "69.00",
-    "last_change": "2026-08-06T22:46:03.609485",
-    "last_checked": "2026-08-10T10:58:15.829474"
+    "last_change": "2026-08-10T11:32:53.903718",
+    "last_checked": "2026-08-10T11:32:53.903721"
   }
 }

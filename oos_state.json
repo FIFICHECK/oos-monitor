@@ -21,7 +21,7 @@
     "stock_level": 22,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-10T13:51:34.278813"
+    "last_checked": "2026-08-10T14:30:08.811186"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 1,
     "price": "168.00",
     "last_change": "2026-08-03T21:47:15.912204",
-    "last_checked": "2026-08-10T13:51:23.698428"
+    "last_checked": "2026-08-10T14:29:56.487346"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 10,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-08-10T13:51:27.506959"
+    "last_checked": "2026-08-10T14:30:00.372931"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -340,7 +340,7 @@
     "stock_level": 4,
     "price": "850.00",
     "last_change": "2026-08-10T12:45:55.870358",
-    "last_checked": "2026-08-10T13:51:30.899424"
+    "last_checked": "2026-08-10T14:30:04.863019"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 77,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-10T13:51:37.525113"
+    "last_checked": "2026-08-10T14:30:12.374991"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 24,
+    "stock_level": 28,
     "price": "69.00",
     "last_change": "2026-08-10T11:32:53.903718",
-    "last_checked": "2026-08-10T13:51:41.125292"
+    "last_checked": "2026-08-10T14:30:16.641554"
   }
 }

@@ -21,7 +21,7 @@
     "stock_level": 20,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-11T08:43:52.948908"
+    "last_checked": "2026-08-11T09:28:48.382111"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 1,
     "price": "168.00",
     "last_change": "2026-08-10T16:55:41.563585",
-    "last_checked": "2026-08-11T08:43:42.940045"
+    "last_checked": "2026-08-11T09:28:35.750598"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 10,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-08-11T08:43:46.266644"
+    "last_checked": "2026-08-11T09:28:40.132987"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -338,9 +338,9 @@
     "status": "oos",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
     "stock_level": 0,
-    "price": "588.00",
+    "price": "350.00",
     "last_change": "2026-08-11T01:29:00.411322",
-    "last_checked": "2026-08-11T08:43:49.684697"
+    "last_checked": "2026-08-11T09:28:43.934705"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 75,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-11T08:43:56.345322"
+    "last_checked": "2026-08-11T09:28:52.882666"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 25,
+    "stock_level": 24,
     "price": "69.00",
     "last_change": "2026-08-10T11:32:53.903718",
-    "last_checked": "2026-08-11T08:44:00.176649"
+    "last_checked": "2026-08-11T09:28:56.285320"
   }
 }

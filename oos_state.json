@@ -21,7 +21,7 @@
     "stock_level": 21,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-12T09:47:37.787436"
+    "last_checked": "2026-08-12T10:26:38.301530"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -162,9 +162,9 @@
     "status": "oos",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
     "stock_level": 0,
-    "price": "80.00",
+    "price": "116.00",
     "last_change": "2026-08-11T17:41:49.347907",
-    "last_checked": "2026-08-12T09:47:27.819027"
+    "last_checked": "2026-08-12T10:26:27.101074"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 10,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-08-12T09:47:31.098706"
+    "last_checked": "2026-08-12T10:26:31.689594"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -340,7 +340,7 @@
     "stock_level": 2,
     "price": "850.00",
     "last_change": "2026-08-11T10:14:51.411153",
-    "last_checked": "2026-08-12T09:47:34.459106"
+    "last_checked": "2026-08-12T10:26:35.037161"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 64,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-12T09:47:40.972667"
+    "last_checked": "2026-08-12T10:26:41.487358"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 21,
+    "stock_level": 20,
     "price": "69.00",
     "last_change": "2026-08-10T11:32:53.903718",
-    "last_checked": "2026-08-12T09:47:44.595130"
+    "last_checked": "2026-08-12T10:26:44.786679"
   }
 }

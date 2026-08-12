@@ -21,7 +21,7 @@
     "stock_level": 21,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-12T06:53:53.830351"
+    "last_checked": "2026-08-12T09:12:19.714099"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -162,9 +162,9 @@
     "status": "oos",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
     "stock_level": 0,
-    "price": "118.00",
+    "price": "370.00",
     "last_change": "2026-08-11T17:41:49.347907",
-    "last_checked": "2026-08-12T06:53:44.119895"
+    "last_checked": "2026-08-12T09:12:09.812077"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 10,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-08-12T06:53:47.364924"
+    "last_checked": "2026-08-12T09:12:13.157663"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -337,10 +337,10 @@
   "H6588001_S_KDK_P40VH": {
     "status": "super_low_stock",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
-    "stock_level": 3,
+    "stock_level": 2,
     "price": "850.00",
     "last_change": "2026-08-11T10:14:51.411153",
-    "last_checked": "2026-08-12T06:53:50.679035"
+    "last_checked": "2026-08-12T09:12:16.493454"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -353,17 +353,17 @@
   "H5859001_S_ST4843": {
     "status": "in_stock",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-    "stock_level": 67,
+    "stock_level": 64,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-12T06:53:56.928839"
+    "last_checked": "2026-08-12T09:12:22.835678"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 16,
+    "stock_level": 21,
     "price": "69.00",
     "last_change": "2026-08-10T11:32:53.903718",
-    "last_checked": "2026-08-12T06:54:00.009854"
+    "last_checked": "2026-08-12T09:12:26.219324"
   }
 }

@@ -18,10 +18,10 @@
   "B0961005_S_9311770608084": {
     "status": "low_stock",
     "product_name": "Swisse | 鉑金膠原蛋白美肌飲 8 x 50ml【香港行貨】【最佳使用日期: 04/2027】",
-    "stock_level": 21,
+    "stock_level": 20,
     "price": "149.00",
     "last_change": "2026-08-08T11:26:01.525900",
-    "last_checked": "2026-08-12T15:14:47.169159"
+    "last_checked": "2026-08-12T15:50:56.635527"
   },
   "B0961005_S_9311770615426": {
     "status": "low_stock",
@@ -164,7 +164,7 @@
     "stock_level": 1,
     "price": "168.00",
     "last_change": "2026-08-12T11:46:54.078025",
-    "last_checked": "2026-08-12T15:14:35.618307"
+    "last_checked": "2026-08-12T15:50:45.733237"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 10,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-08-12T15:14:39.212709"
+    "last_checked": "2026-08-12T15:50:49.371783"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -340,7 +340,7 @@
     "stock_level": 1,
     "price": "850.00",
     "last_change": "2026-08-11T10:14:51.411153",
-    "last_checked": "2026-08-12T15:14:43.625387"
+    "last_checked": "2026-08-12T15:50:53.073786"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,14 +356,14 @@
     "stock_level": 63,
     "price": "244.00",
     "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-12T15:14:51.507267"
+    "last_checked": "2026-08-12T15:51:00.088942"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
     "product_name": "Swisse | Beauty 亮膚美白丸 60粒【香港行貨】【最佳使用日期: 05/2027】",
-    "stock_level": 19,
+    "stock_level": 18,
     "price": "69.00",
     "last_change": "2026-08-10T11:32:53.903718",
-    "last_checked": "2026-08-12T15:14:54.952468"
+    "last_checked": "2026-08-12T15:51:03.362854"
   }
 }

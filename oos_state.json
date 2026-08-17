@@ -164,7 +164,7 @@
     "stock_level": 1,
     "price": "168.00",
     "last_change": "2026-08-12T11:46:54.078025",
-    "last_checked": "2026-08-15T00:50:07.071937"
+    "last_checked": "2026-08-17T09:57:51.094546"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 10,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-08-15T00:50:10.398358"
+    "last_checked": "2026-08-17T09:57:54.638200"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -335,12 +335,12 @@
     "last_checked": "2026-08-03T23:59:30.766333"
   },
   "H6588001_S_KDK_P40VH": {
-    "status": "super_low_stock",
+    "status": "oos",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
-    "stock_level": 3,
-    "price": "850.00",
-    "last_change": "2026-08-11T10:14:51.411153",
-    "last_checked": "2026-08-15T00:50:13.816955"
+    "stock_level": 0,
+    "price": "550.00",
+    "last_change": "2026-08-17T09:57:58.243576",
+    "last_checked": "2026-08-17T09:57:58.243577"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -351,12 +351,12 @@
     "last_checked": "2026-07-31T23:27:46.926226"
   },
   "H5859001_S_ST4843": {
-    "status": "in_stock",
+    "status": "low_stock",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-    "stock_level": 45,
+    "stock_level": 11,
     "price": "244.00",
-    "last_change": "2026-08-03T21:47:54.819744",
-    "last_checked": "2026-08-15T00:50:17.029158"
+    "last_change": "2026-08-17T09:58:01.765890",
+    "last_checked": "2026-08-17T09:58:01.765892"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",

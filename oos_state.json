@@ -164,7 +164,7 @@
     "stock_level": 18,
     "price": "168.00",
     "last_change": "2026-08-17T18:59:07.989718",
-    "last_checked": "2026-08-19T11:26:21.095819"
+    "last_checked": "2026-08-19T11:58:57.155168"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 20,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-08-19T11:26:24.716941"
+    "last_checked": "2026-08-19T11:59:00.479151"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -337,10 +337,10 @@
   "H6588001_S_KDK_P40VH": {
     "status": "super_low_stock",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
-    "stock_level": 9,
+    "stock_level": 8,
     "price": "850.00",
     "last_change": "2026-08-18T11:19:34.503133",
-    "last_checked": "2026-08-19T11:26:28.103232"
+    "last_checked": "2026-08-19T11:59:04.129738"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 3,
     "price": "244.00",
     "last_change": "2026-08-17T13:59:55.916510",
-    "last_checked": "2026-08-19T11:26:31.331086"
+    "last_checked": "2026-08-19T11:59:07.273729"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",

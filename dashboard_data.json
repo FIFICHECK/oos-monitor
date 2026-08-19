@@ -3,11 +3,11 @@
     {
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "price": "50.00",
-      "checked_at": "2026-08-20T05:46:31.381050"
+      "price": "61.00",
+      "checked_at": "2026-08-20T06:18:33.372877"
     }
   ],
-  "last_checked": "2026-08-20T05:46:31.429336",
+  "last_checked": "2026-08-20T06:18:33.439130",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -232,13 +232,6 @@
       "status": "super_low_stock",
       "stock_level": 1,
       "checked_at": "2026-07-13T23:30:05.248311"
-    },
-    {
-      "sku": "S6501001_S_G4713294187765",
-      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-      "status": "super_low_stock",
-      "stock_level": 9,
-      "checked_at": "2026-07-23T11:35:48.397701"
     },
     {
       "sku": "S6501001_S_G4713294187765",
@@ -7234,11 +7227,11 @@
       "checked_at": "2026-08-20T05:46:21.387215"
     },
     {
-      "sku": "S6501001_S_G4713294187789",
-      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入平行進口",
-      "status": "super_low_stock",
-      "stock_level": 1,
-      "checked_at": "2026-07-23T16:58:51.671539"
+      "sku": "S6501001_S_G4713294187765",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+      "status": "low_stock",
+      "stock_level": 18,
+      "checked_at": "2026-08-20T06:18:22.840651"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -14232,6 +14225,13 @@
       "status": "low_stock",
       "stock_level": 20,
       "checked_at": "2026-08-20T05:46:24.704119"
+    },
+    {
+      "sku": "S6501001_S_G4713294187789",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
+      "status": "low_stock",
+      "stock_level": 20,
+      "checked_at": "2026-08-20T06:18:26.160743"
     },
     {
       "sku": "B1870001_S_6971738651335",
@@ -52678,6 +52678,13 @@
       "checked_at": "2026-08-20T05:46:28.184412"
     },
     {
+      "sku": "H6588001_S_KDK_P40VH",
+      "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
+      "status": "super_low_stock",
+      "stock_level": 8,
+      "checked_at": "2026-08-20T06:18:30.112643"
+    },
+    {
       "sku": "B0961005_S_4897036691441_24",
       "product_name": "MONSTER | MONSTER-魔爪【原箱】碳酸能量飲料355mLx24罐 [最佳使用日期:08/2027】",
       "status": "in_stock",
@@ -63633,6 +63640,13 @@
       "checked_at": "2026-08-20T05:46:31.381050"
     },
     {
+      "sku": "H5859001_S_ST4843",
+      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
+      "status": "oos",
+      "stock_level": 0,
+      "checked_at": "2026-08-20T06:18:33.372877"
+    },
+    {
       "sku": "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G",
       "product_name": "開心電訊 | 日本 Softbank 5日5G無限數據 (不限速) $168 ｜日本SIM卡｜日本電話卡｜日本數據卡｜日本上網｜",
       "status": "in_stock",
@@ -69535,7 +69549,7 @@
       "status": "expired",
       "stock_level": 30,
       "price": "338.00",
-      "checked_at": "2026-08-20T05:46:17.455045"
+      "checked_at": "2026-08-20T06:18:18.739042"
     },
     {
       "sku": "B0961005_S_4892218083908",
@@ -69543,7 +69557,7 @@
       "status": "expired",
       "stock_level": 126,
       "price": "128.00",
-      "checked_at": "2026-08-20T05:46:17.455057"
+      "checked_at": "2026-08-20T06:18:18.739054"
     },
     {
       "sku": "B0961005_S_4987176297532",
@@ -69551,7 +69565,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "39.00",
-      "checked_at": "2026-08-20T05:46:17.455061"
+      "checked_at": "2026-08-20T06:18:18.739058"
     },
     {
       "sku": "B0961005_S_4987176173560",
@@ -69559,7 +69573,7 @@
       "status": "expired",
       "stock_level": 14,
       "price": "39.00",
-      "checked_at": "2026-08-20T05:46:17.455064"
+      "checked_at": "2026-08-20T06:18:18.739061"
     },
     {
       "sku": "B0961005_S_4987176297662",
@@ -69567,7 +69581,7 @@
       "status": "expired",
       "stock_level": 34,
       "price": "39.00",
-      "checked_at": "2026-08-20T05:46:17.455067"
+      "checked_at": "2026-08-20T06:18:18.739064"
     },
     {
       "sku": "B0961005_S_4987176297563",
@@ -69575,7 +69589,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "39.00",
-      "checked_at": "2026-08-20T05:46:17.455069"
+      "checked_at": "2026-08-20T06:18:18.739066"
     },
     {
       "sku": "B0961005_S_4897091050078",
@@ -69583,7 +69597,7 @@
       "status": "expired",
       "stock_level": 120,
       "price": "129.00",
-      "checked_at": "2026-08-20T05:46:17.455072"
+      "checked_at": "2026-08-20T06:18:18.739068"
     },
     {
       "sku": "H5528001_S_TRT121055",
@@ -69591,7 +69605,7 @@
       "status": "expired",
       "stock_level": 135,
       "price": "99.00",
-      "checked_at": "2026-08-20T05:46:17.455075"
+      "checked_at": "2026-08-20T06:18:18.739071"
     },
     {
       "sku": "S6501001_S_G4713294187765",
@@ -69599,7 +69613,7 @@
       "status": "low_stock",
       "stock_level": 18,
       "price": "168.00",
-      "checked_at": "2026-08-20T05:46:21.387215"
+      "checked_at": "2026-08-20T06:18:22.840651"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -69607,7 +69621,7 @@
       "status": "low_stock",
       "stock_level": 20,
       "price": "370.00",
-      "checked_at": "2026-08-20T05:46:24.704119"
+      "checked_at": "2026-08-20T06:18:26.160743"
     },
     {
       "sku": "H0883003_S_DF01100",
@@ -69615,7 +69629,7 @@
       "status": "expired",
       "stock_level": 32,
       "price": "128.00",
-      "checked_at": "2026-08-20T05:46:24.704156"
+      "checked_at": "2026-08-20T06:18:26.160781"
     },
     {
       "sku": "H0883003_S_Unic4903111961016",
@@ -69623,7 +69637,7 @@
       "status": "expired",
       "stock_level": 98,
       "price": "55.00",
-      "checked_at": "2026-08-20T05:46:24.704160"
+      "checked_at": "2026-08-20T06:18:26.160785"
     },
     {
       "sku": "H0883003_S_DF02100",
@@ -69631,7 +69645,7 @@
       "status": "expired",
       "stock_level": 174,
       "price": "128.00",
-      "checked_at": "2026-08-20T05:46:24.704163"
+      "checked_at": "2026-08-20T06:18:26.160788"
     },
     {
       "sku": "H6588001_S_Xiaomi_AirPurifier6_BHR08MWGB",
@@ -69639,7 +69653,7 @@
       "status": "expired",
       "stock_level": 8,
       "price": "1,188.00",
-      "checked_at": "2026-08-20T05:46:24.704166"
+      "checked_at": "2026-08-20T06:18:26.160791"
     },
     {
       "sku": "H6588001_S_Philips_AC0650",
@@ -69647,7 +69661,7 @@
       "status": "expired",
       "stock_level": 12,
       "price": "599.00",
-      "checked_at": "2026-08-20T05:46:24.704169"
+      "checked_at": "2026-08-20T06:18:26.160794"
     },
     {
       "sku": "B0961005_S_4891609702053",
@@ -69655,7 +69669,7 @@
       "status": "expired",
       "stock_level": 119,
       "price": "285.00",
-      "checked_at": "2026-08-20T05:46:24.704171"
+      "checked_at": "2026-08-20T06:18:26.160796"
     },
     {
       "sku": "B0961005_S_4897036691441_24",
@@ -69663,7 +69677,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "137.00",
-      "checked_at": "2026-08-20T05:46:24.704174"
+      "checked_at": "2026-08-20T06:18:26.160799"
     },
     {
       "sku": "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G",
@@ -69671,7 +69685,7 @@
       "status": "expired",
       "stock_level": 60,
       "price": "99.00",
-      "checked_at": "2026-08-20T05:46:24.704177"
+      "checked_at": "2026-08-20T06:18:26.160801"
     },
     {
       "sku": "B0961005_S_9311770614047",
@@ -69679,7 +69693,7 @@
       "status": "expired",
       "stock_level": 113,
       "price": "299.00",
-      "checked_at": "2026-08-20T05:46:24.704179"
+      "checked_at": "2026-08-20T06:18:26.160804"
     },
     {
       "sku": "B0961005_S_4891609190294",
@@ -69687,7 +69701,7 @@
       "status": "expired",
       "stock_level": 103,
       "price": "359.00",
-      "checked_at": "2026-08-20T05:46:24.704182"
+      "checked_at": "2026-08-20T06:18:26.160806"
     },
     {
       "sku": "H6588001_S_Toshiba_MWPMM20P",
@@ -69695,7 +69709,7 @@
       "status": "expired",
       "stock_level": 42,
       "price": "399.00",
-      "checked_at": "2026-08-20T05:46:24.704184"
+      "checked_at": "2026-08-20T06:18:26.160814"
     },
     {
       "sku": "H6588001_S_Toshiba_RC18NMFIH_White",
@@ -69703,7 +69717,7 @@
       "status": "expired",
       "stock_level": 5,
       "price": "715.00",
-      "checked_at": "2026-08-20T05:46:24.704187"
+      "checked_at": "2026-08-20T06:18:26.160817"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -69711,7 +69725,7 @@
       "status": "super_low_stock",
       "stock_level": 8,
       "price": "850.00",
-      "checked_at": "2026-08-20T05:46:28.184412"
+      "checked_at": "2026-08-20T06:18:30.112643"
     },
     {
       "sku": "B0961005_S_9311770608084",
@@ -69719,15 +69733,15 @@
       "status": "expired",
       "stock_level": 20,
       "price": "149.00",
-      "checked_at": "2026-08-20T05:46:28.184450"
+      "checked_at": "2026-08-20T06:18:30.112674"
     },
     {
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
       "status": "oos",
       "stock_level": 0,
-      "price": "50.00",
-      "checked_at": "2026-08-20T05:46:31.381050"
+      "price": "61.00",
+      "checked_at": "2026-08-20T06:18:33.372877"
     },
     {
       "sku": "B0961005_S_9311770615914",
@@ -69735,7 +69749,7 @@
       "status": "expired",
       "stock_level": 14,
       "price": "69.00",
-      "checked_at": "2026-08-20T05:46:31.381085"
+      "checked_at": "2026-08-20T06:18:33.372912"
     }
   ],
   "super_low_stock_skus": [
@@ -69744,7 +69758,7 @@
       "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
       "price": "850.00",
       "stock_level": 8,
-      "checked_at": "2026-08-20T05:46:28.184412"
+      "checked_at": "2026-08-20T06:18:30.112643"
     }
   ],
   "low_stock_30_skus": [
@@ -69753,14 +69767,14 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "price": "168.00",
       "stock_level": 18,
-      "checked_at": "2026-08-20T05:46:21.387215"
+      "checked_at": "2026-08-20T06:18:22.840651"
     },
     {
       "sku": "S6501001_S_G4713294187789",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
       "price": "370.00",
       "stock_level": 20,
-      "checked_at": "2026-08-20T05:46:24.704119"
+      "checked_at": "2026-08-20T06:18:26.160743"
     }
   ]
 }

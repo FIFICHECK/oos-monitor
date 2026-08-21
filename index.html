@@ -1004,13 +1004,15 @@
 
         async function loadData() {
             try {
-                const [dashResp, cfgResp] = await Promise.all([
+                const [dashResp, cfgResp, stateResp] = await Promise.all([
                     fetch('dashboard_data.json?' + Date.now()),
-                    fetch('config.json?' + Date.now())
+                    fetch('config.json?' + Date.now()),
+                    fetch('oos_state.json?' + Date.now()).catch(function() { return null; })
                 ]);
                 const dashData = await dashResp.json();
                 const config = await cfgResp.json();
-                updateDashboard(dashData, config);
+                const oosState = stateResp ? await stateResp.json() : {};
+                updateDashboard(dashData, config, oosState);
                 if (typeof resetRefreshTimer === 'function') resetRefreshTimer();
 
             } catch (e) {
@@ -1025,7 +1027,7 @@
         }
         
         
-        function updateDashboard(data, config) {
+        function updateDashboard(data, config, oosState) {
             // Build pendingSet from config (used in multiple places)
             var pendingSet = {};
             var now = new Date();
@@ -1471,8 +1473,10 @@
                     var oldHist = st ? hist.filter(function(h) { return new Date(h.checked_at).getTime() < new Date(st).getTime(); }) : hist;
                     var last = oldHist.length ? oldHist[oldHist.length - 1] : (hist[hist.length - 1] || {});
                     var dStock = (last.stock_level !== null && last.stock_level !== undefined) ? last.stock_level + ' 件' : '--';
-                    // Price: history may not have price field → fallback to latest all_skus price
-                    var dPrice = last.price ? '$' + last.price : (skuDataMap && skuDataMap[sku] && skuDataMap[sku].price ? '$' + skuDataMap[sku].price : '--');
+                    // Price: history may not have price field → fallback to latest all_skus price, then oos_state last-known price
+                    var dPrice = last.price ? '$' + last.price
+                        : (skuDataMap && skuDataMap[sku] && skuDataMap[sku].price ? '$' + skuDataMap[sku].price
+                        : (oosState && oosState[sku] && oosState[sku].price ? '$' + oosState[sku].price : '--'));
                     var dSold = computeSold(sku, oldHist.length ? oldHist : hist);
                     var dSoldDisp = dSold !== null ? '<span style="color:#ffd700;font-weight:bold;">' + dSold + '</span>' : '<span style="color:#555;">--</span>';
                     var dChecked = last.checked_at ? new Date(last.checked_at).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';

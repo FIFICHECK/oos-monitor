@@ -1226,7 +1226,7 @@
                     var pEnd = (config.sku_periods && config.sku_periods[s.sku]) || config.monitor_end || '--';
                     var stD = pStart ? new Date(pStart).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var enD = pEnd !== '--' ? new Date(pEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    var sSV = computeSold(s.sku, data.history);
+                    var sSV = computeSold(s.sku, data.history, pStart ? new Date(pStart).getTime() : null, pEnd !== '--' ? new Date(pEnd).getTime() : Infinity);
                     var sSD = sSV !== null ? '<span style="color:#ffd700;font-weight:bold;">' + sSV + '</span>' : '<span style="color:#555;">--</span>';
                     return '<tr><td><code>' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
@@ -1250,7 +1250,7 @@
                     var pEnd = (config.sku_periods && config.sku_periods[s.sku]) || config.monitor_end || '--';
                     var stD = pStart ? new Date(pStart).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var enD = pEnd !== '--' ? new Date(pEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    var sSV = computeSold(s.sku, data.history);
+                    var sSV = computeSold(s.sku, data.history, pStart ? new Date(pStart).getTime() : null, pEnd !== '--' ? new Date(pEnd).getTime() : Infinity);
                     var sSD = sSV !== null ? '<span style="color:#ffd700;font-weight:bold;">' + sSV + '</span>' : '<span style="color:#555;">--</span>';
                     return '<tr><td><code>' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
@@ -1275,7 +1275,7 @@
                     var pEnd = (config.sku_periods && config.sku_periods[s.sku]) || config.monitor_end || '--';
                     var stD = pStart ? new Date(pStart).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
                     var enD = pEnd !== '--' ? new Date(pEnd).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    var sSV = computeSold(s.sku, data.history);
+                    var sSV = computeSold(s.sku, data.history, pStart ? new Date(pStart).getTime() : null, pEnd !== '--' ? new Date(pEnd).getTime() : Infinity);
                     var sSD = sSV !== null ? '<span style="color:#ffd700;font-weight:bold;">' + sSV + '</span>' : '<span style="color:#555;">--</span>';
                     return '<tr><td><code>' + (config.sku_rm && config.sku_rm[s.sku] ? config.sku_rm[s.sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + s.sku + '\')" title="Click to view history">' + s.sku + '</code></td>'
                     + '<td class="name-cell">' + (s.product_name || 'N/A') + '</td>'
@@ -1333,7 +1333,8 @@
                         
                         var stockDisplay = s.stock_level !== null && s.stock_level !== undefined 
                             ? s.stock_level + ' 件' : '--';
-                        var soldVal = computeSold(sku, data.history);
+                        // SOLD counted from period start day (re-added SKU starts fresh)
+                        var soldVal = computeSold(sku, data.history, periodStart ? new Date(periodStart).getTime() : null, periodEnd !== '--' ? new Date(periodEnd).getTime() : Infinity);
                         var soldDisplay = soldVal !== null ? '<span style="color:#ffd700;font-weight:bold;">' + soldVal + '</span>' : '<span style="color:#555;">--</span>';
                         
                         allRows.push('<tr><td><code>' + (config.sku_rm && config.sku_rm[sku] ? config.sku_rm[sku] : '--') + '</code></td><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history">' + sku + '</code></td>'
@@ -1423,7 +1424,7 @@
                     
                     var lastStock = s.stock_level !== null && s.stock_level !== undefined ? s.stock_level + ' 件' : '--';
                     var lastPrice = s.price ? '$' + s.price : '--';
-                    var soldVal = computeSold(s.sku, data.history);
+                    var soldVal = computeSold(s.sku, data.history, periodStart ? new Date(periodStart).getTime() : null, periodEnd !== '--' ? new Date(periodEnd).getTime() : Infinity);
                     var soldDisplay = soldVal !== null ? '<span style="color:#ffd700;font-weight:bold;">' + soldVal + '</span>' : '<span style="color:#555;">--</span>';
                     
                     var tag = '<span class="tag tag-error">Expired</span>';
@@ -1547,9 +1548,21 @@
         }
         
         // ── Compute Sold: sum only decreases (ignore restocks) ──
-        function computeSold(sku, history) {
+        function computeSold(sku, history, startTime, endTime) {
             if (!history || history.length < 2) return null;
-            var entries = history.filter(function(h) { return h.sku === sku && h.stock_level != null; });
+            var entries = history.filter(function(h) {
+                if (h.sku !== sku || h.stock_level == null) return false;
+                // Period-scoped: only count entries within [startTime, endTime] when provided
+                if (startTime) {
+                    var t = new Date(h.checked_at).getTime();
+                    if (t < startTime) return false;
+                }
+                if (endTime && endTime !== Infinity) {
+                    var t2 = new Date(h.checked_at).getTime();
+                    if (t2 > endTime) return false;
+                }
+                return true;
+            });
             if (entries.length < 2) return null;
             var sold = 0;
             for (var i = 1; i < entries.length; i++) {
@@ -1596,15 +1609,23 @@
                     body.innerHTML = '<div class="modal-no-history">📭 No status changes recorded yet</div>';
                 } else {
                     // ── Stock Diff Summary (cumulative decreases only) ──
-                    var firstStock = filtered[0].stock_level;
-                    var lastStock = filtered[filtered.length - 1].stock_level;
+                    // SOLD summary scoped to current period (re-added SKU counts from new start day)
+                    var soldEntries = history;
+                    if (skuStart || skuEnd) {
+                        soldEntries = history.filter(function(h) {
+                            var t = new Date(h.checked_at).getTime();
+                            return t >= startTime && t <= endTime;
+                        });
+                    }
+                    var firstStock = soldEntries.length ? soldEntries[0].stock_level : null;
+                    var lastStock = soldEntries.length ? soldEntries[soldEntries.length - 1].stock_level : null;
                     var soldTotal = 0;
-                    for (var hi = 1; hi < filtered.length; hi++) {
-                        var d = filtered[hi-1].stock_level - filtered[hi].stock_level;
+                    for (var hi = 1; hi < soldEntries.length; hi++) {
+                        var d = soldEntries[hi-1].stock_level - soldEntries[hi].stock_level;
                         if (d > 0) soldTotal += d;
                     }
                     var diffHtml = '';
-                    if (firstStock != null && lastStock != null && filtered.length >= 2) {
+                    if (firstStock != null && lastStock != null && soldEntries.length >= 2) {
                         diffHtml = '<div style="background:#0f3460;padding:12px;border-radius:8px;margin-bottom:12px;text-align:center;">'
                             + '<div style="display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:8px;">'
                             + '<div><span style="color:#888;font-size:0.75rem;">Start</span><br><span style="font-size:1.4rem;font-weight:bold;color:#2ecc71;">' + firstStock + '</span></div>'

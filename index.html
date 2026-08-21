@@ -1471,7 +1471,8 @@
                     var oldHist = st ? hist.filter(function(h) { return new Date(h.checked_at).getTime() < new Date(st).getTime(); }) : hist;
                     var last = oldHist.length ? oldHist[oldHist.length - 1] : (hist[hist.length - 1] || {});
                     var dStock = (last.stock_level !== null && last.stock_level !== undefined) ? last.stock_level + ' 件' : '--';
-                    var dPrice = last.price ? '$' + last.price : '--';
+                    // Price: history may not have price field → fallback to latest all_skus price
+                    var dPrice = last.price ? '$' + last.price : (skuDataMap && skuDataMap[sku] && skuDataMap[sku].price ? '$' + skuDataMap[sku].price : '--');
                     var dSold = computeSold(sku, oldHist.length ? oldHist : hist);
                     var dSoldDisp = dSold !== null ? '<span style="color:#ffd700;font-weight:bold;">' + dSold + '</span>' : '<span style="color:#555;">--</span>';
                     var dChecked = last.checked_at ? new Date(last.checked_at).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';

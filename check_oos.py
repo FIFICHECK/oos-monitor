@@ -99,6 +99,20 @@ def check_sku(page, sku_id):
         
         # Get product name from title
         title = page.title()
+
+        # VALIDATE: error/redirect pages (502 Bad Gateway, Oops, 404) are NOT OOS
+        # Without this, a 502 error page (no add-to-cart button) is misclassified as "oos"
+        if "Oops" in title or "502" in title or "404" in title or "Error" in title or "| HKTVmall" not in title:
+            return {
+                "sku": sku_id,
+                "status": "error",
+                "reason": f"Invalid page: {title[:60]}",
+                "product_name": "",
+                "price": "",
+                "stock_level": None,
+                "checked_at": datetime.now().isoformat()
+            }
+
         product_name = title.replace(" | HKTVmall 香港最大網購平台", "").strip()
         
         # Extract stock level
@@ -384,15 +398,16 @@ def main():
                 if current_stock != prev_stock:
                     print(f"  ℹ️  Stock updated: {prev_stock} → {current_stock}")
             
-            # Update state
-            state[sku] = {
-                "status": result["status"],
-                "product_name": result["product_name"],
-                "stock_level": result.get("stock_level"),
-                "price": result.get("price", ""),
-                "last_change": datetime.now().isoformat() if result["status"] != prev_status else prev.get("last_change"),
-                "last_checked": datetime.now().isoformat()
-            }
+            # Update state (skip "error" results — keep last-known-good data for expired display)
+            if result["status"] != "error":
+                state[sku] = {
+                    "status": result["status"],
+                    "product_name": result["product_name"],
+                    "stock_level": result.get("stock_level"),
+                    "price": result.get("price", ""),
+                    "last_change": datetime.now().isoformat() if result["status"] != prev_status else prev.get("last_change"),
+                    "last_checked": datetime.now().isoformat()
+                }
         
         browser.close()
     
@@ -437,6 +452,7 @@ def main():
                 "product_name": r["product_name"],
                 "status": r["status"],
                 "stock_level": r.get("stock_level"),
+                "price": r.get("price", ""),
                 "checked_at": r["checked_at"]
             })
     # Per-SKU limit: keep last 1000 entries for each SKU

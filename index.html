@@ -1442,25 +1442,40 @@
                 expiryBody.innerHTML = '<tr><td colspan="10" style="text-align:center;color:#666;">No expired SKUs yet</td></tr>';
             }
             
-            // 🗑️ Deleted SKUs — history exists but SKU no longer in config (deleted)
+            // 🗑️ Deleted SKUs — history exists but SKU no longer in config, OR old-cycle records of re-added SKUs
             const deletedBody = document.getElementById('deletedSkuBody');
             var configSkuSet = {};
             config.skus.forEach(function(sk) { configSkuSet[sk] = true; });
             var deletedList = [];
             var seenDel = {};
             (data.history || []).forEach(function(h) {
-                if (!configSkuSet[h.sku] && !seenDel[h.sku]) { seenDel[h.sku] = true; deletedList.push(h.sku); }
+                if (seenDel[h.sku]) return;
+                if (!configSkuSet[h.sku]) {
+                    // SKU fully deleted from config
+                    seenDel[h.sku] = true;
+                    deletedList.push(h.sku);
+                } else {
+                    // Re-added SKU: old-cycle records (before current period start) → archived here
+                    var st = config.sku_start_periods && config.sku_start_periods[h.sku];
+                    if (st && new Date(h.checked_at).getTime() < new Date(st).getTime()) {
+                        seenDel[h.sku] = true;
+                        deletedList.push(h.sku);
+                    }
+                }
             });
             if (deletedList.length > 0) {
                 deletedBody.innerHTML = deletedList.map(function(sku) {
                     var hist = (data.history || []).filter(function(h) { return h.sku === sku; });
-                    var last = hist[hist.length - 1] || {};
+                    // Old-cycle only: records before current period start (or all if SKU fully deleted)
+                    var st = config.sku_start_periods && config.sku_start_periods[sku];
+                    var oldHist = st ? hist.filter(function(h) { return new Date(h.checked_at).getTime() < new Date(st).getTime(); }) : hist;
+                    var last = oldHist.length ? oldHist[oldHist.length - 1] : (hist[hist.length - 1] || {});
                     var dStock = (last.stock_level !== null && last.stock_level !== undefined) ? last.stock_level + ' 件' : '--';
                     var dPrice = last.price ? '$' + last.price : '--';
-                    var dSold = computeSold(sku, data.history);
+                    var dSold = computeSold(sku, oldHist.length ? oldHist : hist);
                     var dSoldDisp = dSold !== null ? '<span style="color:#ffd700;font-weight:bold;">' + dSold + '</span>' : '<span style="color:#555;">--</span>';
                     var dChecked = last.checked_at ? new Date(last.checked_at).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history" style="color:#888;">' + sku + '</code></td>'
+                    return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\', true)" title="Click to view old history" style="color:#888;">' + sku + '</code></td>'
                         + '<td class="name-cell" style="color:#888;">' + (last.product_name || '--') + '</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + dStock + '</td>'
                         + '<td><span class="tag tag-error">🗑️ Deleted</span></td>'
@@ -1573,11 +1588,11 @@
         }
         
         // Modal functions
-        function showSkuHistory(sku) {
+        function showSkuHistory(sku, oldOnly) {
             const modal = document.getElementById('skuModal');
             const title = document.getElementById('modalTitle');
             const body = document.getElementById('modalBody');
-            title.textContent = '📜 Status History: ' + sku;
+            title.textContent = oldOnly ? '🗑️ 舊記錄 History: ' + sku : '📜 Status History: ' + sku;
             body.innerHTML = '<div class="modal-no-history">Loading...</div>';
             modal.classList.add('show');
             
@@ -1595,28 +1610,24 @@
                 const startTime = skuStart ? new Date(skuStart).getTime() : 0;
                 const endTime = skuEnd ? new Date(skuEnd).getTime() : Infinity;
                 
-                // Re-added SKU (history before current period start) → show ALL history (keep old records)
-                var hasOldHistory = skuStart ? history.some(function(h) { return new Date(h.checked_at).getTime() < startTime; }) : false;
-                
-                const filtered = (skuStart || skuEnd) && !hasOldHistory 
-                    ? history.filter(function(h) {
+                var filtered;
+                if (oldOnly) {
+                    // Deleted/archived cycle: show records BEFORE current period start
+                    filtered = startTime ? history.filter(function(h) { return new Date(h.checked_at).getTime() < startTime; }) : history;
+                } else {
+                    // Active cycle: show records within current period
+                    filtered = (skuStart || skuEnd) ? history.filter(function(h) {
                         var t = new Date(h.checked_at).getTime();
                         return t >= startTime && t <= endTime;
-                      })
-                    : history;
+                    }) : history;
+                }
                 
                 if (filtered.length === 0) {
                     body.innerHTML = '<div class="modal-no-history">📭 No status changes recorded yet</div>';
                 } else {
                     // ── Stock Diff Summary (cumulative decreases only) ──
-                    // SOLD summary scoped to current period (re-added SKU counts from new start day)
-                    var soldEntries = history;
-                    if (skuStart || skuEnd) {
-                        soldEntries = history.filter(function(h) {
-                            var t = new Date(h.checked_at).getTime();
-                            return t >= startTime && t <= endTime;
-                        });
-                    }
+                    // SOLD summary scoped to the displayed window
+                    var soldEntries = filtered;
                     var firstStock = soldEntries.length ? soldEntries[0].stock_level : null;
                     var lastStock = soldEntries.length ? soldEntries[soldEntries.length - 1].stock_level : null;
                     var soldTotal = 0;

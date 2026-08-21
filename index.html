@@ -660,6 +660,26 @@
             </tbody>
         </table>
         </div>
+        <!-- 🗑️ Deleted SKUs (history kept) -->
+        <h2 class="section-title" style="color:#666;">🗑️ 已刪除 SKUs（History 保留）</h2>
+        <div class="table-scroll"><table>
+            <thead>
+                <tr>
+                    <th style="width:20%;">SKU</th>
+                    <th style="width:35%;">PRODUCT NAME</th>
+                    <th style="width:8%;">LAST 庫存</th>
+                    <th style="width:10%;">STATUS</th>
+                    <th style="width:8%;text-align:center;padding-right:12px;">SOLD</th>
+                    <th style="width:8%;">LAST PRICE</th>
+                    <th style="width:12%;">LAST CHECKED</th>
+                    <th style="width:8%;">LINK</th>
+                </tr>
+            </thead>
+            <tbody id="deletedSkuBody">
+                <tr><td colspan="8" style="text-align:center;color:#666;">No deleted SKUs</td></tr>
+            </tbody>
+        </table>
+        </div>
         <!-- Status Changes (hidden, used for modal popup data) -->
         <div id="hiddenHistoryContainer" style="display:none;"></div>
         
@@ -1023,6 +1043,14 @@
                     if (s.status === 'expired') expiredSet[s.sku] = true;
                 });
             }
+            // Re-added SKU with unexpired config period → NOT expired (override stale all_skus status)
+            if (config.sku_periods) {
+                for (var sk2 in config.sku_periods) {
+                    if (config.skus.indexOf(sk2) !== -1 && new Date(config.sku_periods[sk2]) > now) {
+                        delete expiredSet[sk2];
+                    }
+                }
+            }
             // Filter status arrays to exclude pending and expired SKUs
             var activeOos = data.oos_skus ? data.oos_skus.filter(function(s) { return !pendingSet[s.sku] && !expiredSet[s.sku]; }) : [];
             var activeSuperLow = data.super_low_stock_skus ? data.super_low_stock_skus.filter(function(s) { return !pendingSet[s.sku] && !expiredSet[s.sku]; }) : [];
@@ -1378,7 +1406,7 @@
             
             // ⏰ Expiry SKUs — expired/completed SKUs
             const expiryBody = document.getElementById('expirySkuBody');
-            const expiredSkus = data.all_skus ? data.all_skus.filter(function(s) { return s.status === 'expired' && !pendingSet[s.sku]; }) : [];
+            const expiredSkus = data.all_skus ? data.all_skus.filter(function(s) { return expiredSet[s.sku] && !pendingSet[s.sku]; }) : [];
             const skuPeriods = config.sku_periods || {};
             
             if (expiredSkus.length > 0) {
@@ -1411,6 +1439,35 @@
                 }).join('');
             } else {
                 expiryBody.innerHTML = '<tr><td colspan="10" style="text-align:center;color:#666;">No expired SKUs yet</td></tr>';
+            }
+            
+            // 🗑️ Deleted SKUs — history exists but SKU no longer in config (deleted)
+            const deletedBody = document.getElementById('deletedSkuBody');
+            var configSkuSet = {};
+            config.skus.forEach(function(sk) { configSkuSet[sk] = true; });
+            var deletedList = [];
+            var seenDel = {};
+            (data.history || []).forEach(function(h) {
+                if (!configSkuSet[h.sku] && !seenDel[h.sku]) { seenDel[h.sku] = true; deletedList.push(h.sku); }
+            });
+            if (deletedList.length > 0) {
+                deletedBody.innerHTML = deletedList.map(function(sku) {
+                    var hist = (data.history || []).filter(function(h) { return h.sku === sku; });
+                    var last = hist[hist.length - 1] || {};
+                    var dStock = (last.stock_level !== null && last.stock_level !== undefined) ? last.stock_level + ' 件' : '--';
+                    var dPrice = last.price ? '$' + last.price : '--';
+                    var dSold = computeSold(sku, data.history);
+                    var dSoldDisp = dSold !== null ? '<span style="color:#ffd700;font-weight:bold;">' + dSold + '</span>' : '<span style="color:#555;">--</span>';
+                    var dChecked = last.checked_at ? new Date(last.checked_at).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
+                    return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\')" title="Click to view history" style="color:#888;">' + sku + '</code></td>'
+                        + '<td class="name-cell" style="color:#888;">' + (last.product_name || '--') + '</td>'
+                        + '<td style="color:#888;font-size:0.8rem;">' + dStock + '</td>'
+                        + '<td><span class="tag tag-error">🗑️ Deleted</span></td>'
+                        + '<td class="tag-cell" style="text-align:center;">' + dSoldDisp + '</td>'
+                        + '<td style="color:#888;font-size:0.8rem;">' + dPrice + '</td>'
+                        + '<td style="color:#666;font-size:0.8rem;">' + dChecked + '</td>'
+                        + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank" style="color:#666;">View</a></td></tr>';
+                }).join('');
             }
             
             
@@ -1525,7 +1582,10 @@
                 const startTime = skuStart ? new Date(skuStart).getTime() : 0;
                 const endTime = skuEnd ? new Date(skuEnd).getTime() : Infinity;
                 
-                const filtered = skuStart || skuEnd 
+                // Re-added SKU (history before current period start) → show ALL history (keep old records)
+                var hasOldHistory = skuStart ? history.some(function(h) { return new Date(h.checked_at).getTime() < startTime; }) : false;
+                
+                const filtered = (skuStart || skuEnd) && !hasOldHistory 
                     ? history.filter(function(h) {
                         var t = new Date(h.checked_at).getTime();
                         return t >= startTime && t <= endTime;

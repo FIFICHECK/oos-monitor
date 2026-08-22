@@ -81,10 +81,10 @@
   "B0961005_S_4894436008671": {
     "status": "in_stock",
     "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】 （新舊包裝隨機發貨）【最佳使用日期: 02/2028】",
-    "stock_level": 176,
+    "stock_level": 178,
     "price": "338.00",
     "last_change": "2026-08-22T12:15:22.106351",
-    "last_checked": "2026-08-22T17:10:26.306228"
+    "last_checked": "2026-08-22T17:54:53.368532"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -164,7 +164,7 @@
     "stock_level": 17,
     "price": "168.00",
     "last_change": "2026-08-17T18:59:07.989718",
-    "last_checked": "2026-08-22T17:10:12.451617"
+    "last_checked": "2026-08-22T17:54:39.982531"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 20,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-08-22T17:10:16.162586"
+    "last_checked": "2026-08-22T17:54:43.383875"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -337,10 +337,10 @@
   "H6588001_S_KDK_P40VH": {
     "status": "super_low_stock",
     "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
-    "stock_level": 8,
+    "stock_level": 7,
     "price": "850.00",
     "last_change": "2026-08-18T11:19:34.503133",
-    "last_checked": "2026-08-22T17:10:19.528694"
+    "last_checked": "2026-08-22T17:54:46.833467"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -356,7 +356,7 @@
     "stock_level": 19,
     "price": "244.00",
     "last_change": "2026-08-20T13:33:34.492594",
-    "last_checked": "2026-08-22T17:10:22.757450"
+    "last_checked": "2026-08-22T17:54:50.138027"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",

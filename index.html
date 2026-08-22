@@ -167,10 +167,19 @@
             .table-scroll td.nowrap { white-space: nowrap; }
             .table-scroll td.sku-cell code { word-break: keep-all; }
         }
-        /* 🗑️ Deleted SKUs — max 10 rows, scroll if longer */
-        .deleted-scroll-wrap { max-height: 520px; overflow-y: auto; }
-        .deleted-scroll-wrap thead { position: sticky; top: 0; z-index: 2; background: #0f3460; }
-        .deleted-scroll-wrap thead th { position: sticky; top: 0; background: #0f3460; z-index: 2; }
+        /* 🗑️ Deleted SKUs — fixed header + scrollable body (max ~10 rows) */
+        .deleted-scroll-wrap table.deleted-head-table { margin-bottom: 0; }
+        .deleted-scroll-wrap > table:last-child { display: block; max-height: 480px; overflow-y: auto; }
+        .deleted-scroll-wrap > table:last-child tbody { display: table; width: 100%; table-layout: fixed; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(1) { width: 15%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(2) { width: 28%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(3) { width: 7%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(4) { width: 8%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(5) { width: 7%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(6) { width: 7%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(7) { width: 10%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(8) { width: 8%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(9) { width: 10%; }
         th {
             background: #0f3460;
             padding: 8px 8px;
@@ -666,23 +675,28 @@
         </div>
         <!-- 🗑️ Deleted SKUs (history kept) -->
         <h2 class="section-title" style="color:#666;">🗑️ 已刪除 SKUs（History 保留）</h2>
-        <div class="table-scroll deleted-scroll-wrap"><table>
-            <thead>
-                <tr>
-                    <th style="width:20%;">SKU</th>
-                    <th style="width:35%;">PRODUCT NAME</th>
-                    <th style="width:8%;">LAST 庫存</th>
-                    <th style="width:10%;">STATUS</th>
-                    <th style="width:8%;text-align:center;padding-right:12px;">SOLD</th>
-                    <th style="width:8%;">LAST PRICE</th>
-                    <th style="width:12%;">LAST CHECKED</th>
-                    <th style="width:8%;">LINK</th>
-                </tr>
-            </thead>
-            <tbody id="deletedSkuBody">
-                <tr><td colspan="8" style="text-align:center;color:#666;">No deleted SKUs</td></tr>
-            </tbody>
-        </table>
+        <div class="toolbar"><input type="text" class="table-search" data-table="deletedSkuBody" placeholder="🔍 Search SKU, name, or date..." onkeyup="filterTable(this)"><button class="dl-btn" onclick="exportTable('deletedSkuBody')">📥 下載</button></div>
+        <div class="table-scroll deleted-scroll-wrap">
+            <table class="deleted-head-table" style="table-layout:fixed;">
+                <thead>
+                    <tr>
+                        <th style="width:15%;">SKU</th>
+                        <th style="width:28%;">PRODUCT NAME</th>
+                        <th style="width:7%;">LAST 庫存</th>
+                        <th style="width:8%;">STATUS</th>
+                        <th style="width:7%;text-align:center;padding-right:12px;">SOLD</th>
+                        <th style="width:7%;">LAST PRICE</th>
+                        <th style="width:10%;">LAST CHECKED</th>
+                        <th style="width:8%;">LINK</th>
+                        <th style="width:10%;">永久刪除</th>
+                    </tr>
+                </thead>
+            </table>
+            <table style="table-layout:fixed;">
+                <tbody id="deletedSkuBody">
+                    <tr><td colspan="9" style="text-align:center;color:#666;">No deleted SKUs</td></tr>
+                </tbody>
+            </table>
         </div>
         <!-- Status Changes (hidden, used for modal popup data) -->
         <div id="hiddenHistoryContainer" style="display:none;"></div>
@@ -972,11 +986,17 @@
         if (!table) return;
         
         var rows = [];
-        // Header row
+        // Header row — may live in a separate fixed header table (deleted section)
         var headers = [];
-        table.querySelectorAll('thead th').forEach(function(th) {
-            headers.push(th.textContent.trim());
-        });
+        var headTable = table;
+        if (table.querySelectorAll('thead th').length === 0) {
+            headTable = table.previousElementSibling;
+        }
+        if (headTable) {
+            headTable.querySelectorAll('thead th').forEach(function(th) {
+                headers.push(th.textContent.trim());
+            });
+        }
         if (headers.length > 0) rows.push(headers);
         
         // Visible data rows only
@@ -1491,7 +1511,8 @@
                         + '<td class="tag-cell" style="text-align:center;">' + dSoldDisp + '</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + dPrice + '</td>'
                         + '<td style="color:#666;font-size:0.8rem;">' + dChecked + '</td>'
-                        + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank" style="color:#666;">View</a></td></tr>';
+                        + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank" style="color:#666;">View</a></td>'
+                        + '<td style="text-align:center;"><button onclick="permanentDeleteSku(\'' + sku + '\')" title="永久刪除所有記錄（包括 history）" style="background:#e74c3c;color:#fff;border:none;padding:3px 8px;border-radius:3px;cursor:pointer;font-size:0.75rem;">🗑️ 刪除</button></td></tr>';
                 }).join('');
             }
             
@@ -1773,6 +1794,116 @@
         function reloadDashboard() {
             setTimeout(function() { location.reload(); }, 1500);
             showApiMsg('✅ Done! Refreshing page...');
+        }
+        
+        // ── Permanent Delete: remove SKU entirely (config + all history + state) ──
+        function permanentDeleteSku(sku) {
+            if (!ensureToken()) return;
+            if (!confirm('⚠️ 永久刪除 ' + sku + ' 嘅所有記錄（包括全部 history）？\n\n此操作不可復原！')) return;
+            showApiMsg('⏳ 永久刪除 ' + sku + '...');
+            
+            permanentDeleteFromConfig(sku)
+                .then(function() { return permanentDeleteFromDashboard(sku); })
+                .then(function() { return permanentDeleteFromState(sku); })
+                .then(function() {
+                    showApiMsg('✅ 已永久刪除 ' + sku + ' 嘅所有記錄 — 刷新中...');
+                    setTimeout(function() { location.reload(); }, 1500);
+                })
+                .catch(function(e) {
+                    console.error(e);
+                    showApiMsg('❌ 永久刪除失敗: ' + e.message, true);
+                });
+        }
+        
+        function permanentDeleteFromConfig(sku) {
+            return getConfigFromGit().then(function(data) {
+                var config = JSON.parse(atob(data.content));
+                var idx = config.skus.indexOf(sku);
+                if (idx !== -1) {
+                    config.skus.splice(idx, 1);
+                    if (config.sku_periods && config.sku_periods[sku]) delete config.sku_periods[sku];
+                    if (config.sku_start_periods && config.sku_start_periods[sku]) delete config.sku_start_periods[sku];
+                    if (config.sku_rm && config.sku_rm[sku]) delete config.sku_rm[sku];
+                }
+                var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(config, null, 2))));
+                return pushConfigToGit(newContent, data.sha, 'Permanent delete ' + sku + ' (config)');
+            });
+        }
+        
+        function permanentDeleteFromState(sku) {
+            var token = getGitToken();
+            var api = 'https://api.github.com/repos/' + GIT_OWNER + '/' + GIT_REPO;
+            return fetch(api + '/contents/oos_state.json', {
+                headers: {'Authorization': 'token ' + token}
+            }).then(function(r) { return r.json(); }).then(function(data) {
+                var st = JSON.parse(atob(data.content));
+                if (st[sku]) delete st[sku];
+                var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(st, null, 2))));
+                return fetch(api + '/contents/oos_state.json', {
+                    method: 'PUT',
+                    headers: {'Authorization': 'token ' + token, 'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        message: 'Permanent delete ' + sku + ' (state)',
+                        content: newContent,
+                        sha: data.sha,
+                        branch: GIT_BRANCH
+                    })
+                }).then(function(r) { return r.json(); });
+            });
+        }
+        
+        function permanentDeleteFromDashboard(sku) {
+            var token = getGitToken();
+            var api = 'https://api.github.com/repos/' + GIT_OWNER + '/' + GIT_REPO;
+            // dashboard_data.json is >1MB → must use Git Data API (blob/tree/commit/ref)
+            return fetch('dashboard_data.json?' + Date.now()).then(function(r) { return r.json(); }).then(function(d) {
+                d.history = (d.history || []).filter(function(h) { return h.sku !== sku; });
+                d.all_skus = (d.all_skus || []).filter(function(s) { return s.sku !== sku; });
+                d.oos_skus = (d.oos_skus || []).filter(function(s) { return s.sku !== sku; });
+                d.super_low_stock_skus = (d.super_low_stock_skus || []).filter(function(s) { return s.sku !== sku; });
+                d.low_stock_30_skus = (d.low_stock_30_skus || []).filter(function(s) { return s.sku !== sku; });
+                var content = btoa(unescape(encodeURIComponent(JSON.stringify(d, null, 2))));
+                return fetch(api + '/git/blobs', {
+                    method: 'POST',
+                    headers: {'Authorization': 'token ' + token, 'Content-Type': 'application/json'},
+                    body: JSON.stringify({content: content, encoding: 'base64'})
+                }).then(function(r) { return r.json(); }).then(function(blob) {
+                    return fetch(api + '/git/refs/heads/' + GIT_BRANCH, {
+                        headers: {'Authorization': 'token ' + token}
+                    }).then(function(r) { return r.json(); }).then(function(ref) {
+                        var commitSha = ref.object.sha;
+                        return fetch(api + '/git/commits/' + commitSha, {
+                            headers: {'Authorization': 'token ' + token}
+                        }).then(function(r) { return r.json(); }).then(function(commit) {
+                            var baseTree = commit.tree.sha;
+                            return fetch(api + '/git/trees', {
+                                method: 'POST',
+                                headers: {'Authorization': 'token ' + token, 'Content-Type': 'application/json'},
+                                body: JSON.stringify({
+                                    base_tree: baseTree,
+                                    tree: [{path: 'dashboard_data.json', mode: '100644', type: 'blob', sha: blob.sha}]
+                                })
+                            }).then(function(r) { return r.json(); }).then(function(tree) {
+                                return fetch(api + '/git/commits', {
+                                    method: 'POST',
+                                    headers: {'Authorization': 'token ' + token, 'Content-Type': 'application/json'},
+                                    body: JSON.stringify({
+                                        message: 'Permanent delete ' + sku + ' (history)',
+                                        tree: tree.sha,
+                                        parents: [commitSha]
+                                    })
+                                }).then(function(r) { return r.json(); }).then(function(newCommit) {
+                                    return fetch(api + '/git/refs/heads/' + GIT_BRANCH, {
+                                        method: 'PATCH',
+                                        headers: {'Authorization': 'token ' + token, 'Content-Type': 'application/json'},
+                                        body: JSON.stringify({sha: newCommit.sha, force: false})
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
         }
         
         function padTime(val, def) {

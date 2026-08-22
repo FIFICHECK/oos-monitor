@@ -84,7 +84,12 @@ def check_sku(page, sku_id):
         html_content = page.content()
         
         # Check for in-stock indicators
-        add_to_cart_buttons = page.locator("button:has-text('加入購物車')")
+        # IMPORTANT: prefer the MAIN product area add-to-cart button. The page also renders
+        # "同店推介" recommendation buttons whose data-price belongs to OTHER products
+        # (e.g. $189 vs the real $338). Falling back to ALL buttons would pick the wrong price.
+        add_to_cart_buttons = page.locator("div.top-panel button:has-text('加入購物車'), div.product-detail button:has-text('加入購物車')")
+        if add_to_cart_buttons.count() == 0:
+            add_to_cart_buttons = page.locator("button:has-text('加入購物車')")
         has_add_to_cart = add_to_cart_buttons.count() > 0
         
         # Check for OOS indicators

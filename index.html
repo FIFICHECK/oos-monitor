@@ -167,6 +167,10 @@
             .table-scroll td.nowrap { white-space: nowrap; }
             .table-scroll td.sku-cell code { word-break: keep-all; }
         }
+        /* 🗑️ Deleted SKUs — max 10 rows, scroll if longer */
+        .deleted-scroll-wrap { max-height: 430px; overflow-y: auto; }
+        .deleted-scroll-wrap thead { position: sticky; top: 0; z-index: 2; background: #0f3460; }
+        .deleted-scroll-wrap thead th { position: sticky; top: 0; background: #0f3460; z-index: 2; }
         th {
             background: #0f3460;
             padding: 8px 8px;
@@ -662,7 +666,7 @@
         </div>
         <!-- 🗑️ Deleted SKUs (history kept) -->
         <h2 class="section-title" style="color:#666;">🗑️ 已刪除 SKUs（History 保留）</h2>
-        <div class="table-scroll"><table>
+        <div class="table-scroll deleted-scroll-wrap"><table>
             <thead>
                 <tr>
                     <th style="width:20%;">SKU</th>

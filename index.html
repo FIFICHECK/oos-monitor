@@ -1407,9 +1407,9 @@
                 pendingBody.innerHTML = '<tr><td colspan="10" style="text-align:center;color:#666;">No pending SKUs</td></tr>';
             }
             
-            // ⏰ Expiry SKUs — expired/completed SKUs
+            // ⏰ Expiry SKUs — expired/completed SKUs (only SKUs still in config; deleted ones go to 🗑️ Deleted section)
             const expiryBody = document.getElementById('expirySkuBody');
-            const expiredSkus = data.all_skus ? data.all_skus.filter(function(s) { return expiredSet[s.sku] && !pendingSet[s.sku]; }) : [];
+            const expiredSkus = data.all_skus ? data.all_skus.filter(function(s) { return expiredSet[s.sku] && !pendingSet[s.sku] && config.skus.indexOf(s.sku) !== -1; }) : [];
             const skuPeriods = config.sku_periods || {};
             
             if (expiredSkus.length > 0) {

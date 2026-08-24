@@ -171,15 +171,16 @@
         .deleted-scroll-wrap table.deleted-head-table { margin-bottom: 0; }
         .deleted-scroll-wrap > table:last-child { display: block; max-height: 480px; overflow-y: auto; }
         .deleted-scroll-wrap > table:last-child tbody { display: table; width: 100%; table-layout: fixed; }
-        .deleted-scroll-wrap > table:last-child td:nth-child(1) { width: 15%; }
-        .deleted-scroll-wrap > table:last-child td:nth-child(2) { width: 28%; }
-        .deleted-scroll-wrap > table:last-child td:nth-child(3) { width: 7%; }
-        .deleted-scroll-wrap > table:last-child td:nth-child(4) { width: 8%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(1) { width: 6%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(2) { width: 14%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(3) { width: 26%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(4) { width: 6%; }
         .deleted-scroll-wrap > table:last-child td:nth-child(5) { width: 7%; }
         .deleted-scroll-wrap > table:last-child td:nth-child(6) { width: 7%; }
-        .deleted-scroll-wrap > table:last-child td:nth-child(7) { width: 10%; }
-        .deleted-scroll-wrap > table:last-child td:nth-child(8) { width: 8%; }
-        .deleted-scroll-wrap > table:last-child td:nth-child(9) { width: 10%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(7) { width: 7%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(8) { width: 9%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(9) { width: 8%; }
+        .deleted-scroll-wrap > table:last-child td:nth-child(10) { width: 10%; }
         th {
             background: #0f3460;
             padding: 8px 8px;
@@ -680,13 +681,14 @@
             <table class="deleted-head-table" style="table-layout:fixed;">
                 <thead>
                     <tr>
-                        <th style="width:15%;">SKU</th>
-                        <th style="width:28%;">PRODUCT NAME</th>
-                        <th style="width:7%;">LAST 庫存</th>
-                        <th style="width:8%;">STATUS</th>
+                        <th style="width:6%;">RM</th>
+                        <th style="width:14%;">SKU</th>
+                        <th style="width:26%;">PRODUCT NAME</th>
+                        <th style="width:6%;">LAST 庫存</th>
+                        <th style="width:7%;">STATUS</th>
                         <th style="width:7%;text-align:center;padding-right:12px;">SOLD</th>
                         <th style="width:7%;">LAST PRICE</th>
-                        <th style="width:10%;">LAST CHECKED</th>
+                        <th style="width:9%;">LAST CHECKED</th>
                         <th style="width:8%;">LINK</th>
                         <th style="width:10%;">永久刪除</th>
                     </tr>
@@ -694,7 +696,7 @@
             </table>
             <table style="table-layout:fixed;">
                 <tbody id="deletedSkuBody">
-                    <tr><td colspan="9" style="text-align:center;color:#666;">No deleted SKUs</td></tr>
+                    <tr><td colspan="10" style="text-align:center;color:#666;">No deleted SKUs</td></tr>
                 </tbody>
             </table>
         </div>
@@ -1504,7 +1506,9 @@
                     var dSold = computeSold(sku, oldHist.length ? oldHist : hist);
                     var dSoldDisp = dSold !== null ? '<span style="color:#ffd700;font-weight:bold;">' + dSold + '</span>' : '<span style="color:#555;">--</span>';
                     var dChecked = last.checked_at ? new Date(last.checked_at).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    return '<tr><td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\', true)" title="Click to view old history" style="color:#888;">' + sku + '</code></td>'
+                    var dRm = (config.sku_rm && config.sku_rm[sku]) ? config.sku_rm[sku] : '--';
+                    return '<tr><td><code style="color:#888;">' + dRm + '</code></td>'
+                        + '<td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\', true)" title="Click to view old history" style="color:#888;">' + sku + '</code></td>'
                         + '<td class="name-cell" style="color:#888;">' + (last.product_name || '--') + '</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + dStock + '</td>'
                         + '<td><span class="tag tag-error">🗑️ Deleted</span></td>'

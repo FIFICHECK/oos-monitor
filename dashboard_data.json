@@ -3,17 +3,17 @@
     {
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "price": "235.00",
-      "checked_at": "2026-08-28T07:13:55.837057"
+      "price": "125.00",
+      "checked_at": "2026-08-28T07:45:53.355800"
     },
     {
       "sku": "H0883003_S_OBgE03988",
       "product_name": "OBgE | 自然遮瑕粉底棒 #1號 象牙白 IVORY▼D2(03988)(平行進口) EXP:2029 | 款式 : 1",
       "price": "102.00",
-      "checked_at": "2026-08-28T07:13:59.882651"
+      "checked_at": "2026-08-28T07:45:57.340568"
     }
   ],
-  "last_checked": "2026-08-28T07:13:59.939495",
+  "last_checked": "2026-08-28T07:45:57.393181",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -238,13 +238,6 @@
       "status": "super_low_stock",
       "stock_level": 1,
       "checked_at": "2026-07-13T23:30:05.248311"
-    },
-    {
-      "sku": "S6501001_S_G4713294187765",
-      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-      "status": "low_stock",
-      "stock_level": 16,
-      "checked_at": "2026-07-31T07:59:45.464286"
     },
     {
       "sku": "S6501001_S_G4713294187765",
@@ -7510,11 +7503,12 @@
       "checked_at": "2026-08-28T07:13:45.980400"
     },
     {
-      "sku": "S6501001_S_G4713294187789",
-      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
-      "status": "super_low_stock",
-      "stock_level": 8,
-      "checked_at": "2026-07-31T14:29:44.418857"
+      "sku": "S6501001_S_G4713294187765",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+      "status": "low_stock",
+      "stock_level": 10,
+      "price": "168.00",
+      "checked_at": "2026-08-28T07:45:43.011017"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -14779,6 +14773,14 @@
       "stock_level": 20,
       "price": "370.00",
       "checked_at": "2026-08-28T07:13:49.252374"
+    },
+    {
+      "sku": "S6501001_S_G4713294187789",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
+      "status": "low_stock",
+      "stock_level": 20,
+      "price": "370.00",
+      "checked_at": "2026-08-28T07:45:46.470095"
     },
     {
       "sku": "B1870001_S_6971738651335",
@@ -50390,13 +50392,6 @@
       "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
       "status": "super_low_stock",
       "stock_level": 6,
-      "checked_at": "2026-07-31T13:57:54.162296"
-    },
-    {
-      "sku": "H6588001_S_KDK_P40VH",
-      "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
-      "status": "super_low_stock",
-      "stock_level": 6,
       "checked_at": "2026-07-31T14:31:36.677061"
     },
     {
@@ -57655,6 +57650,14 @@
       "stock_level": 11,
       "price": "850.00",
       "checked_at": "2026-08-28T07:13:52.597340"
+    },
+    {
+      "sku": "H6588001_S_KDK_P40VH",
+      "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
+      "status": "low_stock",
+      "stock_level": 11,
+      "price": "850.00",
+      "checked_at": "2026-08-28T07:45:49.937650"
     },
     {
       "sku": "B0961005_S_4897036691441_24",
@@ -71319,6 +71322,14 @@
       "checked_at": "2026-08-28T07:13:55.837057"
     },
     {
+      "sku": "H5859001_S_ST4843",
+      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
+      "status": "oos",
+      "stock_level": 0,
+      "price": "125.00",
+      "checked_at": "2026-08-28T07:45:53.355800"
+    },
+    {
       "sku": "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G",
       "product_name": "開心電訊 | 日本 Softbank 5日5G無限數據 (不限速) $168 ｜日本SIM卡｜日本電話卡｜日本數據卡｜日本上網｜",
       "status": "in_stock",
@@ -77427,6 +77438,14 @@
       "stock_level": 0,
       "price": "102.00",
       "checked_at": "2026-08-28T07:13:59.882651"
+    },
+    {
+      "sku": "H0883003_S_OBgE03988",
+      "product_name": "OBgE | 自然遮瑕粉底棒 #1號 象牙白 IVORY▼D2(03988)(平行進口) EXP:2029 | 款式 : 1",
+      "status": "oos",
+      "stock_level": 0,
+      "price": "102.00",
+      "checked_at": "2026-08-28T07:45:57.340568"
     }
   ],
   "low_stock_skus": [],
@@ -77437,7 +77456,7 @@
       "status": "low_stock",
       "stock_level": 10,
       "price": "168.00",
-      "checked_at": "2026-08-28T07:13:45.980400"
+      "checked_at": "2026-08-28T07:45:43.011017"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -77445,7 +77464,7 @@
       "status": "low_stock",
       "stock_level": 20,
       "price": "370.00",
-      "checked_at": "2026-08-28T07:13:49.252374"
+      "checked_at": "2026-08-28T07:45:46.470095"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -77453,15 +77472,15 @@
       "status": "low_stock",
       "stock_level": 11,
       "price": "850.00",
-      "checked_at": "2026-08-28T07:13:52.597340"
+      "checked_at": "2026-08-28T07:45:49.937650"
     },
     {
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
       "status": "oos",
       "stock_level": 0,
-      "price": "235.00",
-      "checked_at": "2026-08-28T07:13:55.837057"
+      "price": "125.00",
+      "checked_at": "2026-08-28T07:45:53.355800"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -77469,7 +77488,7 @@
       "status": "expired",
       "stock_level": 58,
       "price": "338.00",
-      "checked_at": "2026-08-28T07:13:55.837456"
+      "checked_at": "2026-08-28T07:45:53.355838"
     },
     {
       "sku": "H0883003_S_OBgE03988",
@@ -77477,7 +77496,7 @@
       "status": "oos",
       "stock_level": 0,
       "price": "102.00",
-      "checked_at": "2026-08-28T07:13:59.882651"
+      "checked_at": "2026-08-28T07:45:57.340568"
     }
   ],
   "super_low_stock_skus": [],
@@ -77487,21 +77506,21 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "price": "168.00",
       "stock_level": 10,
-      "checked_at": "2026-08-28T07:13:45.980400"
+      "checked_at": "2026-08-28T07:45:43.011017"
     },
     {
       "sku": "S6501001_S_G4713294187789",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
       "price": "370.00",
       "stock_level": 20,
-      "checked_at": "2026-08-28T07:13:49.252374"
+      "checked_at": "2026-08-28T07:45:46.470095"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
       "product_name": "KDK | P40VH 座地扇 香港行貨 16吋",
       "price": "850.00",
       "stock_level": 11,
-      "checked_at": "2026-08-28T07:13:52.597340"
+      "checked_at": "2026-08-28T07:45:49.937650"
     }
   ]
 }

@@ -1537,10 +1537,7 @@
                 tokenStatus.innerHTML = '⚠️ No token — enter your GitHub token above to enable Add/Remove';
                 tokenStatus.style.color = '#f39c12';
             }
-            var tk1 = 'ghp_o8N0p3m0s'; var tk2 = 'T19IYwZnYsu1p'; var tk3 = 'CKcjs56S2UJQs6';
-            if (!tokenInput.value) {
-                tokenInput.value = tk1 + tk2 + tk3;
-            }
+            // No hardcoded token — user pastes their own GitHub token
             
             // Settings period
             document.getElementById('settingsPeriod').textContent = periodText.replace('📅 ', '');

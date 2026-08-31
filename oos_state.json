@@ -164,7 +164,7 @@
     "stock_level": 8,
     "price": "168.00",
     "last_change": "2026-08-28T10:27:52.076415",
-    "last_checked": "2026-08-31T18:38:40.846520"
+    "last_checked": "2026-08-31T19:10:41.258646"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 18,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-08-31T18:38:44.248337"
+    "last_checked": "2026-08-31T19:10:44.589899"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -340,7 +340,7 @@
     "stock_level": 9,
     "price": "850.00",
     "last_change": "2026-08-28T22:28:44.773051",
-    "last_checked": "2026-08-31T18:38:48.055021"
+    "last_checked": "2026-08-31T19:10:47.970294"
   },
   "H5859001_S_ST5826": {
     "status": "in_stock",
@@ -354,9 +354,9 @@
     "status": "oos",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
     "stock_level": 0,
-    "price": "235.00",
+    "price": "175.00",
     "last_change": "2026-08-28T06:40:02.184040",
-    "last_checked": "2026-08-31T18:38:51.537269"
+    "last_checked": "2026-08-31T19:10:51.423780"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
@@ -369,9 +369,9 @@
   "H0883003_S_OBgE03988": {
     "status": "in_stock",
     "product_name": "OBgE | 自然遮瑕粉底棒 #1號 象牙白 IVORY▼D2(03988)(平行進口) EXP:2029 | 款式 : 1",
-    "stock_level": 109,
+    "stock_level": 112,
     "price": "175.00",
     "last_change": "2026-08-28T18:11:22.295641",
-    "last_checked": "2026-08-31T18:38:55.958920"
+    "last_checked": "2026-08-31T19:10:55.591585"
   }
 }

@@ -77,7 +77,7 @@ def check_sku(page, sku_id):
     url = f"https://www.hktvmall.com/hktv/p/{sku_id}"
     
     try:
-        page.goto(url, wait_until="networkidle", timeout=25000)
+        page.goto(url, wait_until="load", timeout=30000)
         time.sleep(2)  # Extra wait for JS rendering
         
         body_text = page.inner_text("body")
@@ -282,12 +282,21 @@ def main():
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
+        context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36")
         page = context.new_page()
-        
-        for sku in config['skus']:
+        page.set_default_timeout(25000)
+
+        for i, sku in enumerate(config['skus']):
+            # Restart browser every 8 SKUs — HKTVmall pages hold long-poll connections
+            # that accumulate and hang Playwright after ~15-18 pages
+            if i > 0 and i % 8 == 0:
+                print(f"  🔄 Restarting browser (after {i} SKUs)...", flush=True)
+                browser.close()
+                browser = p.chromium.launch(headless=True)
+                context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36")
+                page = context.new_page()
+                page.set_default_timeout(25000)
+
             # Check per-SKU period
             period_status = check_monitor_period(config, sku)
             if period_status == "pending":
@@ -307,7 +316,7 @@ def main():
                     # First time seeing this SKU — do a quick scan for product info
                     print(f"  ⏳ {sku}... [pending — scanning for product info...]", end=" ", flush=True)
                     try:
-                        page.goto(f"https://www.hktvmall.com/hktv/p/{sku}", timeout=25000, wait_until="networkidle")
+                        page.goto(f"https://www.hktvmall.com/hktv/p/{sku}", timeout=30000, wait_until="load")
                         page.wait_for_timeout(3000)
                         title = page.title().strip()
                         html_content = page.content()

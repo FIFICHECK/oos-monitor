@@ -1781,6 +1781,25 @@
                 headers: {'Authorization': 'token ' + getGitToken()}
             }).then(function(r) { return r.json(); });
         }
+
+        // Decode GitHub contents API response with clear error messages
+        function decodeGitContent(data) {
+            if (!data || !data.content) {
+                var msg = (data && data.message) ? ('GitHub API: ' + data.message) : 'GitHub API 冇回傳內容';
+                if (data && data.message) {
+                    var m = data.message;
+                    if (m.indexOf('Bad credentials') !== -1 || m.indexOf('401') !== -1) {
+                        msg = '❌ Token 無效或已過期！請去 ⚙️ Settings 重新輸入 GitHub Token → 💾 Save Token';
+                    } else if (m.indexOf('rate limit') !== -1 || m.indexOf('API rate limit') !== -1) {
+                        msg = '❌ GitHub API rate limit 超出（每小時 5000 次），請等幾分鐘再試';
+                    } else if (m.indexOf('Not Found') !== -1) {
+                        msg = '❌ Repo 或檔案唔存在（' + GIT_OWNER + '/' + GIT_REPO + '）— 檢查 repo 名';
+                    }
+                }
+                throw new Error(msg);
+            }
+            return JSON.parse(atob(data.content));
+        }
         
         function pushConfigToGit(content, sha, msg) {
             return fetch('https://api.github.com/repos/' + GIT_OWNER + '/' + GIT_REPO + '/contents/config.json', {
@@ -1824,7 +1843,7 @@
         
         function permanentDeleteFromConfig(sku) {
             return getConfigFromGit().then(function(data) {
-                var config = JSON.parse(atob(data.content));
+                var config = decodeGitContent(data);
                 var idx = config.skus.indexOf(sku);
                 if (idx !== -1) {
                     config.skus.splice(idx, 1);
@@ -1843,7 +1862,7 @@
             return fetch(api + '/contents/oos_state.json', {
                 headers: {'Authorization': 'token ' + token}
             }).then(function(r) { return r.json(); }).then(function(data) {
-                var st = JSON.parse(atob(data.content));
+                var st = decodeGitContent(data);
                 if (st[sku]) delete st[sku];
                 var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(st, null, 2))));
                 return fetch(api + '/contents/oos_state.json', {
@@ -1945,7 +1964,7 @@
             msgEl.style.color = '#888';
             
             getConfigFromGit().then(function(data) {
-                var config = JSON.parse(atob(data.content));
+                var config = decodeGitContent(data);
                 var sha = data.sha;
                 
                 if (config.skus.indexOf(sku) !== -1) {
@@ -2021,7 +2040,7 @@
             msgEl.style.color = '#888';
             
             getConfigFromGit().then(function(data) {
-                var config = JSON.parse(atob(data.content));
+                var config = decodeGitContent(data);
                 var sha = data.sha;
                 var added = 0;
                 
@@ -2096,7 +2115,7 @@
             showApiMsg('⏳ Removing ' + sku + '...');
             
             getConfigFromGit().then(function(data) {
-                var config = JSON.parse(atob(data.content));
+                var config = decodeGitContent(data);
                 var sha = data.sha;
                 
                 var idx = config.skus.indexOf(sku);
@@ -2156,7 +2175,7 @@
             checked.forEach(function(cb) { skusToDelete.push(cb.getAttribute('data-sku')); });
             
             getConfigFromGit().then(function(data) {
-                var config = JSON.parse(atob(data.content));
+                var config = decodeGitContent(data);
                 var sha = data.sha;
                 
                 skusToDelete.forEach(function(sku) {

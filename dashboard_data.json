@@ -3,11 +3,11 @@
     {
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "price": "130.00",
-      "checked_at": "2026-09-06T15:41:58.088063"
+      "price": "30.00",
+      "checked_at": "2026-09-06T16:15:39.200654"
     }
   ],
-  "last_checked": "2026-09-06T15:43:45.737413",
+  "last_checked": "2026-09-06T16:17:17.317515",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -232,13 +232,6 @@
       "status": "super_low_stock",
       "stock_level": 1,
       "checked_at": "2026-07-13T23:30:05.248311"
-    },
-    {
-      "sku": "S6501001_S_G4713294187765",
-      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-      "status": "super_low_stock",
-      "stock_level": 1,
-      "checked_at": "2026-08-11T12:00:05.577818"
     },
     {
       "sku": "S6501001_S_G4713294187765",
@@ -7922,11 +7915,12 @@
       "checked_at": "2026-09-06T15:41:52.370886"
     },
     {
-      "sku": "S6501001_S_G4713294187789",
-      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
-      "status": "low_stock",
-      "stock_level": 10,
-      "checked_at": "2026-08-11T13:45:40.895743"
+      "sku": "S6501001_S_G4713294187765",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
+      "status": "super_low_stock",
+      "stock_level": 7,
+      "price": "168.00",
+      "checked_at": "2026-09-06T16:15:34.108087"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -15609,6 +15603,14 @@
       "stock_level": 18,
       "price": "370.00",
       "checked_at": "2026-09-06T15:41:55.501161"
+    },
+    {
+      "sku": "S6501001_S_G4713294187789",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
+      "status": "low_stock",
+      "stock_level": 18,
+      "price": "370.00",
+      "checked_at": "2026-09-06T16:15:36.697626"
     },
     {
       "sku": "B1870001_S_6971738651335",
@@ -65130,13 +65132,6 @@
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
       "status": "in_stock",
-      "stock_level": 73,
-      "checked_at": "2026-08-11T15:24:11.034642"
-    },
-    {
-      "sku": "H5859001_S_ST4843",
-      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "status": "in_stock",
       "stock_level": 71,
       "checked_at": "2026-08-11T15:56:28.133790"
     },
@@ -72857,6 +72852,14 @@
       "stock_level": 0,
       "price": "130.00",
       "checked_at": "2026-09-06T15:41:58.088063"
+    },
+    {
+      "sku": "H5859001_S_ST4843",
+      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
+      "status": "oos",
+      "stock_level": 0,
+      "price": "30.00",
+      "checked_at": "2026-09-06T16:15:39.200654"
     },
     {
       "sku": "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G",
@@ -82305,6 +82308,14 @@
       "checked_at": "2026-09-06T15:42:01.253981"
     },
     {
+      "sku": "H0883003_S_OBgE03988",
+      "product_name": "OBgE | 自然遮瑕粉底棒 #1號 象牙白 IVORY▼D2(03988)(平行進口) EXP:2029 | 款式 : 1",
+      "status": "in_stock",
+      "stock_level": 121,
+      "price": "175.00",
+      "checked_at": "2026-09-06T16:15:42.186392"
+    },
+    {
       "sku": "H6183001_S_3402",
       "product_name": "安記海味 | 安記中秋鮑魚花膠福袋",
       "status": "in_stock",
@@ -82567,6 +82578,14 @@
       "stock_level": 235,
       "price": "268.00",
       "checked_at": "2026-09-06T15:42:04.290924"
+    },
+    {
+      "sku": "H6183001_S_3402",
+      "product_name": "安記海味 | 安記中秋鮑魚花膠福袋",
+      "status": "in_stock",
+      "stock_level": 234,
+      "price": "268.00",
+      "checked_at": "2026-09-06T16:15:45.242715"
     },
     {
       "sku": "H6183001_S_4877",
@@ -82833,6 +82852,14 @@
       "checked_at": "2026-09-06T15:42:07.232252"
     },
     {
+      "sku": "H6183001_S_4877",
+      "product_name": "安記海味 | 鮑發財彩燈禮盒",
+      "status": "in_stock",
+      "stock_level": 289,
+      "price": "128.00",
+      "checked_at": "2026-09-06T16:15:47.878330"
+    },
+    {
       "sku": "H6183001_S_4879",
       "product_name": "安記海味 | 鮑發財禮盒(舞獅)",
       "status": "in_stock",
@@ -83095,6 +83122,14 @@
       "stock_level": 296,
       "price": "108.00",
       "checked_at": "2026-09-06T15:42:11.262958"
+    },
+    {
+      "sku": "H6183001_S_4879",
+      "product_name": "安記海味 | 鮑發財禮盒(舞獅)",
+      "status": "in_stock",
+      "stock_level": 296,
+      "price": "108.00",
+      "checked_at": "2026-09-06T16:15:51.775521"
     },
     {
       "sku": "H6183001_S_4852",
@@ -83361,6 +83396,14 @@
       "checked_at": "2026-09-06T15:42:14.191478"
     },
     {
+      "sku": "H6183001_S_4852",
+      "product_name": "安記海味 | 星級紅燒溏心鮑魚6頭 - 盒裝",
+      "status": "in_stock",
+      "stock_level": 490,
+      "price": "128.00",
+      "checked_at": "2026-09-06T16:15:54.421049"
+    },
+    {
       "sku": "H6183001_S_4855",
       "product_name": "安記海味 | 紅燒溏心鮑魚 - 6隻",
       "status": "in_stock",
@@ -83623,6 +83666,14 @@
       "stock_level": 470,
       "price": "88.00",
       "checked_at": "2026-09-06T15:42:16.898171"
+    },
+    {
+      "sku": "H6183001_S_4855",
+      "product_name": "安記海味 | 紅燒溏心鮑魚 - 6隻",
+      "status": "in_stock",
+      "stock_level": 464,
+      "price": "88.00",
+      "checked_at": "2026-09-06T16:15:56.950381"
     },
     {
       "sku": "H6183001_S_0213",
@@ -83889,6 +83940,14 @@
       "checked_at": "2026-09-06T15:42:19.699917"
     },
     {
+      "sku": "H6183001_S_0213",
+      "product_name": "安記海味 | 【禮券】急凍 - 安記至尊鮑魚花膠盆菜禮券 (6人份)",
+      "status": "low_stock",
+      "stock_level": 11,
+      "price": "588.00",
+      "checked_at": "2026-09-06T16:15:59.652858"
+    },
+    {
       "sku": "H6183001_S_4884",
       "product_name": "安記海味 | 珍品醬香醉鮑",
       "status": "in_stock",
@@ -84151,6 +84210,14 @@
       "stock_level": 80,
       "price": "108.00",
       "checked_at": "2026-09-06T15:42:22.541733"
+    },
+    {
+      "sku": "H6183001_S_4884",
+      "product_name": "安記海味 | 珍品醬香醉鮑",
+      "status": "in_stock",
+      "stock_level": 80,
+      "price": "108.00",
+      "checked_at": "2026-09-06T16:16:02.380376"
     },
     {
       "sku": "H6183001_S_4927",
@@ -84417,6 +84484,14 @@
       "checked_at": "2026-09-06T15:42:25.234266"
     },
     {
+      "sku": "H6183001_S_4927",
+      "product_name": "安記海味 | 零食鮑 - 醉香鮑 (12粒裝)(此日期前最佳：2026年12月)",
+      "status": "in_stock",
+      "stock_level": 64,
+      "price": "88.00",
+      "checked_at": "2026-09-06T16:16:05.170658"
+    },
+    {
       "sku": "H6183001_S_4979",
       "product_name": "安記海味 | 零食鮑-港式叉燒味 (12包裝)",
       "status": "in_stock",
@@ -84679,6 +84754,14 @@
       "stock_level": 430,
       "price": "75.00",
       "checked_at": "2026-09-06T15:42:28.148409"
+    },
+    {
+      "sku": "H6183001_S_4979",
+      "product_name": "安記海味 | 零食鮑-港式叉燒味 (12包裝)",
+      "status": "in_stock",
+      "stock_level": 421,
+      "price": "75.00",
+      "checked_at": "2026-09-06T16:16:07.873360"
     },
     {
       "sku": "H6183001_S_4985",
@@ -84945,6 +85028,14 @@
       "checked_at": "2026-09-06T15:42:30.836470"
     },
     {
+      "sku": "H6183001_S_4985",
+      "product_name": "安記海味 | 零食鮑 – 火辣醬 (8包裝)",
+      "status": "in_stock",
+      "stock_level": 439,
+      "price": "50.00",
+      "checked_at": "2026-09-06T16:16:10.651192"
+    },
+    {
       "sku": "H6183001_S_4991",
       "product_name": "安記海味 | 零食元貝 (8包裝) - 和風照燒 (4包) + 椒麻味 (4包)",
       "status": "in_stock",
@@ -85207,6 +85298,14 @@
       "stock_level": 461,
       "price": "65.00",
       "checked_at": "2026-09-06T15:42:34.370254"
+    },
+    {
+      "sku": "H6183001_S_4991",
+      "product_name": "安記海味 | 零食元貝 (8包裝) - 和風照燒 (4包) + 椒麻味 (4包)",
+      "status": "in_stock",
+      "stock_level": 459,
+      "price": "65.00",
+      "checked_at": "2026-09-06T16:16:14.304266"
     },
     {
       "sku": "H6183001_S_4928",
@@ -85473,6 +85572,14 @@
       "checked_at": "2026-09-06T15:42:37.472665"
     },
     {
+      "sku": "H6183001_S_4928",
+      "product_name": "安記海味 | 零食鮑- 和風照燒(12粒裝)",
+      "status": "in_stock",
+      "stock_level": 262,
+      "price": "75.00",
+      "checked_at": "2026-09-06T16:16:17.093076"
+    },
+    {
       "sku": "H6183001_S_4929",
       "product_name": "安記海味 | 零食鮑 - 椒香麻辣 (12包裝)",
       "status": "in_stock",
@@ -85735,6 +85842,14 @@
       "stock_level": 264,
       "price": "75.00",
       "checked_at": "2026-09-06T15:42:40.373894"
+    },
+    {
+      "sku": "H6183001_S_4929",
+      "product_name": "安記海味 | 零食鮑 - 椒香麻辣 (12包裝)",
+      "status": "in_stock",
+      "stock_level": 251,
+      "price": "75.00",
+      "checked_at": "2026-09-06T16:16:19.626035"
     },
     {
       "sku": "H6183001_S_7618",
@@ -86001,6 +86116,14 @@
       "checked_at": "2026-09-06T15:42:43.403376"
     },
     {
+      "sku": "H6183001_S_7618",
+      "product_name": "安記海味 | 安記即食頂級排翅 【台灣製造】",
+      "status": "in_stock",
+      "stock_level": 176,
+      "price": "205.00",
+      "checked_at": "2026-09-06T16:16:22.206740"
+    },
+    {
       "sku": "H6183001_S_5471",
       "product_name": "安記海味 | 安記即食鮑汁花膠【台灣製造】",
       "status": "in_stock",
@@ -86263,6 +86386,14 @@
       "stock_level": 200,
       "price": "258.00",
       "checked_at": "2026-09-06T15:42:46.612328"
+    },
+    {
+      "sku": "H6183001_S_5471",
+      "product_name": "安記海味 | 安記即食鮑汁花膠【台灣製造】",
+      "status": "in_stock",
+      "stock_level": 200,
+      "price": "258.00",
+      "checked_at": "2026-09-06T16:16:25.081448"
     },
     {
       "sku": "H6183001_S_5476",
@@ -86529,6 +86660,14 @@
       "checked_at": "2026-09-06T15:42:52.808955"
     },
     {
+      "sku": "H6183001_S_5476",
+      "product_name": "安記海味 | 安記即食鮑汁海參【台灣製造】",
+      "status": "in_stock",
+      "stock_level": 198,
+      "price": "258.00",
+      "checked_at": "2026-09-06T16:16:27.783239"
+    },
+    {
       "sku": "H6183001_S_62049",
       "product_name": "安記海味 | 精選日本關西刺參150g禮盒( 23-28支/盒)[#9596]",
       "status": "in_stock",
@@ -86791,6 +86930,14 @@
       "stock_level": 96,
       "price": "908.00",
       "checked_at": "2026-09-06T15:42:55.433961"
+    },
+    {
+      "sku": "H6183001_S_62049",
+      "product_name": "安記海味 | 精選日本關西刺參150g禮盒( 23-28支/盒)[#9596]",
+      "status": "in_stock",
+      "stock_level": 96,
+      "price": "908.00",
+      "checked_at": "2026-09-06T16:16:30.461190"
     },
     {
       "sku": "H6183001_S_6047",
@@ -87057,6 +87204,14 @@
       "checked_at": "2026-09-06T15:42:59.285112"
     },
     {
+      "sku": "H6183001_S_6047",
+      "product_name": "安記海味 | 挪威花膠(70-90隻/包)(300g) [#6495]",
+      "status": "in_stock",
+      "stock_level": 88,
+      "price": "188.00",
+      "checked_at": "2026-09-06T16:16:33.103258"
+    },
+    {
       "sku": "H6183001_S_6447",
       "product_name": "安記海味 | 非洲清水花膠筒 毎包 15-17隻 (225g)",
       "status": "in_stock",
@@ -87319,6 +87474,14 @@
       "stock_level": 198,
       "price": "598.00",
       "checked_at": "2026-09-06T15:43:02.706374"
+    },
+    {
+      "sku": "H6183001_S_6447",
+      "product_name": "安記海味 | 非洲清水花膠筒 毎包 15-17隻 (225g)",
+      "status": "in_stock",
+      "stock_level": 198,
+      "price": "598.00",
+      "checked_at": "2026-09-06T16:16:36.312947"
     },
     {
       "sku": "H6183001_S_9095",
@@ -87585,6 +87748,14 @@
       "checked_at": "2026-09-06T15:43:05.709875"
     },
     {
+      "sku": "H6183001_S_9095",
+      "product_name": "安記海味 | 杏汁銀杏豬肺湯",
+      "status": "in_stock",
+      "stock_level": 408,
+      "price": "33.00",
+      "checked_at": "2026-09-06T16:16:38.902870"
+    },
+    {
       "sku": "H6183001_S_9096",
       "product_name": "安記海味 | 椰子燉竹絲雞湯",
       "status": "in_stock",
@@ -87847,6 +88018,14 @@
       "stock_level": 447,
       "price": "33.00",
       "checked_at": "2026-09-06T15:43:08.324551"
+    },
+    {
+      "sku": "H6183001_S_9096",
+      "product_name": "安記海味 | 椰子燉竹絲雞湯",
+      "status": "in_stock",
+      "stock_level": 447,
+      "price": "33.00",
+      "checked_at": "2026-09-06T16:16:41.440442"
     },
     {
       "sku": "H6183001_S_9097",
@@ -88113,6 +88292,14 @@
       "checked_at": "2026-09-06T15:43:11.080178"
     },
     {
+      "sku": "H6183001_S_9097",
+      "product_name": "安記海味 | 胡椒豬肚雞湯",
+      "status": "in_stock",
+      "stock_level": 235,
+      "price": "33.00",
+      "checked_at": "2026-09-06T16:16:43.975089"
+    },
+    {
       "sku": "H6183001_S_3701",
       "product_name": "安記海味 | 鮑魚花膠碗仔翅",
       "status": "in_stock",
@@ -88375,6 +88562,14 @@
       "stock_level": 51,
       "price": "44.00",
       "checked_at": "2026-09-06T15:43:13.666520"
+    },
+    {
+      "sku": "H6183001_S_3701",
+      "product_name": "安記海味 | 鮑魚花膠碗仔翅",
+      "status": "in_stock",
+      "stock_level": 43,
+      "price": "44.00",
+      "checked_at": "2026-09-06T16:16:46.723780"
     },
     {
       "sku": "H6183001_S_3702",
@@ -88641,6 +88836,14 @@
       "checked_at": "2026-09-06T15:43:16.470685"
     },
     {
+      "sku": "H6183001_S_3702",
+      "product_name": "安記海味 | 花膠干貝魚肚羹",
+      "status": "in_stock",
+      "stock_level": 154,
+      "price": "44.00",
+      "checked_at": "2026-09-06T16:16:49.469726"
+    },
+    {
       "sku": "H6183001_S_4943",
       "product_name": "安記海味 | 【蟹黃鮑系列】安記頂級蟹黃醬鮑魚拌麵",
       "status": "in_stock",
@@ -88903,6 +89106,14 @@
       "stock_level": 124,
       "price": "30.00",
       "checked_at": "2026-09-06T15:43:19.479357"
+    },
+    {
+      "sku": "H6183001_S_4943",
+      "product_name": "安記海味 | 【蟹黃鮑系列】安記頂級蟹黃醬鮑魚拌麵",
+      "status": "in_stock",
+      "stock_level": 124,
+      "price": "30.00",
+      "checked_at": "2026-09-06T16:16:52.351295"
     },
     {
       "sku": "H6183001_S_9442",
@@ -89169,6 +89380,14 @@
       "checked_at": "2026-09-06T15:43:22.286692"
     },
     {
+      "sku": "H6183001_S_9442",
+      "product_name": "安記海味 | 安記櫻花蝦XO醬",
+      "status": "in_stock",
+      "stock_level": 87,
+      "price": "70.00",
+      "checked_at": "2026-09-06T16:16:55.049376"
+    },
+    {
       "sku": "H6183001_S_9443",
       "product_name": "安記海味 | 安記元貝XO醬",
       "status": "in_stock",
@@ -89431,6 +89650,14 @@
       "stock_level": 130,
       "price": "70.00",
       "checked_at": "2026-09-06T15:43:26.604287"
+    },
+    {
+      "sku": "H6183001_S_9443",
+      "product_name": "安記海味 | 安記元貝XO醬",
+      "status": "in_stock",
+      "stock_level": 129,
+      "price": "70.00",
+      "checked_at": "2026-09-06T16:16:58.421954"
     },
     {
       "sku": "H6183001_S_2213",
@@ -89697,6 +89924,14 @@
       "checked_at": "2026-09-06T15:43:29.392877"
     },
     {
+      "sku": "H6183001_S_2213",
+      "product_name": "安記海味 | 安記極品花菇皇 (300克)",
+      "status": "in_stock",
+      "stock_level": 162,
+      "price": "75.00",
+      "checked_at": "2026-09-06T16:17:01.188144"
+    },
+    {
       "sku": "H6183001_S_3329",
       "product_name": "安記海味 | 特級花菇禮盒(一磅裝)",
       "status": "in_stock",
@@ -89959,6 +90194,14 @@
       "stock_level": 191,
       "price": "138.00",
       "checked_at": "2026-09-06T15:43:32.095405"
+    },
+    {
+      "sku": "H6183001_S_3329",
+      "product_name": "安記海味 | 特級花菇禮盒(一磅裝)",
+      "status": "in_stock",
+      "stock_level": 191,
+      "price": "138.00",
+      "checked_at": "2026-09-06T16:17:03.862396"
     },
     {
       "sku": "H6183001_S_8021x6",
@@ -90225,6 +90468,14 @@
       "checked_at": "2026-09-06T15:43:34.698204"
     },
     {
+      "sku": "H6183001_S_8021x6",
+      "product_name": "安記海味 | 【六包裝】即食海蜇絲 (100g/包) 6 包",
+      "status": "in_stock",
+      "stock_level": 264,
+      "price": "60.00",
+      "checked_at": "2026-09-06T16:17:06.711446"
+    },
+    {
       "sku": "H6183001_S_3707",
       "product_name": "安記海味 | 【桃膠糖水系列】桃膠雪耳蓮子燉貢梨",
       "status": "in_stock",
@@ -90487,6 +90738,14 @@
       "stock_level": 472,
       "price": "25.00",
       "checked_at": "2026-09-06T15:43:37.314554"
+    },
+    {
+      "sku": "H6183001_S_3707",
+      "product_name": "安記海味 | 【桃膠糖水系列】桃膠雪耳蓮子燉貢梨",
+      "status": "in_stock",
+      "stock_level": 471,
+      "price": "25.00",
+      "checked_at": "2026-09-06T16:17:09.529659"
     },
     {
       "sku": "H6183001_S_3708",
@@ -90753,6 +91012,14 @@
       "checked_at": "2026-09-06T15:43:40.116013"
     },
     {
+      "sku": "H6183001_S_3708",
+      "product_name": "安記海味 | 【桃膠糖水系列】椰香桃膠蓮子百合紅豆沙",
+      "status": "in_stock",
+      "stock_level": 457,
+      "price": "25.00",
+      "checked_at": "2026-09-06T16:17:12.117931"
+    },
+    {
       "sku": "H6183001_S_8626",
       "product_name": "安記海味 | 【一人份鮑魚海味系列】急凍-金牌佛跳牆【急凍-18℃】",
       "status": "in_stock",
@@ -91017,6 +91284,14 @@
       "checked_at": "2026-09-06T15:43:42.954059"
     },
     {
+      "sku": "H6183001_S_8626",
+      "product_name": "安記海味 | 【一人份鮑魚海味系列】急凍-金牌佛跳牆【急凍-18℃】",
+      "status": "in_stock",
+      "stock_level": 389,
+      "price": "60.00",
+      "checked_at": "2026-09-06T16:17:14.710904"
+    },
+    {
       "sku": "H6183001_S_8651",
       "product_name": "安記海味 | 藜麥小米遼參粥260g(1人份)【急凍-18℃】",
       "status": "in_stock",
@@ -91279,6 +91554,14 @@
       "stock_level": 242,
       "price": "30.00",
       "checked_at": "2026-09-06T15:43:45.673088"
+    },
+    {
+      "sku": "H6183001_S_8651",
+      "product_name": "安記海味 | 藜麥小米遼參粥260g(1人份)【急凍-18℃】",
+      "status": "in_stock",
+      "stock_level": 229,
+      "price": "30.00",
+      "checked_at": "2026-09-06T16:17:17.264591"
     }
   ],
   "low_stock_skus": [],
@@ -91289,7 +91572,7 @@
       "status": "super_low_stock",
       "stock_level": 7,
       "price": "168.00",
-      "checked_at": "2026-09-06T15:41:52.370886"
+      "checked_at": "2026-09-06T16:15:34.108087"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -91297,7 +91580,7 @@
       "status": "low_stock",
       "stock_level": 18,
       "price": "370.00",
-      "checked_at": "2026-09-06T15:41:55.501161"
+      "checked_at": "2026-09-06T16:15:36.697626"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -91305,15 +91588,15 @@
       "status": "expired",
       "stock_level": 8,
       "price": "850.00",
-      "checked_at": "2026-09-06T15:41:55.501294"
+      "checked_at": "2026-09-06T16:15:36.697688"
     },
     {
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
       "status": "oos",
       "stock_level": 0,
-      "price": "130.00",
-      "checked_at": "2026-09-06T15:41:58.088063"
+      "price": "30.00",
+      "checked_at": "2026-09-06T16:15:39.200654"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -91321,23 +91604,23 @@
       "status": "expired",
       "stock_level": 58,
       "price": "338.00",
-      "checked_at": "2026-09-06T15:41:58.088169"
+      "checked_at": "2026-09-06T16:15:39.200711"
     },
     {
       "sku": "H0883003_S_OBgE03988",
       "product_name": "OBgE | 自然遮瑕粉底棒 #1號 象牙白 IVORY▼D2(03988)(平行進口) EXP:2029 | 款式 : 1",
       "status": "in_stock",
-      "stock_level": 122,
+      "stock_level": 121,
       "price": "175.00",
-      "checked_at": "2026-09-06T15:42:01.253981"
+      "checked_at": "2026-09-06T16:15:42.186392"
     },
     {
       "sku": "H6183001_S_3402",
       "product_name": "安記海味 | 安記中秋鮑魚花膠福袋",
       "status": "in_stock",
-      "stock_level": 235,
+      "stock_level": 234,
       "price": "268.00",
-      "checked_at": "2026-09-06T15:42:04.290924"
+      "checked_at": "2026-09-06T16:15:45.242715"
     },
     {
       "sku": "H6183001_S_4877",
@@ -91345,7 +91628,7 @@
       "status": "in_stock",
       "stock_level": 289,
       "price": "128.00",
-      "checked_at": "2026-09-06T15:42:07.232252"
+      "checked_at": "2026-09-06T16:15:47.878330"
     },
     {
       "sku": "H6183001_S_4879",
@@ -91353,7 +91636,7 @@
       "status": "in_stock",
       "stock_level": 296,
       "price": "108.00",
-      "checked_at": "2026-09-06T15:42:11.262958"
+      "checked_at": "2026-09-06T16:15:51.775521"
     },
     {
       "sku": "H6183001_S_4852",
@@ -91361,15 +91644,15 @@
       "status": "in_stock",
       "stock_level": 490,
       "price": "128.00",
-      "checked_at": "2026-09-06T15:42:14.191478"
+      "checked_at": "2026-09-06T16:15:54.421049"
     },
     {
       "sku": "H6183001_S_4855",
       "product_name": "安記海味 | 紅燒溏心鮑魚 - 6隻",
       "status": "in_stock",
-      "stock_level": 470,
+      "stock_level": 464,
       "price": "88.00",
-      "checked_at": "2026-09-06T15:42:16.898171"
+      "checked_at": "2026-09-06T16:15:56.950381"
     },
     {
       "sku": "H6183001_S_0213",
@@ -91377,7 +91660,7 @@
       "status": "low_stock",
       "stock_level": 11,
       "price": "588.00",
-      "checked_at": "2026-09-06T15:42:19.699917"
+      "checked_at": "2026-09-06T16:15:59.652858"
     },
     {
       "sku": "H6183001_S_4884",
@@ -91385,55 +91668,55 @@
       "status": "in_stock",
       "stock_level": 80,
       "price": "108.00",
-      "checked_at": "2026-09-06T15:42:22.541733"
+      "checked_at": "2026-09-06T16:16:02.380376"
     },
     {
       "sku": "H6183001_S_4927",
       "product_name": "安記海味 | 零食鮑 - 醉香鮑 (12粒裝)(此日期前最佳：2026年12月)",
       "status": "in_stock",
-      "stock_level": 66,
+      "stock_level": 64,
       "price": "88.00",
-      "checked_at": "2026-09-06T15:42:25.234266"
+      "checked_at": "2026-09-06T16:16:05.170658"
     },
     {
       "sku": "H6183001_S_4979",
       "product_name": "安記海味 | 零食鮑-港式叉燒味 (12包裝)",
       "status": "in_stock",
-      "stock_level": 430,
+      "stock_level": 421,
       "price": "75.00",
-      "checked_at": "2026-09-06T15:42:28.148409"
+      "checked_at": "2026-09-06T16:16:07.873360"
     },
     {
       "sku": "H6183001_S_4985",
       "product_name": "安記海味 | 零食鮑 – 火辣醬 (8包裝)",
       "status": "in_stock",
-      "stock_level": 441,
+      "stock_level": 439,
       "price": "50.00",
-      "checked_at": "2026-09-06T15:42:30.836470"
+      "checked_at": "2026-09-06T16:16:10.651192"
     },
     {
       "sku": "H6183001_S_4991",
       "product_name": "安記海味 | 零食元貝 (8包裝) - 和風照燒 (4包) + 椒麻味 (4包)",
       "status": "in_stock",
-      "stock_level": 461,
+      "stock_level": 459,
       "price": "65.00",
-      "checked_at": "2026-09-06T15:42:34.370254"
+      "checked_at": "2026-09-06T16:16:14.304266"
     },
     {
       "sku": "H6183001_S_4928",
       "product_name": "安記海味 | 零食鮑- 和風照燒(12粒裝)",
       "status": "in_stock",
-      "stock_level": 286,
+      "stock_level": 262,
       "price": "75.00",
-      "checked_at": "2026-09-06T15:42:37.472665"
+      "checked_at": "2026-09-06T16:16:17.093076"
     },
     {
       "sku": "H6183001_S_4929",
       "product_name": "安記海味 | 零食鮑 - 椒香麻辣 (12包裝)",
       "status": "in_stock",
-      "stock_level": 264,
+      "stock_level": 251,
       "price": "75.00",
-      "checked_at": "2026-09-06T15:42:40.373894"
+      "checked_at": "2026-09-06T16:16:19.626035"
     },
     {
       "sku": "H6183001_S_7618",
@@ -91441,7 +91724,7 @@
       "status": "in_stock",
       "stock_level": 176,
       "price": "205.00",
-      "checked_at": "2026-09-06T15:42:43.403376"
+      "checked_at": "2026-09-06T16:16:22.206740"
     },
     {
       "sku": "H6183001_S_5471",
@@ -91449,7 +91732,7 @@
       "status": "in_stock",
       "stock_level": 200,
       "price": "258.00",
-      "checked_at": "2026-09-06T15:42:46.612328"
+      "checked_at": "2026-09-06T16:16:25.081448"
     },
     {
       "sku": "H6183001_S_5476",
@@ -91457,7 +91740,7 @@
       "status": "in_stock",
       "stock_level": 198,
       "price": "258.00",
-      "checked_at": "2026-09-06T15:42:52.808955"
+      "checked_at": "2026-09-06T16:16:27.783239"
     },
     {
       "sku": "H6183001_S_62049",
@@ -91465,7 +91748,7 @@
       "status": "in_stock",
       "stock_level": 96,
       "price": "908.00",
-      "checked_at": "2026-09-06T15:42:55.433961"
+      "checked_at": "2026-09-06T16:16:30.461190"
     },
     {
       "sku": "H6183001_S_6047",
@@ -91473,7 +91756,7 @@
       "status": "in_stock",
       "stock_level": 88,
       "price": "188.00",
-      "checked_at": "2026-09-06T15:42:59.285112"
+      "checked_at": "2026-09-06T16:16:33.103258"
     },
     {
       "sku": "H6183001_S_6447",
@@ -91481,15 +91764,15 @@
       "status": "in_stock",
       "stock_level": 198,
       "price": "598.00",
-      "checked_at": "2026-09-06T15:43:02.706374"
+      "checked_at": "2026-09-06T16:16:36.312947"
     },
     {
       "sku": "H6183001_S_9095",
       "product_name": "安記海味 | 杏汁銀杏豬肺湯",
       "status": "in_stock",
-      "stock_level": 410,
+      "stock_level": 408,
       "price": "33.00",
-      "checked_at": "2026-09-06T15:43:05.709875"
+      "checked_at": "2026-09-06T16:16:38.902870"
     },
     {
       "sku": "H6183001_S_9096",
@@ -91497,23 +91780,23 @@
       "status": "in_stock",
       "stock_level": 447,
       "price": "33.00",
-      "checked_at": "2026-09-06T15:43:08.324551"
+      "checked_at": "2026-09-06T16:16:41.440442"
     },
     {
       "sku": "H6183001_S_9097",
       "product_name": "安記海味 | 胡椒豬肚雞湯",
       "status": "in_stock",
-      "stock_level": 239,
+      "stock_level": 235,
       "price": "33.00",
-      "checked_at": "2026-09-06T15:43:11.080178"
+      "checked_at": "2026-09-06T16:16:43.975089"
     },
     {
       "sku": "H6183001_S_3701",
       "product_name": "安記海味 | 鮑魚花膠碗仔翅",
       "status": "in_stock",
-      "stock_level": 51,
+      "stock_level": 43,
       "price": "44.00",
-      "checked_at": "2026-09-06T15:43:13.666520"
+      "checked_at": "2026-09-06T16:16:46.723780"
     },
     {
       "sku": "H6183001_S_3702",
@@ -91521,7 +91804,7 @@
       "status": "in_stock",
       "stock_level": 154,
       "price": "44.00",
-      "checked_at": "2026-09-06T15:43:16.470685"
+      "checked_at": "2026-09-06T16:16:49.469726"
     },
     {
       "sku": "H6183001_S_4943",
@@ -91529,31 +91812,31 @@
       "status": "in_stock",
       "stock_level": 124,
       "price": "30.00",
-      "checked_at": "2026-09-06T15:43:19.479357"
+      "checked_at": "2026-09-06T16:16:52.351295"
     },
     {
       "sku": "H6183001_S_9442",
       "product_name": "安記海味 | 安記櫻花蝦XO醬",
       "status": "in_stock",
-      "stock_level": 89,
+      "stock_level": 87,
       "price": "70.00",
-      "checked_at": "2026-09-06T15:43:22.286692"
+      "checked_at": "2026-09-06T16:16:55.049376"
     },
     {
       "sku": "H6183001_S_9443",
       "product_name": "安記海味 | 安記元貝XO醬",
       "status": "in_stock",
-      "stock_level": 130,
+      "stock_level": 129,
       "price": "70.00",
-      "checked_at": "2026-09-06T15:43:26.604287"
+      "checked_at": "2026-09-06T16:16:58.421954"
     },
     {
       "sku": "H6183001_S_2213",
       "product_name": "安記海味 | 安記極品花菇皇 (300克)",
       "status": "in_stock",
-      "stock_level": 163,
+      "stock_level": 162,
       "price": "75.00",
-      "checked_at": "2026-09-06T15:43:29.392877"
+      "checked_at": "2026-09-06T16:17:01.188144"
     },
     {
       "sku": "H6183001_S_3329",
@@ -91561,47 +91844,47 @@
       "status": "in_stock",
       "stock_level": 191,
       "price": "138.00",
-      "checked_at": "2026-09-06T15:43:32.095405"
+      "checked_at": "2026-09-06T16:17:03.862396"
     },
     {
       "sku": "H6183001_S_8021x6",
       "product_name": "安記海味 | 【六包裝】即食海蜇絲 (100g/包) 6 包",
       "status": "in_stock",
-      "stock_level": 267,
+      "stock_level": 264,
       "price": "60.00",
-      "checked_at": "2026-09-06T15:43:34.698204"
+      "checked_at": "2026-09-06T16:17:06.711446"
     },
     {
       "sku": "H6183001_S_3707",
       "product_name": "安記海味 | 【桃膠糖水系列】桃膠雪耳蓮子燉貢梨",
       "status": "in_stock",
-      "stock_level": 472,
+      "stock_level": 471,
       "price": "25.00",
-      "checked_at": "2026-09-06T15:43:37.314554"
+      "checked_at": "2026-09-06T16:17:09.529659"
     },
     {
       "sku": "H6183001_S_3708",
       "product_name": "安記海味 | 【桃膠糖水系列】椰香桃膠蓮子百合紅豆沙",
       "status": "in_stock",
-      "stock_level": 459,
+      "stock_level": 457,
       "price": "25.00",
-      "checked_at": "2026-09-06T15:43:40.116013"
+      "checked_at": "2026-09-06T16:17:12.117931"
     },
     {
       "sku": "H6183001_S_8626",
       "product_name": "安記海味 | 【一人份鮑魚海味系列】急凍-金牌佛跳牆【急凍-18℃】",
       "status": "in_stock",
-      "stock_level": 395,
+      "stock_level": 389,
       "price": "60.00",
-      "checked_at": "2026-09-06T15:43:42.954059"
+      "checked_at": "2026-09-06T16:17:14.710904"
     },
     {
       "sku": "H6183001_S_8651",
       "product_name": "安記海味 | 藜麥小米遼參粥260g(1人份)【急凍-18℃】",
       "status": "in_stock",
-      "stock_level": 242,
+      "stock_level": 229,
       "price": "30.00",
-      "checked_at": "2026-09-06T15:43:45.673088"
+      "checked_at": "2026-09-06T16:17:17.264591"
     }
   ],
   "super_low_stock_skus": [
@@ -91610,7 +91893,7 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "price": "168.00",
       "stock_level": 7,
-      "checked_at": "2026-09-06T15:41:52.370886"
+      "checked_at": "2026-09-06T16:15:34.108087"
     }
   ],
   "low_stock_30_skus": [
@@ -91619,14 +91902,14 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
       "price": "370.00",
       "stock_level": 18,
-      "checked_at": "2026-09-06T15:41:55.501161"
+      "checked_at": "2026-09-06T16:15:36.697626"
     },
     {
       "sku": "H6183001_S_0213",
       "product_name": "安記海味 | 【禮券】急凍 - 安記至尊鮑魚花膠盆菜禮券 (6人份)",
       "price": "588.00",
       "stock_level": 11,
-      "checked_at": "2026-09-06T15:42:19.699917"
+      "checked_at": "2026-09-06T16:15:59.652858"
     }
   ]
 }

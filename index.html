@@ -2188,9 +2188,8 @@
                         if (config.sku_start_periods && config.sku_start_periods[sku]) {
                             delete config.sku_start_periods[sku];
                         }
-                        if (config.sku_rm && config.sku_rm[sku]) {
-                            delete config.sku_rm[sku];
-                        }
+                        // NOTE: sku_rm deliberately KEPT so Deleted section can show the RM name.
+                        // Only permanentDeleteSku removes sku_rm (with all other history).
                     }
                 });
                 

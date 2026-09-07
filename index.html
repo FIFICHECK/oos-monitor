@@ -1472,62 +1472,73 @@
                 expiryBody.innerHTML = '<tr><td colspan="10" style="text-align:center;color:#666;">No expired SKUs yet</td></tr>';
             }
             
-            // 🗑️ Deleted SKUs — history exists but SKU no longer in config, OR old-cycle records of re-added SKUs
+            // 🗑️ Deleted SKUs — show EACH monitoring period/cycle of a SKU as its own row.
+            // Cycle boundary = gap >= 24h between consecutive history records.
+            // The ongoing period of an active SKU (checked within 24h) is excluded
+            // (it lives in the All Monitored table instead).
             const deletedBody = document.getElementById('deletedSkuBody');
             var configSkuSet = {};
             config.skus.forEach(function(sk) { configSkuSet[sk] = true; });
-            var deletedList = [];
-            var seenDel = {};
+            var nowMs = Date.now();
+            var GAP_MS = 24 * 3600 * 1000;   // 24h without a check = period boundary
+            var fmtDt = function(t) { return t ? new Date(t).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--'; };
+
+            // Group history by SKU in a single pass
+            var histBySku = {};
             (data.history || []).forEach(function(h) {
-                if (seenDel[h.sku]) return;
-                if (!configSkuSet[h.sku]) {
-                    // SKU fully deleted from config
-                    seenDel[h.sku] = true;
-                    deletedList.push(h.sku);
-                } else {
-                    // Re-added SKU: old-cycle records (before current period start) → archived here
-                    var st = config.sku_start_periods && config.sku_start_periods[h.sku];
-                    if (st && new Date(h.checked_at).getTime() < new Date(st).getTime()) {
-                        seenDel[h.sku] = true;
-                        deletedList.push(h.sku);
-                    }
-                }
+                if (!h || !h.sku) return;
+                (histBySku[h.sku] = histBySku[h.sku] || []).push(h);
             });
-            if (deletedList.length > 0) {
-                deletedBody.innerHTML = deletedList.map(function(sku) {
-                    var hist = (data.history || []).filter(function(h) { return h.sku === sku; });
-                    // Old-cycle only: records before current period start (or all if SKU fully deleted)
-                    var st = config.sku_start_periods && config.sku_start_periods[sku];
-                    var oldHist = st ? hist.filter(function(h) { return new Date(h.checked_at).getTime() < new Date(st).getTime(); }) : hist;
-                    var last = oldHist.length ? oldHist[oldHist.length - 1] : (hist[hist.length - 1] || {});
-                    var dStock = (last.stock_level !== null && last.stock_level !== undefined) ? last.stock_level + ' 件' : '--';
-                    // Price: history may not have price field → fallback to latest all_skus price, then oos_state last-known price
-                    var dPrice = last.price ? '$' + last.price
+
+            var deletedRows = [];
+            Object.keys(histBySku).forEach(function(sku) {
+                var entries = histBySku[sku].slice().sort(function(a, b) { return new Date(a.checked_at) - new Date(b.checked_at); });
+                if (!entries.length) return;
+                // Cut history into periods wherever the gap between checks >= 24h
+                var periods = [];
+                var cur = [entries[0]];
+                for (var i = 1; i < entries.length; i++) {
+                    var gap = new Date(entries[i].checked_at).getTime() - new Date(entries[i - 1].checked_at).getTime();
+                    if (gap >= GAP_MS) { periods.push(cur); cur = []; }
+                    cur.push(entries[i]);
+                }
+                periods.push(cur);
+
+                var isActive = !!configSkuSet[sku];
+                periods.forEach(function(period, pi) {
+                    var lastE = period[period.length - 1] || {};
+                    var firstE = period[0] || {};
+                    var isLastPeriod = pi === periods.length - 1;
+                    var stillRunning = isActive && isLastPeriod && lastE.checked_at && (nowMs - new Date(lastE.checked_at).getTime() < GAP_MS);
+                    if (stillRunning) return;  // ongoing period — shown in All Monitored table
+
+                    var dStock = (lastE.stock_level !== null && lastE.stock_level !== undefined) ? lastE.stock_level + ' 件' : '--';
+                    var dPrice = lastE.price ? '$' + lastE.price
                         : (skuDataMap && skuDataMap[sku] && skuDataMap[sku].price ? '$' + skuDataMap[sku].price
                         : (oosState && oosState[sku] && oosState[sku].price ? '$' + oosState[sku].price : '--'));
-                    var dSold = computeSold(sku, oldHist.length ? oldHist : hist);
-                    var dSoldDisp = dSold !== null ? '<span style="color:#ffd700;font-weight:bold;">' + dSold + '</span>' : '<span style="color:#555;">--</span>';
-                    var dChecked = last.checked_at ? new Date(last.checked_at).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
-                    // STARTS = first record of the archived cycle, END = last record
-                    var firstRec = oldHist.length ? oldHist[0] : (hist.length ? hist[0] : null);
-                    var dStarts = firstRec && firstRec.checked_at ? new Date(firstRec.checked_at).toLocaleString('zh-HK', {year:'numeric', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false}) : '--';
+                    var dSold = computeSold(sku, period);
+                    var dSoldDisp = (dSold !== null && dSold !== undefined) ? '<span style="color:#ffd700;font-weight:bold;">' + dSold + '</span>' : '<span style="color:#555;">--</span>';
                     var dRm = (config.sku_rm && config.sku_rm[sku]) ? config.sku_rm[sku] : '--';
-                    return '<tr><td><code style="color:#888;">' + dRm + '</code></td>'
-                        + '<td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\', true)" title="Click to view old history" style="color:#888;">' + sku + '</code></td>'
-                        + '<td class="name-cell" style="color:#888;">' + (last.product_name || '--') + '</td>'
+                    var pLabel = periods.length > 1 ? ' <span style="color:#777;font-size:0.7rem;font-weight:normal;">(P' + (pi + 1) + ')</span>' : '';
+                    deletedRows.push('<tr><td><code style="color:#888;">' + dRm + '</code></td>'
+                        + '<td class="sku-cell"><code onclick="showSkuHistory(\'' + sku + '\', true)" title="Click to view history" style="color:#888;">' + sku + '</code>' + pLabel + '</td>'
+                        + '<td class="name-cell" style="color:#888;">' + (lastE.product_name || '--') + '</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + dStock + '</td>'
                         + '<td><span class="tag tag-error">🗑️ Deleted</span></td>'
                         + '<td class="tag-cell" style="text-align:center;">' + dSoldDisp + '</td>'
                         + '<td style="color:#888;font-size:0.8rem;">' + dPrice + '</td>'
-                        + '<td style="color:#666;font-size:0.8rem;">' + dStarts + '</td>'
-                        + '<td style="color:#666;font-size:0.8rem;">' + dChecked + '</td>'
+                        + '<td style="color:#666;font-size:0.8rem;">' + fmtDt(firstE.checked_at) + '</td>'
+                        + '<td style="color:#666;font-size:0.8rem;">' + fmtDt(lastE.checked_at) + '</td>'
                         + '<td class="link-cell"><a href="https://www.hktvmall.com/hktv/p/' + sku + '" target="_blank" style="color:#666;">View</a></td>'
-                        + '<td style="text-align:center;"><button onclick="permanentDeleteSku(\'' + sku + '\')" title="永久刪除所有記錄（包括 history）" style="background:#e74c3c;color:#fff;border:none;padding:3px 8px;border-radius:3px;cursor:pointer;font-size:0.75rem;">🗑️ 刪除</button></td></tr>';
-                }).join('');
-            }
+                        + '<td style="text-align:center;"><button onclick="permanentDeleteSku(\'' + sku + '\')" title="永久刪除所有記錄（包括 history）" style="background:#e74c3c;color:#fff;border:none;padding:3px 8px;border-radius:3px;cursor:pointer;font-size:0.75rem;">🗑️ 刪除</button></td></tr>');
+                });
+            });
+
+            deletedBody.innerHTML = deletedRows.length
+                ? deletedRows.join('')
+                : '<tr><td colspan="11" style="text-align:center;color:#666;">No deleted SKUs</td></tr>';
             
-            
-            // Token status
+                        // Token status
             var tokenStatus = document.getElementById('tokenStatus');
             var tokenInput = document.getElementById('gitTokenInput');
             if (getGitToken()) {

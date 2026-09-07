@@ -265,15 +265,28 @@ def check_monitor_period(config, sku=None):
     return "ok"
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description='OOS Monitor checker')
+    parser.add_argument('--sku', help='Check only this one SKU (crash-isolated mode)')
+    args = parser.parse_args()
+
     config = load_config()
     state = load_state()
     dashboard = load_dashboard_data()
-    
+
+    if args.sku:
+        if args.sku not in config['skus']:
+            print(f"❌ SKU {args.sku} not in config")
+            return 1
+        skus_to_check = [args.sku]
+    else:
+        skus_to_check = config['skus']
+
     if not check_monitor_period(config):
         return 0
     
     print(f"🔍 OOS Monitor — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"📋 Checking {len(config['skus'])} SKU(s)...")
+    print(f"📋 Checking {len(skus_to_check)} SKU(s)...")
     print(f"📅 Monitor until: {config.get('monitor_end', 'N/A')}")
     
     from playwright.sync_api import sync_playwright
@@ -286,7 +299,7 @@ def main():
         page = context.new_page()
         page.set_default_timeout(25000)
 
-        for i, sku in enumerate(config['skus']):
+        for i, sku in enumerate(skus_to_check):
             # Restart browser every 8 SKUs — HKTVmall pages hold long-poll connections
             # that accumulate and hang Playwright after ~15-18 pages
             if i > 0 and i % 8 == 0:
@@ -452,10 +465,36 @@ def main():
         for r in results
     ]
     
-    dashboard["oos_skus"] = oos_list
-    dashboard["super_low_stock_skus"] = super_low_stock_list
-    dashboard["low_stock_30_skus"] = low_stock_30_list
-    dashboard["all_skus"] = all_skus_list
+    # MERGE instead of overwrite — supports single-SKU (--sku) runs so earlier
+    # SKUs keep their entries when this run only covers a subset of config['skus']
+    checked = {r['sku'] for r in results}
+
+    def _keep_unchecked(lst):
+        return [x for x in lst if x['sku'] not in checked]
+
+    oos_base = _keep_unchecked(dashboard.get('oos_skus', []))
+    sls_base = _keep_unchecked(dashboard.get('super_low_stock_skus', []))
+    ls_base = _keep_unchecked(dashboard.get('low_stock_30_skus', []))
+
+    for r in results:
+        if r['status'] == 'oos':
+            oos_base.append({"sku": r['sku'], "product_name": r['product_name'], "price": r['price'], "checked_at": r['checked_at']})
+        elif r['status'] == 'super_low_stock':
+            sls_base.append({"sku": r['sku'], "product_name": r['product_name'], "price": r['price'], "stock_level": r['stock_level'], "checked_at": r['checked_at']})
+        elif r['status'] == 'low_stock':
+            ls_base.append({"sku": r['sku'], "product_name": r['product_name'], "price": r['price'], "stock_level": r['stock_level'], "checked_at": r['checked_at']})
+
+    dashboard['oos_skus'] = oos_base
+    dashboard['super_low_stock_skus'] = sls_base
+    dashboard['low_stock_30_skus'] = ls_base
+    # all_skus: update entries for checked SKUs, keep others
+    all_map = {x['sku']: x for x in dashboard.get('all_skus', [])}
+    for r in results:
+        all_map[r['sku']] = {
+            "sku": r['sku'], "product_name": r['product_name'], "status": r['status'],
+            "stock_level": r.get('stock_level'), "price": r['price'], "checked_at": r['checked_at']
+        }
+    dashboard['all_skus'] = list(all_map.values())
     dashboard["last_checked"] = datetime.now().isoformat()
     
     # Add to history with per-SKU limit (keep last 1000 entries per SKU)

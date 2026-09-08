@@ -159,12 +159,12 @@
     "last_checked": "2026-07-13T23:30:05.248335"
   },
   "S6501001_S_G4713294187765": {
-    "status": "super_low_stock",
+    "status": "low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-    "stock_level": 8,
+    "stock_level": 24,
     "price": "168.00",
-    "last_change": "2026-08-28T10:27:52.076415",
-    "last_checked": "2026-09-08T14:52:03.664658"
+    "last_change": "2026-09-08T15:24:02.328648",
+    "last_checked": "2026-09-08T15:24:02.328649"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 27,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-09-08T14:52:06.485017"
+    "last_checked": "2026-09-08T15:24:05.092669"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -354,9 +354,9 @@
     "status": "oos",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
     "stock_level": 0,
-    "price": "138.00",
+    "price": "232.00",
     "last_change": "2026-08-28T06:40:02.184040",
-    "last_checked": "2026-09-08T14:52:09.406386"
+    "last_checked": "2026-09-08T15:24:07.852569"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
@@ -372,7 +372,7 @@
     "stock_level": 108,
     "price": "175.00",
     "last_change": "2026-08-28T18:11:22.295641",
-    "last_checked": "2026-09-08T14:52:13.595444"
+    "last_checked": "2026-09-08T15:24:11.285328"
   },
   "H6183001_S_3402": {
     "status": "in_stock",

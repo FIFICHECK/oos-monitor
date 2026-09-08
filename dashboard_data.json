@@ -3,11 +3,11 @@
     {
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "price": "47.00",
-      "checked_at": "2026-09-09T03:41:46.263027"
+      "price": "230.00",
+      "checked_at": "2026-09-09T04:13:57.378848"
     }
   ],
-  "last_checked": "2026-09-09T03:41:49.244573",
+  "last_checked": "2026-09-09T04:14:00.473647",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -232,13 +232,6 @@
       "status": "super_low_stock",
       "stock_level": 1,
       "checked_at": "2026-07-13T23:30:05.248311"
-    },
-    {
-      "sku": "S6501001_S_G4713294187765",
-      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-      "status": "super_low_stock",
-      "stock_level": 1,
-      "checked_at": "2026-08-14T21:22:44.888688"
     },
     {
       "sku": "S6501001_S_G4713294187765",
@@ -8034,11 +8027,12 @@
       "checked_at": "2026-09-09T03:41:41.047959"
     },
     {
-      "sku": "S6501001_S_G4713294187789",
-      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
+      "sku": "S6501001_S_G4713294187765",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "status": "low_stock",
-      "stock_level": 10,
-      "checked_at": "2026-08-14T22:59:53.842218"
+      "stock_level": 24,
+      "price": "168.00",
+      "checked_at": "2026-09-09T04:13:52.119905"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -15833,6 +15827,14 @@
       "stock_level": 27,
       "price": "370.00",
       "checked_at": "2026-09-09T03:41:43.673687"
+    },
+    {
+      "sku": "S6501001_S_G4713294187789",
+      "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
+      "status": "low_stock",
+      "stock_level": 27,
+      "price": "370.00",
+      "checked_at": "2026-09-09T04:13:54.684746"
     },
     {
       "sku": "B1870001_S_6971738651335",
@@ -65355,13 +65357,6 @@
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
       "status": "in_stock",
       "stock_level": 45,
-      "checked_at": "2026-08-15T00:17:10.075333"
-    },
-    {
-      "sku": "H5859001_S_ST4843",
-      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "status": "in_stock",
-      "stock_level": 45,
       "checked_at": "2026-08-15T00:50:17.029133"
     },
     {
@@ -73193,6 +73188,14 @@
       "stock_level": 0,
       "price": "47.00",
       "checked_at": "2026-09-09T03:41:46.263027"
+    },
+    {
+      "sku": "H5859001_S_ST4843",
+      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
+      "status": "oos",
+      "stock_level": 0,
+      "price": "230.00",
+      "checked_at": "2026-09-09T04:13:57.378848"
     },
     {
       "sku": "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G",
@@ -83535,6 +83538,14 @@
       "stock_level": 102,
       "price": "175.00",
       "checked_at": "2026-09-09T03:41:49.198889"
+    },
+    {
+      "sku": "H0883003_S_OBgE03988",
+      "product_name": "OBgE | 自然遮瑕粉底棒 #1號 象牙白 IVORY▼D2(03988)(平行進口) EXP:2029 | 款式 : 1",
+      "status": "in_stock",
+      "stock_level": 102,
+      "price": "175.00",
+      "checked_at": "2026-09-09T04:14:00.414424"
     },
     {
       "sku": "H6183001_S_3402",
@@ -96329,7 +96340,7 @@
       "status": "low_stock",
       "stock_level": 24,
       "price": "168.00",
-      "checked_at": "2026-09-09T03:41:41.047959"
+      "checked_at": "2026-09-09T04:13:52.119905"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -96337,7 +96348,7 @@
       "status": "low_stock",
       "stock_level": 27,
       "price": "370.00",
-      "checked_at": "2026-09-09T03:41:43.673687"
+      "checked_at": "2026-09-09T04:13:54.684746"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -96352,8 +96363,8 @@
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
       "status": "oos",
       "stock_level": 0,
-      "price": "47.00",
-      "checked_at": "2026-09-09T03:41:46.263027"
+      "price": "230.00",
+      "checked_at": "2026-09-09T04:13:57.378848"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -96361,7 +96372,7 @@
       "status": "pending",
       "stock_level": 58,
       "price": "338.00",
-      "checked_at": "2026-09-09T03:41:49.198947"
+      "checked_at": "2026-09-09T04:14:00.414485"
     },
     {
       "sku": "H0883003_S_OBgE03988",
@@ -96369,7 +96380,7 @@
       "status": "in_stock",
       "stock_level": 102,
       "price": "175.00",
-      "checked_at": "2026-09-09T03:41:49.198889"
+      "checked_at": "2026-09-09T04:14:00.414424"
     },
     {
       "sku": "H6183001_S_3402",
@@ -96651,14 +96662,14 @@
       "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
       "price": "168.00",
       "stock_level": 24,
-      "checked_at": "2026-09-09T03:41:41.047959"
+      "checked_at": "2026-09-09T04:13:52.119905"
     },
     {
       "sku": "S6501001_S_G4713294187789",
       "product_name": "提提研 | 提提研 雙活性外泌體賦活潤凍膜30ml 10入 (3ml*10) 平行進口",
       "price": "370.00",
       "stock_level": 27,
-      "checked_at": "2026-09-09T03:41:43.673687"
+      "checked_at": "2026-09-09T04:13:54.684746"
     }
   ]
 }

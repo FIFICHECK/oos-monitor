@@ -81,10 +81,10 @@
   "B0961005_S_4894436008671": {
     "status": "in_stock",
     "product_name": "G-NiiB | 免疫+ 益生菌 28包【青春雙歧桿菌】【最佳使用日期: 03/2028】",
-    "stock_level": 137,
+    "stock_level": 127,
     "price": "358.00",
     "last_change": "2026-08-24T09:28:04.287349",
-    "last_checked": "2026-09-12T20:05:29.797796"
+    "last_checked": "2026-09-12T20:37:07.662701"
   },
   "B0961005_S_4892218083908": {
     "status": "in_stock",
@@ -164,7 +164,7 @@
     "stock_level": 24,
     "price": "168.00",
     "last_change": "2026-09-08T15:24:02.328648",
-    "last_checked": "2026-09-12T20:05:19.004803"
+    "last_checked": "2026-09-12T20:36:56.344242"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 27,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-09-12T20:05:21.632439"
+    "last_checked": "2026-09-12T20:36:58.973750"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -354,9 +354,9 @@
     "status": "oos",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
     "stock_level": 0,
-    "price": "61.00",
+    "price": "232.00",
     "last_change": "2026-09-12T13:11:48.472182",
-    "last_checked": "2026-09-12T20:05:24.122954"
+    "last_checked": "2026-09-12T20:37:01.463584"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
@@ -372,7 +372,7 @@
     "stock_level": 88,
     "price": "175.00",
     "last_change": "2026-08-28T18:11:22.295641",
-    "last_checked": "2026-09-12T20:05:27.115863"
+    "last_checked": "2026-09-12T20:37:05.118336"
   },
   "H6183001_S_3402": {
     "status": "in_stock",

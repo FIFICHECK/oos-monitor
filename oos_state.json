@@ -164,7 +164,7 @@
     "stock_level": 21,
     "price": "168.00",
     "last_change": "2026-09-08T15:24:02.328648",
-    "last_checked": "2026-09-15T12:42:09.178785"
+    "last_checked": "2026-09-15T13:13:08.422261"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 27,
     "price": "370.00",
     "last_change": "2026-08-10T12:45:52.112733",
-    "last_checked": "2026-09-15T12:42:11.707915"
+    "last_checked": "2026-09-15T13:13:11.197230"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -354,9 +354,9 @@
     "status": "oos",
     "product_name": "AESOP | 草本腋下身體噴霧 50ml",
     "stock_level": 0,
-    "price": "48.00",
+    "price": "98.00",
     "last_change": "2026-09-12T13:11:48.472182",
-    "last_checked": "2026-09-15T12:42:14.330371"
+    "last_checked": "2026-09-15T13:13:14.170663"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",
@@ -372,7 +372,7 @@
     "stock_level": 70,
     "price": "175.00",
     "last_change": "2026-08-28T18:11:22.295641",
-    "last_checked": "2026-09-15T12:42:17.452988"
+    "last_checked": "2026-09-15T13:13:17.425904"
   },
   "H6183001_S_3402": {
     "status": "in_stock",

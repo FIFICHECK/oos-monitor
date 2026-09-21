@@ -57,18 +57,39 @@ def extract_stock_level(html_content):
         return int(match.group(1))
     return None
 
-def extract_price(page, add_to_cart_buttons):
-    """Extract selling price from add-to-cart button's data-price attribute."""
+def extract_price(page, add_to_cart_buttons=None, sku_id=None):
+    """Extract the MAIN product's selling price.
+
+    HKTVmall tags the main product's own button/element with
+    data-productcode="<SKU>" + data-pagetype="productDetailPage", whereas
+    "同店推介" (recommendation) elements carry OTHER product codes. Matching on the
+    SKU itself is therefore the only reliable way to avoid picking a neighbour's
+    price (real bug: AESOP spray showed the $47 price of a recommended item
+    instead of its own $244).
+    """
     try:
-        if add_to_cart_buttons.count() > 0:
+        if sku_id:
+            html = page.content()
+            sid = re.escape(sku_id)
+            # attribute order in the DOM varies → try both orders
+            for pat in (
+                r'data-productcode="' + sid + r'"[^>]*?data-price="\$\s*([\d,]+\.\d{2})"',
+                r'data-price="\$\s*([\d,]+\.\d{2})"[^>]*?data-productcode="' + sid + r'"',
+            ):
+                m = re.search(pat, html)
+                if m:
+                    return m.group(1).replace(',', '')
+    except Exception:
+        pass
+    # Fallback: data-price of the main product button if one was resolved
+    try:
+        if add_to_cart_buttons is not None and add_to_cart_buttons.count() > 0:
             price_attr = add_to_cart_buttons.first.get_attribute("data-price")
             if price_attr:
-                # data-price format: "$ 359.00" → extract "359.00"
-                import re
-                match = re.search(r'([0-9,]+\.[0-9]{2})', price_attr)
+                match = re.search(r'([0-9,]+\.\d{2})', price_attr)
                 if match:
-                    return match.group(1)
-    except:
+                    return match.group(1).replace(',', '')
+    except Exception:
         pass
     return ""
 
@@ -84,13 +105,21 @@ def check_sku(page, sku_id):
         html_content = page.content()
         
         # Check for in-stock indicators
-        # IMPORTANT: prefer the MAIN product area add-to-cart button. The page also renders
-        # "同店推介" recommendation buttons whose data-price belongs to OTHER products
-        # (e.g. $189 vs the real $338). Falling back to ALL buttons would pick the wrong price.
-        add_to_cart_buttons = page.locator("div.top-panel button:has-text('加入購物車'), div.product-detail button:has-text('加入購物車')")
-        if add_to_cart_buttons.count() == 0:
-            add_to_cart_buttons = page.locator("button:has-text('加入購物車')")
-        has_add_to_cart = add_to_cart_buttons.count() > 0
+        # IMPORTANT: HKTVmall tags the MAIN product's own button with
+        # data-productcode="<SKU>" (data-pagetype="productDetailPage"). The page also
+        # renders "同店推介" recommendation buttons (data-pagetype="productBrief") whose
+        # data-price/productcode belong to OTHER products. Matching on the SKU itself is
+        # the only reliable way to resolve the main product's button & price.
+        main_buttons = page.locator('button[data-productcode="' + sku_id + '"]')
+        btn_count = main_buttons.count()
+        btn_text = ""
+        if btn_count > 0:
+            try:
+                btn_text = main_buttons.first.inner_text().strip()
+            except Exception:
+                btn_text = ""
+        has_add_to_cart = "加入購物車" in btn_text
+        add_to_cart_buttons = main_buttons
         
         # Check for OOS indicators
         has_oos_text = any(t in body_text for t in [
@@ -100,7 +129,10 @@ def check_sku(page, sku_id):
         # Check if button is disabled
         button_disabled = False
         if has_add_to_cart:
-            button_disabled = add_to_cart_buttons.first.is_disabled()
+            try:
+                button_disabled = main_buttons.first.is_disabled()
+            except Exception:
+                button_disabled = False
         
         # Get product name from title
         title = page.title()
@@ -142,7 +174,7 @@ def check_sku(page, sku_id):
             "status": status,
             "reason": reason,
             "product_name": product_name[:100],
-            "price": extract_price(page, add_to_cart_buttons),
+            "price": extract_price(page, add_to_cart_buttons, sku_id),
             "stock_level": stock_level,
             "checked_at": datetime.now().isoformat()
         }
@@ -343,11 +375,10 @@ def main():
                         else:
                             product_name = title.replace(" | HKTVmall 香港最大網購平台", "").strip()[:100]
                             stock_level = extract_stock_level(html_content)
-                            # Extract price from data-price attribute in HTML
-                            pm = re.search(r'data-price="[^\d]*(\d+\.\d{2})', html_content)
-                            if pm:
-                                price = pm.group(1)
-                            else:
+                            # Price: match the SKU's OWN productcode element (same logic
+                            # as extract_price) so recommendation items can't poison it
+                            price = extract_price(page, None, sku)
+                            if not price:
                                 # Fallback: JSON-LD price
                                 pm2 = re.search(r'"price"\s*:\s*"(\d+\.?\d*)"', html_content)
                                 price = pm2.group(1) if pm2 else ""

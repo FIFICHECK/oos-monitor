@@ -34,10 +34,10 @@
   "B0961005_S_9556174902219": {
     "status": "in_stock",
     "product_name": "桂格 | 桂格即食燕麥片 紅色 800克【香港行貨】【最佳使用日期: 12/2027】",
-    "stock_level": 99,
+    "stock_level": 111,
     "price": "15.50",
     "last_change": "2026-09-21T14:15:23.523401",
-    "last_checked": "2026-09-24T15:18:54.283314"
+    "last_checked": "2026-09-24T15:51:34.452751"
   },
   "H5096001_S_LDB-UN003030": {
     "status": "in_stock",
@@ -161,10 +161,10 @@
   "S6501001_S_G4713294187765": {
     "status": "low_stock",
     "product_name": "提提研 | 提提研 雙活性外泌體賦活生物纖維面膜3片/盒 平行進口",
-    "stock_level": 17,
+    "stock_level": 18,
     "price": "168.00",
     "last_change": "2026-09-08T15:24:02.328648",
-    "last_checked": "2026-09-24T15:18:44.981428"
+    "last_checked": "2026-09-24T15:51:26.346427"
   },
   "S6501001_S_G4713294187789": {
     "status": "in_stock",
@@ -172,7 +172,7 @@
     "stock_level": 31,
     "price": "370.00",
     "last_change": "2026-09-24T14:44:19.814563",
-    "last_checked": "2026-09-24T15:18:48.545640"
+    "last_checked": "2026-09-24T15:51:29.012967"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -356,7 +356,7 @@
     "stock_level": 0,
     "price": "244.00",
     "last_change": "2026-09-12T13:11:48.472182",
-    "last_checked": "2026-09-24T15:18:51.329245"
+    "last_checked": "2026-09-24T15:51:31.728550"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",

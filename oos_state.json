@@ -37,7 +37,7 @@
     "stock_level": 297,
     "price": "15.50",
     "last_change": "2026-10-02T22:46:39.372553",
-    "last_checked": "2026-10-04T00:23:33.840227"
+    "last_checked": "2026-10-04T00:58:17.416890"
   },
   "H5096001_S_LDB-UN003030": {
     "status": "in_stock",
@@ -164,7 +164,7 @@
     "stock_level": 0,
     "price": "168.00",
     "last_change": "2026-10-03T23:12:20.696070",
-    "last_checked": "2026-10-04T00:23:25.576062"
+    "last_checked": "2026-10-04T00:58:09.432730"
   },
   "S6501001_S_G4713294187789": {
     "status": "low_stock",
@@ -172,7 +172,7 @@
     "stock_level": 29,
     "price": "370.00",
     "last_change": "2026-09-27T13:05:37.554330",
-    "last_checked": "2026-10-04T00:23:28.619493"
+    "last_checked": "2026-10-04T00:58:12.159918"
   },
   "H6588001_S_Philips_HD9355": {
     "status": "low_stock",
@@ -356,7 +356,7 @@
     "stock_level": 0,
     "price": "244.00",
     "last_change": "2026-09-12T13:11:48.472182",
-    "last_checked": "2026-10-04T00:23:31.171051"
+    "last_checked": "2026-10-04T00:58:14.722182"
   },
   "B0961005_S_9311770615914": {
     "status": "low_stock",

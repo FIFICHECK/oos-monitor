@@ -4,10 +4,10 @@
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
       "price": "244.00",
-      "checked_at": "2026-10-20T16:24:56.830134"
+      "checked_at": "2026-10-20T17:00:59.474190"
     }
   ],
-  "last_checked": "2026-10-20T16:24:59.841013",
+  "last_checked": "2026-10-20T17:01:02.701379",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -66475,14 +66475,6 @@
       "status": "oos",
       "stock_level": 0,
       "price": "244.00",
-      "checked_at": "2026-09-22T19:45:50.330984"
-    },
-    {
-      "sku": "H5859001_S_ST4843",
-      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "status": "oos",
-      "stock_level": 0,
-      "price": "244.00",
       "checked_at": "2026-09-22T20:18:02.638317"
     },
     {
@@ -74468,6 +74460,14 @@
       "stock_level": 0,
       "price": "244.00",
       "checked_at": "2026-10-20T16:24:56.830134"
+    },
+    {
+      "sku": "H5859001_S_ST4843",
+      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
+      "status": "oos",
+      "stock_level": 0,
+      "price": "244.00",
+      "checked_at": "2026-10-20T17:00:59.474190"
     },
     {
       "sku": "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G",
@@ -99927,14 +99927,6 @@
       "sku": "B0961005_S_9556174902219",
       "product_name": "桂格 | 桂格即食燕麥片 紅色 800克【香港行貨】【最佳使用日期: 12/2027】",
       "status": "in_stock",
-      "stock_level": 112,
-      "price": "15.50",
-      "checked_at": "2026-09-22T20:18:05.486298"
-    },
-    {
-      "sku": "B0961005_S_9556174902219",
-      "product_name": "桂格 | 桂格即食燕麥片 紅色 800克【香港行貨】【最佳使用日期: 12/2027】",
-      "status": "in_stock",
       "stock_level": 110,
       "price": "15.50",
       "checked_at": "2026-09-22T20:51:54.622464"
@@ -107922,6 +107914,14 @@
       "stock_level": 277,
       "price": "15.50",
       "checked_at": "2026-10-20T16:24:59.790644"
+    },
+    {
+      "sku": "B0961005_S_9556174902219",
+      "product_name": "桂格 | 桂格即食燕麥片 紅色 800克【香港行貨】【最佳使用日期: 12/2027】",
+      "status": "in_stock",
+      "stock_level": 277,
+      "price": "15.50",
+      "checked_at": "2026-10-20T17:01:02.644397"
     }
   ],
   "low_stock_skus": [],
@@ -107932,7 +107932,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "168.00",
-      "checked_at": "2026-10-20T16:24:53.279745"
+      "checked_at": "2026-10-20T17:00:54.760605"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -107940,7 +107940,7 @@
       "status": "expired",
       "stock_level": 28,
       "price": "370.00",
-      "checked_at": "2026-10-20T16:24:53.279762"
+      "checked_at": "2026-10-20T17:00:54.760616"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -107956,7 +107956,7 @@
       "status": "oos",
       "stock_level": 0,
       "price": "244.00",
-      "checked_at": "2026-10-20T16:24:56.830134"
+      "checked_at": "2026-10-20T17:00:59.474190"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -108252,7 +108252,7 @@
       "status": "in_stock",
       "stock_level": 277,
       "price": "15.50",
-      "checked_at": "2026-10-20T16:24:59.790644"
+      "checked_at": "2026-10-20T17:01:02.644397"
     }
   ],
   "super_low_stock_skus": [],

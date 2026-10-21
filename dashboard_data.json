@@ -4,10 +4,10 @@
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
       "price": "244.00",
-      "checked_at": "2026-10-22T00:49:01.662781"
+      "checked_at": "2026-10-22T01:24:02.541963"
     }
   ],
-  "last_checked": "2026-10-22T00:49:04.955633",
+  "last_checked": "2026-10-22T01:24:06.101855",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -66475,14 +66475,6 @@
       "status": "oos",
       "stock_level": 0,
       "price": "244.00",
-      "checked_at": "2026-09-24T02:32:49.919276"
-    },
-    {
-      "sku": "H5859001_S_ST4843",
-      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "status": "oos",
-      "stock_level": 0,
-      "price": "244.00",
       "checked_at": "2026-09-24T03:06:03.426809"
     },
     {
@@ -74468,6 +74460,14 @@
       "stock_level": 0,
       "price": "244.00",
       "checked_at": "2026-10-22T00:49:01.662781"
+    },
+    {
+      "sku": "H5859001_S_ST4843",
+      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
+      "status": "oos",
+      "stock_level": 0,
+      "price": "244.00",
+      "checked_at": "2026-10-22T01:24:02.541963"
     },
     {
       "sku": "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G",
@@ -99929,14 +99929,6 @@
       "status": "in_stock",
       "stock_level": 103,
       "price": "15.50",
-      "checked_at": "2026-09-24T03:06:06.277896"
-    },
-    {
-      "sku": "B0961005_S_9556174902219",
-      "product_name": "桂格 | 桂格即食燕麥片 紅色 800克【香港行貨】【最佳使用日期: 12/2027】",
-      "status": "in_stock",
-      "stock_level": 103,
-      "price": "15.50",
       "checked_at": "2026-09-24T03:41:53.592467"
     },
     {
@@ -107922,6 +107914,14 @@
       "stock_level": 239,
       "price": "15.50",
       "checked_at": "2026-10-22T00:49:04.896468"
+    },
+    {
+      "sku": "B0961005_S_9556174902219",
+      "product_name": "桂格 | 桂格即食燕麥片 紅色 800克【香港行貨】【最佳使用日期: 2027/12】",
+      "status": "in_stock",
+      "stock_level": 236,
+      "price": "15.50",
+      "checked_at": "2026-10-22T01:24:06.048339"
     }
   ],
   "low_stock_skus": [],
@@ -107932,7 +107932,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "168.00",
-      "checked_at": "2026-10-22T00:48:58.333366"
+      "checked_at": "2026-10-22T01:23:59.109833"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -107940,7 +107940,7 @@
       "status": "expired",
       "stock_level": 28,
       "price": "370.00",
-      "checked_at": "2026-10-22T00:48:58.333376"
+      "checked_at": "2026-10-22T01:23:59.109844"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -107956,7 +107956,7 @@
       "status": "oos",
       "stock_level": 0,
       "price": "244.00",
-      "checked_at": "2026-10-22T00:49:01.662781"
+      "checked_at": "2026-10-22T01:24:02.541963"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -108250,9 +108250,9 @@
       "sku": "B0961005_S_9556174902219",
       "product_name": "桂格 | 桂格即食燕麥片 紅色 800克【香港行貨】【最佳使用日期: 2027/12】",
       "status": "in_stock",
-      "stock_level": 239,
+      "stock_level": 236,
       "price": "15.50",
-      "checked_at": "2026-10-22T00:49:04.896468"
+      "checked_at": "2026-10-22T01:24:06.048339"
     }
   ],
   "super_low_stock_skus": [],

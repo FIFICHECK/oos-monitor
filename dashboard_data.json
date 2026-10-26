@@ -1,13 +1,6 @@
 {
-  "oos_skus": [
-    {
-      "sku": "H5859001_S_ST4843",
-      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "price": "244.00",
-      "checked_at": "2026-10-26T09:43:40.029397"
-    }
-  ],
-  "last_checked": "2026-10-26T09:43:40.092876",
+  "oos_skus": [],
+  "last_checked": "2026-10-26T10:20:04.511767",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -107932,7 +107925,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "168.00",
-      "checked_at": "2026-10-26T09:43:32.649617"
+      "checked_at": "2026-10-26T10:19:34.454283"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -107940,7 +107933,7 @@
       "status": "expired",
       "stock_level": 28,
       "price": "370.00",
-      "checked_at": "2026-10-26T09:43:32.649627"
+      "checked_at": "2026-10-26T10:19:34.454293"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -107952,11 +107945,11 @@
     },
     {
       "sku": "H5859001_S_ST4843",
-      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "status": "oos",
-      "stock_level": 0,
-      "price": "244.00",
-      "checked_at": "2026-10-26T09:43:40.029397"
+      "product_name": "",
+      "status": "error",
+      "stock_level": null,
+      "price": "",
+      "checked_at": "2026-10-26T10:20:04.463263"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -108252,7 +108245,7 @@
       "status": "expired",
       "stock_level": 168,
       "price": "15.50",
-      "checked_at": "2026-10-26T09:43:40.029442"
+      "checked_at": "2026-10-26T10:20:04.463316"
     }
   ],
   "super_low_stock_skus": [],

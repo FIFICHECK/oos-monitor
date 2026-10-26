@@ -4,10 +4,10 @@
       "sku": "H5859001_S_ST4843",
       "product_name": "AESOP | 草本腋下身體噴霧 50ml",
       "price": "244.00",
-      "checked_at": "2026-10-27T06:58:16.084753"
+      "checked_at": "2026-10-27T07:34:17.349880"
     }
   ],
-  "last_checked": "2026-10-27T06:58:16.141386",
+  "last_checked": "2026-10-27T07:34:17.399612",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -66475,14 +66475,6 @@
       "status": "oos",
       "stock_level": 0,
       "price": "244.00",
-      "checked_at": "2026-09-28T23:46:16.964308"
-    },
-    {
-      "sku": "H5859001_S_ST4843",
-      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
-      "status": "oos",
-      "stock_level": 0,
-      "price": "244.00",
       "checked_at": "2026-09-29T00:17:31.607669"
     },
     {
@@ -74468,6 +74460,14 @@
       "stock_level": 0,
       "price": "244.00",
       "checked_at": "2026-10-27T06:58:16.084753"
+    },
+    {
+      "sku": "H5859001_S_ST4843",
+      "product_name": "AESOP | 草本腋下身體噴霧 50ml",
+      "status": "oos",
+      "stock_level": 0,
+      "price": "244.00",
+      "checked_at": "2026-10-27T07:34:17.349880"
     },
     {
       "sku": "B1200001_S_HSH_SIM_JP_SOFT_5DAYS_5G",
@@ -107932,7 +107932,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "168.00",
-      "checked_at": "2026-10-27T06:58:12.728367"
+      "checked_at": "2026-10-27T07:34:14.012271"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -107940,7 +107940,7 @@
       "status": "expired",
       "stock_level": 28,
       "price": "370.00",
-      "checked_at": "2026-10-27T06:58:12.728377"
+      "checked_at": "2026-10-27T07:34:14.012282"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -107956,7 +107956,7 @@
       "status": "oos",
       "stock_level": 0,
       "price": "244.00",
-      "checked_at": "2026-10-27T06:58:16.084753"
+      "checked_at": "2026-10-27T07:34:17.349880"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -108252,7 +108252,7 @@
       "status": "expired",
       "stock_level": 168,
       "price": "15.50",
-      "checked_at": "2026-10-27T06:58:16.084798"
+      "checked_at": "2026-10-27T07:34:17.349926"
     }
   ],
   "super_low_stock_skus": [],

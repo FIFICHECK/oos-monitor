@@ -1,6 +1,6 @@
 {
   "oos_skus": [],
-  "last_checked": "2026-11-15T05:40:48.771060",
+  "last_checked": "2026-11-15T06:17:49.701061",
   "history": [
     {
       "sku": "H6588001_S_Toshiba_FLYA20WHKG",
@@ -107925,7 +107925,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "168.00",
-      "checked_at": "2026-11-15T05:40:48.711018"
+      "checked_at": "2026-11-15T06:17:49.651776"
     },
     {
       "sku": "S6501001_S_G4713294187789",
@@ -107933,7 +107933,7 @@
       "status": "expired",
       "stock_level": 28,
       "price": "370.00",
-      "checked_at": "2026-11-15T05:40:48.711037"
+      "checked_at": "2026-11-15T06:17:49.651791"
     },
     {
       "sku": "H6588001_S_KDK_P40VH",
@@ -107949,7 +107949,7 @@
       "status": "expired",
       "stock_level": 0,
       "price": "244.00",
-      "checked_at": "2026-11-15T05:40:48.711046"
+      "checked_at": "2026-11-15T06:17:49.651797"
     },
     {
       "sku": "B0961005_S_4894436008671",
@@ -108245,7 +108245,7 @@
       "status": "expired",
       "stock_level": 168,
       "price": "15.50",
-      "checked_at": "2026-11-15T05:40:48.711055"
+      "checked_at": "2026-11-15T06:17:49.651802"
     }
   ],
   "super_low_stock_skus": [],
